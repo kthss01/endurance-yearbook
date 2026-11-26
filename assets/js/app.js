@@ -588,7 +588,7 @@ const state = {
   routes: {},
 };
 // 기록표·인증서·Strava 캡처 등 '문서형' 이미지는 대표 사진으로 쓰지 않는다
-const DOC_IMAGE = /(result|certificate|strava|splits|pace|heart-rate|route-summary|chart)/;
+const DOC_IMAGE = /(official|result|certificate|ranking|strava|splits|pace|heart-rate|route-summary|course|chart)/;
 const isDocImage = (p) => DOC_IMAGE.test(p.split("/").pop());
 const coverPhoto = (pics = []) => pics.find((p) => !isDocImage(p));
 // 카드 표면에 크게 보여줄 거리 (GPS 기준)
