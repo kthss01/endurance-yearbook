@@ -20,7 +20,7 @@ const METRICS = {
   elevationGainM: { label: "상승고도", unit: "m", d: 0 },
   activityCount: { label: "활동 수", unit: "회", d: 0 },
 };
-const LABEL2 = { ...LABEL, transition: "전환", journey: "여정", randonneuring: "브레베", "finished-with-dnf-stage": "완주 · 일부 구간 DNF", "partial-route": "일부 구간 주행" };
+const LABEL2 = { ...LABEL, transition: "전환", journey: "여정", randonneuring: "브레베", "finished-with-dnf-stage": "완주 · 일부 구간 DNF", "partial-route": "일부 구간 주행", cancelled: "대회 취소" };
 // 숫자 전용 글꼴(대문자만 있음)에서 단위가 대문자로 보이지 않도록 영문 단위를 <small>로 감싼다
 const u = (str) => String(str).replace(/(\d["']?)\s?(\/?[a-zA-Z][a-zA-Z/]*)/g, "$1<small class=\"unit\">$2</small>");
 
@@ -521,7 +521,9 @@ function comparables(e) {
     list = pool.filter((x) => x.category === "triathlon" && officialSec(x) && (eventDistance(x) || 0) >= 40).map((x) => ({ e: x, v: officialSec(x) }));
     fmt = (v) => fmtDur(v); title = "철인3종 표준거리 공식 기록 비교";
   } else if (e.category === "aquathlon") {
-    list = pool.filter((x) => x.category === "aquathlon").map((x) => ({ e: x, v: toSec(x.official?.splits?.swimming || x.official?.swimTime) })).filter((x) => x.v);
+    // 스프린트(수영 750m)처럼 수영 거리가 짧은 대회는 1.5km 기록과 섞지 않는다
+    const swimKm = (x) => (x.strava?.segments || []).filter((s) => s.sport === "swimming").reduce((a, s) => a + (s.distanceKm || 0), 0) || x.strava?.swimDistanceKm || 0;
+    list = pool.filter((x) => x.category === "aquathlon" && swimKm(x) >= 1.2).map((x) => ({ e: x, v: toSec(x.official?.splits?.swimming || x.official?.swimTime) })).filter((x) => x.v);
     fmt = (v) => fmtDur(v); title = "아쿠아슬론 수영 기록 비교";
   }
   if (list.length < 2) return "";
