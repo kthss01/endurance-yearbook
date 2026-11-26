@@ -472,6 +472,10 @@ const MEDIA = {
   ],
 };
 const JOURNEY_MEDIA = {
+  "2025-randonneurs-virtual-200k": [
+    "assets/images/journeys/2025-randonneurs-virtual-200k/strava-summary.jpg",
+    "assets/images/journeys/2025-randonneurs-virtual-200k/strava-chart.jpg",
+  ],
   "2026-seoul-200k-brevet": [
     "assets/images/events/2026-seoul-200k-brevet/cover.jpg",
     "assets/images/events/2026-seoul-200k-brevet/gallery-01.jpg",

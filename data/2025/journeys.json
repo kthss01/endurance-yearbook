@@ -8,11 +8,14 @@
     "category": "randonneuring",
     "status": "finished",
     "reviewStatus": "verified",
-    "strava": { "activityCount": 1, "distanceKm": 200.64, "elapsedHours": 21.52, "elevationGainM": 1266 },
-    "review": "실내에서 200km를 이어 달린 장거리 지구력 도전이다. 실제 브레베로 넘어가기 전 긴 시간 안장 위에서 버티는 경험을 쌓았다.",
+    "story": { "url": "https://story.kakao.com/_F7q479/GRIpXVLLbJA" },
+    "next": ["실내 장거리에서도 보급 간격과 정차 시간을 기록해 실제 브레베 운영 계획에 반영한다.", "같은 파워(130W대)를 실외 200km에서 유지할 수 있는지 퍼머넌트로 확인한다.", "장거리 실내 주행 뒤 열감과 피로 회복에 필요한 시간을 기록한다."],
+    "analysis": "Strava 기준 200.63km를 이동 7:08:53, 경과 8:22:18에 마쳐 평균 28.1km/h, 평균 파워 135W를 기록했다. 실내 가상 코스라 상승 1,266m는 실제 도로와 직접 비교하지 않는다. 경과와 이동 시간 차이는 약 1시간 13분으로, 실내에서도 보급과 휴식 시간이 적지 않았다.",
+    "strava": { "activityId": "13630226993", "activityCount": 1, "distanceKm": 200.64, "movingTime": "07:08:53", "movingHours": 7.15, "elapsedTime": "08:22:18", "elapsedHours": 8.37, "elevationGainM": 1266 },
+    "review": "실내에서 200km를 달리는 란도너스 벡터로 2025년 첫 대회를 치렀다. 회사 일로 의기소침하던 시기에 가족 여행으로 마음을 추스른 뒤 짧게나마 차근차근 준비했고, 좁은 방 안에서 '과연 나는 할 수 있을까'라는 오래된 질문을 되뇌며 끝까지 페달을 밟았다. 박수도 없이 모니터 속 결과 한 줄뿐인 고요한 완주였지만, 하루가 지나자 번뇌가 열기 속에 타 버린 듯 '그냥 해야지'라는 마음이 남았다.",
     "display": { "featured": true, "suggestedFormat": "challenge card" },
-    "sources": ["strava"],
-    "media": []
+    "sources": ["strava", "kakao-story"],
+    "media": ["assets/images/journeys/2025-randonneurs-virtual-200k/strava-summary.jpg", "assets/images/journeys/2025-randonneurs-virtual-200k/strava-chart.jpg"]
   },
   {
     "id": "2025-kyushu-cycling",
