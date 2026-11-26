@@ -283,21 +283,49 @@
     "title": "세븐브릿지 투어",
     "category": "cycling",
     "status": "finished",
-    "reviewStatus": "partial",
+    "reviewStatus": "verified",
     "official": {
       "time": "02:35:11",
-      "course": "77km · 부산 대교 7개 · MTB/일반 부문",
-      "distanceKm": 77
+      "bib": 5307,
+      "course": "77km · MTB/일반 부문 2위",
+      "rankOverall": 147,
+      "rankMen": 140
     },
     "story": {
       "url": "https://story.kakao.com/_F7q479/9E6Uc64wcQ0"
     },
     "review": "부산의 대교 7개를 건너는 77km 자전거 축제로, 전년에 추가 접수조차 못 했던 대회에 처음 나섰다. 전날 익산 아쿠아슬론 수영 컷오프의 아쉬움을 안고 새벽 4시 반에 일어나, 5,000명 넘는 참가자 속 초반 병목을 지난 뒤 평지와 완만한 내리막에서 분노하듯 쏟아내 02:35:11에 완주했다. 참가 부문이 로드가 아닌 MTB/일반으로 배정되는 해프닝이 있었고, 다음에는 고속 주행이 안전한 로드 부문으로 다시 나가고 싶은 대회로 남겼다.",
     "sources": [
+      "strava",
       "kakao-story",
       "youtube"
     ],
-    "media": []
+    "media": [
+      "assets/images/events/2026-seven-bridge-tour/cover.jpg",
+      "assets/images/events/2026-seven-bridge-tour/gallery-01.jpg",
+      "assets/images/events/2026-seven-bridge-tour/gallery-02.jpg",
+      "assets/images/events/2026-seven-bridge-tour/gallery-03.jpg",
+      "assets/images/events/2026-seven-bridge-tour/gallery-04.jpg",
+      "assets/images/events/2026-seven-bridge-tour/gallery-05.jpg",
+      "assets/images/events/2026-seven-bridge-tour/gallery-06.jpg",
+      "assets/images/events/2026-seven-bridge-tour/gallery-07.jpg",
+      "assets/images/events/2026-seven-bridge-tour/gallery-08.jpg",
+      "assets/images/events/2026-seven-bridge-tour/gallery-09.jpg",
+      "assets/images/events/2026-seven-bridge-tour/gallery-10.jpg",
+      "assets/images/events/2026-seven-bridge-tour/official-result.jpg",
+      "assets/images/events/2026-seven-bridge-tour/official-ranking.jpg",
+      "assets/images/events/2026-seven-bridge-tour/official-result-stats.jpg",
+      "assets/images/events/2026-seven-bridge-tour/route-summary.jpg",
+      "assets/images/events/2026-seven-bridge-tour/strava-chart-1.jpg",
+      "assets/images/events/2026-seven-bridge-tour/strava-chart-2.jpg",
+      "assets/images/events/2026-seven-bridge-tour/strava-chart-3.jpg",
+      "assets/images/events/2026-seven-bridge-tour/strava-chart-4.jpg"
+    ],
+    "strava": {
+      "distanceKm": 80.82,
+      "movingTime": "02:39:15",
+      "elevationGainM": 635
+    }
   },
   {
     "id": "2026-siheung-half",
@@ -324,22 +352,40 @@
     "title": "빙그레 그란폰도",
     "category": "cycling",
     "status": "finished",
-    "reviewStatus": "partial",
+    "reviewStatus": "verified",
     "official": {
       "time": "04:34:52",
-      "course": "그란폰도 114.14km · 공주",
-      "distanceKm": 114.14,
-      "elevationGainM": 1274
+      "bib": "A0132",
+      "course": "CHALLENGE A 114.14km · 공주",
+      "rankOverall": 451,
+      "rankMen": 420
     },
     "story": {
       "url": "https://story.kakao.com/_F7q479/GCtjSRtOsqA"
     },
     "review": "공주에서 열린 114.14km·1,274m 그란폰도를 04:34:52에 완주했다. 수요일 러닝 훈련으로 근육통과 피로가 남아 있었지만 페이스를 끝까지 유지했고, 규모가 큰 대회라 첫 보급소까지 병목이 있었으나 이후 빠르게 앞질러 편하게 달렸다. 빠른 참가자들 사이에서 세상이 넓다는 걸 느꼈고, 끝난 뒤 금강 온천에서 몸을 풀며 이틀 뒤 PT-75 안동 리벤지를 위한 휴식을 다짐했다.",
     "sources": [
+      "strava",
       "kakao-story",
       "youtube"
     ],
-    "media": []
+    "media": [
+      "assets/images/events/2026-bingrae-granfondo/cover.jpg",
+      "assets/images/events/2026-bingrae-granfondo/gallery-01.jpg",
+      "assets/images/events/2026-bingrae-granfondo/gallery-02.jpg",
+      "assets/images/events/2026-bingrae-granfondo/official-certificate.jpg",
+      "assets/images/events/2026-bingrae-granfondo/official-result.jpg",
+      "assets/images/events/2026-bingrae-granfondo/route-summary.jpg",
+      "assets/images/events/2026-bingrae-granfondo/strava-chart-1.jpg",
+      "assets/images/events/2026-bingrae-granfondo/strava-chart-2.jpg",
+      "assets/images/events/2026-bingrae-granfondo/strava-chart-3.jpg",
+      "assets/images/events/2026-bingrae-granfondo/strava-chart-4.jpg"
+    ],
+    "strava": {
+      "distanceKm": 114.13,
+      "movingTime": "04:09:26",
+      "elevationGainM": 1274
+    }
   },
   {
     "id": "2026-daecheongho-full-marathon",

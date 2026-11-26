@@ -83,27 +83,42 @@
     "title": "제주 1100고지·성판악 미니벨로",
     "category": "journey",
     "status": "finished",
-    "reviewStatus": "partial",
+    "reviewStatus": "verified",
     "strava": {
       "activityCount": 1,
       "distanceKm": 102.48,
-      "movingTime": "07:41:00",
-      "movingHours": 7.68,
+      "movingTime": "05:57:52",
+      "movingHours": 5.96,
+      "elapsedTime": "07:41:00",
+      "elapsedHours": 7.68,
       "elevationGainM": 1837
     },
     "story": {
       "url": "https://story.kakao.com/_F7q479/8ZHGkUQTEk9"
     },
-    "review": "가족 여행으로 간 제주에 미니벨로를 비행기에 싣고 가 1100고지와 성판악을 넘었다. 평균 경사 5도 정도라는 말에 쉽게 덤볐지만, 기어비가 모자란 작은 자전거와 무더위 속에서 포기와 도움 요청을 수없이 저울질하며 102.48km·1,837m를 이동 7시간 41분 만에 마쳤다. 남은 일정을 모두 휴식으로 바꿀 만큼 힘들었고, 대회 경험에 자만했던 자신을 돌아보며 꾸준한 훈련의 필요를 새겼다.",
+    "review": "가족 여행으로 간 제주에 미니벨로를 비행기에 싣고 가 1100고지와 성판악을 넘었다. 평균 경사 5도 정도라는 말에 쉽게 덤볐지만, 기어비가 모자란 작은 자전거와 무더위 속에서 포기와 도움 요청을 수없이 저울질하며 102.48km·1,837m를 전체 7시간 41분(이동 5시간 58분) 만에 마쳤다. 남은 일정을 모두 휴식으로 바꿀 만큼 힘들었고, 대회 경험에 자만했던 자신을 돌아보며 꾸준한 훈련의 필요를 새겼다.",
     "display": {
       "featured": false,
       "suggestedFormat": "photo card"
     },
     "sources": [
+      "strava",
       "kakao-story",
       "youtube"
     ],
-    "media": []
+    "media": [
+      "assets/images/journeys/2025-jeju-1100-ride/cover.jpg",
+      "assets/images/journeys/2025-jeju-1100-ride/gallery-01.jpg",
+      "assets/images/journeys/2025-jeju-1100-ride/gallery-02.jpg",
+      "assets/images/journeys/2025-jeju-1100-ride/gallery-03.jpg",
+      "assets/images/journeys/2025-jeju-1100-ride/gallery-04.jpg",
+      "assets/images/journeys/2025-jeju-1100-ride/gallery-05.jpg",
+      "assets/images/journeys/2025-jeju-1100-ride/gallery-06.jpg",
+      "assets/images/journeys/2025-jeju-1100-ride/route-summary.jpg",
+      "assets/images/journeys/2025-jeju-1100-ride/strava-chart-1.jpg",
+      "assets/images/journeys/2025-jeju-1100-ride/strava-chart-2.jpg"
+    ],
+    "analysis": "Strava 캡처 기준 102.48km를 실제 이동 05:57:52, 전체 경과 07:41:00에 기록했다. 카카오스토리의 ‘이동 시간 07:41:00’ 표기는 Strava의 경과시간과 일치하므로 두 시간을 구분했다. 최고 해발은 1,098m(1100고지 부근)이며 이동 평균은 17.2km/h다."
   },
   {
     "id": "2025-seoul-busan-cycling",
