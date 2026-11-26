@@ -232,6 +232,7 @@ const AI_ANALYSIS = {
 const state = {
   year: 2026,
   filter: "all",
+  chartSport: "all",
   summaries: {},
   events: {},
   journeys: {},
@@ -275,7 +276,7 @@ function render() {
   $("#hero-year").textContent = y;
   $("#hero-summary").textContent = c.summary;
   renderStats(s);
-  renderChart(s);
+  renderChart(s, state.chartSport);
   renderSports(s);
   renderEvents();
   renderJourneys();
@@ -302,24 +303,35 @@ function renderStats(s) {
     )
     .join("");
 }
-function renderChart(s) {
-  const vals = s.months.map((m) => m.distanceKm),
+function renderChart(s, sport = "all") {
+  const sports = Object.keys(s.sports).filter((key) => s.sports[key].activityCount);
+  $("#chart-filters").innerHTML = ["all", ...sports]
+    .map((key) => `<button class="${sport === key ? "active" : ""}" data-chart-sport="${key}">${key === "all" ? "전체" : LABEL[key] || key}</button>`).join("");
+  $("#chart-title").textContent = sport === "all" ? "전체 종목" : `${LABEL[sport] || sport} · ${num(s.sports[sport].distanceKm)} km`;
+  const vals = s.months.map((m) => sport === "all" ? m.distanceKm : (m.sports[sport]?.distanceKm || 0)),
     max = Math.max(...vals);
   $("#monthly-chart").innerHTML = s.months
-    .map(
-      (m) =>
-        `<div class="month-column"><div class="month-bars" title="${num(m.distanceKm)} km" style="height:${Math.max(2, (m.distanceKm / max) * 100)}%"></div><span>${m.month}월</span></div>`,
-    )
+    .map((m, i) => `<div class="month-column"><div class="bar-value">${vals[i] ? num(vals[i]) : ""}</div><div class="month-bars sport-${sport}" title="${num(vals[i])} km" style="height:${max ? Math.max(2, (vals[i] / max) * 100) : 2}%"></div><span>${m.month}월</span></div>`)
     .join("");
+  $("#chart-filters").querySelectorAll("button").forEach((button) => button.onclick = () => {
+    state.chartSport = button.dataset.chartSport;
+    renderChart(s, state.chartSport);
+    renderSports(s);
+  });
 }
 function renderSports(s) {
   $("#sport-grid").innerHTML = Object.entries(s.sports)
     .filter(([, v]) => v.activityCount)
     .map(
       ([k, v]) =>
-        `<article class="sport-card"><p>${LABEL[k] || k}<br><small>${v.activityCount} activities</small></p><strong>${num(v.distanceKm)} km</strong></article>`,
+        `<button class="sport-card ${state.chartSport === k ? "active" : ""}" data-sport="${k}"><p>${LABEL[k] || k}<br><small>${v.activityCount} activities · ${num(v.movingHours)} h</small></p><strong>${num(v.distanceKm)} km</strong></button>`,
     )
     .join("");
+  $("#sport-grid").querySelectorAll(".sport-card").forEach((card) => card.onclick = () => {
+    state.chartSport = card.dataset.sport;
+    renderChart(s, state.chartSport);
+    renderSports(s);
+  });
 }
 function renderEvents() {
   const events = state.events[state.year],
@@ -413,7 +425,7 @@ function showDetail(e) {
   const analysisHtml = analysis
     ? `<section><h3>AI REVIEW / 기록 분석</h3><div class="analysis-panel"><h4>데이터로 확인한 사실</h4><ul>${analysis.facts.map((x) => `<li>${x}</li>`).join("")}</ul><h4>평가와 해석</h4><p>${analysis.assessment}</p><small class="analysis-note">※ 수치로 확인할 수 없는 원인은 직접 쓴 후기를 토대로 추정했으며 확정적 사실이 아닙니다.</small></div></section><aside><h3>NEXT / 다음 도전</h3><div class="analysis-panel"><ul>${analysis.next.map((x) => `<li>${x}</li>`).join("")}</ul></div></aside>`
     : "";
-  $("#event-detail").innerHTML = `<div class="detail-hero ${hero}"><div><span>${e.date} · ${LABEL[e.category] || e.category} · ${LABEL[e.status] || e.status}</span><h2 id="detail-title">${e.title}</h2></div></div><div class="detail-grid"><section><h3>ROUTE / Strava 원본 경로</h3><div class="source-route"><strong>경로는 다시 그리지 않고 원본 활동과 캡처로 보여줍니다.</strong><p>아래 사진과 Strava 원본에서 지도, 구간, 고도와 상세 기록을 확인할 수 있습니다.</p>${activity ? `<a href="https://www.strava.com/activities/${activity}" target="_blank" rel="noreferrer">Strava 활동 열기 ↗</a>` : "<span>원본 활동 연결 준비 중</span>"}</div></section><aside><h3>RESULT / 기록</h3><div class="metric-list">${metrics(e).map(([a, b]) => `<div><span>${a}</span><strong>${b}</strong></div>`).join("")}</div><a class="source-link" href="${storyUrl}" target="_blank" rel="noreferrer">카카오스토리 후기 원문 ↗</a></aside><section><h3>MY STORY / 직접 쓴 후기</h3><p class="detail-review">${e.review}</p><a class="source-link" href="${storyUrl}" target="_blank" rel="noreferrer">전체 후기 읽기 ↗</a></section><aside><h3>SOURCES / 검토 출처</h3><p>${e.sources.join(" · ")}</p><p>사진과 글은 카카오스토리 게시물에서 확인해 저장소에 첨부했으며 원문 주소도 함께 보존합니다.</p></aside>${analysisHtml}</div>${pics.length ? `<div class="gallery">${pics.map((p, i) => `<img src="${p}" alt="${e.title} 사진 ${i + 1}" loading="lazy">`).join("")}</div>` : ""}`;
+  $("#event-detail").innerHTML = `<div class="detail-hero ${hero}"><div class="detail-hero-copy"><div class="detail-tags"><span>${e.date}</span><span>${LABEL[e.category] || e.category}</span><span>${LABEL[e.status] || e.status}</span></div><h2 id="detail-title">${e.title}</h2><p>${result(e)}${pics.length ? ` · ${pics.length} PHOTOS` : ""}</p></div></div><div class="detail-quick">${metrics(e).slice(0,4).map(([a,b])=>`<div><span>${a}</span><strong>${b}</strong></div>`).join("")}</div><div class="detail-grid"><section class="route-section"><h3>ROUTE / STRAVA</h3><div class="source-route"><div class="route-mark">S</div><strong>지도와 고도는 Strava 원본에서 확인하세요.</strong><p>사이트에서 경로를 다시 그리지 않고 원본 활동으로 바로 연결합니다.</p>${activity ? `<a href="https://www.strava.com/activities/${activity}" target="_blank" rel="noreferrer">지도·구간·랩 기록 열기 ↗</a>` : "<span>원본 활동 연결 준비 중</span>"}</div></section><aside><h3>RESULT / 전체 기록</h3><div class="metric-list">${metrics(e).map(([a, b]) => `<div><span>${a}</span><strong>${b}</strong></div>`).join("")}</div></aside><section class="story-section"><h3>MY STORY / 직접 쓴 후기</h3><p class="detail-review">${e.review}</p><a class="source-link" href="${storyUrl}" target="_blank" rel="noreferrer">카카오스토리 원문 읽기 ↗</a></section><aside class="sources-card"><h3>SOURCES / 검토 출처</h3><p>${e.sources.join(" · ")}</p><p>사진과 글은 원문을 확인해 저장했으며, AI 분석과 직접 쓴 후기를 구분했습니다.</p></aside>${analysisHtml}</div>${pics.length ? `<section class="gallery-section"><div class="gallery-head"><span>PHOTO ESSAY</span><h3>그날의 장면</h3><b>${pics.length} images</b></div><div class="gallery ${pics.length === 1 ? "single" : ""}">${pics.map((p, i) => `<figure><img src="${p}" alt="${e.title} 사진 ${i + 1}" loading="lazy"><figcaption>${String(i + 1).padStart(2,"0")} / ${String(pics.length).padStart(2,"0")}</figcaption></figure>`).join("")}</div></section>` : ""}`;
   $("#event-dialog").showModal();
   document.body.style.overflow = "hidden";
 }
