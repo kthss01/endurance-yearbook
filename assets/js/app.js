@@ -53,6 +53,16 @@ const LABEL = {
   participated: "참가",
 };
 const MEDIA = {
+  "2026-seolbong-triathlon": [
+    "assets/images/events/2026-seolbong-triathlon/cover.jpg",
+    "assets/images/events/2026-seolbong-triathlon/official-certificate.jpg",
+    "assets/images/events/2026-seolbong-triathlon/official-result.jpg",
+    "assets/images/events/2026-seolbong-triathlon/official-ranking.jpg",
+    "assets/images/events/2026-seolbong-triathlon/swim-strava.jpg",
+    "assets/images/events/2026-seolbong-triathlon/bike-strava.jpg",
+    "assets/images/events/2026-seolbong-triathlon/run-strava.jpg",
+    "assets/images/events/2026-seolbong-triathlon/venue.jpg",
+  ],
   "2026-cool-valley-trail": [
     "assets/images/events/2026-cool-valley-trail/cover.jpg",
     "assets/images/events/2026-cool-valley-trail/official-result.jpg",
@@ -162,6 +172,7 @@ const JOURNEY_STRAVA = {
 };
 const KAKAO = "https://story.kakao.com/_F7q479";
 const KAKAO_POSTS = {
+  "2026-seolbong-triathlon": "https://story.kakao.com/_F7q479/gKcGvKqzlQA",
   "2026-cool-valley-trail": "https://story.kakao.com/_F7q479/9BLlsmohoP0",
   "2026-lotte-aquathlon": "https://story.kakao.com/_F7q479/6HAVzVSBio9",
   "2026-hongcheon-granfondo": "https://story.kakao.com/_F7q479/7YcOoBR8in9",
@@ -175,6 +186,20 @@ const KAKAO_POSTS = {
   "2026-incheon-full-marathon": "https://story.kakao.com/_F7q479/EVJyv4BzXRA",
 };
 const AI_ANALYSIS = {
+  "2026-seolbong-triathlon": {
+    facts: [
+      "공식 기록은 총 03:09:52(수영 00:46:41, T1 00:05:24, 사이클 01:07:16, T2 00:04:20, 러닝 01:06:10)이며 배번호는 176번입니다.",
+      "전체 377/589위, 남자 328/507위, 35-39세 남자 29/55위이고, 종목별 전체 순위는 수영 458위·사이클 134위·러닝 406위입니다.",
+      "Strava 기록은 수영 1,452 m(평균 3:12/100m, 평균 심박 154 bpm), 사이클 38.60 km(평균 34.6 km/h, 216 W), 러닝 9.61 km(평균 6:53/km, 상승 176 m)입니다.",
+    ],
+    assessment:
+      "사이클 순위가 전체 134위(연령대 9위)로 세 종목 중 압도적으로 높아, 후기에 적은 대로 자전거가 이 대회의 기반이었습니다. 양산 표준거리와 비교하면 총 기록은 3분 07초 줄었고 수영은 1분 52초, 사이클은 6분 44초 단축했지만 러닝은 3분 35초 늘었습니다. 다만 두 대회의 코스와 러닝 고도가 달라 러닝 기록 차이를 체력 저하로 단정하지 않습니다.",
+    next: [
+      "대회용 경기복과 슈트의 착용감을 사전에 수영 훈련에서 점검해 호흡 제한을 없앱니다.",
+      "2바퀴 코스에서는 바깥 라인을 잡아 후미 그룹과 겹치는 구간의 몸싸움을 피합니다.",
+      "언덕 반복 러닝 코스를 대비해 브릭 훈련에 오르막 구간을 포함합니다.",
+    ],
+  },
   "2026-cool-valley-trail": {
     facts: [
       "공식 기록은 03:45:22(SUN.18K, 배번호 3386)이며 전체 407/994위, 남자 319/685위, 35-39세 남자 70/151위입니다.",
