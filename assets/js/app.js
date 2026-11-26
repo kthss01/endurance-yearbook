@@ -53,6 +53,14 @@ const LABEL = {
   participated: "참가",
 };
 const MEDIA = {
+  "2026-bbang-trail-30k": [
+    "assets/images/events/2026-bbang-trail-30k/cover.jpg",
+    "assets/images/events/2026-bbang-trail-30k/official-certificate.jpg",
+    "assets/images/events/2026-bbang-trail-30k/official-result.jpg",
+    "assets/images/events/2026-bbang-trail-30k/official-ranking.jpg",
+    "assets/images/events/2026-bbang-trail-30k/route-summary.jpg",
+    "assets/images/events/2026-bbang-trail-30k/course.jpg",
+  ],
   "2026-mungyeong-granfondo": [
     "assets/images/events/2026-mungyeong-granfondo/cover.jpg",
     "assets/images/events/2026-mungyeong-granfondo/official-certificate.jpg",
@@ -186,6 +194,7 @@ const JOURNEY_STRAVA = {
 };
 const KAKAO = "https://story.kakao.com/_F7q479";
 const KAKAO_POSTS = {
+  "2026-bbang-trail-30k": "https://story.kakao.com/_F7q479/KEv6PDZ57Ra",
   "2026-mungyeong-granfondo": "https://story.kakao.com/_F7q479/f3nKEZ0awQA",
   "2026-daegwallyeong-trail": "https://story.kakao.com/_F7q479/1DDc1Ry7qP9",
   "2026-seolbong-triathlon": "https://story.kakao.com/_F7q479/gKcGvKqzlQA",
@@ -202,6 +211,20 @@ const KAKAO_POSTS = {
   "2026-incheon-full-marathon": "https://story.kakao.com/_F7q479/EVJyv4BzXRA",
 };
 const AI_ANALYSIS = {
+  "2026-bbang-trail-30k": {
+    facts: [
+      "공식 기록은 05:31:45(30K, 배번호 1024)이며 30K 전체 82/543위, 남자 69/370위로 표시됐습니다.",
+      "공식 구간 페이스는 4.0 km 10:00 → 10.0 km 08:27 → 17.4 km 09:48 → 24.8 km 15:02 → 30.0 km 10:58(분/km)입니다.",
+      "Strava 기록은 31.28 km · 이동 시간 05:10:37 · 누적 상승 1,587 m, 평균 심박 156 bpm · 최고 175 bpm입니다.",
+    ],
+    assessment:
+      "초반 10 km를 무리하지 않고 운영한 덕분에, 가장 느린 17.4~24.8 km 구간(15:02/km) 이후에도 마지막 구간을 10:58/km로 회복하며 완주했습니다. 이 느린 구간은 후기에서 말한 긴 내리막 뒤 재상승 구간과 발목·발가락 경련 시점에 해당하는 것으로 보입니다. 순위 비율은 쿨밸리·대관령보다 크게 앞서 보이지만, 같은 집계 화면의 30K 완주율이 53.4%로 표시돼 순위 분모에 미완주자가 포함됐는지는 확인하지 못했으므로 직접 비교는 하지 않습니다.",
+    next: [
+      "20 km 이후 긴 오르막에 대비해 후반 보급(젤·전해질)을 시간 단위로 미리 배치합니다.",
+      "긴 내리막에서 무릎 부담을 줄이도록 다운힐 근력·기술 훈련을 보강합니다.",
+      "대회 뒤 회복 기간의 수면·열감·통증을 기록해 다음 장거리 트레일 일정 간격을 정합니다.",
+    ],
+  },
   "2026-mungyeong-granfondo": {
     facts: [
       "공식 기록은 06:46:47.23(그란폰도 153.2 km, 배번호 1412)이며 전체 502/1173위, 남자 468/1091위입니다.",

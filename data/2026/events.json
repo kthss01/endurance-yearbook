@@ -228,11 +228,15 @@
     "category": "trail",
     "status": "finished",
     "reviewStatus": "verified",
-    "official": { "time": "05:31:45" },
-    "strava": { "distanceKm": 31.29, "movingTime": "05:10:48", "elevationGainM": 1587 },
-    "review": "트레일러닝을 30km까지 확장한 시즌의 대표 산악 러닝이다.",
+    "official": { "time": "05:31:45", "bib": 1024, "course": "30K", "rankOverall": 82, "rankMen": 69 },
+    "strava": { "distanceKm": 31.29, "movingTime": "05:10:37", "elevationGainM": 1587 },
+    "review": "20km를 겨우 넘겨 본 상태에서 나선 첫 30km 트레일이다. 초반이 완만하고 빵을 나눠 주는 분위기에 긴장이 풀리기 쉬웠지만, 강원도 산의 30km는 풀코스급이라 여기고 운탄고도에서 페이스를 끌어올리지 않았다. 그 덕분에 길게 내려갔다가 다시 올라오는 후반 구간에서 왼발목·발가락 쥐와 무릎 부담을 겪으면서도 아껴 둔 파워젤로 버텨 05:31:45에 완주했다. 마주 오는 주자들과 주고받은 응원, 가족이 함께한 결승이 힘이 됐고, 끝난 뒤엔 기쁨보다 생각이 많아진 하루로 남겼다.",
     "sources": ["strava", "kakao-story"],
-    "media": []
+    "media": [
+      "assets/images/events/2026-bbang-trail-30k/cover.jpg",
+      "assets/images/events/2026-bbang-trail-30k/official-result.jpg",
+      "assets/images/events/2026-bbang-trail-30k/route-summary.jpg"
+    ]
   },
   {
     "id": "2026-iksan-aquathlon-cutoff",
