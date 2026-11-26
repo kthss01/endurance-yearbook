@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="2025년과 2026년의 멀티스포츠 기록을 정리한 개인 연감">
+    <title>움직인 해들 — Endurance Yearbook</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="움직인 해들 홈">
+        <span class="brand-mark" aria-hidden="true">EY</span>
+        <span><strong>움직인 해들</strong><small>Endurance Yearbook</small></span>
+      </a>
+      <nav class="year-nav" aria-label="연도 선택">
+        <button type="button" data-year-button="2025">2025</button>
+        <button type="button" data-year-button="2026" class="is-active">2026</button>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow" id="hero-eyebrow">2026 YEARBOOK</p>
+          <h1 id="hero-title">한 해를 거리보다<br>이야기로 기억합니다.</h1>
+          <p class="hero-summary" id="hero-summary"></p>
+          <div class="hero-actions">
+            <a href="#events" class="primary-action">주요 기록 보기</a>
+            <a href="#comparison" class="text-action">2025 ↔ 2026 비교</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="선택한 연도의 대표 기록">
+          <span class="hero-year" id="hero-year">2026</span>
+          <div class="route-line" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+          <p id="hero-highlight"></p>
+        </div>
+      </section>
+
+      <section class="section stats-section" aria-labelledby="stats-title">
+        <div class="section-heading">
+          <div><p class="section-index">01</p><h2 id="stats-title">한 해의 크기</h2></div>
+          <p>한국시간으로 정리한 Strava 활동 통계입니다.</p>
+        </div>
+        <div class="stats-grid" id="stats-grid"></div>
+      </section>
+
+      <section class="section rhythm-section" aria-labelledby="rhythm-title">
+        <div class="section-heading">
+          <div><p class="section-index">02</p><h2 id="rhythm-title">월별 리듬</h2></div>
+          <p>운동량의 높낮이 위에 대회와 여행의 맥락을 겹쳐 봅니다.</p>
+        </div>
+        <div class="chart-card">
+          <div class="chart-legend" aria-hidden="true">
+            <span class="cycling">사이클</span><span class="running">러닝</span><span class="swimming">수영</span>
+          </div>
+          <div class="monthly-chart" id="monthly-chart" role="img" aria-label="월별 종목 거리 막대그래프"></div>
+        </div>
+        <div class="sport-grid" id="sport-grid"></div>
+      </section>
+
+      <section class="section journey-section" aria-labelledby="journey-title">
+        <div class="section-heading light">
+          <div><p class="section-index">03</p><h2 id="journey-title">한 번의 활동으로<br>설명되지 않는 여정</h2></div>
+          <p>여러 날의 이동과 계획 변경을 하나의 장으로 묶었습니다.</p>
+        </div>
+        <div class="journey-list" id="journey-list"></div>
+      </section>
+
+      <section class="section events-section" id="events" aria-labelledby="events-title">
+        <div class="section-heading">
+          <div><p class="section-index">04</p><h2 id="events-title">주요 대회와 도전</h2></div>
+          <p>완주, DNF, 컷오프와 종목 변경을 모두 같은 기록으로 남깁니다.</p>
+        </div>
+        <div class="event-filters" id="event-filters" aria-label="종목 필터"></div>
+        <div class="event-grid" id="event-grid"></div>
+      </section>
+
+      <section class="section review-section" aria-labelledby="review-title">
+        <div class="section-heading light">
+          <div><p class="section-index">05</p><h2 id="review-title">기록을 다시 읽기</h2></div>
+        </div>
+        <blockquote id="review-quote"></blockquote>
+        <div class="review-points" id="review-points"></div>
+      </section>
+
+      <section class="section comparison-section" id="comparison" aria-labelledby="comparison-title">
+        <div class="section-heading">
+          <div><p class="section-index">06</p><h2 id="comparison-title">2025 ↔ 2026</h2></div>
+          <p>더 많이 했는지보다 무엇이 달라졌는지 확인합니다.</p>
+        </div>
+        <div class="comparison-grid" id="comparison-grid"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Endurance Yearbook</p>
+      <p>Strava · Google Docs · KakaoStory를 대조해 정리한 개인 기록</p>
+    </footer>
+
+    <script src="assets/js/app.js" defer></script>
+  </body>
+</html>
+
