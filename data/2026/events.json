@@ -34,7 +34,8 @@
     "title": "홍천 그란폰도",
     "category": "cycling",
     "status": "finished",
-    "reviewStatus": "partial",
+    "reviewStatus": "verified",
+    "official": { "time": "01:49:07", "bib": 118, "result": "우천 단축 완주" },
     "strava": { "distanceKm": 119.64, "movingTime": "04:48:00", "elevationGainM": 1727 },
     "review": "산티아고 13일 라이딩 직후 국내 그란폰도 시즌으로 복귀한 대회다.",
     "sources": ["strava", "google-docs"],
@@ -50,14 +51,14 @@
     "reviewStatus": "partial",
     "strava": {
       "segments": [
-        { "sport": "swimming", "distanceKm": 1.53 },
-        { "sport": "cycling", "distanceKm": 16.02 },
-        { "sport": "running", "distanceKm": 4.44 }
+          { "sport": "swimming", "distanceKm": 1.53, "movingTime": "00:40:56" },
+          { "sport": "cycling", "distanceKm": 16.02, "movingTime": "00:32:30" },
+          { "sport": "running", "distanceKm": 4.44, "movingTime": "00:23:39" }
       ]
     },
-    "review": "2026년 철인 시즌의 첫 대회다. 공식 종목 거리와 총기록 보완이 필요하다.",
-    "sources": ["strava", "google-docs"],
-    "media": []
+    "review": "2026년 철인 시즌의 첫 대회. 비 때문에 사이클과 러닝 코스가 축소됐지만 수영 1.53km부터 전환, 사이클, 러닝까지 멈추지 않고 01:49:07에 완주했다. 같은 날 카카오스토리에는 결과 자체보다 한계를 부정하고 끝까지 나답게 살아가려는 감정을 남겼다. 예상하지 못한 조건에서도 모든 종목을 이어낸 경험은 이후 양산 표준거리 도전의 출발점이 됐다.",
+    "sources": ["strava", "kakao-story"],
+    "media": ["assets/images/events/2026-changwon-triathlon/official-result.jpg"]
   },
   {
     "id": "2026-yangsan-triathlon",

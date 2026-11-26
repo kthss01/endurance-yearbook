@@ -53,6 +53,9 @@ const LABEL = {
   participated: "참가",
 };
 const MEDIA = {
+  "2026-changwon-triathlon": [
+    "assets/images/events/2026-changwon-triathlon/official-result.jpg",
+  ],
   "2026-hangang-seoul-half": [
     "assets/images/events/2026-hangang-half-2.jpg",
     "assets/images/events/2026-hangang-half-1.jpg",
@@ -106,6 +109,7 @@ const STRAVA_LINKS = {
   "2025-mbn-half": "16471098789",
   "2026-hangang-seoul-half": "17168173856",
   "2026-gumi-full-marathon": "17559804794",
+  "2026-changwon-triathlon": "18353304428",
   "2026-yangsan-triathlon": "18536799191",
   "2026-lotte-aquathlon": "19275097487",
   "2026-cool-valley-trail": "19370536509",
@@ -129,11 +133,26 @@ const JOURNEY_STRAVA = {
 };
 const KAKAO = "https://story.kakao.com/_F7q479";
 const KAKAO_POSTS = {
+  "2026-changwon-triathlon": "https://story.kakao.com/_F7q479/AEdVmqWxOO0",
   "2026-gumi-full-marathon": "https://story.kakao.com/_F7q479/KQsGwUHN1Oa",
   "2026-daecheongho-full-marathon": "https://story.kakao.com/_F7q479/H97RJOBnzRa",
   "2026-incheon-full-marathon": "https://story.kakao.com/_F7q479/EVJyv4BzXRA",
 };
 const AI_ANALYSIS = {
+  "2026-changwon-triathlon": {
+    facts: [
+      "공식 완주 기록은 01:49:07이며 배번호는 118번입니다.",
+      "Strava에는 수영 1.53 km·40:56, 사이클 16.02 km·32:30, 러닝 4.44 km·23:39가 기록됐습니다.",
+      "활동 메모에는 우천으로 사이클과 러닝 구간이 축소됐다고 명시돼 있습니다.",
+    ],
+    assessment:
+      "악천후와 코스 축소라는 변수를 겪으면서도 세 종목과 두 번의 전환을 모두 마친 첫 시즌 실전이라는 점이 핵심 성과입니다. 수영 뒤 T1은 07:23, T2는 04:26으로 계산되어 전환에 약 11분 49초를 사용했습니다. 다만 코스가 축소되어 표준거리 대회의 페이스와 직접 비교할 수 없고, 당시 후기에도 보급이나 종목별 체감 난도는 구체적으로 남아 있지 않아 원인을 단정하지 않습니다.",
+    next: [
+      "전환 동선을 미리 정해 T1과 T2 합계 시간을 우선 10분 이내로 줄입니다.",
+      "다음 표준거리 대회에서는 종목별 랩과 전환 시간을 별도로 기록해 페이스 저하 지점을 확인합니다.",
+      "우천 시 장비·타이어·보온 준비 체크리스트를 만들어 돌발 조건에서도 안전을 먼저 확보합니다.",
+    ],
+  },
   "2026-gumi-full-marathon": {
     facts: [
       "첫 풀코스를 04:51:59에 완주했습니다.",
