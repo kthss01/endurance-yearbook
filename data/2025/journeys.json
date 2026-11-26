@@ -1,0 +1,45 @@
+[
+  {
+    "id": "2025-kyushu-cycling",
+    "year": 2025,
+    "startDate": "2025-11-01",
+    "endDate": "2025-11-06",
+    "title": "큐슈 자전거 일주",
+    "category": "journey",
+    "status": "partial-route",
+    "reviewStatus": "verified",
+    "strava": {
+      "activityCount": 13,
+      "distanceKm": 371.96,
+      "movingHours": 18.01,
+      "elapsedHours": 29.42,
+      "elevationGainM": 2057
+    },
+    "review": "자전거 파손과 철도 이동으로 계획이 크게 바뀐 여행이다. 완벽한 일주보다 문제를 해결하며 이동한 과정이 중심이다.",
+    "display": { "featured": true, "suggestedFormat": "day-by-day photo strip" },
+    "sources": ["strava", "kakao-story", "google-docs"],
+    "media": []
+  },
+  {
+    "id": "2025-seoul-busan-cycling",
+    "year": 2025,
+    "startDate": "2025-12-25",
+    "endDate": "2025-12-28",
+    "title": "서울에서 부산까지 4일",
+    "category": "journey",
+    "status": "finished",
+    "reviewStatus": "partial",
+    "strava": {
+      "activityCount": 5,
+      "distanceKm": 539.41,
+      "movingHours": 26.12,
+      "elapsedHours": 32.81,
+      "elevationGainM": 2930
+    },
+    "review": "연말을 4일간의 장거리 국토 이동으로 마무리했다. 일차별 사진과 거리 변화를 함께 보여주기 적합하다.",
+    "display": { "featured": true, "suggestedFormat": "stage chart" },
+    "sources": ["strava", "google-docs"],
+    "media": []
+  }
+]
+
