@@ -53,6 +53,12 @@ const LABEL = {
   participated: "참가",
 };
 const MEDIA = {
+  "2026-iksan-aquathlon-cutoff": [
+    "assets/images/events/2026-iksan-aquathlon-cutoff/cover.jpg",
+    "assets/images/events/2026-iksan-aquathlon-cutoff/swim-strava.jpg",
+    "assets/images/events/2026-iksan-aquathlon-cutoff/run-strava.jpg",
+    "assets/images/events/2026-iksan-aquathlon-cutoff/venue.jpg",
+  ],
   "2026-bbang-trail-30k": [
     "assets/images/events/2026-bbang-trail-30k/cover.jpg",
     "assets/images/events/2026-bbang-trail-30k/official-certificate.jpg",
@@ -194,6 +200,7 @@ const JOURNEY_STRAVA = {
 };
 const KAKAO = "https://story.kakao.com/_F7q479";
 const KAKAO_POSTS = {
+  "2026-iksan-aquathlon-cutoff": "https://story.kakao.com/_F7q479/CCeTRc1pCQ0",
   "2026-bbang-trail-30k": "https://story.kakao.com/_F7q479/KEv6PDZ57Ra",
   "2026-mungyeong-granfondo": "https://story.kakao.com/_F7q479/f3nKEZ0awQA",
   "2026-daegwallyeong-trail": "https://story.kakao.com/_F7q479/1DDc1Ry7qP9",
@@ -211,6 +218,20 @@ const KAKAO_POSTS = {
   "2026-incheon-full-marathon": "https://story.kakao.com/_F7q479/EVJyv4BzXRA",
 };
 const AI_ANALYSIS = {
+  "2026-iksan-aquathlon-cutoff": {
+    facts: [
+      "후기 기준 수영 1.5 km 00:53:13으로 컷오프됐고, 이후 허용된 러닝 10 km는 00:56:34였습니다.",
+      "Strava 수영 기록은 1,540 m · 53:13 · 평균 3:27/100m · 평균 심박 162 bpm(최고 178 bpm)입니다.",
+      "Strava 러닝 기록은 10.21 km · 이동 시간 56:34 · 평균 5:32/km · 평균 심박 159 bpm입니다.",
+    ],
+    assessment:
+      "평균 수영 페이스 3:27/100m는 설봉(3:12/100m)·롯데(3:07/100m)보다 느리고, 평균 심박은 162 bpm으로 두 대회(154·143 bpm)보다 높았습니다. 후기에서 짚은 슈트 미착용, 4바퀴 진출입, 너울이 페이스 저하와 심박 상승에 함께 작용했을 수 있지만 각 요인의 비중은 나눌 수 없습니다. 반면 컷오프 뒤 뛴 10 km를 5:32/km로 마쳐 러닝 체력 자체는 무너지지 않았음을 보여 줍니다. 이 대회의 공식 결과는 완주가 아닌 수영 컷오프로 유지합니다.",
+    next: [
+      "슈트 선택이 가능한 대회는 슈트를 기본으로 하고, 착용 상태로 오픈워터 훈련을 해 둡니다.",
+      "대회 전 코스 바퀴 수·진출입 동선·컷오프 시간을 확인해 바퀴별 목표 통과 시간을 정합니다.",
+      "2바퀴 시점에 목표 대비 페이스를 점검하고, 늦으면 그때 바로 속도를 올리는 기준을 세웁니다.",
+    ],
+  },
   "2026-bbang-trail-30k": {
     facts: [
       "공식 기록은 05:31:45(30K, 배번호 1024)이며 30K 전체 82/543위, 남자 69/370위로 표시됐습니다.",

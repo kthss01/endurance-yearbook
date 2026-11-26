@@ -248,9 +248,13 @@
     "reviewStatus": "verified",
     "official": { "swimTime": "00:53:13", "runTime": "00:56:34", "result": "수영 컷오프" },
     "strava": { "swimDistanceKm": 1.54, "runDistanceKm": 10.22 },
-    "review": "두 활동이 모두 남아 있지만 공식 결과는 수영 컷오프다. 활동 존재와 완주를 동일시하면 안 되는 대표 사례다.",
+    "review": "수영 1.5km를 00:53:13에 마쳤지만 컷오프로 기록칩을 반납했고, 러닝은 뛸 수 있다는 안내에 따라 10km를 00:56:34에 뛰었다. 러닝 페이스는 좋았지만 공식 결과는 수영 컷오프다. 여러 번 참가한 대회라 자신한 나머지 슈트를 입지 않았고, 4바퀴를 도는 코스와 바퀴마다 드나들며 잃는 시간, 심한 너울을 현장에서야 알았다. 속도를 4바퀴째에야 올린 것을 아쉬워하며, 모든 도전은 진심을 다해야 겨우 닿는다는 것과 좌절에서 다시 일어서는 과정까지가 성장이라는 다짐을 남겼다.",
     "sources": ["strava", "kakao-story"],
-    "media": []
+    "media": [
+      "assets/images/events/2026-iksan-aquathlon-cutoff/cover.jpg",
+      "assets/images/events/2026-iksan-aquathlon-cutoff/swim-strava.jpg",
+      "assets/images/events/2026-iksan-aquathlon-cutoff/run-strava.jpg"
+    ]
   },
   {
     "id": "2026-siheung-half",
