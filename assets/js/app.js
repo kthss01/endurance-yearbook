@@ -53,6 +53,15 @@ const LABEL = {
   participated: "참가",
 };
 const MEDIA = {
+  "2025-goseong-granfondo": [
+    "assets/images/events/2025-goseong-granfondo/cover.jpg",
+    "assets/images/events/2025-goseong-granfondo/gallery-01.jpg",
+    "assets/images/events/2025-goseong-granfondo/gallery-02.jpg",
+    "assets/images/events/2025-goseong-granfondo/gallery-03.jpg",
+    "assets/images/events/2025-goseong-granfondo/gallery-04.jpg",
+    "assets/images/events/2025-goseong-granfondo/gallery-05.jpg",
+    "assets/images/events/2025-goseong-granfondo/gallery-06.jpg",
+  ],
   "2025-korea-open-race-10k": [
     "assets/images/events/2025-korea-open-race-10k/cover.jpg",
     "assets/images/events/2025-korea-open-race-10k/gallery-01.jpg",
@@ -330,6 +339,7 @@ const JOURNEY_STRAVA = {
 };
 const KAKAO = "https://story.kakao.com/_F7q479";
 const KAKAO_POSTS = {
+  "2025-goseong-granfondo": "https://story.kakao.com/_F7q479/7HYQjMbVCi9",
   "2025-korea-open-race-10k": "https://story.kakao.com/_F7q479/DLPlrPlDsJA",
   "2026-tongyeong-triathlon": "https://story.kakao.com/_F7q479/DUchhqMNaRA",
   "2026-siheung-half": "https://story.kakao.com/_F7q479/C7aHp1UGPQ0",
@@ -351,6 +361,20 @@ const KAKAO_POSTS = {
   "2026-incheon-full-marathon": "https://story.kakao.com/_F7q479/EVJyv4BzXRA",
 };
 const AI_ANALYSIS = {
+  "2025-goseong-granfondo": {
+    facts: [
+      "공식 기록은 05:26:25.84(그란폰도 119km, 배번호 1319)이며 전체 468/1237위, 남자 443/1165위입니다.",
+      "Strava 기록은 120.16 km · 이동 시간 04:59:39 · 누적 상승 1,583 m, 평균 24.1 km/h · 평균 파워 167 W입니다.",
+      "후기에는 경련이 세 번 있었고, 첫 번째만 보급품으로 대응했다고 기록돼 있습니다.",
+    ],
+    assessment:
+      "전체 순위 상위 약 38%로, 후기에서 말한 '중간 정도'라는 체감과 일치합니다. 공식 기록과 이동 시간 차이는 약 26분 47초로 보급·정차 시간이 적지 않았습니다. 급경사 업힐과 반복된 경련이 후반 페이스에 영향을 줬을 가능성이 있지만 구간별 파워·심박 자료가 없어 경련 시점과 원인은 단정하지 않습니다.",
+    next: [
+      "경련 대응 보급품을 예상보다 넉넉히 챙기고, 경련이 시작된 시점을 기록합니다.",
+      "그룹 주행 시 분위기에 휩쓸려 페이스를 올리지 않도록 업힐 진입 전 파워 상한을 정합니다.",
+      "업힐과 다운힐에서 주행 라인을 유지하는 연습으로 안전 여유를 확보합니다.",
+    ],
+  },
   "2025-korea-open-race-10k": {
     facts: [
       "공식 완주기록증 기준 기록은 00:59:26.13, 참가번호는 15032번입니다.",

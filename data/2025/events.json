@@ -23,11 +23,16 @@
     "title": "고성 공룡나라 그란폰도",
     "category": "cycling",
     "status": "finished",
-    "reviewStatus": "partial",
-    "strava": { "distanceKm": 120.17, "movingTime": "04:59:24", "elevationGainM": 1583 },
-    "review": "연속된 봄 그란폰도 시즌의 시작점이다. 공식 완주기록과 후기 연결이 남아 있다.",
-    "sources": ["strava"],
-    "media": []
+    "reviewStatus": "verified",
+    "official": { "time": "05:26:25.84", "bib": 1319, "course": "그란폰도 119km", "rankOverall": 468, "rankMen": 443 },
+    "strava": { "distanceKm": 120.17, "movingTime": "04:59:39", "elevationGainM": 1583 },
+    "review": "2025년 첫 자전거 대회로, 예상보다 추웠지만 준비는 단단히 하고 나섰다. 200km 란도너스를 타 온 만큼 119km쯤은 쉽다고 여겼으나 걸어서도 오르기 힘든 급경사 업힐 앞에서 생각을 고쳤고, 쥐가 세 번이나 나 마지막엔 정신력으로 버텼다. 앞서 내려가던 참가자의 사고를 목격하고, 미니벨로로 산을 넘는 참가자에게 자극을 받으며 05:26:25.84에 무사히 완주했다. 괴물들 사이에서 중간쯤은 한다는 자신감과 함께, 분위기에 휩쓸리는 습관과 주행 라인 유지를 고칠 점으로 남겼다.",
+    "sources": ["strava", "kakao-story"],
+    "media": [
+      "assets/images/events/2025-goseong-granfondo/cover.jpg",
+      "assets/images/events/2025-goseong-granfondo/gallery-03.jpg",
+      "assets/images/events/2025-goseong-granfondo/gallery-01.jpg"
+    ]
   },
   {
     "id": "2025-nakdong-triathlon",
