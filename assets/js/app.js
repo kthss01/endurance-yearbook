@@ -72,6 +72,7 @@ const MEDIA = {
   "2026-hangang-seoul-half": [
     "assets/images/events/2026-hangang-half-2.jpg",
     "assets/images/events/2026-hangang-half-1.jpg",
+    "assets/images/events/2026-hangang-seoul-half/venue.jpg",
   ],
   "2026-daecheongho-full-marathon": [
     "assets/images/events/2026-daecheongho-full-marathon/cover.jpg",
@@ -147,6 +148,7 @@ const JOURNEY_STRAVA = {
 const KAKAO = "https://story.kakao.com/_F7q479";
 const KAKAO_POSTS = {
   "2026-hongcheon-granfondo": "https://story.kakao.com/_F7q479/7YcOoBR8in9",
+  "2026-hangang-seoul-half": "https://story.kakao.com/_F7q479/CQmnGjL16N0",
   "2026-samcheok-granfondo": "https://story.kakao.com/_F7q479/gQ86NqzRLPA",
   "2026-seoul-200k-brevet": "https://story.kakao.com/_F7q479/5TSCRTj8RO9",
   "2026-yangsan-triathlon": "https://story.kakao.com/_F7q479/aBHsNXID4o0",
@@ -156,6 +158,20 @@ const KAKAO_POSTS = {
   "2026-incheon-full-marathon": "https://story.kakao.com/_F7q479/EVJyv4BzXRA",
 };
 const AI_ANALYSIS = {
+  "2026-hangang-seoul-half": {
+    facts: [
+      "공식 기록은 02:16:29.24이며 하프 전체 1441/2736위, 남자 1306/2300위입니다.",
+      "공식 기록표의 중간 계측 누적 시간은 Section 1 00:29:10.67, Section 2 01:34:22.43입니다.",
+      "Strava 기록은 21.0 km · 이동 시간 02:16:12이고, 후기에는 18 km 부근부터 시작된 경련이 기록됐습니다.",
+    ],
+    assessment:
+      "공식 기록 기준 평균 페이스는 약 6분 28초/km입니다. 눈 덮인 흙길로 시작한 초반과 18 km 이후 경련 속에서도 걷지 않고 완주했다는 점이 이 대회의 핵심입니다. 공식 기록과 이동 시간 차이가 17초에 불과해 정차 시간은 거의 없었던 것으로 보입니다. 다만 계측 구간의 거리가 기록표에 표시되지 않아 구간별 페이스와 감속 지점은 계산하지 않습니다.",
+    next: [
+      "겨울 대회는 출발 전 보온과 초반 노면 상태를 고려해 첫 5 km 목표 페이스를 따로 정합니다.",
+      "경련이 시작된 거리와 직전 보급 시점을 기록해 풀코스 준비의 수분·전해질 계획에 반영합니다.",
+      "이 하프 기록을 첫 풀코스 준비의 기준선으로 두고 장거리 훈련의 페이스를 비교합니다.",
+    ],
+  },
   "2026-hongcheon-granfondo": {
     facts: [
       "공식 기록은 05:09:22.80(그란폰도 121.52 km, 배번호 1313)이며 전체 364/1412위, 남자 333/1292위입니다.",
