@@ -397,6 +397,14 @@ function metrics(e) {
   if (s.elevationGainM) items.push(["상승고도", `${num(s.elevationGainM)} m`]);
   if (e.official?.time) items.push(["공식 기록", e.official.time]);
   if (e.official?.milestone) items.push(["이정표", e.official.milestone]);
+  // 공식 구간기록이 있으면 종목별로 표시
+  if (e.official?.splits)
+    items.push(
+      ...Object.entries(e.official.splits).map(([sport, time]) => [
+        `공식 ${LABEL[sport] || sport}`,
+        time,
+      ]),
+    );
   if (s.segments)
     items.push(
       ...s.segments.map((x) => [
@@ -414,14 +422,6 @@ function showDetail(e) {
     activity = STRAVA_LINKS[e.id],
     storyUrl = KAKAO_POSTS[e.id] || KAKAO,
     analysis = AI_ANALYSIS[e.id];
-  $("#event-detail").innerHTML =
-    `<div class="detail-hero ${hero}"><div><span>${e.date} · ${LABEL[e.category] || e.category} · ${LABEL[e.status] || e.status}</span><h2 id="detail-title">${e.title}</h2></div></div><div class="detail-grid"><section><h3>ROUTE / Strava 원본 경로</h3><div class="source-route"><strong>경로는 다시 그리지 않고 원본 활동에 직접 연결합니다.</strong><p>Strava에서 지도, 구간, 고도와 상세 기록을 확인할 수 있습니다.</p>${activity ? `<a href="https://www.strava.com/activities/${activity}" target="_blank" rel="noreferrer">Strava 활동 열기 ↗</a>` : "<span>원본 활동 연결 준비 중</span>"}</div></section><aside><h3>RESULT / 기록</h3><div class="metric-list">${metrics(
-      e,
-    )
-      .map(([a, b]) => `<div><span>${a}</span><strong>${b}</strong></div>`)
-      .join(
-        "",
-      )}</div><a class="source-link" href="${KAKAO}" target="_blank" rel="noreferrer">카카오스토리 원문 찾기 ↗</a></aside><section><h3>REVIEW / 후기</h3><p class="detail-review">${e.review}</p></section><aside><h3>SOURCES / 검토 출처</h3><p>${e.sources.join(" · ")}</p><p>카카오스토리 사진은 원본을 저장소에 보관하고 게시물 주소를 함께 연결합니다.</p></aside></div>${pics.length ? `<div class="gallery">${pics.map((p, i) => `<img src="${p}" alt="${e.title} 사진 ${i + 1}">`).join("")}</div>` : ""}`;
   const analysisHtml = analysis
     ? `<section><h3>AI REVIEW / 기록 분석</h3><div class="analysis-panel"><h4>데이터로 확인한 사실</h4><ul>${analysis.facts.map((x) => `<li>${x}</li>`).join("")}</ul><h4>평가와 해석</h4><p>${analysis.assessment}</p><small class="analysis-note">※ 수치로 확인할 수 없는 원인은 직접 쓴 후기를 토대로 추정했으며 확정적 사실이 아닙니다.</small></div></section><aside><h3>NEXT / 다음 도전</h3><div class="analysis-panel"><ul>${analysis.next.map((x) => `<li>${x}</li>`).join("")}</ul></div></aside>`
     : "";
