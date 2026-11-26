@@ -472,6 +472,28 @@ const MEDIA = {
   ],
 };
 const JOURNEY_MEDIA = {
+  "2025-kyushu-cycling": [
+    "assets/images/journeys/2025-kyushu-cycling/cover.jpg",
+    "assets/images/journeys/2025-kyushu-cycling/day1-fukuoka-airport.jpg",
+    "assets/images/journeys/2025-kyushu-cycling/day1-ryokan.jpg",
+    "assets/images/journeys/2025-kyushu-cycling/day1-ryokan-garden.jpg",
+    "assets/images/journeys/2025-kyushu-cycling/day2-broken-spoke.jpg",
+    "assets/images/journeys/2025-kyushu-cycling/day2-shin-yatsushiro.jpg",
+    "assets/images/journeys/2025-kyushu-cycling/day2-kumamoto-station.jpg",
+    "assets/images/journeys/2025-kyushu-cycling/day4-sea-window.jpg",
+    "assets/images/journeys/2025-kyushu-cycling/day4-miyazaki-bike.jpg",
+    "assets/images/journeys/2025-kyushu-cycling/day4-oita-station.jpg",
+    "assets/images/journeys/2025-kyushu-cycling/day5-beppu-bay.jpg",
+    "assets/images/journeys/2025-kyushu-cycling/day5-onsen-hotel.jpg",
+    "assets/images/journeys/2025-kyushu-cycling/day5-bike-shop.jpg",
+    "assets/images/journeys/2025-kyushu-cycling/day6-beppu-station.jpg",
+    "assets/images/journeys/2025-kyushu-cycling/day6-fukuoka-airport.jpg",
+    "assets/images/journeys/2025-kyushu-cycling/strava-day1.jpg",
+    "assets/images/journeys/2025-kyushu-cycling/strava-day2.jpg",
+    "assets/images/journeys/2025-kyushu-cycling/strava-day4.jpg",
+    "assets/images/journeys/2025-kyushu-cycling/strava-day5.jpg",
+    "assets/images/journeys/2025-kyushu-cycling/strava-day6.jpg",
+  ],
   "2025-randonneurs-virtual-200k": [
     "assets/images/journeys/2025-randonneurs-virtual-200k/strava-summary.jpg",
     "assets/images/journeys/2025-randonneurs-virtual-200k/strava-chart.jpg",

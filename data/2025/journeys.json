@@ -26,6 +26,9 @@
     "category": "journey",
     "status": "partial-route",
     "reviewStatus": "verified",
+    "story": { "url": "https://story.kakao.com/_F7q479/4UgNypxh3l9" },
+    "next": ["해외 장거리 여행 전에는 휠 장력과 스포크 상태를 전문점에서 점검하고 예비 스포크를 챙긴다.", "자전거가 고장 났을 때 쓸 기차·수리점 대안 경로를 일차별로 미리 정리해 둔다.", "미니벨로 일주는 하루 거리 목표를 줄이고 휴식일을 넣어 장비 부담을 낮춘다."],
+    "analysis": "Strava 기준 6일간 13개 활동, 371.96km를 이동 18.01시간에 기록했다. 자전거로 길게 달린 날은 1일차(71.43km, 평균 20.2km/h)와 2일차 오전(84.58km, 평균 23.0km/h)이며, 2일차 스포크 파손 이후로는 하루 10~25km 안팎의 짧은 구간과 기차 이동이 중심이 됐다. 같은 바퀴에서 스포크가 두 번 부러진 만큼, 장거리 해외 여행 전 휠 상태 점검이 일정 전체를 좌우했다. 3일차는 카카오스토리 게시물이 없어 일정을 확인하지 못했다.",
     "strava": {
       "activityCount": 13,
       "distanceKm": 371.96,
@@ -33,10 +36,10 @@
       "elapsedHours": 29.42,
       "elevationGainM": 2057
     },
-    "review": "자전거 파손과 철도 이동으로 계획이 크게 바뀐 여행이다. 완벽한 일주보다 문제를 해결하며 이동한 과정이 중심이다.",
+    "review": "프로젝트를 마친 다음 날 미니벨로를 싣고 후쿠오카로 건너가 큐슈 일주에 나섰다. 첫날 오무타까지 71km를 달려 료칸에 묵었지만, 둘째 날 야쓰시로로 가던 길에 스포크가 부러지며 여행이 흔들렸다. 신칸센으로 구마모토로 옮겨 수리점을 찾아 다니고, 넷째 날에는 니치난선과 특급열차로 미야자키·오이타·벳푸를 이으며 도움을 준 현지 사람들의 따뜻함을 느꼈다. 다섯째 날 벳푸 해안에서 스포크가 또 부러지자 귀환을 결심했고, 마지막 날 맑은 후쿠오카에서 짧게 달린 뒤 돌아왔다. 계획한 일주를 다 달리진 못했지만 기차와 자전거를 엮어 큐슈를 한 바퀴 돌았다.",
     "display": { "featured": true, "suggestedFormat": "day-by-day photo strip" },
     "sources": ["strava", "kakao-story", "google-docs"],
-    "media": []
+    "media": ["assets/images/journeys/2025-kyushu-cycling/cover.jpg", "assets/images/journeys/2025-kyushu-cycling/day2-broken-spoke.jpg", "assets/images/journeys/2025-kyushu-cycling/day4-miyazaki-bike.jpg", "assets/images/journeys/2025-kyushu-cycling/strava-day1.jpg"]
   },
   {
     "id": "2025-remember-granfondo",
