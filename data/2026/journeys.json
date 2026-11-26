@@ -44,11 +44,14 @@
     "category": "journey",
     "status": "finished",
     "reviewStatus": "verified",
+    "story": { "url": "https://story.kakao.com/_F7q479/jRDXBqhxLoa" },
+    "next": ["다일 여행에는 휴대폰·라이트용 충전기를 두 개 챙겨 밤사이 충전 부담을 줄인다.", "마지막 날 교통편이 정해진 일정은 출발 시각을 앞당기고 구간별 통과 시각을 정해 둔다.", "업다운이 많은 해안 코스는 오르막 페이스 상한을 정해 이튿날 피로 누적을 줄인다."],
+    "analysis": "일차별 Strava 기록은 1일차 170.81km(이동 7:58:12, 경과 10:03:18, 상승 1,297m), 2일차 153.17km(7:29:03, 9:16:44, 1,553m), 3일차 101.00km(4:47:10, 5:35:44, 684m)로 합계 424.98km, 이동 약 20.24시간이다. 평균 속도는 21.4 → 20.5 → 21.1km/h로 사흘 내내 비슷하게 유지됐고, 하루 정차 시간은 약 48분~2시간 5분이었다. 상승고도가 가장 컸던 2일차에도 속도 저하가 크지 않아 연속 장거리 주행 지구력이 확인된다.",
     "strava": { "activityCount": 3, "distanceKm": 424.99, "movingHours": 20.24, "elapsedHours": 24.93, "elevationGainM": 3534 },
-    "review": "울산에서 영덕, 동해를 거쳐 속초까지 3일간 북상한 장거리 라이딩이다.",
+    "review": "스페인 순례를 앞둔 마지막 자전거 준비로 그래블 바이크를 타고 울산에서 속초까지 3일간 동해안을 북상했다. 첫날 울산~영덕 170km는 추위와 바람, 많은 업힐로 고행에 가까웠고, 둘째 날 영덕~동해 153km는 순풍과 따뜻한 날씨에도 끝없는 오르내림에 몇 번이고 힘들다는 말이 나왔지만 온천에서 피로를 풀며 성장을 느꼈다. 마지막 날에는 속초발 버스 시간에 쫓겨 사진 한 장 없이 101km를 달렸고, 이렇게 순례 전 자전거 준비를 마쳤다.",
     "display": { "featured": true, "suggestedFormat": "three-stage chart" },
     "sources": ["strava", "kakao-story"],
-    "media": []
+    "media": ["assets/images/journeys/2026-donghae-coast/cover.jpg", "assets/images/journeys/2026-donghae-coast/day1-bulguksa.jpg", "assets/images/journeys/2026-donghae-coast/day1-east-sea.jpg", "assets/images/journeys/2026-donghae-coast/strava-day1.jpg"]
   },
   {
     "id": "2026-camino-frances",

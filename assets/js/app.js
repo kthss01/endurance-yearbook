@@ -472,6 +472,17 @@ const MEDIA = {
   ],
 };
 const JOURNEY_MEDIA = {
+  "2026-donghae-coast": [
+    "assets/images/journeys/2026-donghae-coast/cover.jpg",
+    "assets/images/journeys/2026-donghae-coast/day1-east-sea.jpg",
+    "assets/images/journeys/2026-donghae-coast/day1-bulguksa.jpg",
+    "assets/images/journeys/2026-donghae-coast/day1-shelter.jpg",
+    "assets/images/journeys/2026-donghae-coast/day2-bus-stop.jpg",
+    "assets/images/journeys/2026-donghae-coast/day2-bike-path.jpg",
+    "assets/images/journeys/2026-donghae-coast/strava-day1.jpg",
+    "assets/images/journeys/2026-donghae-coast/strava-day2.jpg",
+    "assets/images/journeys/2026-donghae-coast/strava-day3.jpg",
+  ],
   "2025-seoul-busan-cycling": [
     "assets/images/journeys/2025-seoul-busan-cycling/cover.jpg",
     "assets/images/journeys/2025-seoul-busan-cycling/gallery-01.jpg",
