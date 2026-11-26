@@ -40,6 +40,14 @@ function fmtDur(sec, withSec = true) {
 }
 const fmtPace = (secPerKm) => `${Math.floor(secPerKm / 60)}'${String(Math.round(secPerKm % 60)).padStart(2, "0")}"`;
 const dateKo = (d) => d.replaceAll("-", ".");
+// 초 → 영상 길이 표기 "m:ss" / "h:mm:ss"
+function fmtClock(sec) {
+  sec = Math.round(sec);
+  const h = Math.floor(sec / 3600), m = Math.floor((sec % 3600) / 60), s = String(sec % 60).padStart(2, "0");
+  return h ? `${h}:${String(m).padStart(2, "0")}:${s}` : `${m}:${s}`;
+}
+// 외부 데이터(영상 제목·설명)를 HTML에 넣을 때 쓰는 이스케이프
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 
 /* ───────── 사진·기록 판별 ───────── */
 const DOC_IMAGE = /(official|result|certificate|ranking|strava|splits|pace|heart-rate|route-summary|course|chart)/;
@@ -112,10 +120,33 @@ function runBucket(e) {
 const BUCKET_LABEL = { FULL: "풀코스", HALF: "하프", "10K": "10K" };
 
 /* ───────── 상태 ───────── */
-const state = { year: 2026, filter: "all", metric: "distanceKm", summaries: {}, events: {}, journeys: {}, detailList: [], detailIndex: 0, lb: { list: [], i: 0 } };
+const state = { year: 2026, filter: "all", metric: "distanceKm", summaries: {}, events: {}, journeys: {}, videos: {}, detailList: [], detailIndex: 0, lb: { list: [], i: 0 } };
 const allEvents = () => YEARS.flatMap((y) => state.events[y] || []);
 
+/* 유튜브 영상 목록(data/videos.json)을 "type:targetId"별로 묶는다.
+   대회와 여정이 같은 id를 쓰는 경우가 있어 type까지 키에 넣는다.
+   파일이 없거나 형식이 잘못돼도 사이트는 영상 없이 그대로 보여준다. */
+async function loadVideos() {
+  try {
+    const r = await fetch("data/videos.json");
+    if (!r.ok) return {};
+    const list = await r.json();
+    const map = {};
+    (Array.isArray(list) ? list : []).forEach((v) => {
+      if (!v?.videoId || !v.targetId) return;
+      (map[`${v.type || "event"}:${v.targetId}`] ||= []).push(v);
+    });
+    Object.values(map).forEach((arr) => arr.sort((a, b) => String(a.publishedAt || "").localeCompare(String(b.publishedAt || ""))));
+    return map;
+  } catch (err) {
+    console.warn("영상 목록을 불러오지 못했습니다.", err);
+    return {};
+  }
+}
+const videosOf = (type, id) => state.videos[`${type}:${id}`] || [];
+
 async function load() {
+  const videos = loadVideos();
   for (const y of YEARS) {
     const [s, e, j] = await Promise.all(
       ["summary", "events", "journeys"].map((n) => fetch(`data/${y}/${n}.json`).then((r) => r.json())),
@@ -124,6 +155,7 @@ async function load() {
     state.events[y] = e;
     state.journeys[y] = j;
   }
+  state.videos = await videos;
   render();
 }
 
@@ -393,7 +425,7 @@ function renderEvents() {
     .map((e, i) => {
       const pics = MEDIA[e.id] || [], photo = coverPhoto(pics), o = e.official || {}, d = eventDistance(e);
       const rank = o.rankOverall ? `<span class="rank">#${o.rankOverall}<small>종합</small></span>` : "";
-      return `<article class="race-card reveal ${photo ? "has-photo" : ""}" tabindex="0" data-id="${e.id}" style="--c:${COLOR[e.category] || "#d9ff43"};--d:${(i % 6) * 60}ms"><div class="rc-media">${photo ? `<img src="${photo}" alt="${e.title} 대표 사진" loading="lazy">` : recordFace(e)}<div class="rc-chips"><span class="chip">${LABEL2[e.category] || e.category}</span>${e.status !== "finished" ? `<span class="chip warn">${LABEL2[e.status] || e.status}</span>` : ""}${pics.length ? `<span class="chip ghost">${pics.length} PHOTOS</span>` : ""}</div></div><div class="rc-body"><div class="rc-meta"><span>${dateKo(e.date)}</span>${rank}</div><h3>${e.title}</h3><div class="rc-result">${u(result(e))}</div><div class="rc-stats">${d ? `<span>${num(d)} km</span>` : ""}${e.strava?.elevationGainM ? `<span>↑ ${num(e.strava.elevationGainM, 0)} m</span>` : ""}${o.course ? `<span>${o.course}</span>` : ""}</div></div><span class="rc-glow" aria-hidden="true"></span></article>`;
+      return `<article class="race-card reveal ${photo ? "has-photo" : ""}" tabindex="0" data-id="${e.id}" style="--c:${COLOR[e.category] || "#d9ff43"};--d:${(i % 6) * 60}ms"><div class="rc-media">${photo ? `<img src="${photo}" alt="${e.title} 대표 사진" loading="lazy">` : recordFace(e)}<div class="rc-chips"><span class="chip">${LABEL2[e.category] || e.category}</span>${e.status !== "finished" ? `<span class="chip warn">${LABEL2[e.status] || e.status}</span>` : ""}${pics.length ? `<span class="chip ghost">${pics.length} PHOTOS</span>` : ""}${videoChip(videosOf("event", e.id).length)}</div></div><div class="rc-body"><div class="rc-meta"><span>${dateKo(e.date)}</span>${rank}</div><h3>${e.title}</h3><div class="rc-result">${u(result(e))}</div><div class="rc-stats">${d ? `<span>${num(d)} km</span>` : ""}${e.strava?.elevationGainM ? `<span>↑ ${num(e.strava.elevationGainM, 0)} m</span>` : ""}${o.course ? `<span>${o.course}</span>` : ""}</div></div><span class="rc-glow" aria-hidden="true"></span></article>`;
     })
     .join("");
   $$("#event-grid .race-card").forEach((card) => {
@@ -412,7 +444,8 @@ function renderJourneys() {
     .map((j, i) => {
       const photos = JOURNEY_MEDIA[j.id] || [], s = j.strava || {}, photo = coverPhoto(photos) || photos[0];
       const period = j.startDate === j.endDate ? dateKo(j.startDate) : `${dateKo(j.startDate)} — ${dateKo(j.endDate)}`;
-      return `<article class="journey-card reveal ${photo ? "has-photo" : ""} ${j.id === FEATURED ? "featured" : ""}" tabindex="0" data-jid="${j.id}" style="--d:${i * 70}ms">${photo ? `<div class="jc-media"><img src="${photo}" alt="${j.title} 대표 사진" loading="lazy">${photos.length > 1 ? `<span class="chip ghost">${photos.length} PHOTOS</span>` : ""}</div>` : `<div class="jc-media empty"><span>${s.distanceKm ? `${num(s.distanceKm, 0)}<small>km</small>` : "—"}</span></div>`}<div class="jc-copy"><span class="date">${period}</span><small>${j.category === "randonneuring" ? "RANDONNEURING" : j.category === "walking" ? "WALKING" : "JOURNEY"}${j.status && j.status !== "finished" ? ` · ${LABEL2[j.status] || j.status}` : ""}</small><h3>${j.title}</h3><p>${j.review || j.summary || ""}</p><div class="jc-stats">${s.distanceKm ? `<b>${num(s.distanceKm)} km</b>` : ""}${s.elapsedHours ? `<b>${num(s.elapsedHours)} h</b>` : ""}${s.elevationGainM ? `<b>↑ ${num(s.elevationGainM, 0)} m</b>` : ""}${s.activityCount > 1 ? `<b>${s.activityCount} stages</b>` : ""}</div><span class="jc-open">여정 자세히 보기 →</span></div></article>`;
+      const vchip = videoChip(videosOf("journey", j.id).length), chips = vchip ? `<div class="jc-chips">${vchip}</div>` : "";
+      return `<article class="journey-card reveal ${photo ? "has-photo" : ""} ${j.id === FEATURED ? "featured" : ""}" tabindex="0" data-jid="${j.id}" style="--d:${i * 70}ms">${photo ? `<div class="jc-media"><img src="${photo}" alt="${j.title} 대표 사진" loading="lazy">${chips}${photos.length > 1 ? `<span class="chip ghost">${photos.length} PHOTOS</span>` : ""}</div>` : `<div class="jc-media empty">${chips}<span>${s.distanceKm ? `${num(s.distanceKm, 0)}<small>km</small>` : "—"}</span></div>`}<div class="jc-copy"><span class="date">${period}</span><small>${j.category === "randonneuring" ? "RANDONNEURING" : j.category === "walking" ? "WALKING" : "JOURNEY"}${j.status && j.status !== "finished" ? ` · ${LABEL2[j.status] || j.status}` : ""}</small><h3>${j.title}</h3><p>${j.review || j.summary || ""}</p><div class="jc-stats">${s.distanceKm ? `<b>${num(s.distanceKm)} km</b>` : ""}${s.elapsedHours ? `<b>${num(s.elapsedHours)} h</b>` : ""}${s.elevationGainM ? `<b>↑ ${num(s.elevationGainM, 0)} m</b>` : ""}${s.activityCount > 1 ? `<b>${s.activityCount} stages</b>` : ""}</div><span class="jc-open">여정 자세히 보기 →</span></div></article>`;
     })
     .join("");
   $$("#journey-list .journey-card").forEach((c) => {
@@ -517,6 +550,41 @@ function gallery(pics, title) {
   return `<section class="gallery-section"><div class="gallery-head"><span class="eyebrow">PHOTO ESSAY</span><h3>그날의 장면</h3><b>${photos.length} photos${docs.length ? ` · ${docs.length} records` : ""}</b></div>${photos.length ? `<div class="masonry">${photos.map((p, i) => fig(p, i, "")).join("")}</div>` : ""}${docs.length ? `<h4 class="docs-title">기록표 · 캡처</h4><div class="doc-strip">${docs.map((p, i) => fig(p, photos.length + i, "doc")).join("")}</div>` : ""}</section>`.replace("<section", `<section data-pics='${JSON.stringify(ordered).replace(/'/g, "&#39;")}'`);
 }
 
+/* ───────── 유튜브 영상 ───────── */
+const videoChip = (n) => (n ? `<span class="chip video">▶ VIDEO${n > 1 ? ` ${n}` : ""}</span>` : "");
+
+// 처음에는 썸네일만 두고, 클릭했을 때 그 자리에 iframe을 넣어 재생한다(playVideo)
+function videoBlock(list) {
+  if (!list.length) return "";
+  const item = (v) => {
+    const id = esc(v.videoId), short = v.kind === "short", dur = v.durationSec ? fmtClock(v.durationSec) : "";
+    const kind = v.kind === "live" ? `<span class="chip warn vid-kind">LIVE</span>` : short ? `<span class="chip ghost vid-kind">SHORTS</span>` : "";
+    const meta = [v.publishedAt ? `${dateKo(v.publishedAt)} 게시` : "", dur].filter(Boolean).join(" · ");
+    return `<figure class="vid ${short ? "short" : ""}"><div class="vid-stage"><button type="button" class="vid-poster" data-vid="${id}" data-title="${esc(v.title)}" aria-label="${esc(v.title)} 영상 재생"><img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt="" loading="lazy"><span class="vid-play" aria-hidden="true"></span>${dur ? `<span class="vid-dur">${dur}</span>` : ""}${kind}</button></div><figcaption><strong>${esc(v.title)}</strong>${meta ? `<small>${meta}</small>` : ""}${v.note ? `<p>${esc(v.note)}</p>` : ""}<a class="vid-link" href="${esc(v.url || `https://www.youtube.com/watch?v=${v.videoId}`)}" target="_blank" rel="noreferrer">YouTube에서 열기 ↗</a></figcaption></figure>`;
+  };
+  return `<section class="d-block video"><h3>VIDEO / 영상</h3><div class="vid-list">${list.map(item).join("")}</div></section>`;
+}
+
+function playVideo(btn) {
+  const stage = btn.closest(".vid-stage");
+  stopVideos(btn.closest("#event-detail") || document); // 다른 영상은 멈춘다
+  const f = document.createElement("iframe");
+  f.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(btn.dataset.vid)}?autoplay=1&rel=0&playsinline=1`;
+  f.title = btn.dataset.title || "YouTube 영상";
+  f.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+  f.allowFullscreen = true;
+  f.referrerPolicy = "strict-origin-when-cross-origin";
+  stage.append(f);
+  stage.classList.add("playing");
+}
+// 재생 중인 iframe을 걷어내고 썸네일로 되돌린다(상세 창을 닫을 때 소리가 남지 않도록)
+function stopVideos(root) {
+  $$(".vid-stage.playing", root).forEach((s) => {
+    $$("iframe", s).forEach((f) => f.remove());
+    s.classList.remove("playing");
+  });
+}
+
 function openEvent(id) {
   const list = [...state.events[state.year]].sort((a, b) => a.date.localeCompare(b.date));
   let idx = list.findIndex((e) => e.id === id);
@@ -549,6 +617,7 @@ function showEvent(e) {
   ${bd.length ? `<div class="d-badges">${bd.map(([a, b]) => `<span><small>${a}</small>${b}</span>`).join("")}</div>` : ""}
   <div class="d-body">
     <div class="d-main">
+      ${videoBlock(videosOf("event", e.id))}
       ${lg.length > 1 ? `<section class="d-block"><h3>SPLITS / 종목별 구간</h3>${splitBar(lg)}${legTable(lg)}</section>` : ""}
       ${timeCompare(e)}
       <section class="d-block story"><h3>MY STORY / 직접 쓴 후기</h3><p class="d-review">${e.review || ""}</p><a class="link-btn" href="${storyUrl}" target="_blank" rel="noreferrer">카카오스토리 원문 읽기 ↗</a></section>
@@ -592,6 +661,7 @@ function showJourney(j) {
     <div class="d-hero-copy"><div class="d-tags"><span>${period}</span><span class="cat" style="--c:#ffb627">${j.category === "randonneuring" ? "브레베" : "여정"}</span>${j.status && j.status !== "finished" ? `<span class="warn">${LABEL2[j.status] || j.status}</span>` : ""}</div><h2 id="detail-title">${j.title}</h2><p class="d-result">${s.distanceKm ? u(`${num(s.distanceKm)} km`) : ""}</p></div></div>
   <div class="d-quick">${quick.map(([a, b, ic], i) => `<div style="--d:${i * 70}ms"><i>${ic}</i><span>${a}</span><strong>${u(b)}</strong></div>`).join("")}</div>
   <div class="d-body"><div class="d-main">
+    ${videoBlock(videosOf("journey", j.id))}
     ${stages}
     <section class="d-block story"><h3>MY STORY / 여정 기록</h3><p class="d-review">${j.review || j.summary || ""}</p>${j.story?.url ? `<a class="link-btn" href="${j.story.url}" target="_blank" rel="noreferrer">카카오스토리 원문 읽기 ↗</a>` : ""}</section>
     ${j.analysis ? `<section class="d-block ai"><h3>AI REVIEW / 기록 분석</h3><p class="assess">${j.analysis}</p></section>` : ""}
@@ -614,6 +684,7 @@ function mountDetail(html) {
   requestAnimationFrame(() => box.classList.add("in"));
   $$(".d-nav button", box).forEach((b) => (b.onclick = () => stepDetail(+b.dataset.step)));
   $$(".cmp-row[data-id]", box).forEach((b) => (b.onclick = () => b.dataset.id && openEvent(b.dataset.id)));
+  $$(".vid-poster", box).forEach((b) => (b.onclick = () => playVideo(b)));
   const gs = $(".gallery-section", box);
   if (gs) {
     const list = JSON.parse(gs.dataset.pics);
@@ -713,7 +784,10 @@ $$("[data-year-button]").forEach((b) => (b.onclick = () => {
   render();
 }));
 $(".dialog-close").onclick = () => $("#event-dialog").close();
-$("#event-dialog").addEventListener("close", () => document.body.classList.remove("locked"));
+$("#event-dialog").addEventListener("close", () => {
+  document.body.classList.remove("locked");
+  stopVideos($("#event-detail"));
+});
 $("#event-dialog").addEventListener("click", (e) => { if (e.target === $("#event-dialog")) $("#event-dialog").close(); });
 $("#event-dialog").addEventListener("keydown", (e) => {
   if ($("#lightbox").open) return;
