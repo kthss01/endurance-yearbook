@@ -53,6 +53,16 @@ const LABEL = {
   participated: "참가",
 };
 const MEDIA = {
+  "2025-hangang-slow-triathlon": [
+    "assets/images/events/2025-hangang-slow-triathlon/cover.jpg",
+    "assets/images/events/2025-hangang-slow-triathlon/gallery-01.jpg",
+    "assets/images/events/2025-hangang-slow-triathlon/gallery-02.jpg",
+    "assets/images/events/2025-hangang-slow-triathlon/gallery-03.jpg",
+    "assets/images/events/2025-hangang-slow-triathlon/gallery-04.jpg",
+    "assets/images/events/2025-hangang-slow-triathlon/gallery-05.jpg",
+    "assets/images/events/2025-hangang-slow-triathlon/gallery-06.jpg",
+    "assets/images/events/2025-hangang-slow-triathlon/gallery-07.jpg",
+  ],
   "2025-seorak-granfondo": [
     "assets/images/events/2025-seorak-granfondo/cover.jpg",
     "assets/images/events/2025-seorak-granfondo/gallery-01.jpg",
@@ -361,6 +371,7 @@ const JOURNEY_STRAVA = {
 };
 const KAKAO = "https://story.kakao.com/_F7q479";
 const KAKAO_POSTS = {
+  "2025-hangang-slow-triathlon": "https://story.kakao.com/_F7q479/5UaHhSdmWJ9",
   "2025-seorak-granfondo": "https://story.kakao.com/_F7q479/HAvEDTP0Pka",
   "2025-nakdong-triathlon": "https://story.kakao.com/_F7q479/FZOt4epNDKA",
   "2025-goseong-granfondo": "https://story.kakao.com/_F7q479/7HYQjMbVCi9",
@@ -385,6 +396,20 @@ const KAKAO_POSTS = {
   "2026-incheon-full-marathon": "https://story.kakao.com/_F7q479/EVJyv4BzXRA",
 };
 const AI_ANALYSIS = {
+  "2025-hangang-slow-triathlon": {
+    facts: [
+      "Strava 기록은 수영 787 m · 17:04(평균 2:10/100m, 롱핀 사용), 미니벨로 20.21 km · 58:06(평균 20.9 km/h), 러닝 6.85 km · 47:47(평균 6:58/km)입니다.",
+      "후기에는 오후 결혼식 일정으로 시간에 쫓긴 참가였고, 수영 중 조류에 밀려 부이를 잡고 쉬었다고 기록돼 있습니다.",
+      "축제형 대회로, 공식 완주 기록은 게시물에서 확인되지 않습니다.",
+    ],
+    assessment:
+      "기록보다 한강 횡단 오픈워터 경험이 핵심인 참가로, 낙동강 슬로우 철인에 이어 오리발·부이를 활용한 오픈워터 적응 단계로 볼 수 있습니다. 다음 날 그란폰도를 앞둔 일정이라 강도를 의도적으로 낮췄다고 보이므로, 자전거·러닝 수치는 체력 지표로 해석하지 않습니다.",
+    next: [
+      "오리발 없이 같은 거리를 수영해 장비 의존도를 확인합니다.",
+      "조류가 있는 오픈워터에서 방향 확인(사이팅) 연습을 해 휩쓸림을 줄입니다.",
+      "연속 대회 일정에서는 전날 대회의 강도를 미리 정해 다음 날 컨디션을 지킵니다.",
+    ],
+  },
   "2025-seorak-granfondo": {
     facts: [
       "공식 기록은 11:10:50.69(M Granfondo 208km, 배번호 3070)로 제한 시간 12시간보다 약 49분 일찍 들어왔습니다.",
