@@ -132,7 +132,11 @@
     "strava": { "distanceKm": 206.21, "movingTime": "08:22:48", "elevationGainM": 1812 },
     "review": "206.21km, 누적 상승 1,812m를 이동 시간 08:22:48에 달린 서울 200K 브레베다. 카카오스토리에 남긴 인증서와 브레베 카드는 체크포인트와 제한 시간 안에서 스스로 주행을 운영해 공식 인증을 얻었음을 보여준다.",
     "sources": ["strava", "kakao-story"],
-    "media": ["assets/images/events/2026-seoul-200k-brevet/brevet-certificate.jpg"]
+    "media": [
+      "assets/images/events/2026-seoul-200k-brevet/cover.jpg",
+      "assets/images/events/2026-seoul-200k-brevet/brevet-certificate.jpg",
+      "assets/images/events/2026-seoul-200k-brevet/official-result.jpg"
+    ]
   },
   {
     "id": "2026-lotte-aquathlon",

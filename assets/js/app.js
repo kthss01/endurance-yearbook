@@ -54,6 +54,23 @@ const LABEL = {
   participated: "참가",
 };
 const MEDIA = {
+  "2026-seoul-200k-brevet": [
+    "assets/images/events/2026-seoul-200k-brevet/cover.jpg",
+    "assets/images/events/2026-seoul-200k-brevet/gallery-01.jpg",
+    "assets/images/events/2026-seoul-200k-brevet/gallery-02.jpg",
+    "assets/images/events/2026-seoul-200k-brevet/gallery-03.jpg",
+    "assets/images/events/2026-seoul-200k-brevet/gallery-04.jpg",
+    "assets/images/events/2026-seoul-200k-brevet/gallery-05.jpg",
+    "assets/images/events/2026-seoul-200k-brevet/gallery-06.jpg",
+    "assets/images/events/2026-seoul-200k-brevet/gallery-07.jpg",
+    "assets/images/events/2026-seoul-200k-brevet/gallery-08.jpg",
+    "assets/images/events/2026-seoul-200k-brevet/gallery-09.jpg",
+    "assets/images/events/2026-seoul-200k-brevet/official-result.jpg",
+    "assets/images/events/2026-seoul-200k-brevet/strava-summary.jpg",
+    "assets/images/events/2026-seoul-200k-brevet/strava-chart-1.jpg",
+    "assets/images/events/2026-seoul-200k-brevet/strava-chart-2.jpg",
+    "assets/images/events/2026-seoul-200k-brevet/strava-chart-3.jpg",
+  ],
   "2026-samcheok-granfondo": [
     "assets/images/events/2026-samcheok-granfondo/cover.jpg",
     "assets/images/events/2026-samcheok-granfondo/gallery-01.jpg",
