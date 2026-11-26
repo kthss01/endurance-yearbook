@@ -472,6 +472,26 @@ const MEDIA = {
   ],
 };
 const JOURNEY_MEDIA = {
+  "2025-seoul-busan-cycling": [
+    "assets/images/journeys/2025-seoul-busan-cycling/cover.jpg",
+    "assets/images/journeys/2025-seoul-busan-cycling/gallery-01.jpg",
+    "assets/images/journeys/2025-seoul-busan-cycling/gallery-02.jpg",
+    "assets/images/journeys/2025-seoul-busan-cycling/gallery-03.jpg",
+    "assets/images/journeys/2025-seoul-busan-cycling/gallery-04.jpg",
+    "assets/images/journeys/2025-seoul-busan-cycling/gallery-05.jpg",
+    "assets/images/journeys/2025-seoul-busan-cycling/gallery-06.jpg",
+    "assets/images/journeys/2025-seoul-busan-cycling/gallery-07.jpg",
+    "assets/images/journeys/2025-seoul-busan-cycling/gallery-08.jpg",
+    "assets/images/journeys/2025-seoul-busan-cycling/gallery-09.jpg",
+    "assets/images/journeys/2025-seoul-busan-cycling/gallery-10.jpg",
+    "assets/images/journeys/2025-seoul-busan-cycling/gallery-11.jpg",
+    "assets/images/journeys/2025-seoul-busan-cycling/gallery-12.jpg",
+    "assets/images/journeys/2025-seoul-busan-cycling/strava-day1.jpg",
+    "assets/images/journeys/2025-seoul-busan-cycling/strava-day2.jpg",
+    "assets/images/journeys/2025-seoul-busan-cycling/strava-day3-1.jpg",
+    "assets/images/journeys/2025-seoul-busan-cycling/strava-day3-2.jpg",
+    "assets/images/journeys/2025-seoul-busan-cycling/strava-day4.jpg",
+  ],
   "2025-kyushu-cycling": [
     "assets/images/journeys/2025-kyushu-cycling/cover.jpg",
     "assets/images/journeys/2025-kyushu-cycling/day1-fukuoka-airport.jpg",

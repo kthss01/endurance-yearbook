@@ -79,7 +79,10 @@
     "title": "서울에서 부산까지 4일",
     "category": "journey",
     "status": "finished",
-    "reviewStatus": "partial",
+    "reviewStatus": "verified",
+    "story": { "url": "https://story.kakao.com/_F7q479/2C0Ma8pflM9" },
+    "next": ["겨울 장거리 여행은 손발 보온 장비와 정차 중 체온 유지 방법을 미리 시험한다.", "새 자전거는 장거리 여행 전에 피팅을 마쳐 길 위 조정 시간을 줄인다.", "펑크 대비 예비 튜브·패치와 수리 시간을 일정에 포함한다."],
+    "analysis": "결산 게시물 기준 539.39km, 상승 2,930m를 3박 4일에 달렸다. 하루 거리는 1일차 185.16km(이동 8:32:09) → 2일차 140.97km(7:11:00) → 3일차 149.25km(펑크 전후 합산, 7:21:17) → 4일차 64.01km(3:02:30)로, 첫날 가장 길게 달리고 갈수록 줄였다. 일차별 평균 속도는 19.6~21.7km/h로 고르게 유지돼, 추위와 펑크 속에서도 페이스가 크게 무너지지 않았다.",
     "strava": {
       "activityCount": 5,
       "distanceKm": 539.41,
@@ -87,9 +90,9 @@
       "elapsedHours": 32.81,
       "elevationGainM": 2930
     },
-    "review": "연말을 4일간의 장거리 국토 이동으로 마무리했다. 일차별 사진과 거리 변화를 함께 보여주기 적합하다.",
+    "review": "성탄절부터 3박 4일 동안 새 그래블 바이크로 서울에서 부산까지 539km를 달렸다. 수안보까지 185km를 달린 첫날, 이화령을 넘은 둘째 날, 펑크를 수습하고 이어 달린 셋째 날을 지나 넷째 날 부산에 닿았다. 눈길이나 빙판은 없었지만 핫팩과 방한복을 챙기고도 여행 내내 추위가 가장 크게 남았고, 길 한복판에서 안장과 자세를 몇 번이고 고치며 새 자전거를 몸에 맞춰 갔다. 튼튼하고 편하지만 무겁고 느린 그래블의 한계도 느꼈고, 스페인 순례 전까지 국내 종주 코스를 하나씩 돌아보자는 목표를 세웠다.",
     "display": { "featured": true, "suggestedFormat": "stage chart" },
-    "sources": ["strava", "google-docs"],
-    "media": []
+    "sources": ["strava", "google-docs", "kakao-story"],
+    "media": ["assets/images/journeys/2025-seoul-busan-cycling/cover.jpg", "assets/images/journeys/2025-seoul-busan-cycling/gallery-09.jpg", "assets/images/journeys/2025-seoul-busan-cycling/gallery-05.jpg", "assets/images/journeys/2025-seoul-busan-cycling/strava-day1.jpg"]
   }
 ]
