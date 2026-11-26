@@ -71,7 +71,10 @@
     },
     "review": "2026년 철인 시즌의 첫 대회. 비 때문에 사이클과 러닝 코스가 축소됐지만 수영 1.53km부터 전환, 사이클, 러닝까지 멈추지 않고 01:49:07에 완주했다. 같은 날 카카오스토리에는 결과 자체보다 한계를 부정하고 끝까지 나답게 살아가려는 감정을 남겼다. 예상하지 못한 조건에서도 모든 종목을 이어낸 경험은 이후 양산 표준거리 도전의 출발점이 됐다.",
     "sources": ["strava", "kakao-story"],
-    "media": ["assets/images/events/2026-changwon-triathlon/official-result.jpg"]
+    "media": [
+      "assets/images/events/2026-changwon-triathlon/cover.jpg",
+      "assets/images/events/2026-changwon-triathlon/official-result.jpg"
+    ]
   },
   {
     "id": "2026-yangsan-triathlon",
