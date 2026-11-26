@@ -53,6 +53,14 @@ const LABEL = {
   participated: "참가",
 };
 const MEDIA = {
+  "2025-mbn-half": [
+    "assets/images/events/2025-mbn-half/cover.jpg",
+    "assets/images/events/2025-mbn-half/gallery-01.jpg",
+    "assets/images/events/2025-mbn-half/gallery-02.jpg",
+    "assets/images/events/2025-mbn-half/gallery-03.jpg",
+    "assets/images/events/2025-mbn-half/gallery-04.jpg",
+    "assets/images/events/2025-mbn-half/gallery-05.jpg",
+  ],
   "2025-chuncheon-10k": [
     "assets/images/events/2025-chuncheon-10k/cover.jpg",
     "assets/images/events/2025-chuncheon-10k/gallery-01.jpg",
@@ -442,6 +450,7 @@ const JOURNEY_STRAVA = {
 };
 const KAKAO = "https://story.kakao.com/_F7q479";
 const KAKAO_POSTS = {
+  "2025-mbn-half": "https://story.kakao.com/_F7q479/1UfwkAy0Dl9",
   "2025-chuncheon-10k": "https://story.kakao.com/_F7q479/hKjZ4K5Esma",
   "2025-yeosu-granfondo": "https://story.kakao.com/_F7q479/53daRxAKQL9",
   "2025-goryeong-duathlon": "https://story.kakao.com/_F7q479/iIoSjWfkpma",
@@ -474,6 +483,20 @@ const KAKAO_POSTS = {
   "2026-incheon-full-marathon": "https://story.kakao.com/_F7q479/EVJyv4BzXRA",
 };
 const AI_ANALYSIS = {
+  "2025-mbn-half": {
+    facts: [
+      "공식 기록은 01:53:32(배번호 55739, 평균 5:22/km)이며 하프 전체 8069/19285위입니다.",
+      "공식 구간 페이스는 2.6 km 4:59 → 5.0 km 5:03 → 10.0 km 5:14 → 15.6 km 5:33 → 결승 5:38(분/km)입니다.",
+      "Strava 기록은 21.20 km · 이동 시간 1:53:32 · 평균 5:21/km · 상승 54 m · 평균 케이던스 180 spm입니다.",
+    ],
+    assessment:
+      "두 달 전 마블런 하프(02:21:51)보다 약 28분 19초 단축했고, 전체 순위는 상위 약 42%입니다. 다만 구간 페이스가 초반 4:59/km에서 후반 5:38/km로 꾸준히 느려진 포지티브 스플릿이라, 카본화로 빨라진 초반 속도를 끝까지 유지하지는 못했습니다. 후반 감속이 체력 한계 때문인지 신발 적응 부족 때문인지는 심박 자료가 없어 구분하지 않습니다.",
+    next: [
+      "초반 5 km를 목표 평균 페이스(5:20/km 안팎)에 맞춰 후반 감속 폭을 줄입니다.",
+      "카본화를 장거리 훈련에서 미리 써 보며 종아리·발목 부담과 쓸림 부위를 점검합니다.",
+      "이 기록을 2026년 하프·풀코스 목표 페이스의 기준선으로 사용합니다.",
+    ],
+  },
   "2025-chuncheon-10k": {
     facts: [
       "공식 기록은 00:54:20(참가번호 39590, 평균 5:25/km)이며, 기록 사이트의 비공식 순위는 전체 2,984위·남자 2,340위입니다.",

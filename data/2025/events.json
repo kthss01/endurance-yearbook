@@ -245,11 +245,15 @@
     "category": "running",
     "status": "finished",
     "reviewStatus": "verified",
-    "official": { "time": "01:53:32" },
-    "strava": { "distanceKm": 21.2, "movingTime": "01:53:24", "elevationGainM": 54 },
-    "review": "2025년 대표 하프 기록이다. 2026년 하프 및 풀코스 목표를 설명하는 기준 기록으로 사용한다.",
+    "official": { "time": "01:53:32", "bib": 55739, "course": "Half", "rankOverall": 8069 },
+    "strava": { "distanceKm": 21.2, "movingTime": "01:53:32", "elevationGainM": 54 },
+    "review": "첫 하프 뒤 10km를 55분 안팎으로 달리게 되면서 처음 카본화를 신고 나선 하프다. 로드바이크를 처음 탔을 때처럼 가볍고 빠른 대신 더 힘든 신발이라 무릎·종아리·발목 걱정이 컸지만, 러닝 수업에서 배운 빠른 스텝 감각을 살리자 속도가 유지됐고 큰 부상 없이 01:53:32에 들어왔다. 첫 하프보다 약 28분 빠른 기록에 자전거처럼 재미를 붙일 만큼 신나게 달렸지만, 끝난 뒤에는 쓸림과 통증으로 한동안 환자가 됐다. 한 해의 마지막 대회를 만족스럽게 마무리했다.",
     "sources": ["strava", "google-docs", "kakao-story"],
-    "media": []
+    "media": [
+      "assets/images/events/2025-mbn-half/cover.jpg",
+      "assets/images/events/2025-mbn-half/gallery-03.jpg",
+      "assets/images/events/2025-mbn-half/gallery-01.jpg"
+    ]
   }
 ]
 
