@@ -89,11 +89,12 @@
     "title": "삼척 그란폰도",
     "category": "cycling",
     "status": "finished",
-    "reviewStatus": "partial",
+    "reviewStatus": "verified",
+    "official": { "time": "05:41:22.8", "bib": 1194 },
     "strava": { "distanceKm": 131.73, "movingTime": "05:24:00", "elevationGainM": 1916 },
-    "review": "동해안의 긴 업다운을 견딘 여름 전 장거리 대회로 분류한다.",
-    "sources": ["strava", "google-docs"],
-    "media": []
+    "review": "131.73km와 누적 상승 1,916m의 그란폰도를 공식 05:41:22.8에 완주했다. 대회 이틀 뒤에는 목과 허리 통증, 고갈된 에너지를 먹는 것으로 버티는 상태를 적으며 휴식의 필요성을 분명히 기록했다. 다음 설악을 앞두고 훈련과 회복의 경계를 다시 확인하게 한 대회였다.",
+    "sources": ["strava", "kakao-story"],
+    "media": ["assets/images/events/2026-samcheok-granfondo/official-result.jpg"]
   },
   {
     "id": "2026-seoul-200k-brevet",
@@ -102,11 +103,11 @@
     "title": "서울 200K 브레베",
     "category": "cycling",
     "status": "finished",
-    "reviewStatus": "partial",
+    "reviewStatus": "verified",
     "strava": { "distanceKm": 206.21, "movingTime": "08:22:48", "elevationGainM": 1812 },
-    "review": "하루 200km 장거리 주행 능력을 확인한 브레베다.",
-    "sources": ["strava", "google-docs"],
-    "media": []
+    "review": "206.21km, 누적 상승 1,812m를 이동 시간 08:22:48에 달린 서울 200K 브레베다. 카카오스토리에 남긴 인증서와 브레베 카드는 체크포인트와 제한 시간 안에서 스스로 주행을 운영해 공식 인증을 얻었음을 보여준다.",
+    "sources": ["strava", "kakao-story"],
+    "media": ["assets/images/events/2026-seoul-200k-brevet/brevet-certificate.jpg"]
   },
   {
     "id": "2026-lotte-aquathlon",

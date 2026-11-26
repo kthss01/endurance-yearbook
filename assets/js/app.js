@@ -53,6 +53,8 @@ const LABEL = {
   participated: "참가",
 };
 const MEDIA = {
+  "2026-samcheok-granfondo": ["assets/images/events/2026-samcheok-granfondo/official-result.jpg"],
+  "2026-seoul-200k-brevet": ["assets/images/events/2026-seoul-200k-brevet/brevet-certificate.jpg"],
   "2026-yangsan-triathlon": [
     "assets/images/events/2026-yangsan-triathlon/official-result.jpg",
     "assets/images/events/2026-yangsan-triathlon/swim-strava.jpg",
@@ -137,6 +139,8 @@ const JOURNEY_STRAVA = {
 };
 const KAKAO = "https://story.kakao.com/_F7q479";
 const KAKAO_POSTS = {
+  "2026-samcheok-granfondo": "https://story.kakao.com/_F7q479/gQ86NqzRLPA",
+  "2026-seoul-200k-brevet": "https://story.kakao.com/_F7q479/5TSCRTj8RO9",
   "2026-yangsan-triathlon": "https://story.kakao.com/_F7q479/aBHsNXID4o0",
   "2026-changwon-triathlon": "https://story.kakao.com/_F7q479/AEdVmqWxOO0",
   "2026-gumi-full-marathon": "https://story.kakao.com/_F7q479/KQsGwUHN1Oa",
@@ -144,6 +148,16 @@ const KAKAO_POSTS = {
   "2026-incheon-full-marathon": "https://story.kakao.com/_F7q479/EVJyv4BzXRA",
 };
 const AI_ANALYSIS = {
+  "2026-samcheok-granfondo": {
+    facts: ["공식 기록은 05:41:22.8, 배번호는 1194번입니다.", "Strava 기록은 131.73 km·05:24:00·누적 상승 1,916 m입니다.", "이틀 뒤 후기에는 목·허리 통증과 에너지 고갈, 휴식 필요성이 기록됐습니다."],
+    assessment: "이동 평균은 약 24.4 km/h이며 공식 기록과 이동 시간 차이는 약 17분 23초입니다. 1,900m가 넘는 상승량에도 정차를 효율적으로 관리했습니다. 다만 후기에서 통증과 피로 누적이 확인됩니다. 통증 원인은 의료 자료가 없어 훈련 과부하로 단정하지 않습니다.",
+    next: ["다음 고난도 대회 전 7일은 훈련량을 낮추고 수면을 우선합니다.", "목·허리 통증이 지속되면 고강도 훈련을 중단하고 상태를 확인합니다.", "90분 단위 보급 섭취량을 기록해 후반 에너지 저하를 비교합니다."],
+  },
+  "2026-seoul-200k-brevet": {
+    facts: ["Strava 기록은 206.21 km·08:22:48·누적 상승 1,812 m입니다.", "이동 시간 기준 평균 속도는 약 24.6 km/h입니다.", "카카오스토리에서 200 km 인증서와 통과 도장이 찍힌 브레베 카드를 확인했습니다."],
+    assessment: "200km를 8시간대 이동 시간으로 마친 것은 지속적인 유산소 능력과 자급 운영 능력이 함께 갖춰졌다는 근거입니다. 현재 확보된 수치는 이동 시간뿐이므로 공식 제한 시간 대비 여유는 계산하지 않습니다.",
+    next: ["다음 브레베는 각 체크포인트 통과 시간을 함께 보존합니다.", "50 km 단위로 보급과 체감 강도를 기록합니다.", "200K 회복 상태를 확인한 뒤 더 긴 거리로 확장합니다."],
+  },
   "2026-yangsan-triathlon": {
     facts: [
       "공식 기록은 총 03:12:59, 수영 00:48:33, 사이클 01:14:00, 러닝 01:02:35입니다.",
