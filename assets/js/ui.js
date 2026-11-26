@@ -22,7 +22,7 @@ const METRICS = {
 };
 const LABEL2 = { ...LABEL, transition: "전환", journey: "여정", randonneuring: "브레베", "finished-with-dnf-stage": "완주 · 일부 구간 DNF", "partial-route": "일부 구간 주행" };
 // 숫자 전용 글꼴(대문자만 있음)에서 단위가 대문자로 보이지 않도록 영문 단위를 <small>로 감싼다
-const u = (str) => String(str).replace(/(\d)\s?([a-zA-Z][a-zA-Z/]*)/g, "$1<small class=\"unit\">$2</small>");
+const u = (str) => String(str).replace(/(\d["']?)\s?(\/?[a-zA-Z][a-zA-Z/]*)/g, "$1<small class=\"unit\">$2</small>");
 
 // "hh:mm:ss(.xx)" → 초
 function toSec(t) {
@@ -53,6 +53,9 @@ const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "
 const DOC_IMAGE = /(official|result|certificate|ranking|strava|splits|pace|heart-rate|route-summary|course|chart)/;
 const isDocImage = (p) => DOC_IMAGE.test(p.split("/").pop());
 const coverPhoto = (pics = []) => pics.find((p) => !isDocImage(p));
+// 인터넷에서 가져온 자유 라이선스 사진의 출처(app.js IMAGE_CREDITS)
+const credit = (p) => (typeof IMAGE_CREDITS !== "undefined" && IMAGE_CREDITS[p]) || null;
+const creditHtml = (c) => (c ? `${c.caption ? `${c.caption} · ` : ""}사진: ${c.source ? `<a href="${c.source}" target="_blank" rel="noreferrer">${c.author || "출처"}</a>` : c.author || ""}${c.license ? ` (${c.license})` : ""}` : "");
 // 사진별 초점 위치(app.js COVER_FOCUS)를 style 속성으로
 const focus = (p) => { const f = typeof COVER_FOCUS !== "undefined" && COVER_FOCUS[p]; return f ? ` style="object-position:${f}"` : ""; };
 
@@ -450,7 +453,7 @@ function renderEvents() {
     .map((e, i) => {
       const pics = MEDIA[e.id] || [], photo = coverPhoto(pics), o = e.official || {}, d = eventDistance(e);
       const rank = o.rankOverall ? `<span class="rank">#${o.rankOverall}<small>종합</small></span>` : "";
-      return `<article class="race-card reveal ${photo ? "has-photo" : ""}" tabindex="0" data-id="${e.id}" style="--c:${COLOR[e.category] || "#d9ff43"};--d:${(i % 6) * 60}ms"><div class="rc-media">${photo ? `<img src="${photo}"${focus(photo)} alt="${e.title} 대표 사진" loading="lazy">` : recordFace(e)}<div class="rc-chips"><span class="chip">${LABEL2[e.category] || e.category}</span>${e.status !== "finished" ? `<span class="chip warn">${LABEL2[e.status] || e.status}</span>` : ""}${pics.length ? `<span class="chip ghost">${pics.length} PHOTOS</span>` : ""}${videoChip(videosOf("event", e.id).length)}</div></div><div class="rc-body"><div class="rc-meta"><span>${dateKo(e.date)}</span>${rank}</div><h3>${e.title}</h3><div class="rc-result">${u(result(e))}</div><div class="rc-stats">${d ? `<span>${num(d)} km</span>` : ""}${e.strava?.elevationGainM ? `<span>↑ ${num(e.strava.elevationGainM, 0)} m</span>` : ""}${o.course ? `<span>${o.course}</span>` : ""}</div></div><span class="rc-glow" aria-hidden="true"></span></article>`;
+      return `<article class="race-card reveal ${photo ? "has-photo" : ""}" tabindex="0" data-id="${e.id}" style="--c:${COLOR[e.category] || "#d9ff43"};--d:${(i % 6) * 60}ms"><div class="rc-media">${photo ? `<img src="${photo}"${focus(photo)} alt="${e.title} 대표 사진" loading="lazy">` : recordFace(e)}<div class="rc-chips"><span class="chip">${LABEL2[e.category] || e.category}</span>${photo && credit(photo) ? `<span class="chip ghost" title="${credit(photo).caption || ""}">참고 사진</span>` : ""}${e.status !== "finished" ? `<span class="chip warn">${LABEL2[e.status] || e.status}</span>` : ""}${pics.length ? `<span class="chip ghost">${pics.length} PHOTOS</span>` : ""}${videoChip(videosOf("event", e.id).length)}</div></div><div class="rc-body"><div class="rc-meta"><span>${dateKo(e.date)}</span>${rank}</div><h3>${e.title}</h3><div class="rc-result">${u(result(e))}</div><div class="rc-stats">${d ? `<span>${num(d)} km</span>` : ""}${e.strava?.elevationGainM ? `<span>↑ ${num(e.strava.elevationGainM, 0)} m</span>` : ""}${o.course ? `<span>${o.course}</span>` : ""}</div></div><span class="rc-glow" aria-hidden="true"></span></article>`;
     })
     .join("");
   $$("#event-grid .race-card").forEach((card) => {
@@ -570,7 +573,7 @@ function stravaLinks(e) {
 function gallery(pics, title) {
   if (!pics.length) return "";
   const photos = pics.filter((p) => !isDocImage(p)), docs = pics.filter(isDocImage);
-  const fig = (p, i, cls) => `<figure class="${cls}" data-i="${i}"><img src="${p}" alt="${title} 사진 ${i + 1}" loading="lazy"></figure>`;
+  const fig = (p, i, cls) => `<figure class="${cls}" data-i="${i}"><img src="${p}" alt="${credit(p)?.caption || `${title} 사진 ${i + 1}`}" loading="lazy">${credit(p) ? `<figcaption class="credit">${creditHtml(credit(p))}</figcaption>` : ""}</figure>`;
   const ordered = [...photos, ...docs];
   return `<section class="gallery-section"><div class="gallery-head"><span class="eyebrow">PHOTO ESSAY</span><h3>그날의 장면</h3><b>${photos.length} photos${docs.length ? ` · ${docs.length} records` : ""}</b></div>${photos.length ? `<div class="masonry">${photos.map((p, i) => fig(p, i, "")).join("")}</div>` : ""}${docs.length ? `<h4 class="docs-title">기록표 · 캡처</h4><div class="doc-strip">${docs.map((p, i) => fig(p, photos.length + i, "doc")).join("")}</div>` : ""}</section>`.replace("<section", `<section data-pics='${JSON.stringify(ordered).replace(/'/g, "&#39;")}'`);
 }
@@ -635,7 +638,7 @@ function showEvent(e) {
   const pics = MEDIA[e.id] || [], cover = coverPhoto(pics), c = COLOR[e.category] || "#d9ff43";
   const storyUrl = KAKAO_POSTS[e.id] || e.story?.url || KAKAO, an = AI_ANALYSIS[e.id], lg = legs(e), bd = badges(e), links = stravaLinks(e);
   const html = `
-  <div class="d-hero ${cover ? "has-photo" : ""}" style="--c:${c}">${cover ? `<img class="kb" src="${cover}"${focus(cover)} alt="">` : `<div class="d-hero-pattern"></div>`}
+  <div class="d-hero ${cover ? "has-photo" : ""}" style="--c:${c}">${cover ? `<img class="kb" src="${cover}"${focus(cover)} alt="">${credit(cover) ? `<small class="hero-credit">${creditHtml(credit(cover))}</small>` : ""}` : `<div class="d-hero-pattern"></div>`}
     <div class="d-hero-copy"><div class="d-tags"><span>${dateKo(e.date)}</span><span style="--c:${c}" class="cat">${LABEL2[e.category] || e.category}</span><span class="${e.status !== "finished" ? "warn" : ""}">${LABEL2[e.status] || e.status}</span></div>
       <h2 id="detail-title">${e.title}</h2><p class="d-result">${u(result(e))}</p></div></div>
   <div class="d-quick">${quickStats(e).map(([a, b, ic], i) => `<div style="--d:${i * 70}ms"><i>${ic}</i><span>${a}</span><strong>${u(b)}</strong></div>`).join("")}</div>
@@ -682,7 +685,7 @@ function showJourney(j) {
     ? `<section class="d-block"><h3>STAGES / 구간별 기록</h3><div class="cmp">${(() => { const mx = Math.max(...j.stages.map((x) => x.distanceKm)); return j.stages.map((x, i) => `<div class="cmp-row ${x.status !== "finished" ? "dnf" : ""}" style="--d:${i * 80}ms"><span>${i + 1}. ${x.title}<small>${LABEL2[x.status] || x.status}</small></span><div class="cmp-track"><i style="width:${(x.distanceKm / mx) * 100}%"></i></div><b>${u(`${num(x.distanceKm)} km`)}</b></div>`).join(""); })()}</div></section>`
     : "";
   const html = `
-  <div class="d-hero ${cover ? "has-photo" : ""}" style="--c:#ffb627">${cover ? `<img class="kb" src="${cover}"${focus(cover)} alt="">` : `<div class="d-hero-pattern"></div>`}
+  <div class="d-hero ${cover ? "has-photo" : ""}" style="--c:#ffb627">${cover ? `<img class="kb" src="${cover}"${focus(cover)} alt="">${credit(cover) ? `<small class="hero-credit">${creditHtml(credit(cover))}</small>` : ""}` : `<div class="d-hero-pattern"></div>`}
     <div class="d-hero-copy"><div class="d-tags"><span>${period}</span><span class="cat" style="--c:#ffb627">${j.category === "randonneuring" ? "브레베" : "여정"}</span>${j.status && j.status !== "finished" ? `<span class="warn">${LABEL2[j.status] || j.status}</span>` : ""}</div><h2 id="detail-title">${j.title}</h2><p class="d-result">${s.distanceKm ? u(`${num(s.distanceKm)} km`) : ""}</p></div></div>
   <div class="d-quick">${quick.map(([a, b, ic], i) => `<div style="--d:${i * 70}ms"><i>${ic}</i><span>${a}</span><strong>${u(b)}</strong></div>`).join("")}</div>
   <div class="d-body"><div class="d-main">
@@ -734,7 +737,7 @@ function openLightbox(list, i) {
 function showLb() {
   const { list, i } = state.lb;
   $("#lb-img").src = list[i];
-  $("#lb-cap").textContent = `${i + 1} / ${list.length}`;
+  $("#lb-cap").innerHTML = `${i + 1} / ${list.length}${credit(list[i]) ? ` · ${creditHtml(credit(list[i]))}` : ""}`;
 }
 function stepLb(d) {
   const L = state.lb.list.length;

@@ -579,3 +579,8 @@ button.cmp-row:hover { background: rgba(255, 255, 255, .04); }
   .bars .seg, .heat i, .meter i, .tl-dot { transform: none; }
   .lines .line, .spark path { stroke-dashoffset: 0; }
 }
+/* 인터넷 자유 라이선스 사진 출처 표시 */
+.credit { padding: 6px 10px; background: rgba(0, 0, 0, .75); color: #cfcec7; font-size: 11px; line-height: 1.5; }
+.masonry figure .credit { position: absolute; left: 0; right: 0; bottom: 0; }
+.credit a, .hero-credit a, #lb-cap a { color: var(--acid); }
+.hero-credit { position: absolute; right: 16px; bottom: 12px; z-index: 1; max-width: 60%; padding: 4px 10px; border-radius: 8px; background: rgba(0, 0, 0, .55); color: #cfcec7; font-size: 11px; text-align: right; }
