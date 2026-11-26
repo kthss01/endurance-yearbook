@@ -34,11 +34,16 @@
     "title": "홍천 그란폰도",
     "category": "cycling",
     "status": "finished",
-    "reviewStatus": "partial",
-    "strava": { "distanceKm": 119.64, "movingTime": "04:48:00", "elevationGainM": 1727 },
-    "review": "산티아고 13일 라이딩 직후 국내 그란폰도 시즌으로 복귀한 대회다.",
-    "sources": ["strava", "google-docs"],
-    "media": []
+    "reviewStatus": "verified",
+    "official": { "time": "05:09:22.80", "bib": 1313, "course": "그란폰도 121.52km", "rankOverall": 364, "rankMen": 333 },
+    "strava": { "distanceKm": 119.64, "movingTime": "04:48:12", "elevationGainM": 1727 },
+    "review": "산티아고 순례 뒤 그래블과 실내 로라만 타다가 오랜만에 로드로 나선 대회였다. 대회 속에서 로드에 다시 적응하며 속도와 가벼움을 실감했고, 남을 따라가지 않고 내 페이스를 고집하느라 쉬어 가지 못한 채 전력으로 달렸다. 업힐 뒤 이어진 약 40km 완만한 내리막에서 마음껏 질주했고, 쥐와 몸의 무리 속에서도 05:09:22.80에 완주했다. 평지·업힐·역풍에는 자신감을 얻었고, 남은 과제로 다운힐 공포를 적었다.",
+    "sources": ["strava", "google-docs", "kakao-story"],
+    "media": [
+      "assets/images/events/2026-hongcheon-granfondo/cover.jpg",
+      "assets/images/events/2026-hongcheon-granfondo/official-result.jpg",
+      "assets/images/events/2026-hongcheon-granfondo/route-summary.jpg"
+    ]
   },
   {
     "id": "2026-changwon-triathlon",
