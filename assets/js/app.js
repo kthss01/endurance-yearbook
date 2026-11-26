@@ -53,6 +53,24 @@ const LABEL = {
   participated: "참가",
 };
 const MEDIA = {
+  "2025-goryeong-duathlon": [
+    "assets/images/events/2025-goryeong-duathlon/cover.jpg",
+    "assets/images/events/2025-goryeong-duathlon/gallery-01.jpg",
+    "assets/images/events/2025-goryeong-duathlon/gallery-02.jpg",
+    "assets/images/events/2025-goryeong-duathlon/gallery-03.jpg",
+    "assets/images/events/2025-goryeong-duathlon/gallery-04.jpg",
+    "assets/images/events/2025-goryeong-duathlon/gallery-05.jpg",
+    "assets/images/events/2025-goryeong-duathlon/gallery-06.jpg",
+    "assets/images/events/2025-goryeong-duathlon/gallery-07.jpg",
+    "assets/images/events/2025-goryeong-duathlon/gallery-08.jpg",
+    "assets/images/events/2025-goryeong-duathlon/gallery-09.jpg",
+    "assets/images/events/2025-goryeong-duathlon/gallery-10.jpg",
+    "assets/images/events/2025-goryeong-duathlon/gallery-11.jpg",
+    "assets/images/events/2025-goryeong-duathlon/gallery-12.jpg",
+    "assets/images/events/2025-goryeong-duathlon/gallery-13.jpg",
+    "assets/images/events/2025-goryeong-duathlon/gallery-14.jpg",
+    "assets/images/events/2025-goryeong-duathlon/gallery-15.jpg",
+  ],
   "2025-marvel-run-half": [
     "assets/images/events/2025-marvel-run-half/cover.jpg",
     "assets/images/events/2025-marvel-run-half/gallery-01.jpg",
@@ -405,6 +423,7 @@ const JOURNEY_STRAVA = {
 };
 const KAKAO = "https://story.kakao.com/_F7q479";
 const KAKAO_POSTS = {
+  "2025-goryeong-duathlon": "https://story.kakao.com/_F7q479/iIoSjWfkpma",
   "2025-marvel-run-half": "https://story.kakao.com/_F7q479/DPSg2iu9plA",
   "2025-mungyeong-granfondo": "https://story.kakao.com/_F7q479/4NIx4h8Cik9",
   "2025-hangang-night-walk-42k": "https://story.kakao.com/_F7q479/FMyvEUHLmLA",
@@ -434,6 +453,20 @@ const KAKAO_POSTS = {
   "2026-incheon-full-marathon": "https://story.kakao.com/_F7q479/EVJyv4BzXRA",
 };
 const AI_ANALYSIS = {
+  "2025-goryeong-duathlon": {
+    facts: [
+      "완주증 기준 총 02:55:21(달리기 00:26:22, 자전거 01:21:21, 달리기 00:59:37)이며 30-34세 남자 45위입니다.",
+      "Strava 기록은 달리기 5.18 km · 27:29(평균 5:18/km), 자전거 41.22 km · 1:21:06(평균 30.5 km/h, 상승 436 m, 203 W), 달리기 10.17 km · 1:00:20(평균 5:56/km)입니다.",
+      "공식 세 구간 합계는 2:47:20으로, 두 번의 전환에 약 8분이 쓰였습니다.",
+    ],
+    assessment:
+      "자전거 평균 30.5 km/h는 436 m 상승이 있는 40 km에서 나온 수치로, 이 시즌 멀티스포츠 대회 중에서도 자전거가 확실한 강점임을 보여 줍니다. 첫 5 km를 5:18/km로 달린 뒤 자전거 이후 10 km를 5:56/km로 유지해 후반 러닝도 크게 무너지지 않았습니다. 수영이 빠진 형식이라 표준 철인3종 기록과는 직접 비교하지 않습니다.",
+    next: [
+      "수영이 포함된 정규 철인3종에서 같은 자전거·러닝 페이스를 유지할 수 있는지 확인합니다.",
+      "두 번의 전환 시간(약 8분)을 줄이도록 장비 배치를 연습합니다.",
+      "첫 러닝 구간 페이스를 조금 낮춰 마지막 10 km 페이스와의 차이를 줄이는지 비교합니다.",
+    ],
+  },
   "2025-marvel-run-half": {
     facts: [
       "공식 기록은 02:21:51(배번호 25083)이며 하프 전체 4201/6307위, 남자 3588위입니다.",

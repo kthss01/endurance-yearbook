@@ -185,17 +185,21 @@
     "category": "triathlon",
     "status": "format-changed",
     "reviewStatus": "verified",
-    "official": { "result": "유속 문제로 수영 취소, 런-바이크-런 듀애슬론 전환" },
+    "official": { "result": "유속 문제로 수영 취소, 런-바이크-런 듀애슬론 전환", "duathlonTime": "02:55:21", "ageGroupRank": "30-34세 남 45위", "legTimes": { "run5k": "00:26:22", "bike40k": "01:21:21", "run10k": "00:59:37" } },
     "strava": {
       "segments": [
-        { "sport": "running", "distanceKm": 5.18, "movingTime": "00:27:36" },
-        { "sport": "cycling", "distanceKm": 41.23, "movingTime": "01:21:00" },
-        { "sport": "running", "distanceKm": 10.18, "movingTime": "01:00:36" }
+        { "sport": "running", "distanceKm": 5.18, "movingTime": "00:27:29" },
+        { "sport": "cycling", "distanceKm": 41.23, "movingTime": "01:21:06" },
+        { "sport": "running", "distanceKm": 10.18, "movingTime": "01:00:20" }
       ]
     },
-    "review": "철인3종 참가 기록이지만 현장 상황으로 듀애슬론이 됐다. 연감에서는 변경된 실제 형식을 우선 표시한다.",
-    "sources": ["strava", "google-docs"],
-    "media": []
+    "review": "수영이 취소되며 달리기 5km·자전거 40km·달리기 10km 듀애슬론으로 바뀐 대회를 02:55:21에 완주했다. 수원 프로젝트에 오며 외쳤던 철인 도전을 사실상 마무리하는 한 해의 결산 같은 대회였다. 자전거 조금 좋아하는 평범한 사람에게 불가능해 보였던 철인을 예정보다 오래 준비하며, 겁나고 두려운 순간과 막판 감량까지 포기하지 않고 버텨 왔다는 데 만족했다. 완전한 철인이 아닌 아쉬움보다 '할 수 있었다'는 확인과, 끝이 곧 새 시작이라는 다짐을 남겼다.",
+    "sources": ["strava", "google-docs", "kakao-story"],
+    "media": [
+      "assets/images/events/2025-goryeong-duathlon/cover.jpg",
+      "assets/images/events/2025-goryeong-duathlon/gallery-15.jpg",
+      "assets/images/events/2025-goryeong-duathlon/gallery-01.jpg"
+    ]
   },
   {
     "id": "2025-yeosu-granfondo",
