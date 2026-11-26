@@ -1,5 +1,35 @@
 [
   {
+    "id": "2026-seoul-200k-brevet",
+    "year": 2026,
+    "startDate": "2026-06-12",
+    "endDate": "2026-06-12",
+    "title": "서울 200K 브레베",
+    "category": "randonneuring",
+    "status": "finished",
+    "reviewStatus": "verified",
+    "strava": { "activityCount": 1, "distanceKm": 206.21, "elapsedHours": 14.64, "elevationGainM": 1812 },
+    "review": "실내 200km 경험을 실제 도로의 브레베로 확장했다. 200km를 하루 안에 완주하며 장거리 운영 능력을 확인한 기록이다.",
+    "display": { "featured": true, "suggestedFormat": "route card" },
+    "sources": ["strava", "google-docs"],
+    "media": []
+  },
+  {
+    "id": "2026-cheonan-200k-brevet",
+    "year": 2026,
+    "startDate": "2026-10-30",
+    "endDate": "2026-10-30",
+    "title": "천안 200K 브레베",
+    "category": "randonneuring",
+    "status": "finished",
+    "reviewStatus": "verified",
+    "strava": { "activityCount": 1, "distanceKm": 204.76, "elapsedHours": 16.64, "elevationGainM": 1478 },
+    "review": "시즌 후반에 다시 완주한 200km 브레베. 같은 거리라도 계절과 코스에 따라 달라지는 장거리 운영 경험을 더했다.",
+    "display": { "featured": true, "suggestedFormat": "route card" },
+    "sources": ["strava"],
+    "media": []
+  },
+  {
     "id": "2026-donghae-coast",
     "year": 2026,
     "startDate": "2026-03-20",
@@ -51,4 +81,3 @@
     "media": []
   }
 ]
-

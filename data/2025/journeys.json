@@ -1,5 +1,20 @@
 [
   {
+    "id": "2025-randonneurs-virtual-200k",
+    "year": 2025,
+    "startDate": "2025-02-14",
+    "endDate": "2025-02-14",
+    "title": "란도너스 벡터 200km",
+    "category": "randonneuring",
+    "status": "finished",
+    "reviewStatus": "verified",
+    "strava": { "activityCount": 1, "distanceKm": 200.64, "elapsedHours": 21.52, "elevationGainM": 1266 },
+    "review": "실내에서 200km를 이어 달린 장거리 지구력 도전이다. 실제 브레베로 넘어가기 전 긴 시간 안장 위에서 버티는 경험을 쌓았다.",
+    "display": { "featured": true, "suggestedFormat": "challenge card" },
+    "sources": ["strava"],
+    "media": []
+  },
+  {
     "id": "2025-kyushu-cycling",
     "year": 2025,
     "startDate": "2025-11-01",
@@ -18,6 +33,36 @@
     "review": "자전거 파손과 철도 이동으로 계획이 크게 바뀐 여행이다. 완벽한 일주보다 문제를 해결하며 이동한 과정이 중심이다.",
     "display": { "featured": true, "suggestedFormat": "day-by-day photo strip" },
     "sources": ["strava", "kakao-story", "google-docs"],
+    "media": []
+  },
+  {
+    "id": "2025-remember-granfondo",
+    "year": 2025,
+    "startDate": "2025-08-17",
+    "endDate": "2025-08-17",
+    "title": "광복 80주년 Remember Granfondo",
+    "category": "challenge",
+    "status": "finished",
+    "reviewStatus": "verified",
+    "strava": { "activityCount": 1 },
+    "review": "광복 80주년을 기념한 장거리 라이딩. 대회뿐 아니라 의미를 가진 이동도 연감의 한 장면으로 남긴다.",
+    "display": { "featured": false, "suggestedFormat": "photo card" },
+    "sources": ["strava"],
+    "media": []
+  },
+  {
+    "id": "2025-busan-night-walk",
+    "year": 2025,
+    "startDate": "2025-08-23",
+    "endDate": "2025-08-23",
+    "title": "부산 나이트 워크 42K",
+    "category": "walking",
+    "status": "finished",
+    "reviewStatus": "verified",
+    "strava": { "activityCount": 1 },
+    "review": "밤을 통과해 42km를 걷는 장시간 지구력 도전. 달리기와 사이클 외에 걷기로 완성한 여행형 기록이다.",
+    "display": { "featured": false, "suggestedFormat": "photo card" },
+    "sources": ["strava"],
     "media": []
   },
   {
@@ -42,4 +87,3 @@
     "media": []
   }
 ]
-
