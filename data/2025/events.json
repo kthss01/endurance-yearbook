@@ -12,8 +12,8 @@
     "review": "2025년 첫 마라톤으로 나선 한강 10km다. 준비가 부족해 물집까지 잡히며 힘들었지만 00:59:26.13으로 간신히 1시간 안에 들어왔다. 완주 뒤에는 변화의 필요성, 다가오는 대회와 회사 일을 떠올리며 하나씩 두려워하지 말고 해 보자고 스스로를 다독였다.",
     "sources": ["strava", "kakao-story"],
     "media": [
-      "assets/images/events/2025-korea-open-race-10k/cover.jpg",
-      "assets/images/events/2025-korea-open-race-10k/gallery-01.jpg"
+      "assets/images/events/2025-korea-open-race-10k/official-certificate.jpg",
+      "assets/images/events/2025-korea-open-race-10k/result-capture-01.jpg"
     ]
   },
   {
@@ -30,8 +30,8 @@
     "sources": ["strava", "kakao-story"],
     "media": [
       "assets/images/events/2025-goseong-granfondo/cover.jpg",
-      "assets/images/events/2025-goseong-granfondo/gallery-03.jpg",
-      "assets/images/events/2025-goseong-granfondo/gallery-01.jpg"
+      "assets/images/events/2025-goseong-granfondo/result-capture-03.jpg",
+      "assets/images/events/2025-goseong-granfondo/result-capture-01.jpg"
     ]
   },
   {
@@ -54,8 +54,8 @@
     "sources": ["strava", "google-docs", "kakao-story"],
     "media": [
       "assets/images/events/2025-nakdong-triathlon/cover.jpg",
-      "assets/images/events/2025-nakdong-triathlon/gallery-01.jpg",
-      "assets/images/events/2025-nakdong-triathlon/gallery-05.jpg"
+      "assets/images/events/2025-nakdong-triathlon/official-certificate.jpg",
+      "assets/images/events/2025-nakdong-triathlon/result-capture-04.jpg"
     ]
   },
   {
@@ -72,8 +72,8 @@
     "sources": ["strava", "google-docs", "kakao-story"],
     "media": [
       "assets/images/events/2025-seorak-granfondo/cover.jpg",
-      "assets/images/events/2025-seorak-granfondo/gallery-04.jpg",
-      "assets/images/events/2025-seorak-granfondo/gallery-01.jpg"
+      "assets/images/events/2025-seorak-granfondo/result-capture-04.jpg",
+      "assets/images/events/2025-seorak-granfondo/result-capture-01.jpg"
     ]
   },
   {
@@ -96,8 +96,8 @@
     "sources": ["strava", "kakao-story"],
     "media": [
       "assets/images/events/2025-hangang-slow-triathlon/cover.jpg",
-      "assets/images/events/2025-hangang-slow-triathlon/gallery-05.jpg",
-      "assets/images/events/2025-hangang-slow-triathlon/gallery-06.jpg"
+      "assets/images/events/2025-hangang-slow-triathlon/result-capture-01.jpg",
+      "assets/images/events/2025-hangang-slow-triathlon/result-capture-02.jpg"
     ]
   },
   {
@@ -119,8 +119,8 @@
     "sources": ["strava", "kakao-story"],
     "media": [
       "assets/images/events/2025-iksan-aquathlon-standard/cover.jpg",
-      "assets/images/events/2025-iksan-aquathlon-standard/gallery-01.jpg",
-      "assets/images/events/2025-iksan-aquathlon-standard/gallery-03.jpg"
+      "assets/images/events/2025-iksan-aquathlon-standard/official-certificate.jpg",
+      "assets/images/events/2025-iksan-aquathlon-standard/result-capture-02.jpg"
     ]
   },
   {
@@ -137,7 +137,7 @@
     "sources": ["strava", "kakao-story"],
     "media": [
       "assets/images/events/2025-hangang-night-walk-42k/cover.jpg",
-      "assets/images/events/2025-hangang-night-walk-42k/gallery-03.jpg",
+      "assets/images/events/2025-hangang-night-walk-42k/result-capture-01.jpg",
       "assets/images/events/2025-hangang-night-walk-42k/gallery-04.jpg"
     ]
   },
@@ -155,8 +155,8 @@
     "sources": ["strava", "kakao-story", "google-docs"],
     "media": [
       "assets/images/events/2025-mungyeong-granfondo/cover.jpg",
-      "assets/images/events/2025-mungyeong-granfondo/gallery-08.jpg",
-      "assets/images/events/2025-mungyeong-granfondo/gallery-01.jpg"
+      "assets/images/events/2025-mungyeong-granfondo/result-capture-05.jpg",
+      "assets/images/events/2025-mungyeong-granfondo/result-capture-01.jpg"
     ]
   },
   {
@@ -173,8 +173,9 @@
     "sources": ["strava", "kakao-story"],
     "media": [
       "assets/images/events/2025-marvel-run-half/cover.jpg",
-      "assets/images/events/2025-marvel-run-half/gallery-03.jpg",
-      "assets/images/events/2025-marvel-run-half/gallery-01.jpg"
+      "assets/images/events/2025-marvel-run-half/official-result.jpg",
+      "assets/images/events/2025-marvel-run-half/result-capture-03.jpg",
+      "assets/images/events/2025-marvel-run-half/result-capture-01.jpg"
     ]
   },
   {
@@ -198,7 +199,7 @@
     "media": [
       "assets/images/events/2025-goryeong-duathlon/cover.jpg",
       "assets/images/events/2025-goryeong-duathlon/gallery-15.jpg",
-      "assets/images/events/2025-goryeong-duathlon/gallery-01.jpg"
+      "assets/images/events/2025-goryeong-duathlon/official-certificate.jpg"
     ]
   },
   {
@@ -215,8 +216,8 @@
     "sources": ["strava", "google-docs", "kakao-story"],
     "media": [
       "assets/images/events/2025-yeosu-granfondo/cover.jpg",
-      "assets/images/events/2025-yeosu-granfondo/gallery-01.jpg",
-      "assets/images/events/2025-yeosu-granfondo/gallery-04.jpg"
+      "assets/images/events/2025-yeosu-granfondo/official-certificate.jpg",
+      "assets/images/events/2025-yeosu-granfondo/result-capture-03.jpg"
     ]
   },
   {
@@ -232,9 +233,9 @@
     "review": "전날 여수 그란폰도를 마치고 피로가 남은 채 춘천으로 향한 10km다. 출발 시각을 착각해 1시간 일찍 도착한 덕분에 웜업과 스트레칭을 충분히 했고, 오르내림이 있는 코스에서도 평균 5분 30초 안팎의 페이스를 지켜 목표였던 55분 안인 00:54:20에 들어왔다. 다리에 피로가 조금 남았지만 잘 달린 하루였고, 긴 운전으로 지친 주말을 마무리했다.",
     "sources": ["strava", "google-docs", "kakao-story"],
     "media": [
-      "assets/images/events/2025-chuncheon-10k/cover.jpg",
-      "assets/images/events/2025-chuncheon-10k/gallery-01.jpg",
-      "assets/images/events/2025-chuncheon-10k/gallery-02.jpg"
+      "assets/images/events/2025-chuncheon-10k/official-result.jpg",
+      "assets/images/events/2025-chuncheon-10k/result-capture-01.jpg",
+      "assets/images/events/2025-chuncheon-10k/result-capture-02.jpg"
     ]
   },
   {
@@ -251,8 +252,9 @@
     "sources": ["strava", "google-docs", "kakao-story"],
     "media": [
       "assets/images/events/2025-mbn-half/cover.jpg",
-      "assets/images/events/2025-mbn-half/gallery-03.jpg",
-      "assets/images/events/2025-mbn-half/gallery-01.jpg"
+      "assets/images/events/2025-mbn-half/official-certificate.jpg",
+      "assets/images/events/2025-mbn-half/result-capture-03.jpg",
+      "assets/images/events/2025-mbn-half/result-capture-01.jpg"
     ]
   }
 ]
