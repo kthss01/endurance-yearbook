@@ -53,6 +53,12 @@ const LABEL = {
   participated: "참가",
 };
 const MEDIA = {
+  "2026-mungyeong-granfondo": [
+    "assets/images/events/2026-mungyeong-granfondo/cover.jpg",
+    "assets/images/events/2026-mungyeong-granfondo/official-certificate.jpg",
+    "assets/images/events/2026-mungyeong-granfondo/official-result.jpg",
+    "assets/images/events/2026-mungyeong-granfondo/route-summary.jpg",
+  ],
   "2026-daegwallyeong-trail": [
     "assets/images/events/2026-daegwallyeong-trail/cover.jpg",
     "assets/images/events/2026-daegwallyeong-trail/official-certificate.jpg",
@@ -180,6 +186,7 @@ const JOURNEY_STRAVA = {
 };
 const KAKAO = "https://story.kakao.com/_F7q479";
 const KAKAO_POSTS = {
+  "2026-mungyeong-granfondo": "https://story.kakao.com/_F7q479/f3nKEZ0awQA",
   "2026-daegwallyeong-trail": "https://story.kakao.com/_F7q479/1DDc1Ry7qP9",
   "2026-seolbong-triathlon": "https://story.kakao.com/_F7q479/gKcGvKqzlQA",
   "2026-cool-valley-trail": "https://story.kakao.com/_F7q479/9BLlsmohoP0",
@@ -195,6 +202,20 @@ const KAKAO_POSTS = {
   "2026-incheon-full-marathon": "https://story.kakao.com/_F7q479/EVJyv4BzXRA",
 };
 const AI_ANALYSIS = {
+  "2026-mungyeong-granfondo": {
+    facts: [
+      "공식 기록은 06:46:47.23(그란폰도 153.2 km, 배번호 1412)이며 전체 502/1173위, 남자 468/1091위입니다.",
+      "Strava 기록은 154.36 km · 이동 시간 06:21:33 · 누적 상승 1,988 m, 평균 24.3 km/h · 평균 파워 153 W · 평균 심박 141 bpm입니다.",
+      "후기 기준 그란폰도 분기점 마감 11:30보다 3분 앞선 11:27에 통과했고, 이화령과 여우목고개에서 오른쪽 허벅지 경련이 있었습니다.",
+    ],
+    assessment:
+      "2025년에 분기점 컷오프로 메디오폰도(Strava 107.65 km) 완주에 그친 같은 대회를 153 km 그란폰도 완주로 바꾼 것이 가장 큰 성과입니다. 구간 통과 시간표를 미리 만들고 긴 보급 줄을 건너뛰는 판단이 3분 차이의 분기점 통과로 이어졌습니다. 반면 업힐 구간마다 같은 부위 경련이 반복됐는데, 후기에서 최근 업힐 라이딩 부족과 높은 페이스를 원인으로 짐작했을 뿐 파워·심박 구간 자료가 없어 원인을 확정하지 않습니다.",
+    next: [
+      "분기점 마감이 있는 대회는 보급소별 목표 통과 시각에 10분 이상 여유를 두도록 시간표를 다시 짭니다.",
+      "장거리 업힐 훈련을 시즌 중 정기적으로 넣어 업힐 전용 근지구력을 유지합니다.",
+      "쥐 방지 보급을 예상 경련 구간 수보다 넉넉하게 준비하고, 업힐 진입 전 페이스 상한을 정합니다.",
+    ],
+  },
   "2026-daegwallyeong-trail": {
     facts: [
       "공식 기록은 03:26:34(20.18K, 배번호 2273)이며 전체 260/732위, 남자 183/474위, 35-39세 남자 33/70위입니다.",

@@ -210,11 +210,15 @@
     "category": "cycling",
     "status": "finished",
     "reviewStatus": "verified",
-    "official": { "time": "06:46:47" },
-    "strava": { "distanceKm": 154.36, "movingTime": "06:21:36", "elevationGainM": 1988 },
-    "review": "2025년 컷오프 후 2026년에 그란폰도 코스를 완주한 대표 재도전이다.",
+    "official": { "time": "06:46:47.23", "bib": 1412, "course": "그란폰도 153.2km", "rankOverall": 502, "rankMen": 468 },
+    "strava": { "distanceKm": 154.36, "movingTime": "06:21:33", "elevationGainM": 1988 },
+    "review": "2025년 분기점 컷오프로 메디오폰도 완주에 그쳤던 대회에 다시 서서 그란폰도 완주를 이뤘다. 자전거를 많이 타지 못한 채 다른 그란폰도보다 30km 긴 코스에 나서며 구간별 통과 시간표와 파워젤·쥐 방지 보급을 챙겼고, 줄이 긴 1·2보급소는 건너뛰었다. 그란폰도·메디오폰도 분기에는 마감 11:30보다 3분 이른 11:27에 도착했다. 이화령과 여우목고개에서 오른쪽 허벅지에 쥐가 나고 허리와 안장 통증이 이어졌지만 끌바 없이 페이스를 지켜 06:46:47에 완주했고, 마지막 평지에서 후회 없이 쏟아붓자는 마음을 새겼다.",
     "sources": ["strava", "google-docs", "kakao-story"],
-    "media": []
+    "media": [
+      "assets/images/events/2026-mungyeong-granfondo/cover.jpg",
+      "assets/images/events/2026-mungyeong-granfondo/official-certificate.jpg",
+      "assets/images/events/2026-mungyeong-granfondo/route-summary.jpg"
+    ]
   },
   {
     "id": "2026-bbang-trail-30k",
