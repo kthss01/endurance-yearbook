@@ -53,6 +53,14 @@ const LABEL = {
   participated: "참가",
 };
 const MEDIA = {
+  "2025-iksan-aquathlon-standard": [
+    "assets/images/events/2025-iksan-aquathlon-standard/cover.jpg",
+    "assets/images/events/2025-iksan-aquathlon-standard/gallery-01.jpg",
+    "assets/images/events/2025-iksan-aquathlon-standard/gallery-02.jpg",
+    "assets/images/events/2025-iksan-aquathlon-standard/gallery-03.jpg",
+    "assets/images/events/2025-iksan-aquathlon-standard/gallery-04.jpg",
+    "assets/images/events/2025-iksan-aquathlon-standard/gallery-05.jpg",
+  ],
   "2025-hangang-slow-triathlon": [
     "assets/images/events/2025-hangang-slow-triathlon/cover.jpg",
     "assets/images/events/2025-hangang-slow-triathlon/gallery-01.jpg",
@@ -371,6 +379,7 @@ const JOURNEY_STRAVA = {
 };
 const KAKAO = "https://story.kakao.com/_F7q479";
 const KAKAO_POSTS = {
+  "2025-iksan-aquathlon-standard": "https://story.kakao.com/_F7q479/CCoGDX57jk0",
   "2025-hangang-slow-triathlon": "https://story.kakao.com/_F7q479/5UaHhSdmWJ9",
   "2025-seorak-granfondo": "https://story.kakao.com/_F7q479/HAvEDTP0Pka",
   "2025-nakdong-triathlon": "https://story.kakao.com/_F7q479/FZOt4epNDKA",
@@ -396,6 +405,20 @@ const KAKAO_POSTS = {
   "2026-incheon-full-marathon": "https://story.kakao.com/_F7q479/EVJyv4BzXRA",
 };
 const AI_ANALYSIS = {
+  "2025-iksan-aquathlon-standard": {
+    facts: [
+      "완주증 기준 총 01:33:33(수영 0:47:26, 러닝 0:42:44)이며, 러닝은 폭염으로 5 km로 단축됐습니다.",
+      "Strava 기록은 수영 1,510 m · 47:42 · 평균 3:09/100m · 평균 심박 170 bpm, 러닝 5.18 km · 43:04 · 평균 8:18/km · 평균 심박 173 bpm입니다.",
+      "후기에는 가장 마지막으로 결승선에 들어왔고 경기 뒤 전신 경련이 있었다고 기록돼 있습니다.",
+    ],
+    assessment:
+      "오리발·부이 없이 1.5 km 오픈워터를 완주해 수영에 대한 심리적 장벽을 넘은 것이 핵심 성과입니다. 반면 폭염 속 러닝은 평균 8:18/km, 평균 심박 173 bpm으로 강도에 비해 속도가 크게 떨어졌는데, 더위와 수영 직후 피로가 겹친 결과로 보이나 기온·수분 섭취 자료가 없어 원인을 확정하지 않습니다. 이 대회는 이후 2026년 4월 같은 대회 재참가 후기에서 비교 기준으로 다시 언급됩니다.",
+    next: [
+      "폭염 대회는 출발 전 수분·전해질 섭취 계획을 세우고 러닝 목표 페이스를 낮춰 잡습니다.",
+      "수영 후 러닝 전환에서 심박을 낮추는 연습(브릭 훈련)을 정기적으로 넣습니다.",
+      "경기 뒤 경련이 반복되므로 대회 당일 귀가 운전 계획을 미리 정해 둡니다.",
+    ],
+  },
   "2025-hangang-slow-triathlon": {
     facts: [
       "Strava 기록은 수영 787 m · 17:04(평균 2:10/100m, 롱핀 사용), 미니벨로 20.21 km · 58:06(평균 20.9 km/h), 러닝 6.85 km · 47:47(평균 6:58/km)입니다.",

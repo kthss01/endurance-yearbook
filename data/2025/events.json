@@ -107,16 +107,21 @@
     "title": "익산 챌린지 아쿠아슬론 스탠다드",
     "category": "aquathlon",
     "status": "finished",
-    "reviewStatus": "partial",
+    "reviewStatus": "verified",
+    "official": { "time": "01:33:33", "course": "스탠다드(수영 1.5km, 폭염으로 러닝 5km 단축)", "splits": { "swimming": "00:47:26", "running": "00:42:44" } },
     "strava": {
       "segments": [
-        { "sport": "swimming", "distanceKm": 1.51, "movingTime": "00:48:00" },
-        { "sport": "running", "distanceKm": 5.19, "movingTime": "00:43:12" }
+        { "sport": "swimming", "distanceKm": 1.51, "movingTime": "00:47:42" },
+        { "sport": "running", "distanceKm": 5.19, "movingTime": "00:43:04" }
       ]
     },
-    "review": "오픈워터 수영과 러닝을 연속 수행한 아쿠아슬론 경험으로 정리한다.",
-    "sources": ["strava"],
-    "media": []
+    "review": "가장 큰 걱정거리였던 수영을 해낼 수 있다고 증명한 대회다. 1.5km를 00:47:26에 마치며 물에 대한 공포가 사라지고 호흡이 트였음을 느꼈고, 폭염으로 5km로 줄어든 러닝까지 01:33:33에 완주했다. 끝난 뒤 온몸에 쥐가 나 운전조차 힘들었고 결승선은 가장 마지막으로 밟았지만, 그 순간 가장 많은 박수를 받았다. 수영이 자전거만큼 자신감을 얻은 만큼, 다음 과제로 러닝과 감량을 꼽았다.",
+    "sources": ["strava", "kakao-story"],
+    "media": [
+      "assets/images/events/2025-iksan-aquathlon-standard/cover.jpg",
+      "assets/images/events/2025-iksan-aquathlon-standard/gallery-01.jpg",
+      "assets/images/events/2025-iksan-aquathlon-standard/gallery-03.jpg"
+    ]
   },
   {
     "id": "2025-hangang-night-walk-42k",
