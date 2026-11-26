@@ -3,67 +3,140 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="달리고, 타고, 헤엄친 한 해를 기록하는 개인 엔듀런스 프로필">
+  <meta name="description" content="달리고, 타고, 헤엄친 한 해를 기록하는 개인 엔듀런스 연감">
+  <meta name="theme-color" content="#0b0c0a">
   <title>Endurance Yearbook — 김태훈</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/journeys.css">
-  <link rel="stylesheet" href="assets/css/design.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;700;900&display=swap">
+  <link rel="stylesheet" href="assets/css/yearbook.css">
 </head>
 <body>
+  <div class="scroll-progress" aria-hidden="true"><span id="scroll-bar"></span></div>
+
   <header class="topbar">
-    <a class="wordmark" href="#top">ENDURANCE / YEARBOOK</a>
-    <nav aria-label="연도 선택">
-      <button data-year-button="2025">2025</button>
-      <button class="active" data-year-button="2026">2026</button>
+    <a class="wordmark" href="#top"><b>ENDURANCE</b><span>/ YEARBOOK</span></a>
+    <nav class="section-nav" aria-label="섹션 이동">
+      <a href="#season">시즌</a><a href="#races">대회</a><a href="#journeys">여정</a><a href="#review">회고</a>
     </nav>
+    <div class="year-switch" role="tablist" aria-label="연도 선택">
+      <span class="year-pill" aria-hidden="true"></span>
+      <button role="tab" data-year-button="2025">2025</button>
+      <button role="tab" data-year-button="2026" class="active">2026</button>
+    </div>
   </header>
 
   <main id="top">
-    <section class="profile-hero">
-      <div class="portrait-wrap"><img src="assets/images/profile.jpg" alt="김태훈 프로필 사진" class="portrait"></div>
-      <div class="profile-copy">
-        <p class="kicker">ATHLETE PROFILE · SEOUL</p>
-        <h1>김태훈<span>계속 움직이며<br>나만의 지도를 만듭니다.</span></h1>
-        <p id="hero-summary" class="intro"></p>
-        <div class="profile-links">
-          <a href="#season">시즌 보기 ↓</a>
-          <a href="https://story.kakao.com/_F7q479" target="_blank" rel="noreferrer">KakaoStory ↗</a>
+    <!-- 히어로: 프로필과 핵심 숫자 -->
+    <section class="hero" id="hero">
+      <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+      <svg class="hero-route" viewBox="0 0 1200 600" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M-20 520 C 140 470, 220 300, 380 340 S 600 520, 720 360 S 900 120, 1040 210 S 1180 330, 1240 260"/>
+      </svg>
+      <div class="hero-year" id="hero-year-bg" aria-hidden="true">2026</div>
+      <div class="hero-inner">
+        <div class="hero-portrait">
+          <img src="assets/images/profile.jpg" alt="김태훈 프로필 사진">
+          <span class="portrait-ring" aria-hidden="true"></span>
+        </div>
+        <div class="hero-copy">
+          <p class="kicker"><span class="live-dot"></span>ATHLETE PROFILE · SEOUL · <b id="hero-year">2026</b></p>
+          <h1>김태훈<span>계속 움직이며 나만의 지도를 만듭니다.</span></h1>
+          <p id="hero-summary" class="intro"></p>
+          <div class="hero-links">
+            <a class="btn-primary" href="#season">시즌 보기 ↓</a>
+            <a class="btn-ghost" href="https://story.kakao.com/_F7q479" target="_blank" rel="noreferrer">KakaoStory ↗</a>
+          </div>
         </div>
       </div>
-      <div class="season-stamp"><b id="hero-year">2026</b><span>RUN · RIDE · SWIM</span></div>
+      <div class="hero-kpis" id="hero-kpis"></div>
     </section>
 
-    <section class="marquee" aria-label="주요 종목"><div>RUNNING · CYCLING · TRIATHLON · TRAIL · SWIMMING · JOURNEY ·&nbsp;</div></section>
+    <section class="marquee" aria-label="주요 종목"><div><span>RUN</span>✦<span>RIDE</span>✦<span>SWIM</span>✦<span>TRIATHLON</span>✦<span>TRAIL</span>✦<span>BREVET</span>✦<span>JOURNEY</span>✦<span>RUN</span>✦<span>RIDE</span>✦<span>SWIM</span>✦<span>TRIATHLON</span>✦<span>TRAIL</span>✦<span>BREVET</span>✦<span>JOURNEY</span>✦</div></section>
 
-    <section class="season section" id="season">
-      <div class="section-head"><div><span>01 / SEASON</span><h2>숫자로 보는 한 해</h2></div><p>Strava 기록을 한국 시간 기준으로 정리했습니다.</p></div>
-      <div id="stats-grid" class="stats-grid"></div>
-      <div class="rhythm-layout">
-        <div class="chart-panel"><div class="chart-heading"><div><div class="panel-label">MONTHLY DISTANCE</div><strong id="chart-title">전체 종목</strong></div><div id="chart-filters" class="chart-filters"></div></div><div id="monthly-chart" class="monthly-chart"></div></div>
-        <div id="sport-grid" class="sport-list"></div>
+    <!-- 01 시즌: 그래프 -->
+    <section class="section" id="season">
+      <div class="section-head reveal">
+        <div><span class="eyebrow">01 / SEASON</span><h2>숫자로 보는 한 해</h2></div>
+        <p>Strava 활동을 한국 시간 기준으로 집계했습니다. 지표를 바꾸면 모든 그래프가 함께 바뀝니다.</p>
       </div>
+
+      <div class="metric-tabs reveal" id="metric-tabs" role="tablist" aria-label="그래프 지표"></div>
+
+      <div class="chart-grid">
+        <article class="panel panel-wide reveal">
+          <header class="panel-head"><div><span class="eyebrow">MONTHLY · BY SPORT</span><h3 id="monthly-title">월별 종목 구성</h3></div><div class="legend" id="monthly-legend"></div></header>
+          <div class="chart" id="monthly-chart"></div>
+        </article>
+        <article class="panel reveal">
+          <header class="panel-head"><div><span class="eyebrow">SHARE</span><h3>종목 비중</h3></div></header>
+          <div class="donut-wrap" id="share-chart"></div>
+        </article>
+        <article class="panel panel-wide reveal">
+          <header class="panel-head"><div><span class="eyebrow">CUMULATIVE · 2025 vs 2026</span><h3 id="cumulative-title">누적 추이 비교</h3></div><div class="legend" id="cumulative-legend"></div></header>
+          <div class="chart" id="cumulative-chart"></div>
+        </article>
+        <article class="panel reveal">
+          <header class="panel-head"><div><span class="eyebrow">CONSISTENCY</span><h3>꾸준함 지도</h3></div></header>
+          <div id="consistency-chart"></div>
+        </article>
+      </div>
+
+      <div class="sport-grid" id="sport-grid"></div>
+      <div class="record-grid" id="record-grid"></div>
     </section>
 
-    <section class="stories section" id="events">
-      <div class="section-head"><div><span>02 / STORIES</span><h2>기억에 남은 대회</h2></div><p>카드를 누르면 기록, 실제 이동 경로, 후기와 사진을 볼 수 있습니다.</p></div>
-      <div id="event-filters" class="filters"></div>
-      <div id="event-grid" class="story-grid"></div>
+    <!-- 02 대회 -->
+    <section class="section section-races" id="races">
+      <div class="section-head reveal">
+        <div><span class="eyebrow">02 / RACES</span><h2>기억에 남은 대회</h2></div>
+        <p>타임라인의 점이나 카드를 누르면 기록, 구간 분석, 후기와 사진을 볼 수 있습니다.</p>
+      </div>
+      <div class="race-summary reveal" id="race-summary"></div>
+      <div class="timeline reveal" id="timeline"></div>
+      <div class="pb-grid reveal" id="pb-grid"></div>
+      <div id="event-filters" class="filters reveal"></div>
+      <div id="event-grid" class="race-grid"></div>
     </section>
 
-    <section class="journeys section">
-      <div class="section-head invert"><div><span>03 / JOURNEYS</span><h2>경기 밖의 이동</h2></div><p>여행과 장거리 도전을 하나의 여정으로 묶었습니다.</p></div>
-      <div id="journey-list" class="journey-list"></div>
+    <!-- 03 여정 -->
+    <section class="section section-journeys" id="journeys">
+      <div class="section-head reveal">
+        <div><span class="eyebrow">03 / JOURNEYS</span><h2>경기 밖의 이동</h2></div>
+        <p>여러 날에 걸친 여행과 장거리 도전을 하나의 여정으로 묶었습니다.</p>
+      </div>
+      <div id="journey-list" class="journey-grid"></div>
     </section>
 
-    <section class="review section"><div class="section-head"><div><span>04 / REVIEW</span><h2>시즌 노트</h2></div></div><blockquote id="review-quote"></blockquote><div id="review-points" class="review-points"></div></section>
+    <!-- 04 회고 -->
+    <section class="section section-review" id="review">
+      <div class="section-head reveal"><div><span class="eyebrow">04 / REVIEW</span><h2>시즌 노트</h2></div></div>
+      <blockquote id="review-quote" class="reveal"></blockquote>
+      <div id="review-points" class="review-points"></div>
+    </section>
   </main>
 
-  <footer><strong>ENDURANCE YEARBOOK</strong><span>Strava · Google Docs · KakaoStory</span><span>2025—2026</span></footer>
+  <footer class="footer">
+    <strong>ENDURANCE YEARBOOK</strong>
+    <span>Strava · Google Docs · KakaoStory</span>
+    <span>2025 — 2026</span>
+  </footer>
 
-  <dialog id="event-dialog" class="event-dialog" aria-labelledby="detail-title">
+  <div class="tooltip" id="tooltip" role="tooltip" hidden></div>
+
+  <dialog id="event-dialog" class="detail-dialog" aria-labelledby="detail-title">
     <button class="dialog-close" aria-label="상세 화면 닫기">닫기 ×</button>
     <div id="event-detail"></div>
   </dialog>
+
+  <dialog id="lightbox" class="lightbox" aria-label="사진 크게 보기">
+    <button class="lb-close" aria-label="닫기">×</button>
+    <button class="lb-nav lb-prev" aria-label="이전 사진">‹</button>
+    <figure><img id="lb-img" alt=""><figcaption id="lb-cap"></figcaption></figure>
+    <button class="lb-nav lb-next" aria-label="다음 사진">›</button>
+  </dialog>
+
   <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/ui.js" defer></script>
 </body>
 </html>
