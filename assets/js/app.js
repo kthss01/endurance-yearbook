@@ -57,6 +57,16 @@ const MEDIA = {
     "assets/images/events/2026-hangang-half-2.jpg",
     "assets/images/events/2026-hangang-half-1.jpg",
   ],
+  "2026-daecheongho-full-marathon": [
+    "assets/images/events/2026-daecheongho-full-marathon/cover.jpg",
+    "assets/images/events/2026-daecheongho-full-marathon/official-result.jpg",
+    "assets/images/events/2026-daecheongho-full-marathon/route-summary.jpg",
+    "assets/images/events/2026-daecheongho-full-marathon/venue.jpg",
+    "assets/images/events/2026-daecheongho-full-marathon/start-area.jpg",
+    "assets/images/events/2026-daecheongho-full-marathon/splits.jpg",
+    "assets/images/events/2026-daecheongho-full-marathon/pace.jpg",
+    "assets/images/events/2026-daecheongho-full-marathon/heart-rate.jpg",
+  ],
   "2026-incheon-full-marathon": [
     "assets/images/events/2026-incheon-full-marathon/cover.jpg",
     "assets/images/events/2026-incheon-full-marathon/official-result.jpg",
@@ -119,9 +129,25 @@ const JOURNEY_STRAVA = {
 };
 const KAKAO = "https://story.kakao.com/_F7q479";
 const KAKAO_POSTS = {
+  "2026-gumi-full-marathon": "https://story.kakao.com/_F7q479/KQsGwUHN1Oa",
+  "2026-daecheongho-full-marathon": "https://story.kakao.com/_F7q479/H97RJOBnzRa",
   "2026-incheon-full-marathon": "https://story.kakao.com/_F7q479/EVJyv4BzXRA",
 };
 const AI_ANALYSIS = {
+  "2026-daecheongho-full-marathon": {
+    facts: [
+      "공식 기록 04:39:37.06, Strava 이동 시간 04:38:24입니다.",
+      "Strava 거리는 42.43 km, 누적 상승고도는 446 m입니다.",
+      "구미 첫 풀코스보다 약 12분 22초 기록을 단축했습니다.",
+    ],
+    assessment:
+      "상승고도 446 m의 굴곡 있는 코스에서 첫 풀코스보다 기록을 줄인 점은 지구력과 페이스 운영이 개선됐다는 근거입니다. 다만 후기에서 대회 뒤 통증과 긴 회복 시간을 직접 언급했으므로, 기록 향상과 별개로 근육 손상과 회복 부담은 컸던 대회로 판단됩니다. 정확한 통증 원인은 데이터만으로 확정할 수 없습니다.",
+    next: [
+      "풀코스 뒤 최소 7일은 회복 주간으로 미리 비워 다음 대회 준비에 대한 조급함을 줄입니다.",
+      "30 km 이후 구간별 페이스와 심박 변화를 비교해 경련이 시작되는 강도를 파악합니다.",
+      "대회 후 통증이 일상 보행에 영향을 주면 훈련 재개보다 상태 확인과 회복을 우선합니다.",
+    ],
+  },
   "2026-incheon-full-marathon": {
     facts: [
       "공식 기록 04:43:02로 목표 04:30:00 대비 13분 02초 늦었습니다.",

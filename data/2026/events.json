@@ -226,9 +226,13 @@
     "reviewStatus": "verified",
     "official": { "time": "04:39:37.06" },
     "strava": { "distanceKm": 42.43, "movingTime": "04:38:24", "elevationGainM": 446 },
-    "review": "첫 풀코스보다 약 12분 22초 단축했다. 고도와 후반 경련을 고려하면 기록 이상의 진전이 확인된다.",
+    "review": "두 번째 풀코스에서 04:39:37.06으로 첫 풀코스보다 약 12분 22초 단축했다. 만족스러운 완주였지만 대회 뒤에는 온몸의 통증과 피로가 남았고, 다음 도전을 준비해야 한다는 조급함 속에서 ‘성장한 것이 아니라 망가진 것은 아닐까’라는 마음도 기록했다. 강렬한 도전 뒤의 고요함과 회복까지가 이번 대회의 이야기다.",
     "sources": ["strava", "google-docs", "kakao-story"],
-    "media": []
+    "media": [
+      "assets/images/events/2026-daecheongho-full-marathon/cover.jpg",
+      "assets/images/events/2026-daecheongho-full-marathon/official-result.jpg",
+      "assets/images/events/2026-daecheongho-full-marathon/route-summary.jpg"
+    ]
   },
   {
     "id": "2026-tongyeong-triathlon",
