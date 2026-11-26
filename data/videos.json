@@ -1,0 +1,68 @@
+[
+  {
+    "targetId": "2025-randonneurs-virtual-200k",
+    "type": "journey",
+    "videoId": "_ecNw-J5BNQ",
+    "url": "https://www.youtube.com/watch?v=_ecNw-J5BNQ",
+    "title": "란도너스 벡터 Zwift 200km 하이라이트",
+    "publishedAt": "2026-10-13",
+    "kind": "video",
+    "durationSec": 148,
+    "note": "79명이 모인 Zwift 밋업 출발 대기부터 4시간 지점의 휴식, 화산 코스를 달리는 후반까지 실내 200km를 짧게 요약했다."
+  },
+  {
+    "targetId": "2025-seorak-granfondo",
+    "type": "event",
+    "videoId": "d-zXpshSw3s",
+    "url": "https://www.youtube.com/watch?v=d-zXpshSw3s",
+    "title": "2025 설악 그란폰도 하이라이트",
+    "publishedAt": "2026-10-14",
+    "kind": "video",
+    "durationSec": 286,
+    "note": "‘12시간의 사투’라는 제목 아래 구룡령 첫 고개 정상, 102km 휴식 뒤 재출발, 150km 넘어 이어지는 오르막을 고도 그래프와 함께 따라간다."
+  },
+  {
+    "targetId": "2025-hangang-night-walk-42k",
+    "type": "event",
+    "videoId": "ldhe5z3oQ_A",
+    "url": "https://www.youtube.com/watch?v=ldhe5z3oQ_A",
+    "title": "2025 한강 나이트워크 42K 하이라이트",
+    "publishedAt": "2026-10-14",
+    "kind": "video",
+    "durationSec": 198,
+    "note": "19시 출발 게이트에서 철교 아래 둔치, 자정 넘은 밤길 행렬, 새벽 4시 막판 발목 부상까지 밤샘 42km를 시간순으로 담았다."
+  },
+  {
+    "targetId": "2025-kyushu-cycling",
+    "type": "journey",
+    "videoId": "JRpR-Wdbstw",
+    "url": "https://www.youtube.com/watch?v=JRpR-Wdbstw",
+    "title": "큐슈 일주 종합 하이라이트 (후쿠오카 ~ 벳푸, 6일)",
+    "publishedAt": "2026-10-13",
+    "kind": "video",
+    "durationSec": 591,
+    "note": "화산을 배경으로 선 자전거, 첫날 저녁 식사, 아오시마 근처 BMX 숍, 4일차 벳푸까지의 야간 라이딩 등 6일 여정을 한 편으로 묶었다."
+  },
+  {
+    "targetId": "2026-camino-frances",
+    "type": "journey",
+    "videoId": "n5GgD3cWsGM",
+    "url": "https://www.youtube.com/watch?v=n5GgD3cWsGM",
+    "title": "산티아고 프랑스길 종합 하이라이트 (생장 ~ 산티아고 13일)",
+    "publishedAt": "2026-10-13",
+    "kind": "video",
+    "durationSec": 825,
+    "note": "생장피에드포르에서 피레네·메세타·철십자가를 지나 산티아고 대성당까지 823.5km를 일차별 챕터로 나눈 종합편이다(설명란에 챕터 시간표)."
+  },
+  {
+    "targetId": "2026-cheonan-200k-brevet",
+    "type": "journey",
+    "videoId": "y6c5HSCx58Y",
+    "url": "https://www.youtube.com/watch?v=y6c5HSCx58Y",
+    "title": "천안 200k 하이라이트",
+    "publishedAt": "2026-11-01",
+    "kind": "video",
+    "durationSec": 292,
+    "note": "새벽 천안 출발, 풍력발전기 언덕과 천수만 방조제의 서해 구간을 지나 아산 시내에서 200km를 넘기는 장면까지 담았다."
+  }
+]

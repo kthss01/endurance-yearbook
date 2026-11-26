@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 
@@ -50,11 +51,51 @@ def validate_year(year: int) -> list[str]:
     return errors
 
 
+VALID_VIDEO_TYPES = {"event", "journey"}
+VALID_VIDEO_KINDS = {"video", "short", "live"}
+
+
+def validate_videos(years: list[int]) -> list[str]:
+    """data/videos.json의 영상이 실제 대회·여정 id를 가리키는지 확인한다."""
+    path = ROOT / "data" / "videos.json"
+    if not path.exists():
+        return []
+    errors: list[str] = []
+    known = {"event": set(), "journey": set()}
+    for year in years:
+        folder = ROOT / "data" / str(year)
+        known["event"] |= {e["id"] for e in load(folder / "events.json")}
+        known["journey"] |= {j["id"] for j in load(folder / "journeys.json")}
+
+    seen: set[tuple[str, str]] = set()
+    for i, video in enumerate(load(path)):
+        label = f"videos[{i}] {video.get('videoId')}"
+        kind, target = video.get("type"), video.get("targetId")
+        if kind not in VALID_VIDEO_TYPES:
+            errors.append(f"{label}: invalid type {kind}")
+        elif target not in known[kind]:
+            errors.append(f"{label}: unknown {kind} id {target}")
+        if video.get("kind") not in VALID_VIDEO_KINDS:
+            errors.append(f"{label}: invalid kind {video.get('kind')}")
+        video_id = video.get("videoId") or ""
+        if not re.fullmatch(r"[A-Za-z0-9_-]{11}", video_id):
+            errors.append(f"{label}: invalid videoId")
+        elif video_id not in (video.get("url") or ""):
+            errors.append(f"{label}: url does not contain videoId")
+        if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", video.get("publishedAt") or ""):
+            errors.append(f"{label}: invalid publishedAt")
+        key = (target, video_id)
+        if key in seen:
+            errors.append(f"{label}: duplicate link to {target}")
+        seen.add(key)
+    return errors
+
+
 def main() -> None:
-    errors = validate_year(2025) + validate_year(2026)
+    errors = validate_year(2025) + validate_year(2026) + validate_videos([2025, 2026])
     if errors:
         raise SystemExit("\n".join(errors))
-    print("Yearbook data validation passed for 2025 and 2026.")
+    print("Yearbook data validation passed for 2025 and 2026 (videos included).")
 
 
 if __name__ == "__main__":
