@@ -1,0 +1,54 @@
+[
+  {
+    "id": "2026-donghae-coast",
+    "year": 2026,
+    "startDate": "2026-03-20",
+    "endDate": "2026-03-22",
+    "title": "동해안 3일 라이딩",
+    "category": "journey",
+    "status": "finished",
+    "reviewStatus": "verified",
+    "strava": { "activityCount": 3, "distanceKm": 424.99, "movingHours": 20.24, "elapsedHours": 24.93, "elevationGainM": 3534 },
+    "review": "울산에서 영덕, 동해를 거쳐 속초까지 3일간 북상한 장거리 라이딩이다.",
+    "display": { "featured": true, "suggestedFormat": "three-stage chart" },
+    "sources": ["strava", "kakao-story"],
+    "media": []
+  },
+  {
+    "id": "2026-camino-frances",
+    "year": 2026,
+    "startDate": "2026-04-03",
+    "endDate": "2026-04-15",
+    "title": "산티아고 순례길 프랑스길",
+    "category": "journey",
+    "status": "finished",
+    "reviewStatus": "verified",
+    "strava": { "activityCount": 13, "distanceKm": 823.49, "movingHours": 53.33, "elapsedHours": 80.68, "elevationGainM": 10614 },
+    "review": "생장에서 산티아고까지 13일간 자전거로 완주했다. 계획과 실제 숙박지를 조정하면서도 최종 일정의 핵심 목표를 달성했다.",
+    "display": { "featured": true, "suggestedFormat": "13-day chapter" },
+    "sources": ["strava", "google-docs", "kakao-story"],
+    "media": []
+  },
+  {
+    "id": "2026-river-to-sea-challenge",
+    "year": 2026,
+    "startDate": "2026-09-23",
+    "endDate": "2026-09-27",
+    "title": "강에서 바다로 챌린지",
+    "category": "journey",
+    "status": "finished-with-dnf-stage",
+    "reviewStatus": "verified",
+    "strava": { "activityCount": 4, "distanceKm": 885.59, "movingHours": 42.5, "elapsedHours": 52.97, "elevationGainM": 10869 },
+    "stages": [
+      { "title": "강 따라 영월까지", "distanceKm": 255.91, "status": "finished" },
+      { "title": "안동 어드벤처", "distanceKm": 207.66, "status": "dnf" },
+      { "title": "거창 돼지구이", "distanceKm": 208.6, "status": "finished" },
+      { "title": "통영 가는 길", "distanceKm": 213.42, "status": "finished" }
+    ],
+    "review": "둘째 구간 DNF 이후 회복해 남은 장거리 구간을 이어갔다. 실패와 재개의 흐름을 한 묶음으로 보여준다.",
+    "display": { "featured": true, "suggestedFormat": "stage timeline" },
+    "sources": ["strava", "kakao-story"],
+    "media": []
+  }
+]
+

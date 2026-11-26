@@ -1,0 +1,551 @@
+{
+  "activityCount": 878,
+  "distanceKm": 11688.8,
+  "movingHours": 664.1,
+  "elevationGainM": 79898,
+  "year": 2026,
+  "timezone": "Asia/Seoul",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-11-25"
+  },
+  "activeDays": 280,
+  "sports": {
+    "cycling": {
+      "activityCount": 506,
+      "distanceKm": 10572.3,
+      "movingHours": 449.6,
+      "elevationGainM": 71932
+    },
+    "mobility": {
+      "activityCount": 124,
+      "distanceKm": 1.7,
+      "movingHours": 36.6,
+      "elevationGainM": 29
+    },
+    "running": {
+      "activityCount": 119,
+      "distanceKm": 955.4,
+      "movingHours": 109.7,
+      "elevationGainM": 7005
+    },
+    "swimming": {
+      "activityCount": 119,
+      "distanceKm": 133.4,
+      "movingHours": 61.2,
+      "elevationGainM": 143
+    },
+    "walking": {
+      "activityCount": 10,
+      "distanceKm": 26.0,
+      "movingHours": 7.0,
+      "elevationGainM": 790
+    }
+  },
+  "months": [
+    {
+      "activityCount": 60,
+      "distanceKm": 694.3,
+      "movingHours": 42.4,
+      "elevationGainM": 1141,
+      "month": 1,
+      "activeDays": 23,
+      "sports": {
+        "cycling": {
+          "activityCount": 19,
+          "distanceKm": 591.0,
+          "movingHours": 18.4,
+          "elevationGainM": 927
+        },
+        "running": {
+          "activityCount": 18,
+          "distanceKm": 82.7,
+          "movingHours": 8.7,
+          "elevationGainM": 214
+        },
+        "swimming": {
+          "activityCount": 15,
+          "distanceKm": 20.6,
+          "movingHours": 11.0,
+          "elevationGainM": 0
+        },
+        "walking": {
+          "activityCount": 0,
+          "distanceKm": 0.0,
+          "movingHours": 0.0,
+          "elevationGainM": 0
+        },
+        "mobility": {
+          "activityCount": 8,
+          "distanceKm": 0.0,
+          "movingHours": 4.3,
+          "elevationGainM": 0
+        }
+      }
+    },
+    {
+      "activityCount": 40,
+      "distanceKm": 906.5,
+      "movingHours": 53.3,
+      "elevationGainM": 3723,
+      "month": 2,
+      "activeDays": 21,
+      "sports": {
+        "cycling": {
+          "activityCount": 14,
+          "distanceKm": 840.9,
+          "movingHours": 36.9,
+          "elevationGainM": 2986
+        },
+        "running": {
+          "activityCount": 10,
+          "distanceKm": 59.1,
+          "movingHours": 6.7,
+          "elevationGainM": 736
+        },
+        "swimming": {
+          "activityCount": 9,
+          "distanceKm": 6.5,
+          "movingHours": 7.4,
+          "elevationGainM": 0
+        },
+        "walking": {
+          "activityCount": 0,
+          "distanceKm": 0.0,
+          "movingHours": 0.0,
+          "elevationGainM": 0
+        },
+        "mobility": {
+          "activityCount": 7,
+          "distanceKm": 0.0,
+          "movingHours": 2.3,
+          "elevationGainM": 0
+        }
+      }
+    },
+    {
+      "activityCount": 48,
+      "distanceKm": 1218.6,
+      "movingHours": 58.9,
+      "elevationGainM": 5806,
+      "month": 3,
+      "activeDays": 25,
+      "sports": {
+        "cycling": {
+          "activityCount": 29,
+          "distanceKm": 1140.8,
+          "movingHours": 46.1,
+          "elevationGainM": 5416
+        },
+        "running": {
+          "activityCount": 7,
+          "distanceKm": 74.5,
+          "movingHours": 7.8,
+          "elevationGainM": 390
+        },
+        "swimming": {
+          "activityCount": 4,
+          "distanceKm": 3.3,
+          "movingHours": 2.4,
+          "elevationGainM": 0
+        },
+        "walking": {
+          "activityCount": 0,
+          "distanceKm": 0.0,
+          "movingHours": 0.0,
+          "elevationGainM": 0
+        },
+        "mobility": {
+          "activityCount": 8,
+          "distanceKm": 0.0,
+          "movingHours": 2.6,
+          "elevationGainM": 0
+        }
+      }
+    },
+    {
+      "activityCount": 42,
+      "distanceKm": 1088.4,
+      "movingHours": 70.9,
+      "elevationGainM": 12961,
+      "month": 4,
+      "activeDays": 23,
+      "sports": {
+        "cycling": {
+          "activityCount": 22,
+          "distanceKm": 1071.3,
+          "movingHours": 63.5,
+          "elevationGainM": 12937
+        },
+        "running": {
+          "activityCount": 1,
+          "distanceKm": 10.3,
+          "movingHours": 1.0,
+          "elevationGainM": 11
+        },
+        "swimming": {
+          "activityCount": 5,
+          "distanceKm": 6.8,
+          "movingHours": 2.8,
+          "elevationGainM": 12
+        },
+        "walking": {
+          "activityCount": 0,
+          "distanceKm": 0.0,
+          "movingHours": 0.0,
+          "elevationGainM": 0
+        },
+        "mobility": {
+          "activityCount": 14,
+          "distanceKm": 0.0,
+          "movingHours": 3.6,
+          "elevationGainM": 0
+        }
+      }
+    },
+    {
+      "activityCount": 79,
+      "distanceKm": 1572.0,
+      "movingHours": 70.5,
+      "elevationGainM": 4843,
+      "month": 5,
+      "activeDays": 27,
+      "sports": {
+        "cycling": {
+          "activityCount": 44,
+          "distanceKm": 1466.6,
+          "movingHours": 52.9,
+          "elevationGainM": 4538
+        },
+        "running": {
+          "activityCount": 11,
+          "distanceKm": 87.1,
+          "movingHours": 9.0,
+          "elevationGainM": 294
+        },
+        "swimming": {
+          "activityCount": 13,
+          "distanceKm": 17.5,
+          "movingHours": 6.7,
+          "elevationGainM": 7
+        },
+        "walking": {
+          "activityCount": 0,
+          "distanceKm": 0.0,
+          "movingHours": 0.0,
+          "elevationGainM": 0
+        },
+        "mobility": {
+          "activityCount": 11,
+          "distanceKm": 0.8,
+          "movingHours": 1.9,
+          "elevationGainM": 4
+        }
+      }
+    },
+    {
+      "activityCount": 87,
+      "distanceKm": 1372.0,
+      "movingHours": 69.2,
+      "elevationGainM": 9153,
+      "month": 6,
+      "activeDays": 27,
+      "sports": {
+        "cycling": {
+          "activityCount": 55,
+          "distanceKm": 1276.0,
+          "movingHours": 47.9,
+          "elevationGainM": 7862
+        },
+        "running": {
+          "activityCount": 6,
+          "distanceKm": 54.9,
+          "movingHours": 6.0,
+          "elevationGainM": 581
+        },
+        "swimming": {
+          "activityCount": 12,
+          "distanceKm": 19.3,
+          "movingHours": 7.4,
+          "elevationGainM": 5
+        },
+        "walking": {
+          "activityCount": 9,
+          "distanceKm": 21.8,
+          "movingHours": 6.0,
+          "elevationGainM": 705
+        },
+        "mobility": {
+          "activityCount": 5,
+          "distanceKm": 0.0,
+          "movingHours": 1.8,
+          "elevationGainM": 0
+        }
+      }
+    },
+    {
+      "activityCount": 114,
+      "distanceKm": 591.0,
+      "movingHours": 52.0,
+      "elevationGainM": 3662,
+      "month": 7,
+      "activeDays": 30,
+      "sports": {
+        "cycling": {
+          "activityCount": 66,
+          "distanceKm": 405.2,
+          "movingHours": 18.4,
+          "elevationGainM": 2476
+        },
+        "running": {
+          "activityCount": 20,
+          "distanceKm": 166.4,
+          "movingHours": 20.4,
+          "elevationGainM": 1018
+        },
+        "swimming": {
+          "activityCount": 9,
+          "distanceKm": 15.2,
+          "movingHours": 5.8,
+          "elevationGainM": 84
+        },
+        "walking": {
+          "activityCount": 1,
+          "distanceKm": 4.2,
+          "movingHours": 1.0,
+          "elevationGainM": 85
+        },
+        "mobility": {
+          "activityCount": 18,
+          "distanceKm": 0.0,
+          "movingHours": 6.5,
+          "elevationGainM": 0
+        }
+      }
+    },
+    {
+      "activityCount": 114,
+      "distanceKm": 776.1,
+      "movingHours": 58.3,
+      "elevationGainM": 5328,
+      "month": 8,
+      "activeDays": 29,
+      "sports": {
+        "cycling": {
+          "activityCount": 62,
+          "distanceKm": 613.9,
+          "movingHours": 24.9,
+          "elevationGainM": 4024
+        },
+        "running": {
+          "activityCount": 12,
+          "distanceKm": 138.1,
+          "movingHours": 18.6,
+          "elevationGainM": 1269
+        },
+        "swimming": {
+          "activityCount": 20,
+          "distanceKm": 23.7,
+          "movingHours": 9.5,
+          "elevationGainM": 24
+        },
+        "walking": {
+          "activityCount": 0,
+          "distanceKm": 0.0,
+          "movingHours": 0.0,
+          "elevationGainM": 0
+        },
+        "mobility": {
+          "activityCount": 20,
+          "distanceKm": 0.5,
+          "movingHours": 5.4,
+          "elevationGainM": 11
+        }
+      }
+    },
+    {
+      "activityCount": 148,
+      "distanceKm": 1837.4,
+      "movingHours": 100.0,
+      "elevationGainM": 19580,
+      "month": 9,
+      "activeDays": 29,
+      "sports": {
+        "cycling": {
+          "activityCount": 99,
+          "distanceKm": 1709.7,
+          "movingHours": 77.7,
+          "elevationGainM": 17876
+        },
+        "running": {
+          "activityCount": 18,
+          "distanceKm": 117.7,
+          "movingHours": 14.2,
+          "elevationGainM": 1705
+        },
+        "swimming": {
+          "activityCount": 16,
+          "distanceKm": 9.9,
+          "movingHours": 3.8,
+          "elevationGainM": 0
+        },
+        "walking": {
+          "activityCount": 0,
+          "distanceKm": 0.0,
+          "movingHours": 0.0,
+          "elevationGainM": 0
+        },
+        "mobility": {
+          "activityCount": 15,
+          "distanceKm": 0.0,
+          "movingHours": 4.2,
+          "elevationGainM": 0
+        }
+      }
+    },
+    {
+      "activityCount": 97,
+      "distanceKm": 1261.8,
+      "movingHours": 66.1,
+      "elevationGainM": 11211,
+      "month": 10,
+      "activeDays": 28,
+      "sports": {
+        "cycling": {
+          "activityCount": 60,
+          "distanceKm": 1149.5,
+          "movingHours": 49.3,
+          "elevationGainM": 10626
+        },
+        "running": {
+          "activityCount": 12,
+          "distanceKm": 104.1,
+          "movingHours": 10.7,
+          "elevationGainM": 560
+        },
+        "swimming": {
+          "activityCount": 12,
+          "distanceKm": 7.6,
+          "movingHours": 3.3,
+          "elevationGainM": 11
+        },
+        "walking": {
+          "activityCount": 0,
+          "distanceKm": 0.0,
+          "movingHours": 0.0,
+          "elevationGainM": 0
+        },
+        "mobility": {
+          "activityCount": 13,
+          "distanceKm": 0.4,
+          "movingHours": 2.8,
+          "elevationGainM": 14
+        }
+      }
+    },
+    {
+      "activityCount": 49,
+      "distanceKm": 370.6,
+      "movingHours": 22.6,
+      "elevationGainM": 2491,
+      "month": 11,
+      "activeDays": 18,
+      "sports": {
+        "cycling": {
+          "activityCount": 36,
+          "distanceKm": 307.3,
+          "movingHours": 13.5,
+          "elevationGainM": 2264
+        },
+        "running": {
+          "activityCount": 4,
+          "distanceKm": 60.3,
+          "movingHours": 6.7,
+          "elevationGainM": 227
+        },
+        "swimming": {
+          "activityCount": 4,
+          "distanceKm": 2.9,
+          "movingHours": 1.2,
+          "elevationGainM": 0
+        },
+        "walking": {
+          "activityCount": 0,
+          "distanceKm": 0.0,
+          "movingHours": 0.0,
+          "elevationGainM": 0
+        },
+        "mobility": {
+          "activityCount": 5,
+          "distanceKm": 0.0,
+          "movingHours": 1.2,
+          "elevationGainM": 0
+        }
+      }
+    },
+    {
+      "activityCount": 0,
+      "distanceKm": 0.0,
+      "movingHours": 0.0,
+      "elevationGainM": 0,
+      "month": 12,
+      "activeDays": 0,
+      "sports": {
+        "cycling": {
+          "activityCount": 0,
+          "distanceKm": 0.0,
+          "movingHours": 0.0,
+          "elevationGainM": 0
+        },
+        "running": {
+          "activityCount": 0,
+          "distanceKm": 0.0,
+          "movingHours": 0.0,
+          "elevationGainM": 0
+        },
+        "swimming": {
+          "activityCount": 0,
+          "distanceKm": 0.0,
+          "movingHours": 0.0,
+          "elevationGainM": 0
+        },
+        "walking": {
+          "activityCount": 0,
+          "distanceKm": 0.0,
+          "movingHours": 0.0,
+          "elevationGainM": 0
+        },
+        "mobility": {
+          "activityCount": 0,
+          "distanceKm": 0.0,
+          "movingHours": 0.0,
+          "elevationGainM": 0
+        }
+      }
+    }
+  ],
+  "records": {
+    "longestDistance": {
+      "date": "2026-09-23",
+      "title": "PT-72 강 따라 영월까지",
+      "activityType": "Ride",
+      "distanceKm": 255.91,
+      "movingHours": 11.33,
+      "elevationGainM": 2172
+    },
+    "highestElevation": {
+      "date": "2026-09-24",
+      "title": "PT-75 안동 어드벤처 (DNF)",
+      "activityType": "Ride",
+      "distanceKm": 207.66,
+      "movingHours": 11.27,
+      "elevationGainM": 3267
+    }
+  },
+  "method": {
+    "source": "Strava activities.csv",
+    "dateRule": "Activity Date interpreted as UTC and converted to Asia/Seoul (+09:00)",
+    "distanceRule": "Detailed Distance column in metres",
+    "timeRule": "Detailed Moving Time column in seconds"
+  }
+}
