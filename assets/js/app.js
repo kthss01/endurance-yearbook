@@ -53,6 +53,9 @@ const LABEL = {
   participated: "참가",
 };
 const MEDIA = {
+  "2026-mungyeong-granfondo": Array.from({ length: 10 }, (_, i) => `assets/images/events/2026-mungyeong-granfondo/photo-${String(i + 1).padStart(2, "0")}.jpg`),
+  "2026-bbang-trail-30k": Array.from({ length: 20 }, (_, i) => `assets/images/events/2026-bbang-trail-30k/photo-${String(i + 1).padStart(2, "0")}.jpg`),
+  "2026-iksan-aquathlon-cutoff": Array.from({ length: 16 }, (_, i) => `assets/images/events/2026-iksan-aquathlon-cutoff/photo-${String(i + 1).padStart(2, "0")}.jpg`),
   "2026-samcheok-granfondo": ["assets/images/events/2026-samcheok-granfondo/official-result.jpg"],
   "2026-seoul-200k-brevet": ["assets/images/events/2026-seoul-200k-brevet/brevet-certificate.jpg"],
   "2026-yangsan-triathlon": [
@@ -139,6 +142,9 @@ const JOURNEY_STRAVA = {
 };
 const KAKAO = "https://story.kakao.com/_F7q479";
 const KAKAO_POSTS = {
+  "2026-mungyeong-granfondo": "https://story.kakao.com/_F7q479/f3nKEZ0awQA",
+  "2026-bbang-trail-30k": "https://story.kakao.com/_F7q479/KEv6PDZ57Ra",
+  "2026-iksan-aquathlon-cutoff": "https://story.kakao.com/_F7q479/CCeTRc1pCQ0",
   "2026-samcheok-granfondo": "https://story.kakao.com/_F7q479/gQ86NqzRLPA",
   "2026-seoul-200k-brevet": "https://story.kakao.com/_F7q479/5TSCRTj8RO9",
   "2026-yangsan-triathlon": "https://story.kakao.com/_F7q479/aBHsNXID4o0",
@@ -148,6 +154,21 @@ const KAKAO_POSTS = {
   "2026-incheon-full-marathon": "https://story.kakao.com/_F7q479/EVJyv4BzXRA",
 };
 const AI_ANALYSIS = {
+  "2026-mungyeong-granfondo": {
+    facts: ["공식 완주 기록은 06:46:47입니다.", "Strava 기록은 154.36 km·06:21:36·누적 상승 1,988 m입니다.", "카카오스토리에는 2025년 컷오프 뒤 2026년 그란폰도 코스를 완주한 과정이 기록됐습니다."],
+    assessment: "공식 기록과 Strava 이동 시간의 차이는 25분 11초입니다. 분기 제한 시각을 3분 남기고 통과한 뒤 이화령과 여우목고개에서 경련을 겪고도 페이스를 유지해 재도전을 완주로 바꿨습니다. 다만 반복된 허벅지 경련과 허리·안장 통증의 원인은 현재 자료만으로 확정할 수 없습니다.",
+    next: ["장거리 업힐 훈련과 보급 계획을 대회 전 타임시트에 함께 기록합니다.", "경련 조짐이 있을 때 다운힐 진입 전 속도를 낮추고 안전한 곳에서 상태를 확인합니다.", "2025·2026년 분기 통과 시각과 정차 시간을 비교해 다음 장거리 운영에 반영합니다."],
+  },
+  "2026-bbang-trail-30k": {
+    facts: ["공식 완주 기록은 05:31:45입니다.", "Strava 기록은 31.29 km·05:10:48·누적 상승 1,587 m입니다.", "첫 30 km 트레일에서 후반 발목·발가락 경련과 무릎 부담을 직접 기록했습니다."],
+    assessment: "공식 기록과 Strava 이동 시간의 차이는 20분 57초입니다. 초반 페이스를 억제하고 후반 긴 업힐에 남겨둔 보급을 사용한 운영이 첫 30 km 완주로 이어졌습니다. 후기에는 대회 뒤 열감과 전신 통증, 에너지 고갈이 분명하므로 완주 직후 추가 훈련보다 회복 확인이 우선입니다.",
+    next: ["긴 다운힐 뒤 재상승하는 코스를 훈련에 넣어 무릎과 발목 부담을 점검합니다.", "20 km 이후 보급 시점과 경련 발생 시점을 기록해 다음 30 km 대회와 비교합니다.", "대회 다음 48시간은 수면·수분·통증을 기록하고 통증이 지속되면 고강도 훈련을 미룹니다."],
+  },
+  "2026-iksan-aquathlon-cutoff": {
+    facts: ["공식 결과는 수영 00:53:13 컷오프이며 러닝 10 km는 00:56:34에 별도로 달렸습니다.", "Strava에는 수영 1.54 km 활동 20235758966과 러닝 10.22 km 활동 20235759050이 각각 남아 있습니다.", "카카오스토리 원문에는 기록칩을 반납한 중도 탈락임이 명확히 기록됐습니다."],
+    assessment: "러닝 활동이 존재해도 공식 완주로 볼 수 없습니다. 후기에서 슈트 미착용, 4바퀴 코스와 반복 입수·퇴수, 너울, 후반에야 올린 페이스를 컷오프 요인으로 직접 짚었습니다. 각 요인의 기여도는 랩별 기록이 없어 수치로 분리할 수 없습니다.",
+    next: ["수영 컷오프가 있는 대회에서는 바퀴별 목표 통과 시각을 미리 정합니다.", "오픈워터 훈련에서 슈트 착용 여부와 너울 조건별 500 m 페이스를 비교합니다.", "공식 결과와 개인 활동 기록을 계속 분리해 중도 탈락 뒤 수행한 러닝을 별도 활동으로 보존합니다."],
+  },
   "2026-samcheok-granfondo": {
     facts: ["공식 기록은 05:41:22.8, 배번호는 1194번입니다.", "Strava 기록은 131.73 km·05:24:00·누적 상승 1,916 m입니다.", "이틀 뒤 후기에는 목·허리 통증과 에너지 고갈, 휴식 필요성이 기록됐습니다."],
     assessment: "이동 평균은 약 24.4 km/h이며 공식 기록과 이동 시간 차이는 약 17분 23초입니다. 1,900m가 넘는 상승량에도 정차를 효율적으로 관리했습니다. 다만 후기에서 통증과 피로 누적이 확인됩니다. 통증 원인은 의료 자료가 없어 훈련 과부하로 단정하지 않습니다.",

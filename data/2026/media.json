@@ -19,8 +19,23 @@
   },
   {
     "eventId": "2026-mungyeong-granfondo",
-    "status": "candidate-needed",
-    "desired": ["완주 사진", "2025년과 비교할 수 있는 코스 사진"],
+    "status": "downloaded",
+    "count": 10,
+    "storyUrl": "https://story.kakao.com/_F7q479/f3nKEZ0awQA",
+    "source": "kakao-story"
+  },
+  {
+    "eventId": "2026-bbang-trail-30k",
+    "status": "downloaded",
+    "count": 20,
+    "storyUrl": "https://story.kakao.com/_F7q479/KEv6PDZ57Ra",
+    "source": "kakao-story"
+  },
+  {
+    "eventId": "2026-iksan-aquathlon-cutoff",
+    "status": "downloaded",
+    "count": 16,
+    "storyUrl": "https://story.kakao.com/_F7q479/CCeTRc1pCQ0",
     "source": "kakao-story"
   },
   {

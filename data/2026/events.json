@@ -175,9 +175,21 @@
     "reviewStatus": "verified",
     "official": { "time": "06:46:47" },
     "strava": { "distanceKm": 154.36, "movingTime": "06:21:36", "elevationGainM": 1988 },
-    "review": "2025년 컷오프 후 2026년에 그란폰도 코스를 완주한 대표 재도전이다.",
+    "review": "작년에는 컷오프로 그란폰도 완주를 못하고 메디오폰도로 돌아섰지만, 올해는 그란폰도 완주라는 바람을 이뤘다. 분기 제한 시각을 3분 남기고 통과했고 이화령과 여우목고개에서 오른쪽 허벅지에 쥐가 났지만 페이스와 보급을 조절해 끝까지 달렸다. 마지막에는 남은 에너지까지 쏟으며 후회 없이 살자는 마음으로 완주했다.",
     "sources": ["strava", "google-docs", "kakao-story"],
-    "media": []
+    "stravaActivityIds": ["20041405671"],
+    "media": [
+      "assets/images/events/2026-mungyeong-granfondo/photo-01.jpg",
+      "assets/images/events/2026-mungyeong-granfondo/photo-02.jpg",
+      "assets/images/events/2026-mungyeong-granfondo/photo-03.jpg",
+      "assets/images/events/2026-mungyeong-granfondo/photo-04.jpg",
+      "assets/images/events/2026-mungyeong-granfondo/photo-05.jpg",
+      "assets/images/events/2026-mungyeong-granfondo/photo-06.jpg",
+      "assets/images/events/2026-mungyeong-granfondo/photo-07.jpg",
+      "assets/images/events/2026-mungyeong-granfondo/photo-08.jpg",
+      "assets/images/events/2026-mungyeong-granfondo/photo-09.jpg",
+      "assets/images/events/2026-mungyeong-granfondo/photo-10.jpg"
+    ]
   },
   {
     "id": "2026-bbang-trail-30k",
@@ -189,9 +201,31 @@
     "reviewStatus": "verified",
     "official": { "time": "05:31:45" },
     "strava": { "distanceKm": 31.29, "movingTime": "05:10:48", "elevationGainM": 1587 },
-    "review": "트레일러닝을 30km까지 확장한 시즌의 대표 산악 러닝이다.",
+    "review": "첫 30km 트레일 도전이라 초반의 완만한 코스와 빵에 긴장을 놓지 않고 페이스를 아꼈다. 긴 다운힐 뒤 같은 길을 오르는 후반, 왼발목과 발가락에 쥐가 나 크램프턴과 남은 파워젤로 버텼다. 온몸의 열과 통증, 바닥난 에너지로 회복까지 쉽지 않았지만 끔찍할 만큼 힘든 도전을 끝까지 견뎌냈다.",
     "sources": ["strava", "kakao-story"],
-    "media": []
+    "stravaActivityIds": ["20138236613"],
+    "media": [
+      "assets/images/events/2026-bbang-trail-30k/photo-01.jpg",
+      "assets/images/events/2026-bbang-trail-30k/photo-02.jpg",
+      "assets/images/events/2026-bbang-trail-30k/photo-03.jpg",
+      "assets/images/events/2026-bbang-trail-30k/photo-04.jpg",
+      "assets/images/events/2026-bbang-trail-30k/photo-05.jpg",
+      "assets/images/events/2026-bbang-trail-30k/photo-06.jpg",
+      "assets/images/events/2026-bbang-trail-30k/photo-07.jpg",
+      "assets/images/events/2026-bbang-trail-30k/photo-08.jpg",
+      "assets/images/events/2026-bbang-trail-30k/photo-09.jpg",
+      "assets/images/events/2026-bbang-trail-30k/photo-10.jpg",
+      "assets/images/events/2026-bbang-trail-30k/photo-11.jpg",
+      "assets/images/events/2026-bbang-trail-30k/photo-12.jpg",
+      "assets/images/events/2026-bbang-trail-30k/photo-13.jpg",
+      "assets/images/events/2026-bbang-trail-30k/photo-14.jpg",
+      "assets/images/events/2026-bbang-trail-30k/photo-15.jpg",
+      "assets/images/events/2026-bbang-trail-30k/photo-16.jpg",
+      "assets/images/events/2026-bbang-trail-30k/photo-17.jpg",
+      "assets/images/events/2026-bbang-trail-30k/photo-18.jpg",
+      "assets/images/events/2026-bbang-trail-30k/photo-19.jpg",
+      "assets/images/events/2026-bbang-trail-30k/photo-20.jpg"
+    ]
   },
   {
     "id": "2026-iksan-aquathlon-cutoff",
@@ -203,9 +237,27 @@
     "reviewStatus": "verified",
     "official": { "swimTime": "00:53:13", "runTime": "00:56:34", "result": "수영 컷오프" },
     "strava": { "swimDistanceKm": 1.54, "runDistanceKm": 10.22 },
-    "review": "두 활동이 모두 남아 있지만 공식 결과는 수영 컷오프다. 활동 존재와 완주를 동일시하면 안 되는 대표 사례다.",
+    "review": "수영 1.5km를 00:53:13에 마쳤지만 컷오프되어 기록칩을 반납했다. 러닝은 뛸 수 있다고 해 10km를 00:56:34에 달렸지만 공식 결과는 중도 탈락이다. 슈트를 입지 않았고 4바퀴 코스와 입수·퇴수 시간, 너울을 충분히 고려하지 못했다. 이번 패배를 안일해진 마음을 다잡고 다음 도전을 더 진지하게 준비하는 과정으로 남긴다.",
     "sources": ["strava", "kakao-story"],
-    "media": []
+    "stravaActivityIds": ["20235758966", "20235759050"],
+    "media": [
+      "assets/images/events/2026-iksan-aquathlon-cutoff/photo-01.jpg",
+      "assets/images/events/2026-iksan-aquathlon-cutoff/photo-02.jpg",
+      "assets/images/events/2026-iksan-aquathlon-cutoff/photo-03.jpg",
+      "assets/images/events/2026-iksan-aquathlon-cutoff/photo-04.jpg",
+      "assets/images/events/2026-iksan-aquathlon-cutoff/photo-05.jpg",
+      "assets/images/events/2026-iksan-aquathlon-cutoff/photo-06.jpg",
+      "assets/images/events/2026-iksan-aquathlon-cutoff/photo-07.jpg",
+      "assets/images/events/2026-iksan-aquathlon-cutoff/photo-08.jpg",
+      "assets/images/events/2026-iksan-aquathlon-cutoff/photo-09.jpg",
+      "assets/images/events/2026-iksan-aquathlon-cutoff/photo-10.jpg",
+      "assets/images/events/2026-iksan-aquathlon-cutoff/photo-11.jpg",
+      "assets/images/events/2026-iksan-aquathlon-cutoff/photo-12.jpg",
+      "assets/images/events/2026-iksan-aquathlon-cutoff/photo-13.jpg",
+      "assets/images/events/2026-iksan-aquathlon-cutoff/photo-14.jpg",
+      "assets/images/events/2026-iksan-aquathlon-cutoff/photo-15.jpg",
+      "assets/images/events/2026-iksan-aquathlon-cutoff/photo-16.jpg"
+    ]
   },
   {
     "id": "2026-siheung-half",
