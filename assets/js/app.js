@@ -212,6 +212,9 @@ const MEDIA = {
     "assets/images/events/2025-goseong-granfondo/gallery-06.jpg",
   ],
   "2025-korea-open-race-10k": [
+    "assets/images/events/2025-korea-open-race-10k/web-01.jpg",
+    "assets/images/events/2025-korea-open-race-10k/web-02.jpg",
+    "assets/images/events/2025-korea-open-race-10k/web-03.jpg",
     "assets/images/events/2025-korea-open-race-10k/official-certificate.jpg",
     "assets/images/events/2025-korea-open-race-10k/result-capture-01.jpg",
   ],
@@ -1125,4 +1128,10 @@ const RECORD_MEDIA = {
 // 대표 사진 초점 위치(object-position). 썸네일·상세 상단에서 피사체가 잘리지 않도록 사진별로 지정한다.
 const COVER_FOCUS = {
   "assets/images/events/2026-siheung-half/cover.jpg": "50% 88%",
+};
+// 인터넷 자유 라이선스 사진의 출처(캡션·작가·라이선스·원본 페이지). 대회 당일 사진이 아니면 캡션에 밝힌다.
+const IMAGE_CREDITS = {
+  "assets/images/events/2025-korea-open-race-10k/web-01.jpg": { caption: "서울 뚝섬한강공원 자벌레 전망대 앞 광장 (대회 장소 일대, 대회 당일 사진 아님)", author: "Motoko C. K.", license: "CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Ttukseom_Hangang_Park_20260416_1.jpg" },
+  "assets/images/events/2025-korea-open-race-10k/web-02.jpg": { caption: "서울 뚝섬한강공원 고가 아래 산책로 (대회 장소 일대, 대회 당일 사진 아님)", author: "Motoko C. K.", license: "CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Ttukseom_Hangang_Park_20260416_2.jpg" },
+  "assets/images/events/2025-korea-open-race-10k/web-03.jpg": { caption: "서울 뚝섬한강공원 쉼터 (대회 장소 일대, 대회 당일 사진 아님)", author: "Motoko C. K.", license: "CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Ttukseom_Hangang_Park_20260416_3.jpg" },
 };
