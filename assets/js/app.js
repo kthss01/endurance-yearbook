@@ -54,6 +54,16 @@ const LABEL = {
   participated: "참가",
 };
 const MEDIA = {
+  "2026-gumi-full-marathon": [
+    "assets/images/events/2026-gumi-full-marathon/cover.jpg",
+    "assets/images/events/2026-gumi-full-marathon/gallery-01.jpg",
+    "assets/images/events/2026-gumi-full-marathon/gallery-02.jpg",
+    "assets/images/events/2026-gumi-full-marathon/gallery-03.jpg",
+    "assets/images/events/2026-gumi-full-marathon/gallery-04.jpg",
+    "assets/images/events/2026-gumi-full-marathon/official-certificate.jpg",
+    "assets/images/events/2026-gumi-full-marathon/official-result.jpg",
+    "assets/images/events/2026-gumi-full-marathon/strava-summary.jpg",
+  ],
   "2025-mbn-half": [
     "assets/images/events/2025-mbn-half/cover.jpg",
     "assets/images/events/2025-mbn-half/official-certificate.jpg",
@@ -479,7 +489,7 @@ const KAKAO_POSTS = {
   "2026-seoul-200k-brevet": "https://story.kakao.com/_F7q479/5TSCRTj8RO9",
   "2026-yangsan-triathlon": "https://story.kakao.com/_F7q479/aBHsNXID4o0",
   "2026-changwon-triathlon": "https://story.kakao.com/_F7q479/AEdVmqWxOO0",
-  "2026-gumi-full-marathon": "https://story.kakao.com/_F7q479/KQsGwUHN1Oa",
+  "2026-gumi-full-marathon": "https://story.kakao.com/_F7q479/d7sXuXoS1nA",
   "2026-daecheongho-full-marathon": "https://story.kakao.com/_F7q479/H97RJOBnzRa",
   "2026-incheon-full-marathon": "https://story.kakao.com/_F7q479/EVJyv4BzXRA",
 };

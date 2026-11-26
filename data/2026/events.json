@@ -29,7 +29,11 @@
     "strava": { "distanceKm": 42.21, "movingTime": "04:51:00", "elevationGainM": 209 },
     "review": "첫 42.195km를 앞두고 기록 경쟁보다 오로지 완주를 목표로 삼았다. 한 주 동안 운동을 줄이고 쉬면서도 미지의 거리에 대한 불안은 남아 있었다. 나이트워크, 철인과 장거리 자전거에서 넘어온 경험을 떠올리며 ‘도망치지 말고 끝까지 가자’고 다짐했고, 04:51:59에 첫 풀코스를 완주했다. 이후 대청호와 인천 기록을 비교하는 출발점이 된 대회다.",
     "sources": ["strava", "google-docs", "kakao-story"],
-    "media": []
+    "media": [
+      "assets/images/events/2026-gumi-full-marathon/cover.jpg",
+      "assets/images/events/2026-gumi-full-marathon/official-certificate.jpg",
+      "assets/images/events/2026-gumi-full-marathon/strava-summary.jpg"
+    ]
   },
   {
     "id": "2026-hongcheon-granfondo",
