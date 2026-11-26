@@ -1,39 +1,10 @@
 [
-  {
-    "eventId": "2026-gumi-full-marathon",
-    "status": "candidate-needed",
-    "desired": ["첫 풀코스 완주 사진", "완주기록 또는 메달"],
-    "source": "kakao-story"
-  },
-  {
-    "eventId": "2026-camino-frances",
-    "status": "candidate-needed",
-    "desired": ["프랑스길 대표 풍경", "자전거와 순례 표식", "산티아고 도착", "13일 일차별 대표 사진"],
-    "source": "kakao-story"
-  },
-  {
-    "eventId": "2026-seolbong-triathlon",
-    "status": "candidate-needed",
-    "desired": ["수영 출발", "바꿈터", "완주 사진"],
-    "source": "kakao-story"
-  },
-  {
-    "eventId": "2026-mungyeong-granfondo",
-    "status": "candidate-needed",
-    "desired": ["완주 사진", "2025년과 비교할 수 있는 코스 사진"],
-    "source": "kakao-story"
-  },
-  {
-    "eventId": "2026-river-to-sea-challenge",
-    "status": "candidate-needed",
-    "desired": ["구간별 도착 사진", "안동 DNF 맥락", "통영 도착 사진"],
-    "source": "kakao-story"
-  },
-  {
-    "eventId": "2026-incheon-full-marathon",
-    "status": "candidate-needed",
-    "desired": ["완주 사진", "청라하늘대교", "기록증 또는 메달"],
-    "source": "kakao-story"
-  }
+  {"eventId": "2026-gumi-full-marathon", "status": "candidate-needed", "source": "kakao-story", "storyUrl": "https://story.kakao.com/_F7q479/KQsGwUHN1Oa", "desired": ["첫 풀코스 완주 사진", "완주기록 또는 메달"]},
+  {"eventId": "2026-camino-frances", "status": "downloaded", "source": "kakao-story", "count": 6},
+  {"eventId": "2026-seolbong-triathlon", "status": "downloaded", "source": "kakao-story", "count": 28, "storyUrl": "https://story.kakao.com/_F7q479/gKcGvKqzlQA"},
+  {"eventId": "2026-mungyeong-granfondo", "status": "downloaded", "source": "kakao-story", "count": 9, "storyUrl": "https://story.kakao.com/_F7q479/f3nKEZ0awQA"},
+  {"eventId": "2026-river-to-sea-challenge", "status": "candidate-needed", "source": "kakao-story", "desired": ["구간별 도착 사진", "안동 DNF 맥락", "통영 도착 사진"]},
+  {"eventId": "2026-incheon-full-marathon", "status": "downloaded", "source": "kakao-story", "count": 7, "storyUrl": "https://story.kakao.com/_F7q479/EVJyv4BzXRA"},
+  {"eventId": "2026-bbang-trail-30k", "status": "downloaded", "count": 18, "storyUrl": "https://story.kakao.com/_F7q479/KEv6PDZ57Ra", "source": "kakao-story"},
+  {"eventId": "2026-iksan-aquathlon-cutoff", "status": "downloaded", "count": 15, "storyUrl": "https://story.kakao.com/_F7q479/CCeTRc1pCQ0", "source": "kakao-story"}
 ]
-
