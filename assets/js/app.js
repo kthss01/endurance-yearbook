@@ -238,6 +238,40 @@ const state = {
   journeys: {},
   routes: {},
 };
+// 기록표·인증서·Strava 캡처 등 '문서형' 이미지는 대표 사진으로 쓰지 않는다
+const DOC_IMAGE = /(result|certificate|strava|splits|pace|heart-rate|route-summary|chart)/;
+const isDocImage = (p) => DOC_IMAGE.test(p.split("/").pop());
+const coverPhoto = (pics = []) => pics.find((p) => !isDocImage(p));
+// 카드 표면에 크게 보여줄 거리 (GPS 기준)
+function headlineDistance(e) {
+  const s = e.strava || {};
+  if (s.distanceKm) return s.distanceKm;
+  if (s.segments) return s.segments.reduce((a, x) => a + (x.distanceKm || 0), 0);
+  const parts = splitDistances(s);
+  return parts.length ? parts.reduce((a, [, d]) => a + d, 0) : null;
+}
+// 종목별 거리 필드(swim/bike/runDistanceKm)를 [종목, 거리] 목록으로
+function splitDistances(s) {
+  return [
+    ["swimming", s.swimDistanceKm],
+    ["cycling", s.bikeDistanceKm],
+    ["running", s.runDistanceKm],
+  ].filter(([, d]) => d);
+}
+function recordFace(e) {
+  const d = headlineDistance(e),
+    s = e.strava || {},
+    docs = (MEDIA[e.id] || []).filter(isDocImage).length;
+  const parts = s.segments
+    ? s.segments.map((x) => [x.sport, x.distanceKm])
+    : splitDistances(s);
+  const sub = [
+    parts.length > 1 ? parts.map(([k, v]) => `${LABEL[k] || k} ${num(v)}`).join(" / ") : "",
+    s.verticalFinish || "",
+    s.elevationGainM ? `↑ ${num(s.elevationGainM)} m` : "",
+  ].filter(Boolean).join(" · ");
+  return `<div class="record-face"><span class="record-sport">${LABEL[e.category] || e.category}</span><strong>${d ? `${num(d)}<small>km</small>` : "—"}</strong><div class="record-sub"><span>${sub}</span>${docs ? `<b>기록 사진 ${docs}</b>` : ""}</div></div>`;
+}
 const $ = (s) => document.querySelector(s),
   num = (v) =>
     new Intl.NumberFormat("ko-KR", { maximumFractionDigits: 1 }).format(v);
@@ -245,12 +279,14 @@ function result(e) {
   if (e.official?.time) return e.official.time;
   if (e.official?.result) return e.official.result;
   if (e.strava?.distanceKm) return `${num(e.strava.distanceKm)} km`;
-  if (e.strava?.bikeDistanceKm)
-    return `${num(e.strava.bikeDistanceKm)} km bike`;
   if (e.strava?.segments)
     return e.strava.segments
       .map((x) => `${LABEL[x.sport] || x.sport} ${x.distanceKm}km`)
       .join(" · ");
+  if (e.strava?.verticalFinish) return `${e.strava.verticalFinish} 완주`;
+  const parts = splitDistances(e.strava || {});
+  if (parts.length)
+    return parts.map(([k, v]) => `${LABEL[k] || k} ${num(v)}km`).join(" · ");
   return "기록 검토 중";
 }
 async function load() {
@@ -356,8 +392,8 @@ function renderEvents() {
   );
   $("#event-grid").innerHTML = shown
     .map((e) => {
-      const photo = MEDIA[e.id]?.[0];
-      return `<article class="story-card" tabindex="0" data-id="${e.id}"><div class="story-media ${photo ? "" : "no-photo"}" data-category="${LABEL[e.category] || e.category}">${photo ? `<img src="${photo}" alt="${e.title} 대표 사진">` : ""}</div><div class="story-body"><div class="story-meta"><span>${e.date.replaceAll("-", ".")}</span><span>${LABEL[e.status] || e.status}</span></div><h3>${e.title}</h3><div class="story-result">${result(e)}</div><span class="story-open">기록 상세 보기 ↗</span></div></article>`;
+      const photo = coverPhoto(MEDIA[e.id]);
+      return `<article class="story-card cat-${e.category}" tabindex="0" data-id="${e.id}" data-status="${e.status}"><div class="story-media ${photo ? "" : "no-photo"}">${photo ? `<img src="${photo}" alt="${e.title} 대표 사진" loading="lazy">` : recordFace(e)}</div><div class="story-body"><div class="story-meta"><span>${e.date.replaceAll("-", ".")}</span><span>${LABEL[e.status] || e.status}</span></div><h3>${e.title}</h3><div class="story-result">${result(e)}</div><span class="story-open">기록 상세 보기 ↗</span></div></article>`;
     })
     .join("");
   $("#event-grid")
@@ -375,7 +411,15 @@ function renderEvents() {
     });
 }
 function renderJourneys() {
-  const list = state.journeys[state.year];
+  // 대표 여정을 맨 앞에, 나머지는 날짜순. 짝이 맞지 않는 마지막 카드는 가로로 넓힌다
+  const FEATURED = "2026-camino-frances",
+    list = [...state.journeys[state.year]].sort(
+      (a, b) =>
+        (b.id === FEATURED) - (a.id === FEATURED) ||
+        a.startDate.localeCompare(b.startDate),
+    ),
+    rest = list.filter((j) => j.id !== FEATURED).length,
+    lastWide = rest % 2 === 1 ? list[list.length - 1].id : null;
   $("#journey-list").innerHTML = list
     .map((j) => {
       const photos = JOURNEY_MEDIA[j.id] || [],
@@ -385,7 +429,7 @@ function renderJourneys() {
             ? j.startDate
             : `${j.startDate} — ${j.endDate}`,
         activity = JOURNEY_STRAVA[j.id];
-      return `<article class="journey-card ${photos.length ? "has-media" : ""} ${j.id === "2026-camino-frances" ? "featured-journey" : ""}">${photos.length ? `<div class="journey-media"><img src="${photos[0]}" alt="${j.title} 대표 사진">${photos.length > 1 ? `<span>+${photos.length - 1} PHOTOS</span>` : ""}</div>` : ""}<div class="journey-copy"><span class="date">${period}</span><small>${j.category === "randonneuring" ? "RANDONNEURING" : j.category === "walking" ? "WALKING" : "JOURNEY"}</small><h3>${j.title}</h3><p>${j.review || j.summary || ""}</p><div class="journey-stats">${s.distanceKm ? `<b>${num(s.distanceKm)} km</b>` : ""}${s.elapsedHours ? `<b>${num(s.elapsedHours)} h</b>` : ""}${s.elevationGainM ? `<b>${num(s.elevationGainM)} m↑</b>` : ""}${s.activityCount > 1 ? `<b>${s.activityCount} stages</b>` : ""}</div>${activity ? `<a class="strava-link" href="https://www.strava.com/activities/${activity}" target="_blank" rel="noreferrer">Strava에서 경로와 원본 기록 보기 ↗</a>` : ""}</div></article>`;
+      return `<article class="journey-card ${photos.length ? "has-media" : ""} ${j.id === FEATURED ? "featured-journey" : ""} ${j.id === lastWide ? "wide-journey" : ""}">${photos.length ? `<div class="journey-media"><img src="${photos[0]}" alt="${j.title} 대표 사진">${photos.length > 1 ? `<span>+${photos.length - 1} PHOTOS</span>` : ""}</div>` : ""}<div class="journey-copy"><span class="date">${period}</span><small>${j.category === "randonneuring" ? "RANDONNEURING" : j.category === "walking" ? "WALKING" : "JOURNEY"}</small><h3>${j.title}</h3><p>${j.review || j.summary || ""}</p><div class="journey-stats">${s.distanceKm ? `<b>${num(s.distanceKm)} km</b>` : ""}${s.elapsedHours ? `<b>${num(s.elapsedHours)} h</b>` : ""}${s.elevationGainM ? `<b>${num(s.elevationGainM)} m↑</b>` : ""}${s.activityCount > 1 ? `<b>${s.activityCount} stages</b>` : ""}</div>${activity ? `<a class="strava-link" href="https://www.strava.com/activities/${activity}" target="_blank" rel="noreferrer">Strava에서 경로와 원본 기록 보기 ↗</a>` : ""}</div></article>`;
     })
     .join("");
 }
@@ -397,6 +441,19 @@ function metrics(e) {
   if (s.elevationGainM) items.push(["상승고도", `${num(s.elevationGainM)} m`]);
   if (e.official?.time) items.push(["공식 기록", e.official.time]);
   if (e.official?.milestone) items.push(["이정표", e.official.milestone]);
+  // 종목별 개별 필드(swimTime, bikeDistanceKm 등)로 저장된 기록
+  const o = e.official || {};
+  [
+    ["수영 기록", o.swimTime],
+    ["전환", o.transitionTime],
+    ["사이클 기록", o.bikeTime],
+    ["러닝 기록", o.runTime],
+    ["수직 러닝", o.verticalRunTime],
+  ].forEach(([k, v]) => v && items.push([k, v]));
+  splitDistances(s).forEach(([k, v]) =>
+    items.push([`${LABEL[k] || k} 거리`, `${num(v)} km`]),
+  );
+  if (s.verticalFinish) items.push(["수직 완주", s.verticalFinish]);
   // 공식 구간기록이 있으면 종목별로 표시
   if (e.official?.splits)
     items.push(
@@ -416,16 +473,17 @@ function metrics(e) {
 }
 function showDetail(e) {
   const pics = MEDIA[e.id] || [],
-    hero = pics[0]
-      ? `has-photo" style="background-image:linear-gradient(0deg,rgba(0,0,0,.68),rgba(0,0,0,.08)),url('${pics[0]}')`
-      : "",
+    cover = coverPhoto(pics),
+    hero = cover
+      ? `has-photo" style="background-image:linear-gradient(0deg,rgba(0,0,0,.68),rgba(0,0,0,.08)),url('${cover}')`
+      : `cat-${e.category}`,
     activity = STRAVA_LINKS[e.id],
     storyUrl = KAKAO_POSTS[e.id] || KAKAO,
     analysis = AI_ANALYSIS[e.id];
   const analysisHtml = analysis
     ? `<section><h3>AI REVIEW / 기록 분석</h3><div class="analysis-panel"><h4>데이터로 확인한 사실</h4><ul>${analysis.facts.map((x) => `<li>${x}</li>`).join("")}</ul><h4>평가와 해석</h4><p>${analysis.assessment}</p><small class="analysis-note">※ 수치로 확인할 수 없는 원인은 직접 쓴 후기를 토대로 추정했으며 확정적 사실이 아닙니다.</small></div></section><aside><h3>NEXT / 다음 도전</h3><div class="analysis-panel"><ul>${analysis.next.map((x) => `<li>${x}</li>`).join("")}</ul></div></aside>`
     : "";
-  $("#event-detail").innerHTML = `<div class="detail-hero ${hero}"><div class="detail-hero-copy"><div class="detail-tags"><span>${e.date}</span><span>${LABEL[e.category] || e.category}</span><span>${LABEL[e.status] || e.status}</span></div><h2 id="detail-title">${e.title}</h2><p>${result(e)}${pics.length ? ` · ${pics.length} PHOTOS` : ""}</p></div></div><div class="detail-quick">${metrics(e).slice(0,4).map(([a,b])=>`<div><span>${a}</span><strong>${b}</strong></div>`).join("")}</div><div class="detail-grid"><section class="route-section"><h3>ROUTE / STRAVA</h3><div class="source-route"><div class="route-mark">S</div><strong>지도와 고도는 Strava 원본에서 확인하세요.</strong><p>사이트에서 경로를 다시 그리지 않고 원본 활동으로 바로 연결합니다.</p>${activity ? `<a href="https://www.strava.com/activities/${activity}" target="_blank" rel="noreferrer">지도·구간·랩 기록 열기 ↗</a>` : "<span>원본 활동 연결 준비 중</span>"}</div></section><aside><h3>RESULT / 전체 기록</h3><div class="metric-list">${metrics(e).map(([a, b]) => `<div><span>${a}</span><strong>${b}</strong></div>`).join("")}</div></aside><section class="story-section"><h3>MY STORY / 직접 쓴 후기</h3><p class="detail-review">${e.review}</p><a class="source-link" href="${storyUrl}" target="_blank" rel="noreferrer">카카오스토리 원문 읽기 ↗</a></section><aside class="sources-card"><h3>SOURCES / 검토 출처</h3><p>${e.sources.join(" · ")}</p><p>사진과 글은 원문을 확인해 저장했으며, AI 분석과 직접 쓴 후기를 구분했습니다.</p></aside>${analysisHtml}</div>${pics.length ? `<section class="gallery-section"><div class="gallery-head"><span>PHOTO ESSAY</span><h3>그날의 장면</h3><b>${pics.length} images</b></div><div class="gallery ${pics.length === 1 ? "single" : ""}">${pics.map((p, i) => `<figure><img src="${p}" alt="${e.title} 사진 ${i + 1}" loading="lazy"><figcaption>${String(i + 1).padStart(2,"0")} / ${String(pics.length).padStart(2,"0")}</figcaption></figure>`).join("")}</div></section>` : ""}`;
+  $("#event-detail").innerHTML = `<div class="detail-hero ${hero}"><div class="detail-hero-copy"><div class="detail-tags"><span>${e.date}</span><span>${LABEL[e.category] || e.category}</span><span>${LABEL[e.status] || e.status}</span></div><h2 id="detail-title">${e.title}</h2><p>${result(e)}${pics.length ? ` · ${pics.length} PHOTOS` : ""}</p></div></div><div class="detail-quick">${metrics(e).slice(0,4).map(([a,b])=>`<div><span>${a}</span><strong>${b}</strong></div>`).join("")}</div><div class="detail-grid"><section class="route-section"><h3>ROUTE / STRAVA</h3><div class="source-route"><div class="route-mark">S</div><strong>지도와 고도는 Strava 원본에서 확인하세요.</strong><p>사이트에서 경로를 다시 그리지 않고 원본 활동으로 바로 연결합니다.</p>${activity ? `<a href="https://www.strava.com/activities/${activity}" target="_blank" rel="noreferrer">지도·구간·랩 기록 열기 ↗</a>` : "<span>원본 활동 연결 준비 중</span>"}</div></section><aside><h3>RESULT / 전체 기록</h3><div class="metric-list">${metrics(e).map(([a, b]) => `<div><span>${a}</span><strong>${b}</strong></div>`).join("")}</div></aside><section class="story-section"><h3>MY STORY / 직접 쓴 후기</h3><p class="detail-review">${e.review}</p><a class="source-link" href="${storyUrl}" target="_blank" rel="noreferrer">카카오스토리 원문 읽기 ↗</a></section><aside class="sources-card"><h3>SOURCES / 검토 출처</h3><p>${e.sources.join(" · ")}</p><p>사진과 글은 원문을 확인해 저장했으며, AI 분석과 직접 쓴 후기를 구분했습니다.</p></aside>${analysisHtml}</div>${pics.length ? `<section class="gallery-section"><div class="gallery-head"><span>PHOTO ESSAY</span><h3>그날의 장면</h3><b>${pics.length} images</b></div><div class="gallery ${pics.length === 1 ? "single" : ""}">${pics.map((p, i) => `<figure class="${isDocImage(p) ? "doc" : ""}"><img src="${p}" alt="${e.title} 사진 ${i + 1}" loading="lazy"><figcaption>${String(i + 1).padStart(2,"0")} / ${String(pics.length).padStart(2,"0")}</figcaption></figure>`).join("")}</div></section>` : ""}`;
   $("#event-dialog").showModal();
   document.body.style.overflow = "hidden";
 }
