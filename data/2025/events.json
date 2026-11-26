@@ -36,6 +36,126 @@
     ]
   },
   {
+    "id": "2025-bingrae-granfondo",
+    "year": 2025,
+    "date": "2025-04-12",
+    "title": "빙그레 그란폰도",
+    "category": "cycling",
+    "status": "finished",
+    "reviewStatus": "verified",
+    "official": {
+      "time": "05:01:59",
+      "bib": 307,
+      "course": "그란폰도 126km"
+    },
+    "strava": {
+      "distanceKm": 126.01,
+      "movingTime": "04:39:27",
+      "elapsedTime": "05:04:48",
+      "elevationGainM": 1338
+    },
+    "story": {
+      "url": "https://story.kakao.com/_F7q479/dPPj7cizojA"
+    },
+    "review": "세 번째 그란폰도로 126km 코스를 05:01:59에 완주했다. 초반 팩을 잘 타 고속 구간을 편하게 지났고, 소나기 속에서도 평지가 많은 코스를 시속 40km 안팎으로 달렸다. 막판 오른 허벅지에 쥐가 났지만 파워젤이나 쥐 방지 보급 없이 버텼고, 마지막에 합류한 메디오폰도 참가자들과 비교하며 그새 성장한 체력과 속도에 처음으로 자신감을 느꼈다. 다음 날 부안 메디오폰도를 앞두고도 안배 없이 모든 힘을 쏟은 하루였다.",
+    "sources": [
+      "strava",
+      "kakao-story"
+    ],
+    "media": [
+      "assets/images/events/2025-bingrae-granfondo/cover.jpg",
+      "assets/images/events/2025-bingrae-granfondo/gallery-01.jpg",
+      "assets/images/events/2025-bingrae-granfondo/gallery-02.jpg",
+      "assets/images/events/2025-bingrae-granfondo/gallery-03.jpg",
+      "assets/images/events/2025-bingrae-granfondo/gallery-04.jpg",
+      "assets/images/events/2025-bingrae-granfondo/official-certificate.jpg",
+      "assets/images/events/2025-bingrae-granfondo/official-ranking.jpg",
+      "assets/images/events/2025-bingrae-granfondo/route-summary.jpg",
+      "assets/images/events/2025-bingrae-granfondo/strava-chart-1.jpg",
+      "assets/images/events/2025-bingrae-granfondo/strava-chart-2.jpg"
+    ]
+  },
+  {
+    "id": "2025-buan-mediofondo",
+    "year": 2025,
+    "date": "2025-04-13",
+    "title": "부안 메디오폰도",
+    "category": "cycling",
+    "status": "finished",
+    "reviewStatus": "verified",
+    "official": {
+      "time": "03:09:33",
+      "bib": 1104,
+      "course": "메디오폰도 81km",
+      "rankOverall": 91,
+      "rankMen": 85,
+      "ageGroupRank": "82위"
+    },
+    "strava": {
+      "distanceKm": 81.69,
+      "movingTime": "03:03:35",
+      "elevationGainM": 945
+    },
+    "story": {
+      "url": "https://story.kakao.com/_F7q479/jTEaIz4OQKa"
+    },
+    "review": "전날 빙그레 그란폰도에 이어 이틀 연속 나선 81km 메디오폰도를 03:09:33(칩 기록)에 완주해 종합 91위·성별 85위를 했다. 자전거와 장거리 운전이 겹친 길고 긴 주말이라 기절할 만큼 지쳤지만, '이렇게 사는 게 나쁘지 않다'는 한마디로 하루를 정리했다.",
+    "sources": [
+      "strava",
+      "kakao-story"
+    ],
+    "media": [
+      "assets/images/events/2025-buan-mediofondo/cover.jpg",
+      "assets/images/events/2025-buan-mediofondo/gallery-01.jpg",
+      "assets/images/events/2025-buan-mediofondo/gallery-02.jpg",
+      "assets/images/events/2025-buan-mediofondo/gallery-03.jpg",
+      "assets/images/events/2025-buan-mediofondo/official-certificate.jpg",
+      "assets/images/events/2025-buan-mediofondo/official-result.jpg",
+      "assets/images/events/2025-buan-mediofondo/route-summary.jpg"
+    ]
+  },
+  {
+    "id": "2025-yangyang-granfondo",
+    "year": 2025,
+    "date": "2025-04-26",
+    "title": "양양 그란폰도",
+    "category": "cycling",
+    "status": "finished",
+    "reviewStatus": "verified",
+    "official": {
+      "time": "08:11:52.35",
+      "bib": 2178,
+      "course": "M 그란폰도 151km · 한계령 2회",
+      "rankOverall": 649,
+      "rankMen": 599
+    },
+    "story": {
+      "url": "https://story.kakao.com/_F7q479/E7ssqnfa3KA"
+    },
+    "review": "한계령을 두 번 오르는 151km·2,380m 코스에 완주만을 바라고 나섰고, 08:11:52.35에 들어왔다. 맑은 날씨와 순풍, 완만한 내리막에 신나 초반 페이스 관리를 놓쳤고, 다리 경련이 올 때마다 근육 이완제를 먹으며 버텼다. 첫 다운힐에서는 서울~속초 라이딩 때의 공포가 되살아났고, 두 번째 한계령에서는 두 번 멈춰 끌바와 회수차를 저울질했지만 포기하지 않기를 선택해 다시 올라 회수차를 피해 완주했다. 막판 다운힐에서 통제를 잃은 차를 간발의 차로 피하며, 다음 목표인 설악 그란폰도를 바라봤다.",
+    "sources": [
+      "strava",
+      "kakao-story",
+      "youtube"
+    ],
+    "media": [
+      "assets/images/events/2025-yangyang-granfondo/cover.jpg",
+      "assets/images/events/2025-yangyang-granfondo/gallery-01.jpg",
+      "assets/images/events/2025-yangyang-granfondo/gallery-02.jpg",
+      "assets/images/events/2025-yangyang-granfondo/gallery-03.jpg",
+      "assets/images/events/2025-yangyang-granfondo/route-summary.jpg",
+      "assets/images/events/2025-yangyang-granfondo/strava-chart-1.jpg",
+      "assets/images/events/2025-yangyang-granfondo/strava-chart-2.jpg",
+      "assets/images/events/2025-yangyang-granfondo/official-certificate.jpg",
+      "assets/images/events/2025-yangyang-granfondo/official-result.jpg"
+    ],
+    "strava": {
+      "distanceKm": 150.84,
+      "movingTime": "07:25:02",
+      "elevationGainM": 2486
+    }
+  },
+  {
     "id": "2025-nakdong-triathlon",
     "year": 2025,
     "date": "2025-05-04",
@@ -60,6 +180,74 @@
     ]
   },
   {
+    "id": "2025-burning-run-10k",
+    "year": 2025,
+    "date": "2025-05-06",
+    "title": "버닝런 10km",
+    "category": "running",
+    "status": "finished",
+    "reviewStatus": "verified",
+    "official": {
+      "time": "00:59:09",
+      "bib": 1462,
+      "rankOverall": 861,
+      "rankMen": 717
+    },
+    "strava": {
+      "distanceKm": 9.95,
+      "movingTime": "00:59:12",
+      "elevationGainM": 13
+    },
+    "story": {
+      "url": "https://story.kakao.com/_F7q479/gVF5PYYLDKA"
+    },
+    "review": "이틀 전 낙동강 철인3종과 연휴 내내 쌓인 피로 속에서 무리하지 않기로 하고, 60분 페이스메이커를 따라가다 막판에만 앞질러 00:59:09로 목표인 1시간 안에 들어왔다. 자전거 대회 시즌 뒤에는 수영과 러닝에 집중하고 철인3종을 위해 감량을 서두르자고 다짐했고, 계속 잡히는 발바닥 물집은 숙제로 남겼다.",
+    "sources": [
+      "strava",
+      "kakao-story"
+    ],
+    "media": [
+      "assets/images/events/2025-burning-run-10k/cover.jpg",
+      "assets/images/events/2025-burning-run-10k/official-certificate.jpg",
+      "assets/images/events/2025-burning-run-10k/official-result.jpg",
+      "assets/images/events/2025-burning-run-10k/official-ranking.jpg",
+      "assets/images/events/2025-burning-run-10k/route-summary.jpg"
+    ]
+  },
+  {
+    "id": "2025-seoul-bike-parade",
+    "year": 2025,
+    "date": "2025-05-11",
+    "title": "서울 자전거 대행진",
+    "category": "cycling",
+    "status": "finished",
+    "reviewStatus": "verified",
+    "official": {
+      "result": "완주 · 약 21km 40여 분",
+      "course": "광화문 광장 ~ 마포 평화의 공원 · 미니벨로"
+    },
+    "story": {
+      "url": "https://story.kakao.com/_F7q479/EMt0cclKHKA"
+    },
+    "review": "광화문 광장에서 마포 평화의 공원까지 약 21km를 달리는 행사에 미니벨로로 참가해 40여 분 만에 마쳤다. 비 걱정과 달리 흐리기만 했고, 로드바이크 사이에서 속도를 따라잡으며 미니벨로로 낸 개인 최고 속도에 즐거워했다. 짧아서 아쉬웠지만 끝난 뒤 수영까지 다녀온 알찬 하루였고, 다음 주 설악 그란폰도를 앞두고 일찍 자는 연습과 컨디션 관리를 다짐했다.",
+    "sources": [
+      "strava",
+      "kakao-story",
+      "youtube"
+    ],
+    "media": [
+      "assets/images/events/2025-seoul-bike-parade/cover.jpg",
+      "assets/images/events/2025-seoul-bike-parade/gallery-01.jpg",
+      "assets/images/events/2025-seoul-bike-parade/route-summary.jpg",
+      "assets/images/events/2025-seoul-bike-parade/strava-chart-1.jpg"
+    ],
+    "strava": {
+      "distanceKm": 20.59,
+      "movingTime": "00:39:04",
+      "elevationGainM": 53
+    }
+  },
+  {
     "id": "2025-seorak-granfondo",
     "year": 2025,
     "date": "2025-05-17",
@@ -75,6 +263,41 @@
       "assets/images/events/2025-seorak-granfondo/cover.jpg",
       "assets/images/events/2025-seorak-granfondo/result-capture-04.jpg",
       "assets/images/events/2025-seorak-granfondo/result-capture-01.jpg"
+    ]
+  },
+  {
+    "id": "2025-guri-canola-10k",
+    "year": 2025,
+    "date": "2025-05-25",
+    "title": "구리 유채꽃 마라톤 10km",
+    "category": "running",
+    "status": "finished",
+    "reviewStatus": "verified",
+    "official": {
+      "time": "00:57:02.34",
+      "bib": 10683,
+      "rankOverall": 579,
+      "rankMen": 488
+    },
+    "strava": {
+      "distanceKm": 10.01,
+      "movingTime": "00:57:11",
+      "elevationGainM": 12
+    },
+    "story": {
+      "url": "https://story.kakao.com/_F7q479/fLCXgQnasKA"
+    },
+    "review": "출발부터 일부러 페이스를 끌어올려 5km까지 km당 5분 30초를 유지했고, 반환점 뒤 무릎 피로로 6분대까지 떨어졌지만 00:57:02.34로 마쳐 1시간을 넘던 10km 기록을 57분대로 당겼다. 같은 페이스로 달리는 앞사람을 따라간 덕을 봤고, 앞으로도 초반 페이스를 올리는 연습을 이어 가기로 했다.",
+    "sources": [
+      "strava",
+      "kakao-story"
+    ],
+    "media": [
+      "assets/images/events/2025-guri-canola-10k/cover.jpg",
+      "assets/images/events/2025-guri-canola-10k/gallery-01.jpg",
+      "assets/images/events/2025-guri-canola-10k/official-certificate.jpg",
+      "assets/images/events/2025-guri-canola-10k/official-result.jpg",
+      "assets/images/events/2025-guri-canola-10k/route-summary.jpg"
     ]
   },
   {
@@ -99,6 +322,137 @@
       "assets/images/events/2025-hangang-slow-triathlon/cover.jpg",
       "assets/images/events/2025-hangang-slow-triathlon/result-capture-01.jpg",
       "assets/images/events/2025-hangang-slow-triathlon/result-capture-02.jpg"
+    ]
+  },
+  {
+    "id": "2025-naejangsan-granfondo",
+    "year": 2025,
+    "date": "2025-06-01",
+    "title": "정읍 내장산 그란폰도",
+    "category": "cycling",
+    "status": "finished",
+    "reviewStatus": "verified",
+    "official": {
+      "time": "06:19:36.59",
+      "bib": 1228,
+      "course": "M 그란폰도 139km",
+      "rankOverall": 462,
+      "rankMen": 419,
+      "ageGroupRank": "91위 (로드 남자 베테랑)"
+    },
+    "strava": {
+      "distanceKm": 138.94,
+      "movingTime": "05:59:20",
+      "elapsedTime": "06:37:54",
+      "elevationGainM": 1886
+    },
+    "story": {
+      "url": "https://story.kakao.com/_F7q479/3GtC6vYtXJ9"
+    },
+    "review": "전날 쉬엄쉬엄 한강 3종에 이어 139km 코스를 06:19:36.59에 완주했다. 설악 같은 급경사도, 양양 같은 긴 업힐도 없지만 오르내림이 잦아 고통스러웠고, 이번에는 햇볕에 타지 않으려 단단히 차려입고 달렸다. 결승을 앞두고 내장산 경치를 보며, 가진 것과 상관없이 포기하지 않고 끝까지 해낸 자신에게 감사를 느낀 대회였다.",
+    "sources": [
+      "strava",
+      "kakao-story"
+    ],
+    "media": [
+      "assets/images/events/2025-naejangsan-granfondo/cover.jpg",
+      "assets/images/events/2025-naejangsan-granfondo/official-certificate.jpg",
+      "assets/images/events/2025-naejangsan-granfondo/official-result.jpg",
+      "assets/images/events/2025-naejangsan-granfondo/route-summary.jpg",
+      "assets/images/events/2025-naejangsan-granfondo/strava-chart-1.jpg",
+      "assets/images/events/2025-naejangsan-granfondo/strava-chart-2.jpg"
+    ]
+  },
+  {
+    "id": "2025-iksan-aquathlon-sprint",
+    "year": 2025,
+    "date": "2025-06-29",
+    "title": "익산 아쿠아슬론 스프린트",
+    "category": "aquathlon",
+    "status": "finished",
+    "reviewStatus": "verified",
+    "official": {
+      "time": "00:59:47",
+      "course": "스프린트(수영 750m · 러닝 5km)",
+      "ageGroupRank": "7위 (스프린트 동호인 30-39세 남)",
+      "splits": {
+        "swimming": "00:22:28",
+        "running": "00:34:05"
+      }
+    },
+    "strava": {
+      "segments": [
+        {
+          "sport": "swimming",
+          "distanceKm": 0.95,
+          "movingTime": "00:22:32"
+        },
+        {
+          "sport": "running",
+          "distanceKm": 5.13,
+          "movingTime": "00:34:23"
+        }
+      ]
+    },
+    "story": {
+      "url": "https://story.kakao.com/_F7q479/eUfJ4GeaqkA"
+    },
+    "review": "자전거 없는 스프린트 아쿠아슬론(수영 750m·러닝 5km)에서 수영 0:22:28, 러닝 0:34:05, 총 0:59:47로 동호인 30-39세 남자부 7위를 했다. 200m도 못 가 밧줄을 잡고 쉬었고 반환점 부근에서는 바닥에 발이 닿을 만큼 힘들었지만, 다이빙 출발과 슈트 없는 수영을 처음 해 보고 러닝 페이스도 지켜 철인3종이라는 꿈에 한 걸음 다가갔다.",
+    "sources": [
+      "strava",
+      "kakao-story"
+    ],
+    "media": [
+      "assets/images/events/2025-iksan-aquathlon-sprint/cover.jpg",
+      "assets/images/events/2025-iksan-aquathlon-sprint/gallery-01.jpg",
+      "assets/images/events/2025-iksan-aquathlon-sprint/gallery-02.jpg",
+      "assets/images/events/2025-iksan-aquathlon-sprint/gallery-03.jpg",
+      "assets/images/events/2025-iksan-aquathlon-sprint/gallery-04.jpg",
+      "assets/images/events/2025-iksan-aquathlon-sprint/gallery-05.jpg",
+      "assets/images/events/2025-iksan-aquathlon-sprint/gallery-06.jpg",
+      "assets/images/events/2025-iksan-aquathlon-sprint/gallery-07.jpg",
+      "assets/images/events/2025-iksan-aquathlon-sprint/gallery-08.jpg",
+      "assets/images/events/2025-iksan-aquathlon-sprint/gallery-09.jpg",
+      "assets/images/events/2025-iksan-aquathlon-sprint/gallery-10.jpg",
+      "assets/images/events/2025-iksan-aquathlon-sprint/gallery-11.jpg",
+      "assets/images/events/2025-iksan-aquathlon-sprint/gallery-12.jpg",
+      "assets/images/events/2025-iksan-aquathlon-sprint/gallery-13.jpg",
+      "assets/images/events/2025-iksan-aquathlon-sprint/gallery-14.jpg",
+      "assets/images/events/2025-iksan-aquathlon-sprint/official-certificate.jpg",
+      "assets/images/events/2025-iksan-aquathlon-sprint/route-summary-swim.jpg",
+      "assets/images/events/2025-iksan-aquathlon-sprint/route-summary-run.jpg"
+    ]
+  },
+  {
+    "id": "2025-isabu-sea-swim",
+    "year": 2025,
+    "date": "2025-07-12",
+    "title": "이사부장군배 전국바다수영대회",
+    "category": "swimming",
+    "status": "cancelled",
+    "reviewStatus": "verified",
+    "official": {
+      "result": "파도로 대회 취소",
+      "course": "바다수영 1.5km · 삼척 맹방해수욕장"
+    },
+    "story": {
+      "url": "https://story.kakao.com/_F7q479/FTHWttUT3LA"
+    },
+    "review": "삼척 맹방해수욕장 바다수영 대회에 나섰지만 2m에 이르는 파도로 연기와 강 수영 전환 논의 끝에 결국 취소됐다. 전날 회식으로 피로가 컸던 터라 마음은 오히려 편했고, 전기자전거로 동해까지 달려 온천 수영장에서 다음 주 아쿠아슬론을 대비해 논스톱 2km를 포함한 3시간 한계 훈련을 했다. 서두르다 자전거 잠금 열쇠를 잃어버린 해프닝도 있었다.",
+    "sources": [
+      "kakao-story"
+    ],
+    "media": [
+      "assets/images/events/2025-isabu-sea-swim/cover.jpg",
+      "assets/images/events/2025-isabu-sea-swim/gallery-01.jpg",
+      "assets/images/events/2025-isabu-sea-swim/gallery-02.jpg",
+      "assets/images/events/2025-isabu-sea-swim/gallery-03.jpg",
+      "assets/images/events/2025-isabu-sea-swim/gallery-04.jpg",
+      "assets/images/events/2025-isabu-sea-swim/training-swim-chart-1.jpg",
+      "assets/images/events/2025-isabu-sea-swim/training-swim-chart-2.jpg",
+      "assets/images/events/2025-isabu-sea-swim/training-swim-chart-3.jpg",
+      "assets/images/events/2025-isabu-sea-swim/training-swim-chart-4.jpg",
+      "assets/images/events/2025-isabu-sea-swim/training-swim-chart-5.jpg"
     ]
   },
   {
@@ -143,6 +497,38 @@
     ]
   },
   {
+    "id": "2025-hangang-cross-swim",
+    "year": 2025,
+    "date": "2025-08-23",
+    "title": "한강 크로스 스위밍",
+    "category": "swimming",
+    "status": "finished",
+    "reviewStatus": "verified",
+    "official": {
+      "result": "완주 · 오리발 없이 슈트·부이 착용",
+      "course": "한강 횡단"
+    },
+    "strava": {
+      "distanceKm": 1.237,
+      "movingTime": "00:33:01"
+    },
+    "story": {
+      "url": "https://story.kakao.com/_F7q479/8HUBw74Q9k9"
+    },
+    "review": "두 번째 오픈워터 도전으로 오리발 없이 슈트와 부이만 착용하고 1,237m를 33:01에 쉬지 않고 건넜다. 오리발 초보자들과 몸싸움과 충돌이 잦았지만 여유 있게 페이스를 조절했고, 옆으로 치는 물살에도 방향을 잡으며 대회 완주를 위한 자유형은 충분하다는 걸 확인했다. 다음 목표로 평형을 제대로 배우고 싶어졌다.",
+    "sources": [
+      "strava",
+      "kakao-story"
+    ],
+    "media": [
+      "assets/images/events/2025-hangang-cross-swim/cover.jpg",
+      "assets/images/events/2025-hangang-cross-swim/gallery-01.jpg",
+      "assets/images/events/2025-hangang-cross-swim/gallery-02.jpg",
+      "assets/images/events/2025-hangang-cross-swim/official-certificate.jpg",
+      "assets/images/events/2025-hangang-cross-swim/route-summary.jpg"
+    ]
+  },
+  {
     "id": "2025-mungyeong-granfondo",
     "year": 2025,
     "date": "2025-09-06",
@@ -177,6 +563,82 @@
       "assets/images/events/2025-marvel-run-half/official-result.jpg",
       "assets/images/events/2025-marvel-run-half/result-capture-03.jpg",
       "assets/images/events/2025-marvel-run-half/result-capture-01.jpg"
+    ]
+  },
+  {
+    "id": "2025-around-taebaek",
+    "year": 2025,
+    "date": "2025-09-27",
+    "title": "어라운드 태백 그란폰도",
+    "category": "cycling",
+    "status": "finished",
+    "reviewStatus": "verified",
+    "official": {
+      "time": "04:25:39.54",
+      "bib": 1069,
+      "course": "그란폰도 100km · 33km 지점 10:10 컷오프"
+    },
+    "strava": {
+      "distanceKm": 100.56,
+      "movingTime": "04:12:30",
+      "elapsedTime": "04:26:29",
+      "elevationGainM": 1421
+    },
+    "story": {
+      "url": "https://story.kakao.com/_F7q479/iVHZjSma2Ma"
+    },
+    "review": "문경새재에서 컷오프를 당했던 기억에 컷오프 시간과 코스를 꼼꼼히 확인하고 나서, 33km 지점 10:10 컷오프를 30분 여유 있게 통과해 100km를 04:25:39.54에 완주했다. 설악보다는 쉬웠지만 어려운 코스였고, 로드를 오래 안 타 생긴 허리 통증도 달리는 동안 나아졌다. 금요일 밤 태백까지 운전한 수고를 경치와 완주가 모두 보상해 준 대회였다.",
+    "sources": [
+      "strava",
+      "kakao-story"
+    ],
+    "media": [
+      "assets/images/events/2025-around-taebaek/cover.jpg",
+      "assets/images/events/2025-around-taebaek/gallery-01.jpg",
+      "assets/images/events/2025-around-taebaek/gallery-02.jpg",
+      "assets/images/events/2025-around-taebaek/gallery-03.jpg",
+      "assets/images/events/2025-around-taebaek/gallery-04.jpg",
+      "assets/images/events/2025-around-taebaek/official-certificate.jpg",
+      "assets/images/events/2025-around-taebaek/route-summary.jpg",
+      "assets/images/events/2025-around-taebaek/strava-chart-1.jpg",
+      "assets/images/events/2025-around-taebaek/strava-chart-2.jpg"
+    ]
+  },
+  {
+    "id": "2025-hangeul-run",
+    "year": 2025,
+    "date": "2025-10-09",
+    "title": "한글런 10.9km",
+    "category": "running",
+    "status": "finished",
+    "reviewStatus": "verified",
+    "official": {
+      "time": "01:35:03",
+      "bib": 14178,
+      "course": "10.9km · 세종 중앙공원",
+      "rankOverall": 4885,
+      "rankMen": 3373
+    },
+    "strava": {
+      "distanceKm": 11.0,
+      "movingTime": "01:35:04",
+      "elevationGainM": 26
+    },
+    "story": {
+      "url": "https://story.kakao.com/_F7q479/2CzXtr7JhL9"
+    },
+    "review": "세종에서 열린 10.9km 대회를 동생과 함께 01:35:03에 달렸다. 아주 어릴 적 이후 오랜만에 함께한 도전에서 끝까지 포기하지 않고 페이스를 지킨 동생이 자랑스러웠고, 곁에서 챙기며 뛰는 역할도 즐거웠다. 웜업과 스트레칭이 부족했던 점을 다음 숙제로 남겼다.",
+    "sources": [
+      "strava",
+      "kakao-story"
+    ],
+    "media": [
+      "assets/images/events/2025-hangeul-run/cover.jpg",
+      "assets/images/events/2025-hangeul-run/gallery-01.jpg",
+      "assets/images/events/2025-hangeul-run/gallery-02.jpg",
+      "assets/images/events/2025-hangeul-run/official-certificate.jpg",
+      "assets/images/events/2025-hangeul-run/official-ranking.jpg",
+      "assets/images/events/2025-hangeul-run/route-summary.jpg"
     ]
   },
   {
@@ -258,6 +720,40 @@
       "assets/images/events/2025-mbn-half/result-capture-03.jpg",
       "assets/images/events/2025-mbn-half/result-capture-01.jpg"
     ]
+  },
+  {
+    "id": "2025-third-bridge-walk-run-10k",
+    "year": 2025,
+    "date": "2025-12-07",
+    "title": "제3연륙교 개통기념 워크앤런 10km",
+    "category": "running",
+    "status": "finished",
+    "reviewStatus": "verified",
+    "official": {
+      "time": "00:49:47.31",
+      "bib": 1524,
+      "rankOverall": 318,
+      "rankMen": 298
+    },
+    "strava": {
+      "distanceKm": 9.92,
+      "movingTime": "00:49:52",
+      "elevationGainM": 21
+    },
+    "story": {
+      "url": "https://story.kakao.com/_F7q479/bY2GqyKDuM0"
+    },
+    "review": "제3연륙교 개통을 기념한 10km를 00:49:47.31에 달려 처음으로 40분대에 들어섰다. 카본화와 다리의 긴 오르막·내리막, 바람이 약했던 날씨의 도움도 있었지만 인천에서 꾸준히 이어 온 러닝·수영 훈련의 성과였다. 기록을 위해 무리한 탓에 대회 뒤 하루를 내리 쉬어야 했고, 부상 위험과 휴식을 함께 챙기자고 적었다.",
+    "sources": [
+      "strava",
+      "kakao-story"
+    ],
+    "media": [
+      "assets/images/events/2025-third-bridge-walk-run-10k/cover.jpg",
+      "assets/images/events/2025-third-bridge-walk-run-10k/gallery-01.jpg",
+      "assets/images/events/2025-third-bridge-walk-run-10k/official-certificate.jpg",
+      "assets/images/events/2025-third-bridge-walk-run-10k/official-result.jpg",
+      "assets/images/events/2025-third-bridge-walk-run-10k/route-summary.jpg"
+    ]
   }
 ]
-

@@ -75,5 +75,60 @@
     "kind": "video",
     "durationSec": 292,
     "note": "새벽 천안 출발, 풍력발전기 언덕과 천수만 방조제의 서해 구간을 지나 아산 시내에서 200km를 넘기는 장면까지 담았다."
+  },
+  {
+    "targetId": "2025-yangyang-granfondo",
+    "type": "event",
+    "videoId": "QrzfxnDqqCk",
+    "url": "https://www.youtube.com/watch?v=QrzfxnDqqCk",
+    "title": "2025 양양 그란폰도 하이라이트",
+    "publishedAt": "2026-10-14",
+    "kind": "video",
+    "durationSec": 265,
+    "note": "양양 남대천 출발과 아침 햇살 속 꽃길을 지나 한계령 보급소(66km)와 한계령 휴게소까지, 한계령을 두 번 넘는 151km 코스를 담았다."
+  },
+  {
+    "targetId": "2025-seoul-bike-parade",
+    "type": "event",
+    "videoId": "rNWuCbM726o",
+    "url": "https://www.youtube.com/watch?v=rNWuCbM726o",
+    "title": "2025 서울 자전거 대행진 하이라이트",
+    "publishedAt": "2026-10-14",
+    "kind": "video",
+    "durationSec": 133,
+    "note": "07:59 광화문에서 출발을 기다리는 참가자들부터 차 없는 도로를 미니벨로로 달려 09:41 도착하기까지 짧게 담았다."
+  },
+  {
+    "targetId": "2025-jeju-1100-ride",
+    "type": "journey",
+    "videoId": "NfzDiL9Ud9U",
+    "url": "https://www.youtube.com/watch?v=NfzDiL9Ud9U",
+    "title": "제주 1100고지, 성판악 하이라이트",
+    "publishedAt": "2026-10-13",
+    "kind": "video",
+    "durationSec": 293,
+    "note": "8/29 새벽 김포공항에서 미니벨로를 포장해 싣는 장면부터 제주 도심을 지나 1100고지·성판악을 넘어 102.5km·1,837m를 완주하기까지 담았다."
+  },
+  {
+    "targetId": "2026-seven-bridge-tour",
+    "type": "event",
+    "videoId": "DN-ybPGa1jw",
+    "url": "https://www.youtube.com/watch?v=DN-ybPGa1jw",
+    "title": "2026 세븐브릿지 투어 하이라이트",
+    "publishedAt": "2026-10-13",
+    "kind": "video",
+    "durationSec": 273,
+    "note": "새벽 벡스코 출발 대기와 5,000명 넘는 참가 행렬, 낙동강 하구를 지나 마지막 다리 광안대교까지 대교 7개를 잇는 77km를 담았다."
+  },
+  {
+    "targetId": "2026-bingrae-granfondo",
+    "type": "event",
+    "videoId": "-GdRDMWivG8",
+    "url": "https://www.youtube.com/watch?v=-GdRDMWivG8",
+    "title": "2026 빙그레 그란폰도 하이라이트 (6분)",
+    "publishedAt": "2026-10-09",
+    "kind": "video",
+    "durationSec": 354,
+    "note": "공주 출발 대기부터 넓은 도로 구간의 빠른 무리 주행까지 113km 코스를 고도 그래프와 함께 6분으로 정리했다."
   }
 ]

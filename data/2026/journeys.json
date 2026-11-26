@@ -18,6 +18,51 @@
     "media": ["assets/images/events/2026-seoul-200k-brevet/cover.jpg", "assets/images/events/2026-seoul-200k-brevet/brevet-certificate.jpg", "assets/images/events/2026-seoul-200k-brevet/official-result.jpg", "assets/images/events/2026-seoul-200k-brevet/gallery-01.jpg"]
   },
   {
+    "id": "2026-ic200-vector",
+    "year": 2026,
+    "startDate": "2026-08-08",
+    "endDate": "2026-08-08",
+    "title": "IC-200 Vector 200km",
+    "category": "randonneuring",
+    "status": "finished",
+    "reviewStatus": "verified",
+    "story": {
+      "url": "https://story.kakao.com/_F7q479/HZHFDCztaqa"
+    },
+    "strava": {
+      "activityCount": 1,
+      "distanceKm": 200.42,
+      "movingTime": "07:53:51",
+      "movingHours": 7.9,
+      "elapsedTime": "09:58:04",
+      "elapsedHours": 9.97,
+      "elevationGainM": 1524
+    },
+    "analysis": "Zwift 결과 화면 기준 완주 시간은 9:57:52이며, Strava 기준 200.42km를 실제 이동 07:53:51, 전체 경과 09:58:04에 기록했다. 이동 평균은 25.4km/h, 평균 파워는 115W다. 실내 가상 코스(마쿠리 40 5바퀴)라 상승 1,524m는 실제 도로와 직접 비교하지 않는다.",
+    "review": "한여름 란도너스 대회를 Zwift 가상 코스(마쿠리 40 5바퀴)로 치르는 IC-200 Vector에, 장마 이후 자전거를 너무 오래 쉬었다는 생각에 급히 참가해 200km를 9:57:52에 완주했다. 근력과 체력이 떨어져 안장통이 심했고 졸음과 포기 생각이 계속됐지만, 온라인으로 함께 달린 참가자들의 드래프팅 덕을 보며 버텼다.",
+    "display": {
+      "featured": false,
+      "suggestedFormat": "challenge card"
+    },
+    "sources": [
+      "strava",
+      "kakao-story"
+    ],
+    "media": [
+      "assets/images/journeys/2026-ic200-vector/cover.jpg",
+      "assets/images/journeys/2026-ic200-vector/gallery-01.jpg",
+      "assets/images/journeys/2026-ic200-vector/gallery-02.jpg",
+      "assets/images/journeys/2026-ic200-vector/gallery-03.jpg",
+      "assets/images/journeys/2026-ic200-vector/official-result.jpg",
+      "assets/images/journeys/2026-ic200-vector/route-summary.jpg",
+      "assets/images/journeys/2026-ic200-vector/strava-chart-1.jpg",
+      "assets/images/journeys/2026-ic200-vector/strava-chart-2.jpg",
+      "assets/images/journeys/2026-ic200-vector/strava-chart-3.jpg",
+      "assets/images/journeys/2026-ic200-vector/strava-chart-4.jpg",
+      "assets/images/journeys/2026-ic200-vector/strava-chart-5.jpg"
+    ]
+  },
+  {
     "id": "2026-cheonan-200k-brevet",
     "year": 2026,
     "startDate": "2026-10-31",

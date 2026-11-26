@@ -36,6 +36,34 @@
     ]
   },
   {
+    "id": "2026-seoul-marathon-10k",
+    "year": 2026,
+    "date": "2026-03-15",
+    "title": "서울 마라톤 10km",
+    "category": "running",
+    "status": "finished",
+    "reviewStatus": "verified",
+    "official": {
+      "time": "00:52:26",
+      "bib": 57835,
+      "rankOverall": 2296,
+      "distanceKm": 10
+    },
+    "story": {
+      "url": "https://story.kakao.com/_F7q479/CH7b2UcvGn0"
+    },
+    "review": "전년 서울 마라톤 급수 자원봉사로 얻은 참가권으로 10km를 00:52:26에 달렸다. 전날 춘천 라이딩과 수면 부족으로 피곤했지만 5km 26:10, 10km 52:26으로 km당 5분 14~15초 페이스를 끝까지 유지했고, 풀코스 뒤 회복해 다시 빨라진 몸에 감사했다. 다음 목표로 동해안 일주와 스페인 순례를 바라봤다.",
+    "sources": [
+      "kakao-story"
+    ],
+    "media": [
+      "assets/images/events/2026-seoul-marathon-10k/cover.jpg",
+      "assets/images/events/2026-seoul-marathon-10k/official-certificate.jpg",
+      "assets/images/events/2026-seoul-marathon-10k/official-result-1.jpg",
+      "assets/images/events/2026-seoul-marathon-10k/official-result-2.jpg"
+    ]
+  },
+  {
     "id": "2026-hongcheon-granfondo",
     "year": 2026,
     "date": "2026-04-25",
@@ -51,6 +79,56 @@
       "assets/images/events/2026-hongcheon-granfondo/cover.jpg",
       "assets/images/events/2026-hongcheon-granfondo/official-result.jpg",
       "assets/images/events/2026-hongcheon-granfondo/route-summary.jpg"
+    ]
+  },
+  {
+    "id": "2026-iksan-aquathlon-standard",
+    "year": 2026,
+    "date": "2026-04-26",
+    "title": "익산 아쿠아슬론 표준거리",
+    "category": "aquathlon",
+    "status": "finished",
+    "reviewStatus": "partial",
+    "official": {
+      "result": "완주 (기록증 미발급)",
+      "course": "표준거리(수영 1.5km · 러닝 10km)"
+    },
+    "strava": {
+      "segments": [
+        {
+          "sport": "swimming",
+          "distanceKm": 1.36,
+          "movingTime": "00:38:05"
+        },
+        {
+          "sport": "running",
+          "distanceKm": 10.34,
+          "movingTime": "00:57:21"
+        }
+      ]
+    },
+    "story": {
+      "url": "https://story.kakao.com/_F7q479/5WvWe6v7in9"
+    },
+    "review": "전날 홍천 그란폰도를 완주하고 바로 이어 표준거리(수영 1.5km·러닝 10km) 아쿠아슬론에 나섰다. 기록증은 아직 나오지 않았지만 Strava 기준 수영 38:05, 러닝 57:21로, 작년 익산에서 꼴찌로 들어왔던 때와 달리 끝까지 좋은 페이스로 수영하고 달렸다. 쥐가 계속 올라왔지만 1년 사이의 준비를 확인했고, 다음 주 철인3종을 위한 자격 증명을 했다고 여겼다.",
+    "sources": [
+      "strava",
+      "kakao-story"
+    ],
+    "media": [
+      "assets/images/events/2026-iksan-aquathlon-standard/cover.jpg",
+      "assets/images/events/2026-iksan-aquathlon-standard/gallery-01.jpg",
+      "assets/images/events/2026-iksan-aquathlon-standard/gallery-02.jpg",
+      "assets/images/events/2026-iksan-aquathlon-standard/gallery-03.jpg",
+      "assets/images/events/2026-iksan-aquathlon-standard/route-summary-swim.jpg",
+      "assets/images/events/2026-iksan-aquathlon-standard/strava-chart-swim-1.jpg",
+      "assets/images/events/2026-iksan-aquathlon-standard/strava-chart-swim-2.jpg",
+      "assets/images/events/2026-iksan-aquathlon-standard/strava-chart-swim-3.jpg",
+      "assets/images/events/2026-iksan-aquathlon-standard/route-summary-run.jpg",
+      "assets/images/events/2026-iksan-aquathlon-standard/strava-chart-run-1.jpg",
+      "assets/images/events/2026-iksan-aquathlon-standard/strava-chart-run-2.jpg",
+      "assets/images/events/2026-iksan-aquathlon-standard/strava-chart-run-3.jpg",
+      "assets/images/events/2026-iksan-aquathlon-standard/strava-chart-run-4.jpg"
     ]
   },
   {
@@ -74,6 +152,41 @@
     "media": [
       "assets/images/events/2026-changwon-triathlon/cover.jpg",
       "assets/images/events/2026-changwon-triathlon/official-result.jpg"
+    ]
+  },
+  {
+    "id": "2026-seoul-citizen-10k",
+    "year": 2026,
+    "date": "2026-05-10",
+    "title": "서울 시민 마라톤 10km",
+    "category": "running",
+    "status": "finished",
+    "reviewStatus": "verified",
+    "official": {
+      "time": "00:55:37",
+      "bib": 10596,
+      "rankOverall": 548,
+      "rankMen": 456
+    },
+    "strava": {
+      "distanceKm": 9.91,
+      "movingTime": "00:55:41",
+      "elevationGainM": 12
+    },
+    "story": {
+      "url": "https://story.kakao.com/_F7q479/5LABVTcUtn9"
+    },
+    "review": "오랜만의 10km를 카본화 없이 가볍게 뛰어 00:55:37에 마쳤다. 족저근막염이 떠올라 속도를 더 내지 않고 지치면 페이스를 줄이며 달렸고, 빠르게 뛰는 것보다 끝까지 최선을 다하며 즐기는 게 중요하다는 걸 되새겼다. 돌아오는 길 한강을 따라 탄 전기자전거 위에서 삶의 감사함을 느꼈다.",
+    "sources": [
+      "strava",
+      "kakao-story"
+    ],
+    "media": [
+      "assets/images/events/2026-seoul-citizen-10k/cover.jpg",
+      "assets/images/events/2026-seoul-citizen-10k/gallery-01.jpg",
+      "assets/images/events/2026-seoul-citizen-10k/gallery-02.jpg",
+      "assets/images/events/2026-seoul-citizen-10k/official-result.jpg",
+      "assets/images/events/2026-seoul-citizen-10k/route-summary.jpg"
     ]
   },
   {
@@ -104,6 +217,47 @@
     ]
   },
   {
+    "id": "2026-yeomyeong808-half",
+    "year": 2026,
+    "date": "2026-05-30",
+    "title": "여명808 국제 마라톤 하프",
+    "category": "running",
+    "status": "finished",
+    "reviewStatus": "verified",
+    "official": {
+      "time": "02:02:21.34",
+      "bib": 23193,
+      "rankOverall": 582,
+      "rankMen": 529,
+      "ageGroupRank": "135위 (30대 이상)"
+    },
+    "strava": {
+      "distanceKm": 20.94,
+      "movingTime": "02:01:10",
+      "elapsedTime": "02:02:24",
+      "elevationGainM": 40
+    },
+    "story": {
+      "url": "https://story.kakao.com/_F7q479/9ClwAlVJFo0"
+    },
+    "review": "오랜만의 하프를 02:02:21.34에 완주했다. 러닝 훈련량은 부족했지만 철인 완주 경험과 감량 덕에 기록 향상을 노렸고, 무릎과 발바닥에 처음 해 본 스포츠 테이핑이 효과를 봐 큰 위기 없이 즐겁게 달렸다. 2시간 벽까지 얼마 남지 않았음을 확인했고, 쓸림 방지는 풀코스 전에 챙길 숙제로 남겼다.",
+    "sources": [
+      "strava",
+      "kakao-story"
+    ],
+    "media": [
+      "assets/images/events/2026-yeomyeong808-half/cover.jpg",
+      "assets/images/events/2026-yeomyeong808-half/gallery-01.jpg",
+      "assets/images/events/2026-yeomyeong808-half/official-certificate.jpg",
+      "assets/images/events/2026-yeomyeong808-half/official-result.jpg",
+      "assets/images/events/2026-yeomyeong808-half/route-summary.jpg",
+      "assets/images/events/2026-yeomyeong808-half/strava-chart-1.jpg",
+      "assets/images/events/2026-yeomyeong808-half/strava-chart-2.jpg",
+      "assets/images/events/2026-yeomyeong808-half/strava-chart-3.jpg",
+      "assets/images/events/2026-yeomyeong808-half/strava-chart-4.jpg"
+    ]
+  },
+  {
     "id": "2026-samcheok-granfondo",
     "year": 2026,
     "date": "2026-06-06",
@@ -122,6 +276,67 @@
     ]
   },
   {
+    "id": "2026-hangang-slow-triathlon",
+    "year": 2026,
+    "date": "2026-06-07",
+    "title": "쉬엄쉬엄 한강 3종 상급자 코스",
+    "category": "triathlon",
+    "status": "finished",
+    "reviewStatus": "verified",
+    "official": {
+      "result": "상급자 코스 완주",
+      "course": "상급자(수영 1km · 따릉이 20km · 러닝 10km)"
+    },
+    "strava": {
+      "segments": [
+        {
+          "sport": "swimming",
+          "distanceKm": 0.888,
+          "movingTime": "00:24:41"
+        },
+        {
+          "sport": "cycling",
+          "distanceKm": 21.44,
+          "movingTime": "00:59:58"
+        },
+        {
+          "sport": "running",
+          "distanceKm": 9.8,
+          "movingTime": "01:01:26"
+        }
+      ]
+    },
+    "story": {
+      "url": "https://story.kakao.com/_F7q479/hKpWwxwKmpa"
+    },
+    "review": "전날 삼척 그란폰도의 피로를 안고 작년에 이어 쉬엄쉬엄 한강 3종 상급자 코스(수영 1km·따릉이 20km·러닝 10km)에 나섰다. 수영 중 숨이 막히자 배영으로 누워 호흡을 가다듬었고, 방류로 빨라진 물살에 맨 오른쪽에서 맨 왼쪽까지 밀려 줄을 잡고 버티며 빠져나왔다. 따릉이 20km는 59:58, 근전환 훈련 삼아 쉬지 않고 이어 간 러닝 10km는 1:01:26으로 마쳐 늘어난 체력을 확인했다.",
+    "sources": [
+      "strava",
+      "kakao-story"
+    ],
+    "media": [
+      "assets/images/events/2026-hangang-slow-triathlon/cover.jpg",
+      "assets/images/events/2026-hangang-slow-triathlon/gallery-01.jpg",
+      "assets/images/events/2026-hangang-slow-triathlon/gallery-02.jpg",
+      "assets/images/events/2026-hangang-slow-triathlon/gallery-03.jpg",
+      "assets/images/events/2026-hangang-slow-triathlon/gallery-04.jpg",
+      "assets/images/events/2026-hangang-slow-triathlon/gallery-05.jpg",
+      "assets/images/events/2026-hangang-slow-triathlon/gallery-06.jpg",
+      "assets/images/events/2026-hangang-slow-triathlon/gallery-07.jpg",
+      "assets/images/events/2026-hangang-slow-triathlon/route-summary-swim.jpg",
+      "assets/images/events/2026-hangang-slow-triathlon/strava-chart-swim-1.jpg",
+      "assets/images/events/2026-hangang-slow-triathlon/strava-chart-swim-2.jpg",
+      "assets/images/events/2026-hangang-slow-triathlon/strava-chart-swim-3.jpg",
+      "assets/images/events/2026-hangang-slow-triathlon/route-summary-bike.jpg",
+      "assets/images/events/2026-hangang-slow-triathlon/strava-chart-bike-1.jpg",
+      "assets/images/events/2026-hangang-slow-triathlon/route-summary-run.jpg",
+      "assets/images/events/2026-hangang-slow-triathlon/strava-chart-run-1.jpg",
+      "assets/images/events/2026-hangang-slow-triathlon/strava-chart-run-2.jpg",
+      "assets/images/events/2026-hangang-slow-triathlon/strava-chart-run-3.jpg",
+      "assets/images/events/2026-hangang-slow-triathlon/strava-chart-run-4.jpg"
+    ]
+  },
+  {
     "id": "2026-seoul-200k-brevet",
     "year": 2026,
     "date": "2026-06-13",
@@ -136,6 +351,118 @@
       "assets/images/events/2026-seoul-200k-brevet/cover.jpg",
       "assets/images/events/2026-seoul-200k-brevet/brevet-certificate.jpg",
       "assets/images/events/2026-seoul-200k-brevet/official-result.jpg"
+    ]
+  },
+  {
+    "id": "2026-hangang-cross-swim",
+    "year": 2026,
+    "date": "2026-06-21",
+    "title": "한강 크로스 스위밍",
+    "category": "swimming",
+    "status": "finished",
+    "reviewStatus": "verified",
+    "official": {
+      "result": "완주 · 오리발(롱핀)·슈트 착용",
+      "course": "한강 횡단"
+    },
+    "strava": {
+      "distanceKm": 0.948,
+      "movingTime": "00:21:31"
+    },
+    "story": {
+      "url": "https://story.kakao.com/_F7q479/4ZDAniIEwO9"
+    },
+    "review": "대회가 취소된다는 소식에 양양에서 자전거를 타려다 재개 소식을 듣고 급히 서울로 돌아와 나섰다. 오리발(롱핀)과 슈트를 착용해 948m를 21:31에 여유 있게 건넜고, 전날 수영 특훈의 성과를 확인했다. 설악 그란폰도 취소로 허망했던 상반기를 정리하며 풀코스 마라톤과 감량 준비를 다짐했다.",
+    "sources": [
+      "strava",
+      "kakao-story"
+    ],
+    "media": [
+      "assets/images/events/2026-hangang-cross-swim/cover.jpg",
+      "assets/images/events/2026-hangang-cross-swim/gallery-01.jpg",
+      "assets/images/events/2026-hangang-cross-swim/gallery-02.jpg",
+      "assets/images/events/2026-hangang-cross-swim/gallery-03.jpg",
+      "assets/images/events/2026-hangang-cross-swim/official-certificate.jpg",
+      "assets/images/events/2026-hangang-cross-swim/route-summary.jpg",
+      "assets/images/events/2026-hangang-cross-swim/strava-chart-1.jpg",
+      "assets/images/events/2026-hangang-cross-swim/strava-chart-2.jpg",
+      "assets/images/events/2026-hangang-cross-swim/strava-chart-3.jpg"
+    ]
+  },
+  {
+    "id": "2026-jeongseon-granfondo",
+    "year": 2026,
+    "date": "2026-06-28",
+    "title": "정선 동강 전국자전거대회 그란폰도",
+    "category": "cycling",
+    "status": "finished",
+    "reviewStatus": "verified",
+    "official": {
+      "time": "03:29:44",
+      "bib": 98,
+      "course": "그란폰도 92km",
+      "rankOverall": 77,
+      "rankMen": 75,
+      "ageGroupRank": "12위 (사이클 남 베테랑 31-40)"
+    },
+    "strava": {
+      "distanceKm": 92.83,
+      "movingTime": "03:22:56",
+      "elapsedTime": "03:30:35",
+      "elevationGainM": 948
+    },
+    "story": {
+      "url": "https://story.kakao.com/_F7q479/CSaXRZgZ5P0"
+    },
+    "review": "전날 밤 사북역에서 숙소까지 어둠 속을 달리고, 새벽에는 산 하나를 넘어 대회장에 도착했다. 난이도가 낮고 평지가 많은 92km 코스를 로드로 쏟아붓듯 질주해 03:29:44로 종합 77위·연령대 12위를 했다. 서울행 버스 시간에 쫓겨 거의 쉬지 않고 한계를 찍었고, 설악 취소 뒤 지쳐 있던 마음을 속도로 풀어낸 하루였다.",
+    "sources": [
+      "strava",
+      "kakao-story"
+    ],
+    "media": [
+      "assets/images/events/2026-jeongseon-granfondo/cover.jpg",
+      "assets/images/events/2026-jeongseon-granfondo/gallery-01.jpg",
+      "assets/images/events/2026-jeongseon-granfondo/gallery-02.jpg",
+      "assets/images/events/2026-jeongseon-granfondo/gallery-03.jpg",
+      "assets/images/events/2026-jeongseon-granfondo/gallery-04.jpg",
+      "assets/images/events/2026-jeongseon-granfondo/official-certificate.jpg",
+      "assets/images/events/2026-jeongseon-granfondo/official-result.jpg",
+      "assets/images/events/2026-jeongseon-granfondo/official-ranking.jpg",
+      "assets/images/events/2026-jeongseon-granfondo/official-result-stats.jpg",
+      "assets/images/events/2026-jeongseon-granfondo/route-summary.jpg",
+      "assets/images/events/2026-jeongseon-granfondo/strava-chart-1.jpg",
+      "assets/images/events/2026-jeongseon-granfondo/strava-chart-2.jpg",
+      "assets/images/events/2026-jeongseon-granfondo/strava-chart-3.jpg"
+    ]
+  },
+  {
+    "id": "2026-hwaseong-fin-swim",
+    "year": 2026,
+    "date": "2026-07-05",
+    "title": "화성 전국 장거리(오리발) 수영대회",
+    "category": "swimming",
+    "status": "finished",
+    "reviewStatus": "verified",
+    "official": {
+      "time": "00:26:38.68",
+      "course": "1.5km 오리발(롱핀) · 남자 2그룹 · 실내"
+    },
+    "strava": {
+      "distanceKm": 1.5,
+      "movingTime": "00:26:38"
+    },
+    "story": {
+      "url": "https://story.kakao.com/_F7q479/F3oyHeEZdpA"
+    },
+    "review": "처음 나선 실내 장거리 수영대회에서 오리발(롱핀) 1.5km를 26:38.68에 마쳤다. 30분 제한의 부담과 좁은 레인에서 쫓기는 스트레스로 출발 전까지 도망치고 싶었지만, 레인의 앞선 두 사람을 차례로 추월하고 턴에서도 쉬지 않고 끝까지 밀어붙였다. 오랜만에 전력을 다한 경험으로 다음 도전에 대한 자신감을 얻었다.",
+    "sources": [
+      "strava",
+      "kakao-story"
+    ],
+    "media": [
+      "assets/images/events/2026-hwaseong-fin-swim/cover.jpg",
+      "assets/images/events/2026-hwaseong-fin-swim/official-certificate.jpg",
+      "assets/images/events/2026-hwaseong-fin-swim/route-summary.jpg"
     ]
   },
   {
@@ -174,6 +501,49 @@
       "assets/images/events/2026-cool-valley-trail/cover.jpg",
       "assets/images/events/2026-cool-valley-trail/official-result.jpg",
       "assets/images/events/2026-cool-valley-trail/route-summary.jpg"
+    ]
+  },
+  {
+    "id": "2026-hangang-night-walk-42k",
+    "year": 2026,
+    "date": "2026-08-01",
+    "title": "한강 나이트 워크 42K",
+    "category": "walking",
+    "status": "finished",
+    "reviewStatus": "verified",
+    "official": {
+      "time": "07:13:20",
+      "course": "42K · 18:00 출발 · 01:13 도착"
+    },
+    "strava": {
+      "distanceKm": 43.48,
+      "movingTime": "06:21:46",
+      "elapsedTime": "07:04:12",
+      "elevationGainM": 108
+    },
+    "story": {
+      "url": "https://story.kakao.com/_F7q479/GL1hk2RX1pA"
+    },
+    "review": "18:00에 출발해 걷기와 달리기를 섞어 42km를 07:13:20에 마쳤다. 초반에 치고 나가 병목을 피했지만 후반에는 22시 출발 14K 참가자와 겹쳤고, 물집 때문에 막판은 걸었다. 비경쟁 걷기 대회라 혼자 달리는 심심함과 생각보다 큰 피로에 우울하기도 했지만, 위기 없이 전략적으로 쉬며 완주했다.",
+    "sources": [
+      "strava",
+      "kakao-story"
+    ],
+    "media": [
+      "assets/images/events/2026-hangang-night-walk-42k/cover.jpg",
+      "assets/images/events/2026-hangang-night-walk-42k/gallery-01.jpg",
+      "assets/images/events/2026-hangang-night-walk-42k/gallery-02.jpg",
+      "assets/images/events/2026-hangang-night-walk-42k/gallery-03.jpg",
+      "assets/images/events/2026-hangang-night-walk-42k/gallery-04.jpg",
+      "assets/images/events/2026-hangang-night-walk-42k/gallery-05.jpg",
+      "assets/images/events/2026-hangang-night-walk-42k/official-result.jpg",
+      "assets/images/events/2026-hangang-night-walk-42k/route-summary.jpg",
+      "assets/images/events/2026-hangang-night-walk-42k/strava-chart-1.jpg",
+      "assets/images/events/2026-hangang-night-walk-42k/strava-chart-2.jpg",
+      "assets/images/events/2026-hangang-night-walk-42k/strava-chart-3.jpg",
+      "assets/images/events/2026-hangang-night-walk-42k/strava-chart-4.jpg",
+      "assets/images/events/2026-hangang-night-walk-42k/strava-chart-5.jpg",
+      "assets/images/events/2026-hangang-night-walk-42k/strava-chart-6.jpg"
     ]
   },
   {
@@ -277,6 +647,95 @@
     ]
   },
   {
+    "id": "2026-seven-bridge-tour",
+    "year": 2026,
+    "date": "2026-09-20",
+    "title": "세븐브릿지 투어",
+    "category": "cycling",
+    "status": "finished",
+    "reviewStatus": "verified",
+    "official": {
+      "time": "02:35:11",
+      "bib": 5307,
+      "course": "77km · MTB/일반 부문 2위",
+      "rankOverall": 147,
+      "rankMen": 140
+    },
+    "story": {
+      "url": "https://story.kakao.com/_F7q479/9E6Uc64wcQ0"
+    },
+    "review": "부산의 대교 7개를 건너는 77km 자전거 축제로, 전년에 추가 접수조차 못 했던 대회에 처음 나섰다. 전날 익산 아쿠아슬론 수영 컷오프의 아쉬움을 안고 새벽 4시 반에 일어나, 5,000명 넘는 참가자 속 초반 병목을 지난 뒤 평지와 완만한 내리막에서 분노하듯 쏟아내 02:35:11에 완주했다. 참가 부문이 로드가 아닌 MTB/일반으로 배정되는 해프닝이 있었고, 다음에는 고속 주행이 안전한 로드 부문으로 다시 나가고 싶은 대회로 남겼다.",
+    "sources": [
+      "strava",
+      "kakao-story",
+      "youtube"
+    ],
+    "media": [
+      "assets/images/events/2026-seven-bridge-tour/cover.jpg",
+      "assets/images/events/2026-seven-bridge-tour/gallery-01.jpg",
+      "assets/images/events/2026-seven-bridge-tour/gallery-02.jpg",
+      "assets/images/events/2026-seven-bridge-tour/gallery-03.jpg",
+      "assets/images/events/2026-seven-bridge-tour/gallery-04.jpg",
+      "assets/images/events/2026-seven-bridge-tour/gallery-05.jpg",
+      "assets/images/events/2026-seven-bridge-tour/gallery-06.jpg",
+      "assets/images/events/2026-seven-bridge-tour/gallery-07.jpg",
+      "assets/images/events/2026-seven-bridge-tour/gallery-08.jpg",
+      "assets/images/events/2026-seven-bridge-tour/gallery-09.jpg",
+      "assets/images/events/2026-seven-bridge-tour/gallery-10.jpg",
+      "assets/images/events/2026-seven-bridge-tour/official-result.jpg",
+      "assets/images/events/2026-seven-bridge-tour/official-ranking.jpg",
+      "assets/images/events/2026-seven-bridge-tour/official-result-stats.jpg",
+      "assets/images/events/2026-seven-bridge-tour/route-summary.jpg",
+      "assets/images/events/2026-seven-bridge-tour/strava-chart-1.jpg",
+      "assets/images/events/2026-seven-bridge-tour/strava-chart-2.jpg",
+      "assets/images/events/2026-seven-bridge-tour/strava-chart-3.jpg",
+      "assets/images/events/2026-seven-bridge-tour/strava-chart-4.jpg"
+    ],
+    "strava": {
+      "distanceKm": 80.82,
+      "movingTime": "02:39:15",
+      "elevationGainM": 635
+    }
+  },
+  {
+    "id": "2026-chungju-granfondo",
+    "year": 2026,
+    "date": "2026-10-03",
+    "title": "산티니 충주 그란폰도",
+    "category": "cycling",
+    "status": "finished",
+    "reviewStatus": "verified",
+    "official": {
+      "time": "04:44:50",
+      "bib": "A0144",
+      "course": "그란폰도 122.2km"
+    },
+    "strava": {
+      "distanceKm": 123.22,
+      "movingTime": "04:42:05",
+      "elapsedTime": "05:08:06",
+      "elevationGainM": 1393
+    },
+    "story": {
+      "url": "https://story.kakao.com/_F7q479/0QzIEotNnQ0"
+    },
+    "review": "당일 새벽 집에서 출발했지만 교통 체증으로 출발 시각보다 늦게 도착해, 최후미 구급차와 함께 15분 늦게 출발했다. 컷오프 부담 속에 몸도 풀지 못한 채 계속 페이스를 끌어올려 122.2km 그란폰도를 04:44:50에 완주했다. 장비보다 훈련과 정신력이 앞서간다는 것을 느낀 대회였다.",
+    "sources": [
+      "strava",
+      "kakao-story"
+    ],
+    "media": [
+      "assets/images/events/2026-chungju-granfondo/cover.jpg",
+      "assets/images/events/2026-chungju-granfondo/gallery-01.jpg",
+      "assets/images/events/2026-chungju-granfondo/official-certificate.jpg",
+      "assets/images/events/2026-chungju-granfondo/official-result.jpg",
+      "assets/images/events/2026-chungju-granfondo/route-summary.jpg",
+      "assets/images/events/2026-chungju-granfondo/strava-chart-1.jpg",
+      "assets/images/events/2026-chungju-granfondo/strava-chart-2.jpg",
+      "assets/images/events/2026-chungju-granfondo/strava-chart-3.jpg"
+    ]
+  },
+  {
     "id": "2026-siheung-half",
     "year": 2026,
     "date": "2026-10-05",
@@ -293,6 +752,48 @@
       "assets/images/events/2026-siheung-half/official-certificate.jpg",
       "assets/images/events/2026-siheung-half/route-summary.jpg"
     ]
+  },
+  {
+    "id": "2026-bingrae-granfondo",
+    "year": 2026,
+    "date": "2026-10-09",
+    "title": "빙그레 그란폰도",
+    "category": "cycling",
+    "status": "finished",
+    "reviewStatus": "verified",
+    "official": {
+      "time": "04:34:52",
+      "bib": "A0132",
+      "course": "CHALLENGE A 114.14km · 공주",
+      "rankOverall": 451,
+      "rankMen": 420
+    },
+    "story": {
+      "url": "https://story.kakao.com/_F7q479/GCtjSRtOsqA"
+    },
+    "review": "공주에서 열린 114.14km·1,274m 그란폰도를 04:34:52에 완주했다. 수요일 러닝 훈련으로 근육통과 피로가 남아 있었지만 페이스를 끝까지 유지했고, 규모가 큰 대회라 첫 보급소까지 병목이 있었으나 이후 빠르게 앞질러 편하게 달렸다. 빠른 참가자들 사이에서 세상이 넓다는 걸 느꼈고, 끝난 뒤 금강 온천에서 몸을 풀며 이틀 뒤 PT-75 안동 리벤지를 위한 휴식을 다짐했다.",
+    "sources": [
+      "strava",
+      "kakao-story",
+      "youtube"
+    ],
+    "media": [
+      "assets/images/events/2026-bingrae-granfondo/cover.jpg",
+      "assets/images/events/2026-bingrae-granfondo/gallery-01.jpg",
+      "assets/images/events/2026-bingrae-granfondo/gallery-02.jpg",
+      "assets/images/events/2026-bingrae-granfondo/official-certificate.jpg",
+      "assets/images/events/2026-bingrae-granfondo/official-result.jpg",
+      "assets/images/events/2026-bingrae-granfondo/route-summary.jpg",
+      "assets/images/events/2026-bingrae-granfondo/strava-chart-1.jpg",
+      "assets/images/events/2026-bingrae-granfondo/strava-chart-2.jpg",
+      "assets/images/events/2026-bingrae-granfondo/strava-chart-3.jpg",
+      "assets/images/events/2026-bingrae-granfondo/strava-chart-4.jpg"
+    ],
+    "strava": {
+      "distanceKm": 114.13,
+      "movingTime": "04:09:26",
+      "elevationGainM": 1274
+    }
   },
   {
     "id": "2026-daecheongho-full-marathon",
@@ -336,6 +837,46 @@
       "assets/images/events/2026-tongyeong-triathlon/cover.jpg",
       "assets/images/events/2026-tongyeong-triathlon/official-result.jpg",
       "assets/images/events/2026-tongyeong-triathlon/bike-strava.jpg"
+    ]
+  },
+  {
+    "id": "2026-asics-gofree-10k",
+    "year": 2026,
+    "date": "2026-11-21",
+    "title": "아식스 고프리런 10km",
+    "category": "running",
+    "status": "finished",
+    "reviewStatus": "verified",
+    "official": {
+      "time": "00:56:42",
+      "bib": 10456,
+      "rankOverall": 1912,
+      "rankMen": 1610
+    },
+    "strava": {
+      "distanceKm": 9.96,
+      "movingTime": "00:56:35",
+      "elevationGainM": 44
+    },
+    "story": {
+      "url": "https://story.kakao.com/_F7q479/j3R05fJxxra"
+    },
+    "review": "인천 국제 마라톤 풀코스 전날, 회사 러닝 동호회 활동을 겸해 10km를 00:56:42에 달렸다. 기침이 계속돼 다음 날 풀코스가 걱정됐지만 가볍게 뛰어도 페이스는 나쁘지 않았고, 회원들을 챙기며 동호회를 이끄는 책임과 의미를 다시 생각했다.",
+    "sources": [
+      "strava",
+      "kakao-story"
+    ],
+    "media": [
+      "assets/images/events/2026-asics-gofree-10k/cover.jpg",
+      "assets/images/events/2026-asics-gofree-10k/gallery-01.jpg",
+      "assets/images/events/2026-asics-gofree-10k/official-certificate.jpg",
+      "assets/images/events/2026-asics-gofree-10k/official-result.jpg",
+      "assets/images/events/2026-asics-gofree-10k/route-summary.jpg",
+      "assets/images/events/2026-asics-gofree-10k/strava-chart-1.jpg",
+      "assets/images/events/2026-asics-gofree-10k/strava-chart-2.jpg",
+      "assets/images/events/2026-asics-gofree-10k/strava-chart-3.jpg",
+      "assets/images/events/2026-asics-gofree-10k/strava-chart-4.jpg",
+      "assets/images/events/2026-asics-gofree-10k/strava-chart-5.jpg"
     ]
   },
   {

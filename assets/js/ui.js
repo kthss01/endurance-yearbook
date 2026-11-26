@@ -20,7 +20,7 @@ const METRICS = {
   elevationGainM: { label: "상승고도", unit: "m", d: 0 },
   activityCount: { label: "활동 수", unit: "회", d: 0 },
 };
-const LABEL2 = { ...LABEL, transition: "전환", journey: "여정", randonneuring: "브레베", "finished-with-dnf-stage": "완주 · 일부 구간 DNF", "partial-route": "일부 구간 주행" };
+const LABEL2 = { ...LABEL, transition: "전환", journey: "여정", randonneuring: "브레베", "finished-with-dnf-stage": "완주 · 일부 구간 DNF", "partial-route": "일부 구간 주행", cancelled: "대회 취소" };
 // 숫자 전용 글꼴(대문자만 있음)에서 단위가 대문자로 보이지 않도록 영문 단위를 <small>로 감싼다
 const u = (str) => String(str).replace(/(\d["']?)\s?(\/?[a-zA-Z][a-zA-Z/]*)/g, "$1<small class=\"unit\">$2</small>");
 
@@ -67,8 +67,11 @@ function eventDistance(e) {
   if (s.distanceKm) return s.distanceKm;
   if (s.segments) return s.segments.reduce((a, x) => a + (x.distanceKm || 0), 0);
   const parts = splitDistances(s);
-  return parts.length ? parts.reduce((a, [, d]) => a + d, 0) : null;
+  if (parts.length) return parts.reduce((a, [, d]) => a + d, 0);
+  // Strava 기록이 없는 대회는 공식·게시물 기준 거리로 대신한다
+  return e.official?.distanceKm || null;
 }
+const eventElevation = (e) => e.strava?.elevationGainM || e.official?.elevationGainM || null;
 function result(e) {
   const o = e.official || {}, s = e.strava || {};
   if (o.time) return o.time;
@@ -434,7 +437,7 @@ function recordFace(e) {
   const d = eventDistance(e), s = e.strava || {};
   const lg = legs(e);
   const bar = lg.length > 1 ? splitBar(lg, true) : "";
-  const sub = [s.elevationGainM ? `↑ ${num(s.elevationGainM, 0)} m` : "", s.verticalFinish || "", e.official?.course || ""].filter(Boolean).join(" · ");
+  const sub = [eventElevation(e) ? `↑ ${num(eventElevation(e), 0)} m` : "", s.verticalFinish || "", e.official?.course || ""].filter(Boolean).join(" · ");
   return `<div class="record-face"><span class="chip">${LABEL2[e.category] || e.category}</span><strong>${d ? `${num(d)}<small>km</small>` : "—"}</strong>${bar}<div class="rf-sub">${sub}</div></div>`;
 }
 
@@ -453,7 +456,7 @@ function renderEvents() {
     .map((e, i) => {
       const pics = MEDIA[e.id] || [], photo = coverPhoto(pics), o = e.official || {}, d = eventDistance(e);
       const rank = o.rankOverall ? `<span class="rank">#${o.rankOverall}<small>종합</small></span>` : "";
-      return `<article class="race-card reveal ${photo ? "has-photo" : ""}" tabindex="0" data-id="${e.id}" style="--c:${COLOR[e.category] || "#d9ff43"};--d:${(i % 6) * 60}ms"><div class="rc-media">${photo ? `<img src="${photo}"${focus(photo)} alt="${e.title} 대표 사진" loading="lazy">` : recordFace(e)}<div class="rc-chips"><span class="chip">${LABEL2[e.category] || e.category}</span>${photo && credit(photo) ? `<span class="chip ghost" title="${credit(photo).caption || ""}">참고 사진</span>` : ""}${e.status !== "finished" ? `<span class="chip warn">${LABEL2[e.status] || e.status}</span>` : ""}${pics.length ? `<span class="chip ghost">${pics.length} PHOTOS</span>` : ""}${videoChip(videosOf("event", e.id).length)}</div></div><div class="rc-body"><div class="rc-meta"><span>${dateKo(e.date)}</span>${rank}</div><h3>${e.title}</h3><div class="rc-result">${u(result(e))}</div><div class="rc-stats">${d ? `<span>${num(d)} km</span>` : ""}${e.strava?.elevationGainM ? `<span>↑ ${num(e.strava.elevationGainM, 0)} m</span>` : ""}${o.course ? `<span>${o.course}</span>` : ""}</div></div><span class="rc-glow" aria-hidden="true"></span></article>`;
+      return `<article class="race-card reveal ${photo ? "has-photo" : ""}" tabindex="0" data-id="${e.id}" style="--c:${COLOR[e.category] || "#d9ff43"};--d:${(i % 6) * 60}ms"><div class="rc-media">${photo ? `<img src="${photo}"${focus(photo)} alt="${e.title} 대표 사진" loading="lazy">` : recordFace(e)}<div class="rc-chips"><span class="chip">${LABEL2[e.category] || e.category}</span>${photo && credit(photo) ? `<span class="chip ghost" title="${credit(photo).caption || ""}">참고 사진</span>` : ""}${e.status !== "finished" ? `<span class="chip warn">${LABEL2[e.status] || e.status}</span>` : ""}${pics.length ? `<span class="chip ghost">${pics.length} PHOTOS</span>` : ""}${videoChip(videosOf("event", e.id).length)}</div></div><div class="rc-body"><div class="rc-meta"><span>${dateKo(e.date)}</span>${rank}</div><h3>${e.title}</h3><div class="rc-result">${u(result(e))}</div><div class="rc-stats">${d ? `<span>${num(d)} km</span>` : ""}${eventElevation(e) ? `<span>↑ ${num(eventElevation(e), 0)} m</span>` : ""}${o.course ? `<span>${o.course}</span>` : ""}</div></div><span class="rc-glow" aria-hidden="true"></span></article>`;
     })
     .join("");
   $$("#event-grid .race-card").forEach((card) => {
@@ -518,7 +521,9 @@ function comparables(e) {
     list = pool.filter((x) => x.category === "triathlon" && officialSec(x) && (eventDistance(x) || 0) >= 40).map((x) => ({ e: x, v: officialSec(x) }));
     fmt = (v) => fmtDur(v); title = "철인3종 표준거리 공식 기록 비교";
   } else if (e.category === "aquathlon") {
-    list = pool.filter((x) => x.category === "aquathlon").map((x) => ({ e: x, v: toSec(x.official?.splits?.swimming || x.official?.swimTime) })).filter((x) => x.v);
+    // 스프린트(수영 750m)처럼 수영 거리가 짧은 대회는 1.5km 기록과 섞지 않는다
+    const swimKm = (x) => (x.strava?.segments || []).filter((s) => s.sport === "swimming").reduce((a, s) => a + (s.distanceKm || 0), 0) || x.strava?.swimDistanceKm || 0;
+    list = pool.filter((x) => x.category === "aquathlon" && swimKm(x) >= 1.2).map((x) => ({ e: x, v: toSec(x.official?.splits?.swimming || x.official?.swimTime) })).filter((x) => x.v);
     fmt = (v) => fmtDur(v); title = "아쿠아슬론 수영 기록 비교";
   }
   if (list.length < 2) return "";
@@ -534,7 +539,7 @@ function quickStats(e) {
   if (off) items.push(["공식 기록", o.time || o.duathlonTime, "⏱"]);
   else if (o.result) items.push(["결과", o.result, "◎"]);
   if (d) items.push(["거리", `${num(d, 2)} km`, "↔"]);
-  if (s.elevationGainM) items.push(["상승고도", `${num(s.elevationGainM, 0)} m`, "⛰"]);
+  if (eventElevation(e)) items.push(["상승고도", `${num(eventElevation(e), 0)} m`, "⛰"]);
   if (mv && d) {
     if (["running", "trail"].includes(e.category)) items.push(["평균 페이스", `${fmtPace((off || mv) / d)}/km`, "⚡"]);
     else if (e.category === "cycling") items.push(["이동 평균 속도", `${num(d / (mv / 3600))} km/h`, "⚡"]);
