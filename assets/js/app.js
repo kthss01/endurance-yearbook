@@ -579,8 +579,8 @@ const JOURNEY_MEDIA = {
     "assets/images/journeys/2025-busan-night-walk/web-01.jpg",
     "assets/images/journeys/2025-busan-night-walk/web-02.jpg",
     "assets/images/journeys/2025-busan-night-walk/web-03.jpg",
-    "assets/images/journeys/2025/busan-night-walk-1.jpg",
-    "assets/images/journeys/2025/busan-night-walk-2.jpg",
+    "assets/images/journeys/2025/busan-night-walk-strava-route.jpg",
+    "assets/images/journeys/2025/busan-night-walk-strava-summary.jpg",
   ],
   "2026-camino-frances": [
     "assets/images/journeys/camino/finish.jpg",
