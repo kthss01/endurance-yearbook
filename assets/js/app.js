@@ -100,6 +100,8 @@ const MEDIA = {
     "assets/images/events/2025-mbn-half/gallery-04.jpg",
   ],
   "2025-chuncheon-10k": [
+    "assets/images/events/2025-chuncheon-10k/web-01.jpg",
+    "assets/images/events/2025-chuncheon-10k/web-02.jpg",
     "assets/images/events/2025-chuncheon-10k/official-result.jpg",
     "assets/images/events/2025-chuncheon-10k/result-capture-01.jpg",
     "assets/images/events/2025-chuncheon-10k/result-capture-02.jpg",
@@ -1134,4 +1136,6 @@ const IMAGE_CREDITS = {
   "assets/images/events/2025-korea-open-race-10k/web-01.jpg": { caption: "서울 뚝섬한강공원 자벌레 전망대 앞 광장 (대회 장소 일대, 대회 당일 사진 아님)", author: "Motoko C. K.", license: "CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Ttukseom_Hangang_Park_20260416_1.jpg" },
   "assets/images/events/2025-korea-open-race-10k/web-02.jpg": { caption: "서울 뚝섬한강공원 고가 아래 산책로 (대회 장소 일대, 대회 당일 사진 아님)", author: "Motoko C. K.", license: "CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Ttukseom_Hangang_Park_20260416_2.jpg" },
   "assets/images/events/2025-korea-open-race-10k/web-03.jpg": { caption: "서울 뚝섬한강공원 쉼터 (대회 장소 일대, 대회 당일 사진 아님)", author: "Motoko C. K.", license: "CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Ttukseom_Hangang_Park_20260416_3.jpg" },
+  "assets/images/events/2025-chuncheon-10k/web-01.jpg": { caption: "공지천유원지에서 바라본 의암호와 춘천대교 (대회 당일 사진 아님)", author: "YellowTurtle9", license: "CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:20231226_%EA%B3%B5%EC%A7%80%EC%B2%9C%EC%9C%A0%EC%9B%90%EC%A7%80%EC%97%90%EC%84%9C_%EB%B0%94%EB%9D%BC%EB%B3%B8_%EC%B6%98%EC%B2%9C%EB%8C%80%EA%B5%90_%EC%A0%84%EA%B2%BD.jpg" },
+  "assets/images/events/2025-chuncheon-10k/web-02.jpg": { caption: "의암호변 공지천유원지 산책로 (대회 당일 사진 아님)", author: "YellowTurtle9", license: "CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:20231226_%EA%B3%B5%EC%A7%80%EC%B2%9C%EC%9C%A0%EC%9B%90%EC%A7%80%EC%9D%98_%EB%B3%B4%EB%8F%84_%EB%AA%A8%EC%8A%B5.jpg" },
 };
