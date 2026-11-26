@@ -472,6 +472,21 @@ const MEDIA = {
   ],
 };
 const JOURNEY_MEDIA = {
+  "2026-seoul-200k-brevet": [
+    "assets/images/events/2026-seoul-200k-brevet/cover.jpg",
+    "assets/images/events/2026-seoul-200k-brevet/gallery-01.jpg",
+    "assets/images/events/2026-seoul-200k-brevet/gallery-02.jpg",
+    "assets/images/events/2026-seoul-200k-brevet/gallery-03.jpg",
+    "assets/images/events/2026-seoul-200k-brevet/gallery-04.jpg",
+    "assets/images/events/2026-seoul-200k-brevet/gallery-05.jpg",
+    "assets/images/events/2026-seoul-200k-brevet/gallery-06.jpg",
+    "assets/images/events/2026-seoul-200k-brevet/gallery-07.jpg",
+    "assets/images/events/2026-seoul-200k-brevet/gallery-08.jpg",
+    "assets/images/events/2026-seoul-200k-brevet/gallery-09.jpg",
+    "assets/images/events/2026-seoul-200k-brevet/brevet-certificate.jpg",
+    "assets/images/events/2026-seoul-200k-brevet/official-result.jpg",
+    "assets/images/events/2026-seoul-200k-brevet/strava-summary.jpg",
+  ],
   "2026-cheonan-200k-brevet": ["cover", ...Array.from({ length: 9 }, (_, i) => `gallery-0${i + 1}`)].map(
     (n) => `assets/images/journeys/2026-cheonan-200k-brevet/${n}.jpg`,
   ),

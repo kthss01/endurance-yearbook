@@ -2,17 +2,20 @@
   {
     "id": "2026-seoul-200k-brevet",
     "year": 2026,
-    "startDate": "2026-06-12",
-    "endDate": "2026-06-12",
+    "startDate": "2026-06-13",
+    "endDate": "2026-06-13",
     "title": "서울 200K 브레베",
     "category": "randonneuring",
     "status": "finished",
     "reviewStatus": "verified",
-    "strava": { "activityCount": 1, "distanceKm": 206.21, "elapsedHours": 14.64, "elevationGainM": 1812 },
-    "review": "실내 200km 경험을 실제 도로의 브레베로 확장했다. 200km를 하루 안에 완주하며 장거리 운영 능력을 확인한 기록이다.",
+    "story": { "url": "https://story.kakao.com/_F7q479/5TSCRTj8RO9" },
+    "next": ["오르막 체크포인트 구간의 목표 속도를 미리 정해 초반 남한산성 구간의 체력 소모를 관리한다.", "그룹과 함께 달릴 때도 체크포인트마다 최소 보급 시간을 확보한다.", "설악급 고도를 대비해 1,900m 이상 상승이 있는 장거리 훈련을 추가한다."],
+    "analysis": "eBrevet 기록상 06:30 출발, 16:20:10 도착으로 라이딩 시간은 9시간 50분이며 제한 13시간 30분보다 약 3시간 40분 일찍 완주했다. Strava 기준 이동 시간은 08:22:46, 경과 시간은 09:43:12로 정차 시간은 약 1시간 20분이다. 체크포인트 구간 속도는 남한산성 오르막 구간 17.2km/h, 양동까지의 15.8km/h가 가장 느렸고 마지막 38.3km는 25.2km/h로 가장 빨랐다.",
+    "strava": { "activityId": "18898997887", "activityCount": 1, "distanceKm": 206.21, "movingTime": "08:22:46", "movingHours": 8.38, "elapsedTime": "09:43:12", "elapsedHours": 9.72, "elevationGainM": 1812 },
+    "review": "퍼머넌트로 혼자 달리던 200km를 처음으로 정식 브레베에서 달렸다. 서울 동쪽 코스의 남한산성과 여러 고개를 넘는 동안 체크포인트마다 인증 사진을 남겼고, 사람들과 함께 달리다 보니 휴식은 짧아졌지만 내리막과 순풍 덕에 제한 13시간 30분 코스를 9시간 50분에 마쳤다. 귀가 피로를 줄이려 차를 한강에 세워 둔 선택도 잘 맞았고, 일주일 뒤 설악 그란폰도를 앞둔 마지막 점검으로 '준비는 끝났다, 할 수 있다'는 다짐을 남겼다.",
     "display": { "featured": true, "suggestedFormat": "route card" },
-    "sources": ["strava", "google-docs"],
-    "media": []
+    "sources": ["strava", "google-docs", "kakao-story"],
+    "media": ["assets/images/events/2026-seoul-200k-brevet/cover.jpg", "assets/images/events/2026-seoul-200k-brevet/brevet-certificate.jpg", "assets/images/events/2026-seoul-200k-brevet/official-result.jpg", "assets/images/events/2026-seoul-200k-brevet/gallery-01.jpg"]
   },
   {
     "id": "2026-cheonan-200k-brevet",
