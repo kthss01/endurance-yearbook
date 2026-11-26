@@ -66,10 +66,15 @@
     "category": "cycling",
     "status": "finished",
     "reviewStatus": "verified",
-    "strava": { "distanceKm": 204.99, "movingTime": "10:04:12", "elevationGainM": 3676 },
-    "review": "2025년 단일 활동 중 가장 높은 상승고도를 기록한 대표 산악 장거리 대회다.",
+    "official": { "time": "11:10:50.69", "bib": 3070, "course": "M Granfondo 208km (제한 12시간)" },
+    "strava": { "distanceKm": 204.99, "movingTime": "10:04:05", "elevationGainM": 3676 },
+    "review": "국내 최고 난도로 꼽히는 208km·3,800m의 설악 그란폰도에 도전해 제한 12시간 안인 11:10:50.69에 완주했다. 작년에 대회를 알고 가슴 한편에 품어 온 꿈이었고, 수영과 달리기를 병행하는 부족한 준비 속에서도 매주 대회에 뛰어들며 놓지 않고 바라본 목표였다. 경쟁 앞에서 위축되던 예전과 달리 더 빠르고 덜 지치며 무너지지 않는 자신을 확인했지만, 사흘이 지나서야 정신을 차리고 글을 쓸 만큼 돌아보면 여전히 끔찍한 하루로 남았다.",
     "sources": ["strava", "google-docs", "kakao-story"],
-    "media": []
+    "media": [
+      "assets/images/events/2025-seorak-granfondo/cover.jpg",
+      "assets/images/events/2025-seorak-granfondo/gallery-04.jpg",
+      "assets/images/events/2025-seorak-granfondo/gallery-01.jpg"
+    ]
   },
   {
     "id": "2025-hangang-slow-triathlon",

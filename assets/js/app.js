@@ -53,6 +53,18 @@ const LABEL = {
   participated: "참가",
 };
 const MEDIA = {
+  "2025-seorak-granfondo": [
+    "assets/images/events/2025-seorak-granfondo/cover.jpg",
+    "assets/images/events/2025-seorak-granfondo/gallery-01.jpg",
+    "assets/images/events/2025-seorak-granfondo/gallery-02.jpg",
+    "assets/images/events/2025-seorak-granfondo/gallery-03.jpg",
+    "assets/images/events/2025-seorak-granfondo/gallery-04.jpg",
+    "assets/images/events/2025-seorak-granfondo/gallery-05.jpg",
+    "assets/images/events/2025-seorak-granfondo/gallery-06.jpg",
+    "assets/images/events/2025-seorak-granfondo/gallery-07.jpg",
+    "assets/images/events/2025-seorak-granfondo/gallery-08.jpg",
+    "assets/images/events/2025-seorak-granfondo/gallery-09.jpg",
+  ],
   "2025-nakdong-triathlon": [
     "assets/images/events/2025-nakdong-triathlon/cover.jpg",
     "assets/images/events/2025-nakdong-triathlon/gallery-01.jpg",
@@ -349,6 +361,7 @@ const JOURNEY_STRAVA = {
 };
 const KAKAO = "https://story.kakao.com/_F7q479";
 const KAKAO_POSTS = {
+  "2025-seorak-granfondo": "https://story.kakao.com/_F7q479/HAvEDTP0Pka",
   "2025-nakdong-triathlon": "https://story.kakao.com/_F7q479/FZOt4epNDKA",
   "2025-goseong-granfondo": "https://story.kakao.com/_F7q479/7HYQjMbVCi9",
   "2025-korea-open-race-10k": "https://story.kakao.com/_F7q479/DLPlrPlDsJA",
@@ -372,6 +385,20 @@ const KAKAO_POSTS = {
   "2026-incheon-full-marathon": "https://story.kakao.com/_F7q479/EVJyv4BzXRA",
 };
 const AI_ANALYSIS = {
+  "2025-seorak-granfondo": {
+    facts: [
+      "공식 기록은 11:10:50.69(M Granfondo 208km, 배번호 3070)로 제한 시간 12시간보다 약 49분 일찍 들어왔습니다.",
+      "Strava 기록은 204.99 km · 이동 시간 10:04:05 · 경과 시간 11:17:08 · 누적 상승 3,676 m, 평균 20.4 km/h · 평균 파워 152 W입니다.",
+      "공식 기록표의 Section 2 누적 시간은 05:14:46.42입니다.",
+    ],
+    assessment:
+      "2025년 단일 활동 중 가장 높은 3,676 m 상승을 10시간 넘게 이어 가며 제한 시간 안에 완주한 것이 이 대회의 핵심입니다. 공식 기록과 이동 시간 차이는 약 1시간 7분으로, 보급소 정차와 휴식이 길었던 것으로 보입니다. Section 2의 거리 위치가 기록표에 표시되지 않아 구간 속도는 계산하지 않습니다.",
+    next: [
+      "보급소별 정차 시간을 기록해 1시간이 넘는 정차 합계를 줄일 수 있는 지점을 찾습니다.",
+      "장거리 업힐 대회 전에는 3,000 m 이상 상승의 장거리 훈련으로 후반 지구력을 확인합니다.",
+      "대회 뒤 회복 기간을 일정에 포함해 연속 대회 일정의 누적 피로를 관리합니다.",
+    ],
+  },
   "2025-nakdong-triathlon": {
     facts: [
       "완주증 기준 스탠다드(수영 1.5km·자전거 46km·트레일런 10km) 완주이며 배번은 112번입니다.",
