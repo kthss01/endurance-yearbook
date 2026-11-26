@@ -115,7 +115,11 @@
     "strava": { "distanceKm": 131.73, "movingTime": "05:24:00", "elevationGainM": 1916 },
     "review": "131.73km와 누적 상승 1,916m의 그란폰도를 공식 05:41:22.8에 완주했다. 대회 이틀 뒤에는 목과 허리 통증, 고갈된 에너지를 먹는 것으로 버티는 상태를 적으며 휴식의 필요성을 분명히 기록했다. 다음 설악을 앞두고 훈련과 회복의 경계를 다시 확인하게 한 대회였다.",
     "sources": ["strava", "kakao-story"],
-    "media": ["assets/images/events/2026-samcheok-granfondo/official-result.jpg"]
+    "media": [
+      "assets/images/events/2026-samcheok-granfondo/cover.jpg",
+      "assets/images/events/2026-samcheok-granfondo/official-result.jpg",
+      "assets/images/events/2026-samcheok-granfondo/strava-summary.jpg"
+    ]
   },
   {
     "id": "2026-seoul-200k-brevet",

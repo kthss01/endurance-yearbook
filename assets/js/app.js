@@ -54,6 +54,14 @@ const LABEL = {
   participated: "참가",
 };
 const MEDIA = {
+  "2026-samcheok-granfondo": [
+    "assets/images/events/2026-samcheok-granfondo/cover.jpg",
+    "assets/images/events/2026-samcheok-granfondo/gallery-01.jpg",
+    "assets/images/events/2026-samcheok-granfondo/strava-summary.jpg",
+    "assets/images/events/2026-samcheok-granfondo/strava-chart-1.jpg",
+    "assets/images/events/2026-samcheok-granfondo/strava-chart-2.jpg",
+    "assets/images/events/2026-samcheok-granfondo/strava-chart-3.jpg",
+  ],
   "2026-gumi-full-marathon": [
     "assets/images/events/2026-gumi-full-marathon/cover.jpg",
     "assets/images/events/2026-gumi-full-marathon/gallery-01.jpg",
