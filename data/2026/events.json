@@ -131,7 +131,8 @@
     "status": "finished",
     "reviewStatus": "verified",
     "official": { "time": "01:27:06", "bib": 1313, "swimTime": "00:47:11", "transitionTime": "00:05:53", "verticalRunTime": "00:34:02", "rankOverall": 624, "rankMen": 507 },
-    "strava": { "swimDistanceKm": 1.51, "verticalFinish": "롯데타워 123층" },
+    "strava": { "swimDistanceKm": 1.51, "verticalFinish": "롯데타워 123층", "activities": [{ "discipline": "swim", "activityId": "19275097487", "url": "https://www.strava.com/activities/19275097487" }, { "discipline": "transition", "activityId": "19275097493", "url": "https://www.strava.com/activities/19275097493" }, { "discipline": "vertical-run", "activityId": "19275097452", "url": "https://www.strava.com/activities/19275097452" }] },
+    "story": { "url": "https://story.kakao.com/_F7q479/6HAVzVSBio9", "postedAt": "2026-07-13T00:42:00+09:00" },
     "review": "석촌호수 1.5km 수영 뒤 롯데타워 123층을 계단으로 오르는 아쿠아슬론이다. 슈트 없이 들어간 물에서 다리가 가라앉고 초반 몸싸움에 휩쓸려 500m까지는 포기를 떠올릴 만큼 힘들었지만, 페이스를 낮추고 리듬을 되찾아 00:47:11에 수영을 마쳤다. 처음 해 본 수직 마라톤은 뛰기엔 벅차 빠른 걸음으로 꾸준히 올랐고, 업힐 라이딩 경험을 떠올리며 많은 참가자를 따라잡아 총 01:27:06에 완주했다. 걱정하던 수영을 잘 버틴 데 만족하며 다음 주 트레일러닝을 준비했다.",
     "sources": ["strava", "kakao-story"],
     "media": [
@@ -149,7 +150,8 @@
     "status": "finished",
     "reviewStatus": "verified",
     "official": { "time": "03:45:22", "milestone": "첫 트레일러닝", "bib": 3386, "course": "SUN.18K", "rankOverall": 407, "rankMen": 319 },
-    "strava": { "distanceKm": 18.62, "movingTime": "03:24:18", "elevationGainM": 980 },
+    "strava": { "distanceKm": 18.62, "movingTime": "03:24:18", "elevationGainM": 980, "activityId": "19370536509", "url": "https://www.strava.com/activities/19370536509" },
+    "story": { "url": "https://story.kakao.com/_F7q479/9BLlsmohoP0", "postedAt": "2026-07-19T23:44:00+09:00" },
     "review": "비 내리는 장수에서 새벽 셔틀을 타고 두 번째로 신어 보는 트레일화로 나선 첫 트레일러닝이었다. 산에서 하는 러닝 정도로 여겼던 생각은 로프를 잡아야 하는 급경사와 진흙길 앞에서 반성으로 바뀌었고, 오르막에서는 허리와 심박이, 내리막에서는 발톱과 무릎이 버티기 어려웠다. 그래도 포기는 떠올리지 않고 03:45:22에 완주했다. 비를 핑계로 가지 않을 이유가 많았는데도 귀찮음을 이기고 뛰어든 것 자체를 이번 도전의 가장 큰 의미로 남겼다.",
     "sources": ["strava", "kakao-story"],
     "media": [
@@ -175,7 +177,8 @@
       "splits": { "swimming": "00:46:41", "cycling": "01:07:16", "running": "01:06:10" },
       "transitions": { "t1": "00:05:24", "t2": "00:04:20" }
     },
-    "strava": { "swimDistanceKm": 1.45, "bikeDistanceKm": 38.61, "runDistanceKm": 9.61 },
+    "strava": { "swimDistanceKm": 1.45, "bikeDistanceKm": 38.61, "runDistanceKm": 9.61, "activities": [{ "discipline": "swim", "activityId": "19857899795", "url": "https://www.strava.com/activities/19857899795" }, { "discipline": "bike", "activityId": "19857899802", "url": "https://www.strava.com/activities/19857899802" }, { "discipline": "run", "activityId": "19857899854", "url": "https://www.strava.com/activities/19857899854" }] },
+    "story": { "url": "https://story.kakao.com/_F7q479/gKcGvKqzlQA", "postedAt": "2026-08-23T13:08:00+09:00" },
     "review": "스스로 두 번째 철인 완주로 꼽은 대회다. 수영에서는 작은 경기복에 숨이 막히고, 좁은 구간의 병목과 물풀·부유물, 뒤에서 몰려온 그룹과의 몸싸움까지 겹쳐 처음으로 포기를 떠올렸다. 팔과 발차기를 늦춰 심박을 가라앉히며 버틴 끝에 00:46:41로 수영을 마쳤고, 오랜만에 탄 자전거에서는 쌓아 둔 서러움을 원동력 삼아 많은 참가자를 제치며 01:07:16을 기록했다. 러닝은 전환 구간에서 심박을 낮추고 천천히 출발해 언덕을 걷지 않고 넘었고, 03:09:52로 무사히 완주했다.",
     "sources": ["strava", "google-docs", "kakao-story"],
     "media": [
@@ -193,7 +196,8 @@
     "status": "finished",
     "reviewStatus": "verified",
     "official": { "time": "03:26:34", "bib": 2273, "course": "20.18K", "rankOverall": 260, "rankMen": 183 },
-    "strava": { "distanceKm": 21.6, "movingTime": "03:18:56", "elevationGainM": 872 },
+    "strava": { "distanceKm": 21.6, "movingTime": "03:18:56", "elevationGainM": 872, "activityId": "19956405053", "url": "https://www.strava.com/activities/19956405053" },
+    "story": { "url": "https://story.kakao.com/_F7q479/1DDc1Ry7qP9", "postedAt": "2026-08-30T11:34:00+09:00" },
     "review": "숙소에서 잠을 설치고 나섰지만 비가 그친 시원한 날씨 덕에 컨디션은 좋았던 두 번째 트레일러닝이다. 먼저 출발하는 44km 주자들을 보며 언젠가를 그려 보다가, 출발선의 열기에 휩쓸리지 않도록 페이스를 조심했다. 한 번 겪어 본 경험 덕에 병목과 속도를 낼 구간이 예상되어 겁이 덜했고, 오르막은 쉬지 않고 걷듯 오르며 내리막에서 속도를 유지하는 기술이 나아졌음을 느꼈다. 마지막 구간까지 페이스를 조절해 03:26:34로 완주했고, 다음 30km 트레일도 해볼 만하다는 자신감을 얻었다.",
     "sources": ["strava", "kakao-story"],
     "media": [
