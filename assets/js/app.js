@@ -1097,3 +1097,28 @@ const AI_ANALYSIS = {
     ],
   },
 };
+// 연간 기록 카드(가장 멀리 간 날·가장 많이 오른 날) 사진. 같은 날 대회·여정 사진은 경로를 재사용한다.
+const RECORD_MEDIA = {
+  "2025-longestDistance": [
+    "assets/images/records/2025-longestDistance/cover.jpg",
+    "assets/images/records/2025-longestDistance/gallery-01.jpg",
+    "assets/images/records/2025-longestDistance/gallery-02.jpg",
+    "assets/images/records/2025-longestDistance/gallery-03.jpg",
+  ],
+  "2025-highestElevation": [
+    "assets/images/events/2025-seorak-granfondo/cover.jpg",
+    "assets/images/events/2025-seorak-granfondo/gallery-06.jpg",
+    "assets/images/events/2025-seorak-granfondo/gallery-08.jpg",
+  ],
+  "2026-longestDistance": [
+    "assets/images/journeys/2026-river-to-sea-challenge/stage1-sunset-monument.jpg",
+    "assets/images/journeys/2026-river-to-sea-challenge/stage1-misty-sunrise.jpg",
+    "assets/images/journeys/2026-river-to-sea-challenge/stage1-boardwalk.jpg",
+  ],
+  "2026-highestElevation": [
+    "assets/images/journeys/2026-river-to-sea-challenge/stage2-sunrise-road.jpg",
+    "assets/images/journeys/2026-river-to-sea-challenge/stage2-pass-stone.jpg",
+    "assets/images/journeys/2026-river-to-sea-challenge/stage2-rock-monument.jpg",
+    "assets/images/journeys/2026-river-to-sea-challenge/stage2-finish-selfie.jpg",
+  ],
+};
