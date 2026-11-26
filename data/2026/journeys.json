@@ -77,6 +77,9 @@
     "category": "journey",
     "status": "finished-with-dnf-stage",
     "reviewStatus": "verified",
+    "story": { "url": "https://story.kakao.com/_F7q479/BXM8u7CeJQ0" },
+    "next": ["제한 시간이 빠듯한 구간은 체크포인트별 마감 시각을 미리 표로 만들어 이동 중에도 바로 확인한다.", "상승 3,000m 이상 구간은 보급 정차를 짧게 하고 끌바 구간을 계획에 포함해 시간 여유를 확보한다.", "안동 어드벤처 재도전 전에는 야간 내리막 장비(라이트)와 경련 대응 보급을 점검한다."],
+    "analysis": "Strava 기준 4개 구간 885.59km, 상승 10,869m를 이동 42.5시간, 경과 52.97시간에 달렸다. 구간별 이동 시간은 영월 11:19:37(255.91km) → 안동 11:16:05(207.65km, 상승 3,267m) → 거창 9:49:23(208.65km) → 통영 10:04:54(213.41km)로, 상승이 가장 컸던 안동 구간의 평균 속도가 18.4km/h로 가장 낮았다. 안동 구간은 후기상 도착이 제한 시간보다 3분 늦어 DNF로 기록하며, 이후 두 구간은 21km/h 이상으로 회복했다.",
     "strava": { "activityCount": 4, "distanceKm": 885.59, "movingHours": 42.5, "elapsedHours": 52.97, "elevationGainM": 10869 },
     "stages": [
       { "title": "강 따라 영월까지", "distanceKm": 255.91, "status": "finished" },
@@ -84,9 +87,9 @@
       { "title": "거창 돼지구이", "distanceKm": 208.6, "status": "finished" },
       { "title": "통영 가는 길", "distanceKm": 213.42, "status": "finished" }
     ],
-    "review": "둘째 구간 DNF 이후 회복해 남은 장거리 구간을 이어갔다. 실패와 재개의 흐름을 한 묶음으로 보여준다.",
+    "review": "강을 따라 내려가 통영 바다에 닿는 200km급 퍼머넌트 4구간을 5일에 걸쳐 달렸다. 첫날 수면 부족 속에 영월까지 256km를 14시간 넘게 달렸고, 둘째 날 안동 어드벤처는 학가산을 끌고 오르고 어둠 속 내리막과 숨은 오르막에서 온몸 경련을 버텼지만 제한 시간을 3분 넘겨 DNF가 됐다. 결과에 승복하고 비 오는 날 하루를 쉰 뒤, 셋째 날 거창 구간으로 설욕했고 마지막 날 강이 바다로 바뀌는 순간을 보며 통영에 도착했다. 안동 구간 재도전을 남긴 채 '할 수 있다'를 다시 확인한 여정이었다.",
     "display": { "featured": true, "suggestedFormat": "stage timeline" },
     "sources": ["strava", "kakao-story"],
-    "media": []
+    "media": ["assets/images/journeys/2026-river-to-sea-challenge/cover.jpg", "assets/images/journeys/2026-river-to-sea-challenge/stage1-misty-sunrise.jpg", "assets/images/journeys/2026-river-to-sea-challenge/stage2-sunrise-road.jpg", "assets/images/journeys/2026-river-to-sea-challenge/strava-stage1.jpg"]
   }
 ]

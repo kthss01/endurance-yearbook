@@ -472,6 +472,25 @@ const MEDIA = {
   ],
 };
 const JOURNEY_MEDIA = {
+  "2026-river-to-sea-challenge": [
+    "assets/images/journeys/2026-river-to-sea-challenge/cover.jpg",
+    "assets/images/journeys/2026-river-to-sea-challenge/stage1-misty-sunrise.jpg",
+    "assets/images/journeys/2026-river-to-sea-challenge/stage1-sunset-monument.jpg",
+    "assets/images/journeys/2026-river-to-sea-challenge/stage1-boardwalk.jpg",
+    "assets/images/journeys/2026-river-to-sea-challenge/stage2-sunrise-road.jpg",
+    "assets/images/journeys/2026-river-to-sea-challenge/stage2-pass-stone.jpg",
+    "assets/images/journeys/2026-river-to-sea-challenge/stage2-rock-monument.jpg",
+    "assets/images/journeys/2026-river-to-sea-challenge/stage2-finish-selfie.jpg",
+    "assets/images/journeys/2026-river-to-sea-challenge/stage3-riverside.jpg",
+    "assets/images/journeys/2026-river-to-sea-challenge/stage3-gaya-road.jpg",
+    "assets/images/journeys/2026-river-to-sea-challenge/stage3-bus-shelter.jpg",
+    "assets/images/journeys/2026-river-to-sea-challenge/stage4-shelter.jpg",
+    "assets/images/journeys/2026-river-to-sea-challenge/strava-stage1.jpg",
+    "assets/images/journeys/2026-river-to-sea-challenge/official-ebrevet-stage1.jpg",
+    "assets/images/journeys/2026-river-to-sea-challenge/strava-stage2.jpg",
+    "assets/images/journeys/2026-river-to-sea-challenge/strava-stage3.jpg",
+    "assets/images/journeys/2026-river-to-sea-challenge/strava-stage4.jpg",
+  ],
   "2026-donghae-coast": [
     "assets/images/journeys/2026-donghae-coast/cover.jpg",
     "assets/images/journeys/2026-donghae-coast/day1-east-sea.jpg",
