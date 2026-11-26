@@ -17,6 +17,13 @@
 .source-route p{max-width:440px;margin:18px 0;color:#aaa;line-height:1.65}
 .source-route a{display:inline-block;margin-top:28px;padding:12px 16px;background:var(--acid);color:#181917;font-weight:700;text-decoration:none}
 .source-route span{display:inline-block;margin-top:28px;color:#aaa}
+.analysis-panel{padding:26px;background:#f2f1eb;border-left:4px solid var(--acid);color:#181917}
+.analysis-panel h4{margin:22px 0 8px;font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+.analysis-panel h4:first-child{margin-top:0}
+.analysis-panel ul{margin:0;padding-left:20px;line-height:1.7}
+.analysis-panel p{line-height:1.75}
+.analysis-note{display:block;margin-top:16px;color:#686962;font-size:12px}
+.source-link+.source-link{margin-left:12px}
 .featured-journey{grid-column:span 2;display:grid;grid-template-columns:1.3fr 1fr}
 .featured-journey .journey-media{height:100%;min-height:520px}
 .featured-journey .journey-copy{align-self:end;padding:45px}
