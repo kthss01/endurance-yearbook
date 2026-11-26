@@ -53,6 +53,13 @@ const LABEL = {
   participated: "참가",
 };
 const MEDIA = {
+  "2026-lotte-aquathlon": [
+    "assets/images/events/2026-lotte-aquathlon/cover.jpg",
+    "assets/images/events/2026-lotte-aquathlon/official-result.jpg",
+    "assets/images/events/2026-lotte-aquathlon/official-ranking.jpg",
+    "assets/images/events/2026-lotte-aquathlon/swim-strava.jpg",
+    "assets/images/events/2026-lotte-aquathlon/venue.jpg",
+  ],
   "2026-hongcheon-granfondo": [
     "assets/images/events/2026-hongcheon-granfondo/cover.jpg",
     "assets/images/events/2026-hongcheon-granfondo/official-result.jpg",
@@ -147,6 +154,7 @@ const JOURNEY_STRAVA = {
 };
 const KAKAO = "https://story.kakao.com/_F7q479";
 const KAKAO_POSTS = {
+  "2026-lotte-aquathlon": "https://story.kakao.com/_F7q479/6HAVzVSBio9",
   "2026-hongcheon-granfondo": "https://story.kakao.com/_F7q479/7YcOoBR8in9",
   "2026-hangang-seoul-half": "https://story.kakao.com/_F7q479/CQmnGjL16N0",
   "2026-samcheok-granfondo": "https://story.kakao.com/_F7q479/gQ86NqzRLPA",
@@ -158,6 +166,20 @@ const KAKAO_POSTS = {
   "2026-incheon-full-marathon": "https://story.kakao.com/_F7q479/EVJyv4BzXRA",
 };
 const AI_ANALYSIS = {
+  "2026-lotte-aquathlon": {
+    facts: [
+      "공식 기록은 총 01:27:06(수영 00:47:11, T1 00:05:53, 수직 마라톤 00:34:02)이며 배번호는 1313번입니다.",
+      "전체 624/950위, 남자 507/754위, 35-39세 남자 70/109위이고, 종목별 전체 순위는 수영 809위·수직 마라톤 293위입니다.",
+      "Strava 수영 기록은 1,512 m · 이동 시간 47:09 · 평균 3:07/100m · 평균 심박 143 bpm입니다.",
+    ],
+    assessment:
+      "수직 마라톤 순위(293위)가 수영 순위(809위)보다 크게 앞서, 업힐 라이딩으로 쌓은 하체 지구력이 계단 오르기에서 강점으로 작용한 것으로 보입니다. 반대로 수영은 후기에서 슈트 없이 다리가 가라앉고 초반 500 m 몸싸움 속에서 호흡이 흔들렸다고 기록해, 전체 순위를 끌어내린 구간이었습니다. 수영 중 심박과 페이스 변동이 초반 혼잡 때문인지 체력 문제인지는 데이터만으로 구분하지 않습니다.",
+    next: [
+      "슈트 없는 오픈워터를 대비해 킥과 몸 자세 훈련으로 하체 가라앉음을 줄입니다.",
+      "출발 위치를 바깥쪽이나 후미로 잡아 초반 몸싸움을 피하고 첫 500 m 호흡 리듬을 먼저 안정시킵니다.",
+      "수영 뒤 T1 05:53의 동선과 장비 교체 순서를 점검해 전환 시간을 줄입니다.",
+    ],
+  },
   "2026-hangang-seoul-half": {
     facts: [
       "공식 기록은 02:16:29.24이며 하프 전체 1441/2736위, 남자 1306/2300위입니다.",

@@ -130,11 +130,15 @@
     "category": "aquathlon",
     "status": "finished",
     "reviewStatus": "verified",
-    "official": { "swimTime": "00:47:11", "transitionTime": "00:05:53", "verticalRunTime": "00:34:02" },
+    "official": { "time": "01:27:06", "bib": 1313, "swimTime": "00:47:11", "transitionTime": "00:05:53", "verticalRunTime": "00:34:02", "rankOverall": 624, "rankMen": 507 },
     "strava": { "swimDistanceKm": 1.51, "verticalFinish": "롯데타워 123층" },
-    "review": "석촌호수 1.5km 수영과 롯데타워 123층 계단을 연결한 독특한 복합 종목이다.",
+    "review": "석촌호수 1.5km 수영 뒤 롯데타워 123층을 계단으로 오르는 아쿠아슬론이다. 슈트 없이 들어간 물에서 다리가 가라앉고 초반 몸싸움에 휩쓸려 500m까지는 포기를 떠올릴 만큼 힘들었지만, 페이스를 낮추고 리듬을 되찾아 00:47:11에 수영을 마쳤다. 처음 해 본 수직 마라톤은 뛰기엔 벅차 빠른 걸음으로 꾸준히 올랐고, 업힐 라이딩 경험을 떠올리며 많은 참가자를 따라잡아 총 01:27:06에 완주했다. 걱정하던 수영을 잘 버틴 데 만족하며 다음 주 트레일러닝을 준비했다.",
     "sources": ["strava", "kakao-story"],
-    "media": []
+    "media": [
+      "assets/images/events/2026-lotte-aquathlon/cover.jpg",
+      "assets/images/events/2026-lotte-aquathlon/official-result.jpg",
+      "assets/images/events/2026-lotte-aquathlon/swim-strava.jpg"
+    ]
   },
   {
     "id": "2026-cool-valley-trail",
