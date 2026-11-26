@@ -131,10 +131,15 @@
     "category": "walking",
     "status": "finished",
     "reviewStatus": "verified",
-    "strava": { "distanceKm": 43.64, "movingTime": "08:28:48", "elevationGainM": 190 },
-    "review": "42km를 걷는 장시간 지구력 도전이다. 이후 풀마라톤 도전의 경험적 기반으로 볼 수 있다.",
+    "official": { "result": "42K 완주(4번째 참가)" },
+    "strava": { "distanceKm": 43.64, "movingTime": "08:29:06", "elevationGainM": 190 },
+    "review": "네 번째로 참가한 한강 밤샘 42km 걷기다. 매번 물집과 혹사를 겪으면서도 다시 나서는 이유를 이번에는 걸으며 돌아보려 했지만, 막상 초반엔 밀린 대열을 앞지르느라, 중반엔 이어폰을 잃어버린 채 페이스와 휴식만 챙기느라 생각할 틈이 없었다. 러닝화 대신 싼 신발을 신은 탓에 물집이 잡히고 막판엔 발목까지 다쳤지만, 설악 그란폰도도 해냈다는 믿음으로 포기 없이 새벽에 완주했다. 전기자전거로 수원까지 돌아온 뒤에는 기쁨보다 온몸의 후폭풍이 더 컸다.",
     "sources": ["strava", "kakao-story"],
-    "media": []
+    "media": [
+      "assets/images/events/2025-hangang-night-walk-42k/cover.jpg",
+      "assets/images/events/2025-hangang-night-walk-42k/gallery-03.jpg",
+      "assets/images/events/2025-hangang-night-walk-42k/gallery-04.jpg"
+    ]
   },
   {
     "id": "2025-mungyeong-granfondo",

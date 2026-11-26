@@ -53,6 +53,14 @@ const LABEL = {
   participated: "참가",
 };
 const MEDIA = {
+  "2025-hangang-night-walk-42k": [
+    "assets/images/events/2025-hangang-night-walk-42k/cover.jpg",
+    "assets/images/events/2025-hangang-night-walk-42k/gallery-01.jpg",
+    "assets/images/events/2025-hangang-night-walk-42k/gallery-02.jpg",
+    "assets/images/events/2025-hangang-night-walk-42k/gallery-03.jpg",
+    "assets/images/events/2025-hangang-night-walk-42k/gallery-04.jpg",
+    "assets/images/events/2025-hangang-night-walk-42k/gallery-05.jpg",
+  ],
   "2025-iksan-aquathlon-standard": [
     "assets/images/events/2025-iksan-aquathlon-standard/cover.jpg",
     "assets/images/events/2025-iksan-aquathlon-standard/gallery-01.jpg",
@@ -379,6 +387,7 @@ const JOURNEY_STRAVA = {
 };
 const KAKAO = "https://story.kakao.com/_F7q479";
 const KAKAO_POSTS = {
+  "2025-hangang-night-walk-42k": "https://story.kakao.com/_F7q479/FMyvEUHLmLA",
   "2025-iksan-aquathlon-standard": "https://story.kakao.com/_F7q479/CCoGDX57jk0",
   "2025-hangang-slow-triathlon": "https://story.kakao.com/_F7q479/5UaHhSdmWJ9",
   "2025-seorak-granfondo": "https://story.kakao.com/_F7q479/HAvEDTP0Pka",
@@ -405,6 +414,20 @@ const KAKAO_POSTS = {
   "2026-incheon-full-marathon": "https://story.kakao.com/_F7q479/EVJyv4BzXRA",
 };
 const AI_ANALYSIS = {
+  "2025-hangang-night-walk-42k": {
+    facts: [
+      "Strava 기록은 43.63 km · 이동 시간 8:29:06 · 상승 190 m · 59,416걸음이며, Strava 최장 걷기 기록으로 표시됐습니다.",
+      "후기에는 19시 무렵 출발해 04:48에 도착했다고 적혀 있어, 이동 시간 외 휴식이 1시간 이상 포함된 것으로 보입니다.",
+      "후기 기준 이번이 이 대회 4번째 참가이며, 물집과 막판 발목 부상이 있었습니다.",
+    ],
+    assessment:
+      "이동 시간 기준 평균 속도는 약 5.1 km/h로, 8시간 넘게 꾸준한 걷기 페이스를 유지했습니다. 다만 출발·도착 시각이 후기에 대략적으로만 적혀 있어 총 경과 시간과 휴식 시간은 정확히 계산하지 않습니다. 물집의 원인은 후기에서 신발 선택으로 짐작했으며, 이 장거리 지속 경험은 이후 첫 풀코스 도전의 기반이 됐습니다.",
+    next: [
+      "장시간 걷기에도 평소 신던 러닝화와 물집 방지 양말을 사용합니다.",
+      "2~3시간마다 발을 식히고 상태를 점검하는 휴식 계획을 미리 정합니다.",
+      "밤샘 대회 뒤 장거리 귀가 이동은 피하고 회복 일정을 확보합니다.",
+    ],
+  },
   "2025-iksan-aquathlon-standard": {
     facts: [
       "완주증 기준 총 01:33:33(수영 0:47:26, 러닝 0:42:44)이며, 러닝은 폭염으로 5 km로 단축됐습니다.",
