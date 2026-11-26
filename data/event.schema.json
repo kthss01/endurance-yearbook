@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Endurance Yearbook Event",
+  "type": "object",
+  "required": ["id", "year", "date", "title", "category", "status", "reviewStatus"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "year": { "type": "integer", "minimum": 2020 },
+    "date": { "type": "string", "format": "date" },
+    "title": { "type": "string" },
+    "category": { "enum": ["running", "cycling", "swimming", "triathlon", "aquathlon", "trail", "walking", "journey"] },
+    "status": { "enum": ["finished", "dnf", "cutoff", "format-changed", "cancelled", "participated"] },
+    "reviewStatus": { "enum": ["verified", "partial", "needs-review"] },
+    "official": { "type": ["object", "null"] },
+    "strava": { "type": ["object", "null"] },
+    "story": { "type": ["object", "null"] },
+    "sources": { "type": "array" },
+    "media": { "type": "array" }
+  },
+  "additionalProperties": true
+}

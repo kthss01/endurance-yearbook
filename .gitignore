@@ -1,0 +1,29 @@
+# Raw Strava exports and sensitive source data
+activities/
+media/
+routes/
+*.gpx
+*.fit
+*.tcx
+activities.csv
+followers.csv
+following.csv
+logins.csv
+profile.csv
+privacy_zones.csv
+mobile_device_identifiers.csv
+
+# Local source and working files
+sources/
+private/
+working/
+*.tmp
+
+# Tooling
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+.DS_Store
+Thumbs.db
+
