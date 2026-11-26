@@ -1122,3 +1122,7 @@ const RECORD_MEDIA = {
     "assets/images/journeys/2026-river-to-sea-challenge/stage2-finish-selfie.jpg",
   ],
 };
+// 대표 사진 초점 위치(object-position). 썸네일·상세 상단에서 피사체가 잘리지 않도록 사진별로 지정한다.
+const COVER_FOCUS = {
+  "assets/images/events/2026-siheung-half/cover.jpg": "50% 88%",
+};

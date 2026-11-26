@@ -53,6 +53,8 @@ const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "
 const DOC_IMAGE = /(official|result|certificate|ranking|strava|splits|pace|heart-rate|route-summary|course|chart)/;
 const isDocImage = (p) => DOC_IMAGE.test(p.split("/").pop());
 const coverPhoto = (pics = []) => pics.find((p) => !isDocImage(p));
+// 사진별 초점 위치(app.js COVER_FOCUS)를 style 속성으로
+const focus = (p) => { const f = typeof COVER_FOCUS !== "undefined" && COVER_FOCUS[p]; return f ? ` style="object-position:${f}"` : ""; };
 
 function splitDistances(s = {}) {
   return [["swimming", s.swimDistanceKm], ["cycling", s.bikeDistanceKm], ["running", s.runDistanceKm]].filter(([, d]) => d);
@@ -358,7 +360,7 @@ function renderRecords(s) {
     const pics = own.length ? own : (t?.pics || []).filter((p) => !isDocImage(p));
     const cover = coverPhoto(pics) || pics[0];
     const thumbs = pics.length > 1 ? `<div class="rec-thumbs">${pics.slice(0, 4).map((p, i) => `<button data-i="${i}" aria-label="기록 사진 ${i + 1} 크게 보기"><img src="${p}" alt="" loading="lazy"></button>`).join("")}${pics.length > 4 ? `<span>+${pics.length - 4}</span>` : ""}</div>` : "";
-    return `<article class="record-card reveal ${key} ${cover ? "has-photo" : ""}" data-pics='${JSON.stringify(pics).replace(/'/g, "&#39;")}' ${t ? `data-type="${t.type}" data-target="${t.id}" tabindex="0"` : ""}>${cover ? `<img class="rec-bg" src="${cover}" alt="${x.title} 사진" loading="lazy">` : ""}<span class="eyebrow">${label}</span><strong><b data-count="${big}" data-dec="${unit === "km" ? 2 : 0}">0</b><small>${unit}</small></strong><h4>${x.title}</h4><p>${dateKo(x.date)} · ${num(x.distanceKm)} km · ↑ ${num(x.elevationGainM, 0)} m · ${num(x.movingHours)} h</p>${thumbs}${t ? `<span class="rec-open">${t.type === "event" ? "대회 기록 보기" : "여정 기록 보기"} →</span>` : ""}</article>`;
+    return `<article class="record-card reveal ${key} ${cover ? "has-photo" : ""}" data-pics='${JSON.stringify(pics).replace(/'/g, "&#39;")}' ${t ? `data-type="${t.type}" data-target="${t.id}" tabindex="0"` : ""}>${cover ? `<img class="rec-bg" src="${cover}"${focus(cover)} alt="${x.title} 사진" loading="lazy">` : ""}<span class="eyebrow">${label}</span><strong><b data-count="${big}" data-dec="${unit === "km" ? 2 : 0}">0</b><small>${unit}</small></strong><h4>${x.title}</h4><p>${dateKo(x.date)} · ${num(x.distanceKm)} km · ↑ ${num(x.elevationGainM, 0)} m · ${num(x.movingHours)} h</p>${thumbs}${t ? `<span class="rec-open">${t.type === "event" ? "대회 기록 보기" : "여정 기록 보기"} →</span>` : ""}</article>`;
   };
   $("#record-grid").innerHTML =
     card("long", "longestDistance", "LONGEST RIDE · 한 번에 가장 멀리", r.longestDistance?.distanceKm, "km", r.longestDistance) +
@@ -448,7 +450,7 @@ function renderEvents() {
     .map((e, i) => {
       const pics = MEDIA[e.id] || [], photo = coverPhoto(pics), o = e.official || {}, d = eventDistance(e);
       const rank = o.rankOverall ? `<span class="rank">#${o.rankOverall}<small>종합</small></span>` : "";
-      return `<article class="race-card reveal ${photo ? "has-photo" : ""}" tabindex="0" data-id="${e.id}" style="--c:${COLOR[e.category] || "#d9ff43"};--d:${(i % 6) * 60}ms"><div class="rc-media">${photo ? `<img src="${photo}" alt="${e.title} 대표 사진" loading="lazy">` : recordFace(e)}<div class="rc-chips"><span class="chip">${LABEL2[e.category] || e.category}</span>${e.status !== "finished" ? `<span class="chip warn">${LABEL2[e.status] || e.status}</span>` : ""}${pics.length ? `<span class="chip ghost">${pics.length} PHOTOS</span>` : ""}${videoChip(videosOf("event", e.id).length)}</div></div><div class="rc-body"><div class="rc-meta"><span>${dateKo(e.date)}</span>${rank}</div><h3>${e.title}</h3><div class="rc-result">${u(result(e))}</div><div class="rc-stats">${d ? `<span>${num(d)} km</span>` : ""}${e.strava?.elevationGainM ? `<span>↑ ${num(e.strava.elevationGainM, 0)} m</span>` : ""}${o.course ? `<span>${o.course}</span>` : ""}</div></div><span class="rc-glow" aria-hidden="true"></span></article>`;
+      return `<article class="race-card reveal ${photo ? "has-photo" : ""}" tabindex="0" data-id="${e.id}" style="--c:${COLOR[e.category] || "#d9ff43"};--d:${(i % 6) * 60}ms"><div class="rc-media">${photo ? `<img src="${photo}"${focus(photo)} alt="${e.title} 대표 사진" loading="lazy">` : recordFace(e)}<div class="rc-chips"><span class="chip">${LABEL2[e.category] || e.category}</span>${e.status !== "finished" ? `<span class="chip warn">${LABEL2[e.status] || e.status}</span>` : ""}${pics.length ? `<span class="chip ghost">${pics.length} PHOTOS</span>` : ""}${videoChip(videosOf("event", e.id).length)}</div></div><div class="rc-body"><div class="rc-meta"><span>${dateKo(e.date)}</span>${rank}</div><h3>${e.title}</h3><div class="rc-result">${u(result(e))}</div><div class="rc-stats">${d ? `<span>${num(d)} km</span>` : ""}${e.strava?.elevationGainM ? `<span>↑ ${num(e.strava.elevationGainM, 0)} m</span>` : ""}${o.course ? `<span>${o.course}</span>` : ""}</div></div><span class="rc-glow" aria-hidden="true"></span></article>`;
     })
     .join("");
   $$("#event-grid .race-card").forEach((card) => {
@@ -468,7 +470,7 @@ function renderJourneys() {
       const photos = JOURNEY_MEDIA[j.id] || [], s = j.strava || {}, photo = coverPhoto(photos) || photos[0];
       const period = j.startDate === j.endDate ? dateKo(j.startDate) : `${dateKo(j.startDate)} — ${dateKo(j.endDate)}`;
       const vchip = videoChip(videosOf("journey", j.id).length), chips = vchip ? `<div class="jc-chips">${vchip}</div>` : "";
-      return `<article class="journey-card reveal ${photo ? "has-photo" : ""} ${j.id === FEATURED ? "featured" : ""}" tabindex="0" data-jid="${j.id}" style="--d:${i * 70}ms">${photo ? `<div class="jc-media"><img src="${photo}" alt="${j.title} 대표 사진" loading="lazy">${chips}${photos.length > 1 ? `<span class="chip ghost">${photos.length} PHOTOS</span>` : ""}</div>` : `<div class="jc-media empty">${chips}<span>${s.distanceKm ? `${num(s.distanceKm, 0)}<small>km</small>` : "—"}</span></div>`}<div class="jc-copy"><span class="date">${period}</span><small>${j.category === "randonneuring" ? "RANDONNEURING" : j.category === "walking" ? "WALKING" : "JOURNEY"}${j.status && j.status !== "finished" ? ` · ${LABEL2[j.status] || j.status}` : ""}</small><h3>${j.title}</h3><p>${j.review || j.summary || ""}</p><div class="jc-stats">${s.distanceKm ? `<b>${num(s.distanceKm)} km</b>` : ""}${s.elapsedHours ? `<b>${num(s.elapsedHours)} h</b>` : ""}${s.elevationGainM ? `<b>↑ ${num(s.elevationGainM, 0)} m</b>` : ""}${s.activityCount > 1 ? `<b>${s.activityCount} stages</b>` : ""}</div><span class="jc-open">여정 자세히 보기 →</span></div></article>`;
+      return `<article class="journey-card reveal ${photo ? "has-photo" : ""} ${j.id === FEATURED ? "featured" : ""}" tabindex="0" data-jid="${j.id}" style="--d:${i * 70}ms">${photo ? `<div class="jc-media"><img src="${photo}"${focus(photo)} alt="${j.title} 대표 사진" loading="lazy">${chips}${photos.length > 1 ? `<span class="chip ghost">${photos.length} PHOTOS</span>` : ""}</div>` : `<div class="jc-media empty">${chips}<span>${s.distanceKm ? `${num(s.distanceKm, 0)}<small>km</small>` : "—"}</span></div>`}<div class="jc-copy"><span class="date">${period}</span><small>${j.category === "randonneuring" ? "RANDONNEURING" : j.category === "walking" ? "WALKING" : "JOURNEY"}${j.status && j.status !== "finished" ? ` · ${LABEL2[j.status] || j.status}` : ""}</small><h3>${j.title}</h3><p>${j.review || j.summary || ""}</p><div class="jc-stats">${s.distanceKm ? `<b>${num(s.distanceKm)} km</b>` : ""}${s.elapsedHours ? `<b>${num(s.elapsedHours)} h</b>` : ""}${s.elevationGainM ? `<b>↑ ${num(s.elevationGainM, 0)} m</b>` : ""}${s.activityCount > 1 ? `<b>${s.activityCount} stages</b>` : ""}</div><span class="jc-open">여정 자세히 보기 →</span></div></article>`;
     })
     .join("");
   $$("#journey-list .journey-card").forEach((c) => {
@@ -633,7 +635,7 @@ function showEvent(e) {
   const pics = MEDIA[e.id] || [], cover = coverPhoto(pics), c = COLOR[e.category] || "#d9ff43";
   const storyUrl = KAKAO_POSTS[e.id] || e.story?.url || KAKAO, an = AI_ANALYSIS[e.id], lg = legs(e), bd = badges(e), links = stravaLinks(e);
   const html = `
-  <div class="d-hero ${cover ? "has-photo" : ""}" style="--c:${c}">${cover ? `<img class="kb" src="${cover}" alt="">` : `<div class="d-hero-pattern"></div>`}
+  <div class="d-hero ${cover ? "has-photo" : ""}" style="--c:${c}">${cover ? `<img class="kb" src="${cover}"${focus(cover)} alt="">` : `<div class="d-hero-pattern"></div>`}
     <div class="d-hero-copy"><div class="d-tags"><span>${dateKo(e.date)}</span><span style="--c:${c}" class="cat">${LABEL2[e.category] || e.category}</span><span class="${e.status !== "finished" ? "warn" : ""}">${LABEL2[e.status] || e.status}</span></div>
       <h2 id="detail-title">${e.title}</h2><p class="d-result">${u(result(e))}</p></div></div>
   <div class="d-quick">${quickStats(e).map(([a, b, ic], i) => `<div style="--d:${i * 70}ms"><i>${ic}</i><span>${a}</span><strong>${u(b)}</strong></div>`).join("")}</div>
@@ -680,7 +682,7 @@ function showJourney(j) {
     ? `<section class="d-block"><h3>STAGES / 구간별 기록</h3><div class="cmp">${(() => { const mx = Math.max(...j.stages.map((x) => x.distanceKm)); return j.stages.map((x, i) => `<div class="cmp-row ${x.status !== "finished" ? "dnf" : ""}" style="--d:${i * 80}ms"><span>${i + 1}. ${x.title}<small>${LABEL2[x.status] || x.status}</small></span><div class="cmp-track"><i style="width:${(x.distanceKm / mx) * 100}%"></i></div><b>${u(`${num(x.distanceKm)} km`)}</b></div>`).join(""); })()}</div></section>`
     : "";
   const html = `
-  <div class="d-hero ${cover ? "has-photo" : ""}" style="--c:#ffb627">${cover ? `<img class="kb" src="${cover}" alt="">` : `<div class="d-hero-pattern"></div>`}
+  <div class="d-hero ${cover ? "has-photo" : ""}" style="--c:#ffb627">${cover ? `<img class="kb" src="${cover}"${focus(cover)} alt="">` : `<div class="d-hero-pattern"></div>`}
     <div class="d-hero-copy"><div class="d-tags"><span>${period}</span><span class="cat" style="--c:#ffb627">${j.category === "randonneuring" ? "브레베" : "여정"}</span>${j.status && j.status !== "finished" ? `<span class="warn">${LABEL2[j.status] || j.status}</span>` : ""}</div><h2 id="detail-title">${j.title}</h2><p class="d-result">${s.distanceKm ? u(`${num(s.distanceKm)} km`) : ""}</p></div></div>
   <div class="d-quick">${quick.map(([a, b, ic], i) => `<div style="--d:${i * 70}ms"><i>${ic}</i><span>${a}</span><strong>${u(b)}</strong></div>`).join("")}</div>
   <div class="d-body"><div class="d-main">
