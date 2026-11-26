@@ -53,6 +53,17 @@ const LABEL = {
   participated: "참가",
 };
 const MEDIA = {
+  "2025-mungyeong-granfondo": [
+    "assets/images/events/2025-mungyeong-granfondo/cover.jpg",
+    "assets/images/events/2025-mungyeong-granfondo/gallery-01.jpg",
+    "assets/images/events/2025-mungyeong-granfondo/gallery-02.jpg",
+    "assets/images/events/2025-mungyeong-granfondo/gallery-03.jpg",
+    "assets/images/events/2025-mungyeong-granfondo/gallery-04.jpg",
+    "assets/images/events/2025-mungyeong-granfondo/gallery-05.jpg",
+    "assets/images/events/2025-mungyeong-granfondo/gallery-06.jpg",
+    "assets/images/events/2025-mungyeong-granfondo/gallery-07.jpg",
+    "assets/images/events/2025-mungyeong-granfondo/gallery-08.jpg",
+  ],
   "2025-hangang-night-walk-42k": [
     "assets/images/events/2025-hangang-night-walk-42k/cover.jpg",
     "assets/images/events/2025-hangang-night-walk-42k/gallery-01.jpg",
@@ -387,6 +398,7 @@ const JOURNEY_STRAVA = {
 };
 const KAKAO = "https://story.kakao.com/_F7q479";
 const KAKAO_POSTS = {
+  "2025-mungyeong-granfondo": "https://story.kakao.com/_F7q479/4NIx4h8Cik9",
   "2025-hangang-night-walk-42k": "https://story.kakao.com/_F7q479/FMyvEUHLmLA",
   "2025-iksan-aquathlon-standard": "https://story.kakao.com/_F7q479/CCoGDX57jk0",
   "2025-hangang-slow-triathlon": "https://story.kakao.com/_F7q479/5UaHhSdmWJ9",
@@ -414,6 +426,20 @@ const KAKAO_POSTS = {
   "2026-incheon-full-marathon": "https://story.kakao.com/_F7q479/EVJyv4BzXRA",
 };
 const AI_ANALYSIS = {
+  "2025-mungyeong-granfondo": {
+    facts: [
+      "그란폰도 컷오프는 85.4 km 지점 11:30이었고, 후기 기준 11:45쯤 도착해 메디오폰도로 전환됐습니다.",
+      "메디오폰도 107.6km 공식 기록은 04:51:22.90(배번호 1356)이며 전체 234/1675위, 남자 204/1493위입니다.",
+      "Strava 기록은 107.64 km · 이동 시간 4:27:42 · 경과 시간 4:51:47 · 누적 상승 1,394 m, 평균 24.1 km/h · 평균 파워 157 W입니다.",
+    ],
+    assessment:
+      "컷오프 지점에 약 15분 늦었는데, 후기에서 직접 꼽은 출발 지연(약 20분)과 보급소 정체, 소극적인 팩 라이딩, 조심스러운 다운힐이 함께 작용한 것으로 보입니다. 메디오폰도 기준 순위는 상위 약 14%였지만 이는 그란폰도 주자 일부가 섞인 결과일 수 있어 체력 수준으로 해석하지 않습니다. 이 대회는 1년 뒤 같은 대회에서 통과 시간표를 세워 분기점을 3분 앞서 통과하는 재도전의 기준점이 됐습니다.",
+    next: [
+      "분기점 마감이 있는 대회는 보급소별 목표 통과 시각표를 미리 만듭니다.",
+      "평지 구간에서는 그룹 주행을 적극 활용해 시간과 체력을 아낍니다.",
+      "다운힐 코너링 연습으로 불필요한 감속을 줄입니다.",
+    ],
+  },
   "2025-hangang-night-walk-42k": {
     facts: [
       "Strava 기록은 43.63 km · 이동 시간 8:29:06 · 상승 190 m · 59,416걸음이며, Strava 최장 걷기 기록으로 표시됐습니다.",

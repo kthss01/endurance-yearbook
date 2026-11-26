@@ -149,11 +149,15 @@
     "category": "cycling",
     "status": "cutoff",
     "reviewStatus": "verified",
-    "official": { "result": "그란폰도 컷오프 후 메디오폰도 완주" },
-    "strava": { "distanceKm": 107.65, "movingTime": "04:27:36", "elevationGainM": 1394 },
-    "review": "활동 거리만 보면 장거리 완주로 보이지만 그란폰도에서는 컷오프됐다. 2026년 재도전 서사의 기준점이다.",
+    "official": { "result": "그란폰도 컷오프 후 메디오폰도 완주", "mediofondoTime": "04:51:22.90", "bib": 1356, "course": "메디오폰도 107.6km", "rankOverall": 234, "rankMen": 204 },
+    "strava": { "distanceKm": 107.65, "movingTime": "04:27:42", "elevationGainM": 1394 },
+    "review": "150km 그란폰도에 나섰지만 85.4km 지점 11:30 컷오프에 15분가량 늦은 11:45쯤 도착해 메디오폰도 107.6km로 04:51:22.90에 완주했다. 출발이 20분 가까이 밀리고 보급소도 붐볐지만, 스스로는 팩 라이딩을 적극적으로 하지 않은 점, 겁을 내 브레이크를 많이 잡은 다운힐, 최근 줄어든 라이딩과 감량으로 떨어진 체력을 원인으로 꼽았다. 비와 한낮 더위를 피하고 발바닥 통증과 심한 쥐 속에서 큰 부상 없이 마쳤다는 위로도 남겼지만, 패배감을 추스르고 가을 대회를 다시 준비하자는 다짐으로 끝맺었다.",
     "sources": ["strava", "kakao-story", "google-docs"],
-    "media": []
+    "media": [
+      "assets/images/events/2025-mungyeong-granfondo/cover.jpg",
+      "assets/images/events/2025-mungyeong-granfondo/gallery-08.jpg",
+      "assets/images/events/2025-mungyeong-granfondo/gallery-01.jpg"
+    ]
   },
   {
     "id": "2025-marvel-run-half",
