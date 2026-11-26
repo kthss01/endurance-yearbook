@@ -53,6 +53,13 @@ const LABEL = {
   participated: "참가",
 };
 const MEDIA = {
+  "2025-marvel-run-half": [
+    "assets/images/events/2025-marvel-run-half/cover.jpg",
+    "assets/images/events/2025-marvel-run-half/gallery-01.jpg",
+    "assets/images/events/2025-marvel-run-half/gallery-02.jpg",
+    "assets/images/events/2025-marvel-run-half/gallery-03.jpg",
+    "assets/images/events/2025-marvel-run-half/gallery-04.jpg",
+  ],
   "2025-mungyeong-granfondo": [
     "assets/images/events/2025-mungyeong-granfondo/cover.jpg",
     "assets/images/events/2025-mungyeong-granfondo/gallery-01.jpg",
@@ -398,6 +405,7 @@ const JOURNEY_STRAVA = {
 };
 const KAKAO = "https://story.kakao.com/_F7q479";
 const KAKAO_POSTS = {
+  "2025-marvel-run-half": "https://story.kakao.com/_F7q479/DPSg2iu9plA",
   "2025-mungyeong-granfondo": "https://story.kakao.com/_F7q479/4NIx4h8Cik9",
   "2025-hangang-night-walk-42k": "https://story.kakao.com/_F7q479/FMyvEUHLmLA",
   "2025-iksan-aquathlon-standard": "https://story.kakao.com/_F7q479/CCoGDX57jk0",
@@ -426,6 +434,20 @@ const KAKAO_POSTS = {
   "2026-incheon-full-marathon": "https://story.kakao.com/_F7q479/EVJyv4BzXRA",
 };
 const AI_ANALYSIS = {
+  "2025-marvel-run-half": {
+    facts: [
+      "공식 기록은 02:21:51(배번호 25083)이며 하프 전체 4201/6307위, 남자 3588위입니다.",
+      "공식 구간 페이스는 6.8 km까지 6:17/km, 10.7 km까지 6:29/km, 14.6 km까지 6:38/km, 결승까지 7:20/km였습니다.",
+      "Strava 기록은 21.39 km · 이동 시간 2:21:16 · 평균 6:36/km · 상승 125 m · 평균 심박 162 bpm입니다.",
+    ],
+    assessment:
+      "첫 하프에서 14.6 km까지 6분 30초대 안팎을 유지했지만 마지막 구간에서 7:20/km로 크게 느려졌는데, 후기에서 말한 15 km 이후 오르막과 페이스메이커 이탈, 마지막 급수 생략 시점과 겹칩니다. 초반을 계획(6:30/km)보다 빠른 6:00/km 안팎으로 시작한 점도 후반 저하에 영향을 줬을 수 있으나 단정하지 않습니다. 두 달 뒤 MBN 하프 01:53:32로 약 28분을 단축하는 출발점 기록입니다.",
+    next: [
+      "출발 직후 흥분으로 빨라지는 초반 3 km를 목표 페이스로 묶는 연습을 합니다.",
+      "급수대는 형태와 상관없이 거르지 않는 원칙을 세웁니다.",
+      "15 km 이후 오르막을 대비해 주 1회 장거리 러닝에 언덕 구간을 넣습니다.",
+    ],
+  },
   "2025-mungyeong-granfondo": {
     facts: [
       "그란폰도 컷오프는 85.4 km 지점 11:30이었고, 후기 기준 11:45쯤 도착해 메디오폰도로 전환됐습니다.",

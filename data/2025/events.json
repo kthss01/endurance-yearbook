@@ -166,11 +166,16 @@
     "title": "마블런 하프",
     "category": "running",
     "status": "finished",
-    "reviewStatus": "partial",
-    "strava": { "distanceKm": 21.39, "movingTime": "02:21:00", "elevationGainM": 125 },
-    "review": "하반기 하프마라톤 경험을 쌓은 대회다. 공식 기록 확인이 필요하다.",
-    "sources": ["strava"],
-    "media": []
+    "reviewStatus": "verified",
+    "official": { "time": "02:21:51", "bib": 25083, "course": "Half", "rankOverall": 4201, "rankMen": 3588, "milestone": "첫 하프 완주" },
+    "strava": { "distanceKm": 21.39, "movingTime": "02:21:16", "elevationGainM": 125 },
+    "review": "몇 번이고 미루고 포기했던 하프마라톤을 처음 완주한 날이다. 서울광장과 청계천을 달리는 코스에서 출발이 30분 늦어지고 공지와 달리 10km가 먼저 출발하는 혼란 속에, 9km에서 만난 2시간 20분 페이스메이커 그룹을 따라 컷오프 지점을 아슬아슬하게 빠져나갔다. 15km 이후 큰 오르막에서 그룹을 놓치고 마지막 급수를 거르며 페이스가 8분대까지 떨어졌지만, 걷지만은 않겠다는 마음으로 버티고 마지막 200m를 전력으로 달려 02:21:51에 들어왔다. 결승 뒤에는 할 수 있다고 외쳐 온 꿈 하나를 이뤘다는 벅찬 감정이 밀려왔다.",
+    "sources": ["strava", "kakao-story"],
+    "media": [
+      "assets/images/events/2025-marvel-run-half/cover.jpg",
+      "assets/images/events/2025-marvel-run-half/gallery-03.jpg",
+      "assets/images/events/2025-marvel-run-half/gallery-01.jpg"
+    ]
   },
   {
     "id": "2025-goryeong-duathlon",
