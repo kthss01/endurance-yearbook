@@ -309,13 +309,36 @@ function renderSports(s) {
 }
 
 /* 연간 최장·최고 기록 */
+// 기록 날짜에 해당하는 대회·여정 찾기 (사진 재사용과 상세 화면 연결용)
+function recordTarget(x) {
+  const y = state.year;
+  const ev = state.events[y].find((e) => e.date === x.date);
+  if (ev) return { type: "event", id: ev.id, pics: MEDIA[ev.id] || [] };
+  const jr = state.journeys[y].find((j) => j.startDate <= x.date && x.date <= j.endDate);
+  if (jr) return { type: "journey", id: jr.id, pics: JOURNEY_MEDIA[jr.id] || [] };
+  return null;
+}
 function renderRecords(s) {
-  const r = s.records || {};
-  const card = (key, label, big, unit, x) =>
-    x ? `<article class="record-card reveal ${key}"><span class="eyebrow">${label}</span><strong><b data-count="${big}" data-dec="${unit === "km" ? 2 : 0}">0</b><small>${unit}</small></strong><h4>${x.title}</h4><p>${dateKo(x.date)} · ${num(x.distanceKm)} km · ↑ ${num(x.elevationGainM, 0)} m · ${num(x.movingHours)} h</p></article>` : "";
+  const r = s.records || {}, RM = typeof RECORD_MEDIA !== "undefined" ? RECORD_MEDIA : {};
+  const card = (key, rk, label, big, unit, x) => {
+    if (!x) return "";
+    const t = recordTarget(x), own = RM[`${state.year}-${rk}`] || [];
+    const pics = own.length ? own : (t?.pics || []).filter((p) => !isDocImage(p));
+    const cover = coverPhoto(pics) || pics[0];
+    const thumbs = pics.length > 1 ? `<div class="rec-thumbs">${pics.slice(0, 4).map((p, i) => `<button data-i="${i}" aria-label="기록 사진 ${i + 1} 크게 보기"><img src="${p}" alt="" loading="lazy"></button>`).join("")}${pics.length > 4 ? `<span>+${pics.length - 4}</span>` : ""}</div>` : "";
+    return `<article class="record-card reveal ${key} ${cover ? "has-photo" : ""}" data-pics='${JSON.stringify(pics).replace(/'/g, "&#39;")}' ${t ? `data-type="${t.type}" data-target="${t.id}" tabindex="0"` : ""}>${cover ? `<img class="rec-bg" src="${cover}" alt="${x.title} 사진" loading="lazy">` : ""}<span class="eyebrow">${label}</span><strong><b data-count="${big}" data-dec="${unit === "km" ? 2 : 0}">0</b><small>${unit}</small></strong><h4>${x.title}</h4><p>${dateKo(x.date)} · ${num(x.distanceKm)} km · ↑ ${num(x.elevationGainM, 0)} m · ${num(x.movingHours)} h</p>${thumbs}${t ? `<span class="rec-open">${t.type === "event" ? "대회 기록 보기" : "여정 기록 보기"} →</span>` : ""}</article>`;
+  };
   $("#record-grid").innerHTML =
-    card("long", "LONGEST RIDE · 한 번에 가장 멀리", r.longestDistance?.distanceKm, "km", r.longestDistance) +
-    card("high", "MOST CLIMBING · 가장 많이 오른 날", r.highestElevation?.elevationGainM, "m", r.highestElevation);
+    card("long", "longestDistance", "LONGEST RIDE · 한 번에 가장 멀리", r.longestDistance?.distanceKm, "km", r.longestDistance) +
+    card("high", "highestElevation", "MOST CLIMBING · 가장 많이 오른 날", r.highestElevation?.elevationGainM, "m", r.highestElevation);
+  $$("#record-grid .record-card").forEach((c) => {
+    const pics = JSON.parse(c.dataset.pics || "[]");
+    $$(".rec-thumbs button", c).forEach((b) => (b.onclick = (ev) => { ev.stopPropagation(); openLightbox(pics, +b.dataset.i); }));
+    if (!c.dataset.target) return;
+    const open = () => (c.dataset.type === "event" ? openEvent(c.dataset.target) : openJourney(c.dataset.target));
+    c.onclick = open;
+    c.onkeydown = (x) => { if (x.key === "Enter") open(); };
+  });
 }
 
 /* ───────── 대회 ───────── */
