@@ -53,6 +53,18 @@ const LABEL = {
   participated: "참가",
 };
 const MEDIA = {
+  "2025-yeosu-granfondo": [
+    "assets/images/events/2025-yeosu-granfondo/cover.jpg",
+    "assets/images/events/2025-yeosu-granfondo/gallery-01.jpg",
+    "assets/images/events/2025-yeosu-granfondo/gallery-02.jpg",
+    "assets/images/events/2025-yeosu-granfondo/gallery-03.jpg",
+    "assets/images/events/2025-yeosu-granfondo/gallery-04.jpg",
+    "assets/images/events/2025-yeosu-granfondo/gallery-05.jpg",
+    "assets/images/events/2025-yeosu-granfondo/gallery-06.jpg",
+    "assets/images/events/2025-yeosu-granfondo/gallery-07.jpg",
+    "assets/images/events/2025-yeosu-granfondo/gallery-08.jpg",
+    "assets/images/events/2025-yeosu-granfondo/gallery-09.jpg",
+  ],
   "2025-goryeong-duathlon": [
     "assets/images/events/2025-goryeong-duathlon/cover.jpg",
     "assets/images/events/2025-goryeong-duathlon/gallery-01.jpg",
@@ -423,6 +435,7 @@ const JOURNEY_STRAVA = {
 };
 const KAKAO = "https://story.kakao.com/_F7q479";
 const KAKAO_POSTS = {
+  "2025-yeosu-granfondo": "https://story.kakao.com/_F7q479/53daRxAKQL9",
   "2025-goryeong-duathlon": "https://story.kakao.com/_F7q479/iIoSjWfkpma",
   "2025-marvel-run-half": "https://story.kakao.com/_F7q479/DPSg2iu9plA",
   "2025-mungyeong-granfondo": "https://story.kakao.com/_F7q479/4NIx4h8Cik9",
@@ -453,6 +466,20 @@ const KAKAO_POSTS = {
   "2026-incheon-full-marathon": "https://story.kakao.com/_F7q479/EVJyv4BzXRA",
 };
 const AI_ANALYSIS = {
+  "2025-yeosu-granfondo": {
+    facts: [
+      "공식 기록은 04:45:42.70(그란폰도 113km, 배번호 1342)입니다.",
+      "Strava 기록은 112.83 km · 이동 시간 4:29:31 · 경과 시간 4:46:23 · 누적 상승 1,609 m, 평균 25.1 km/h · 평균 파워 172 W입니다.",
+      "후기에는 다리 위 맞바람으로 쥐가 났고, 팩 라이딩 없이 단독으로 주행했다고 기록돼 있습니다.",
+    ],
+    assessment:
+      "공식 기록과 이동 시간 차이가 약 16분으로, 같은 해 고성(약 27분)보다 정차 시간을 크게 줄였습니다. 평균 파워 172 W는 고성(167 W)·문경(157 W)보다 높아 시즌 후반 자전거 체력이 올라온 것으로 보입니다. 다만 코스와 바람 조건이 달라 대회 간 파워 차이를 체력 향상만으로 단정하지는 않습니다.",
+    next: [
+      "맞바람 구간이 긴 해안 코스에서는 그룹 주행을 활용해 단독 주행 부담을 줄입니다.",
+      "짧은 대회라도 경련 대응 보급을 장거리 대회와 같은 기준으로 챙깁니다.",
+      "연속 일정(다음 날 마라톤)이 있으면 자전거 강도 상한을 미리 정합니다.",
+    ],
+  },
   "2025-goryeong-duathlon": {
     facts: [
       "완주증 기준 총 02:55:21(달리기 00:26:22, 자전거 01:21:21, 달리기 00:59:37)이며 30-34세 남자 45위입니다.",

@@ -209,10 +209,15 @@
     "category": "cycling",
     "status": "finished",
     "reviewStatus": "verified",
-    "strava": { "distanceKm": 112.83, "movingTime": "04:29:24", "elevationGainM": 1609 },
-    "review": "퇴근 후 야간 이동과 원정 일정까지 포함된 대회다. 공개 화면에는 개인 이동 세부정보를 줄이고 도전의 맥락만 남긴다.",
-    "sources": ["strava", "google-docs"],
-    "media": []
+    "official": { "time": "04:45:42.70", "bib": 1342, "course": "그란폰도 113km" },
+    "strava": { "distanceKm": 112.83, "movingTime": "04:29:31", "elevationGainM": 1609 },
+    "review": "여수의 섬들을 잇는 다리를 건너는 그란폰도를 04:45:42.70에 완주했다. 푹 자고 좋은 컨디션으로 나섰고 업힐과 다운힐 모두 예전보다 수월했지만, 거리가 짧다고 방심한 사이 다리 위 바닷바람 맞바람에 쥐가 났다. 팩 라이딩 없이 혼자 바람을 맞으며 달린 끝에 돌아가는 버스에 겨우 올라탔다. 쥐도 다운힐도 이제 별일 아니게 됐다며 한 해 자전거 대회를 마무리하는 성장을 확인했고, 다음 날 마라톤과 이어질 자전거 일주 여행을 기대했다.",
+    "sources": ["strava", "google-docs", "kakao-story"],
+    "media": [
+      "assets/images/events/2025-yeosu-granfondo/cover.jpg",
+      "assets/images/events/2025-yeosu-granfondo/gallery-01.jpg",
+      "assets/images/events/2025-yeosu-granfondo/gallery-04.jpg"
+    ]
   },
   {
     "id": "2025-chuncheon-10k",
