@@ -192,11 +192,15 @@
     "category": "trail",
     "status": "finished",
     "reviewStatus": "verified",
-    "official": { "time": "03:26:34" },
-    "strava": { "distanceKm": 21.6, "movingTime": "03:19:12", "elevationGainM": 872 },
-    "review": "첫 트레일 대회보다 거리와 운영 능력이 확장된 두 번째 트레일러닝이다.",
+    "official": { "time": "03:26:34", "bib": 2273, "course": "20.18K", "rankOverall": 260, "rankMen": 183 },
+    "strava": { "distanceKm": 21.6, "movingTime": "03:18:56", "elevationGainM": 872 },
+    "review": "숙소에서 잠을 설치고 나섰지만 비가 그친 시원한 날씨 덕에 컨디션은 좋았던 두 번째 트레일러닝이다. 먼저 출발하는 44km 주자들을 보며 언젠가를 그려 보다가, 출발선의 열기에 휩쓸리지 않도록 페이스를 조심했다. 한 번 겪어 본 경험 덕에 병목과 속도를 낼 구간이 예상되어 겁이 덜했고, 오르막은 쉬지 않고 걷듯 오르며 내리막에서 속도를 유지하는 기술이 나아졌음을 느꼈다. 마지막 구간까지 페이스를 조절해 03:26:34로 완주했고, 다음 30km 트레일도 해볼 만하다는 자신감을 얻었다.",
     "sources": ["strava", "kakao-story"],
-    "media": []
+    "media": [
+      "assets/images/events/2026-daegwallyeong-trail/cover.jpg",
+      "assets/images/events/2026-daegwallyeong-trail/official-result.jpg",
+      "assets/images/events/2026-daegwallyeong-trail/route-summary.jpg"
+    ]
   },
   {
     "id": "2026-mungyeong-granfondo",

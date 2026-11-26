@@ -53,6 +53,14 @@ const LABEL = {
   participated: "참가",
 };
 const MEDIA = {
+  "2026-daegwallyeong-trail": [
+    "assets/images/events/2026-daegwallyeong-trail/cover.jpg",
+    "assets/images/events/2026-daegwallyeong-trail/official-certificate.jpg",
+    "assets/images/events/2026-daegwallyeong-trail/official-result.jpg",
+    "assets/images/events/2026-daegwallyeong-trail/official-ranking.jpg",
+    "assets/images/events/2026-daegwallyeong-trail/route-summary.jpg",
+    "assets/images/events/2026-daegwallyeong-trail/course.jpg",
+  ],
   "2026-seolbong-triathlon": [
     "assets/images/events/2026-seolbong-triathlon/cover.jpg",
     "assets/images/events/2026-seolbong-triathlon/official-certificate.jpg",
@@ -172,6 +180,7 @@ const JOURNEY_STRAVA = {
 };
 const KAKAO = "https://story.kakao.com/_F7q479";
 const KAKAO_POSTS = {
+  "2026-daegwallyeong-trail": "https://story.kakao.com/_F7q479/1DDc1Ry7qP9",
   "2026-seolbong-triathlon": "https://story.kakao.com/_F7q479/gKcGvKqzlQA",
   "2026-cool-valley-trail": "https://story.kakao.com/_F7q479/9BLlsmohoP0",
   "2026-lotte-aquathlon": "https://story.kakao.com/_F7q479/6HAVzVSBio9",
@@ -186,6 +195,20 @@ const KAKAO_POSTS = {
   "2026-incheon-full-marathon": "https://story.kakao.com/_F7q479/EVJyv4BzXRA",
 };
 const AI_ANALYSIS = {
+  "2026-daegwallyeong-trail": {
+    facts: [
+      "공식 기록은 03:26:34(20.18K, 배번호 2273)이며 전체 260/732위, 남자 183/474위, 35-39세 남자 33/70위입니다.",
+      "공식 구간 페이스는 7.0 km까지 10:40/km, 12.0 km까지 10:30/km, 결승까지 09:41/km로 갈수록 빨라졌습니다.",
+      "Strava 기록은 21.60 km · 이동 시간 03:18:56 · 누적 상승 872 m, 평균 심박 155 bpm · 최고 178 bpm입니다.",
+    ],
+    assessment:
+      "공식 평균 페이스가 첫 트레일인 쿨밸리의 12:07/km에서 10:14/km로 빨라졌고, 전체 순위 비율도 상위 약 41%에서 약 36%로 올라섰습니다. 구간 페이스가 후반으로 갈수록 빨라져 후기에서 말한 페이스 조절과 내리막 운영이 기록으로도 확인됩니다. 다만 후기에도 적었듯 이번 코스는 경사가 덜하고 내리막이 많아, 개선 폭 중 코스 차이의 영향과 실력 향상분을 나눠 판단할 수는 없습니다.",
+    next: [
+      "30 km 트레일을 대비해 3시간 이상 산악 장거리 훈련으로 후반 다리 근지구력을 확인합니다.",
+      "오르막은 쉬지 않고 걷는 파워 하이킹 페이스를 정해 심박 상한 안에서 유지하는 연습을 합니다.",
+      "대회 전날 숙소 수면 환경을 미리 점검해 수면 부족 변수를 줄입니다.",
+    ],
+  },
   "2026-seolbong-triathlon": {
     facts: [
       "공식 기록은 총 03:09:52(수영 00:46:41, T1 00:05:24, 사이클 01:07:16, T2 00:04:20, 러닝 01:06:10)이며 배번호는 176번입니다.",
