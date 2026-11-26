@@ -53,6 +53,14 @@ const LABEL = {
   participated: "참가",
 };
 const MEDIA = {
+  "2026-cool-valley-trail": [
+    "assets/images/events/2026-cool-valley-trail/cover.jpg",
+    "assets/images/events/2026-cool-valley-trail/official-result.jpg",
+    "assets/images/events/2026-cool-valley-trail/official-ranking.jpg",
+    "assets/images/events/2026-cool-valley-trail/official-certificate.jpg",
+    "assets/images/events/2026-cool-valley-trail/route-summary.jpg",
+    "assets/images/events/2026-cool-valley-trail/venue.jpg",
+  ],
   "2026-lotte-aquathlon": [
     "assets/images/events/2026-lotte-aquathlon/cover.jpg",
     "assets/images/events/2026-lotte-aquathlon/official-result.jpg",
@@ -154,6 +162,7 @@ const JOURNEY_STRAVA = {
 };
 const KAKAO = "https://story.kakao.com/_F7q479";
 const KAKAO_POSTS = {
+  "2026-cool-valley-trail": "https://story.kakao.com/_F7q479/9BLlsmohoP0",
   "2026-lotte-aquathlon": "https://story.kakao.com/_F7q479/6HAVzVSBio9",
   "2026-hongcheon-granfondo": "https://story.kakao.com/_F7q479/7YcOoBR8in9",
   "2026-hangang-seoul-half": "https://story.kakao.com/_F7q479/CQmnGjL16N0",
@@ -166,6 +175,20 @@ const KAKAO_POSTS = {
   "2026-incheon-full-marathon": "https://story.kakao.com/_F7q479/EVJyv4BzXRA",
 };
 const AI_ANALYSIS = {
+  "2026-cool-valley-trail": {
+    facts: [
+      "공식 기록은 03:45:22(SUN.18K, 배번호 3386)이며 전체 407/994위, 남자 319/685위, 35-39세 남자 70/151위입니다.",
+      "공식 구간 페이스는 4.8 km까지 16:31/km, 11.5 km까지 11:50/km, 14.6 km까지 11:19/km, 결승까지 07:53/km입니다.",
+      "Strava 기록은 18.61 km · 이동 시간 03:24:18 · 누적 상승 980 m, 평균 심박 150 bpm · 최고 170 bpm입니다.",
+    ],
+    assessment:
+      "첫 트레일에서 전체 참가자 중 앞쪽 41% 안으로 완주했고, 구간 페이스가 갈수록 빨라져 마지막 4 km를 07:53/km로 마쳤습니다. Strava 고도 그래프상 가장 큰 오르막이 초반 5 km 안에 몰려 있어 첫 구간이 가장 느린 것은 코스 특성의 영향이 큽니다. 공식 기록과 이동 시간 차이는 약 21분인데, 후기의 줄 서서 걷는 정체 구간이 얼마나 포함됐는지는 확인할 수 없어 단정하지 않습니다.",
+    next: [
+      "급경사 오르막은 파워 하이킹 자세와 폴 사용 여부를 미리 연습해 허리 부담을 줄입니다.",
+      "젖은 내리막을 대비해 짧은 보폭 다운힐 훈련을 하고, 발톱 보호를 위해 신발 끈과 양말을 점검합니다.",
+      "장거리 이동이 필요한 대회는 전날 이동이나 회복 일정을 함께 계획합니다.",
+    ],
+  },
   "2026-lotte-aquathlon": {
     facts: [
       "공식 기록은 총 01:27:06(수영 00:47:11, T1 00:05:53, 수직 마라톤 00:34:02)이며 배번호는 1313번입니다.",

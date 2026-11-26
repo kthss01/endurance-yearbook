@@ -148,11 +148,15 @@
     "category": "trail",
     "status": "finished",
     "reviewStatus": "verified",
-    "official": { "time": "03:45:22", "milestone": "첫 트레일러닝" },
-    "strava": { "distanceKm": 18.62, "movingTime": "03:24:00", "elevationGainM": 980 },
-    "review": "비와 진흙 속에서 치른 첫 트레일러닝이다. 이후 대관령과 빵트레일런으로 확장되는 시작점이다.",
+    "official": { "time": "03:45:22", "milestone": "첫 트레일러닝", "bib": 3386, "course": "SUN.18K", "rankOverall": 407, "rankMen": 319 },
+    "strava": { "distanceKm": 18.62, "movingTime": "03:24:18", "elevationGainM": 980 },
+    "review": "비 내리는 장수에서 새벽 셔틀을 타고 두 번째로 신어 보는 트레일화로 나선 첫 트레일러닝이었다. 산에서 하는 러닝 정도로 여겼던 생각은 로프를 잡아야 하는 급경사와 진흙길 앞에서 반성으로 바뀌었고, 오르막에서는 허리와 심박이, 내리막에서는 발톱과 무릎이 버티기 어려웠다. 그래도 포기는 떠올리지 않고 03:45:22에 완주했다. 비를 핑계로 가지 않을 이유가 많았는데도 귀찮음을 이기고 뛰어든 것 자체를 이번 도전의 가장 큰 의미로 남겼다.",
     "sources": ["strava", "kakao-story"],
-    "media": []
+    "media": [
+      "assets/images/events/2026-cool-valley-trail/cover.jpg",
+      "assets/images/events/2026-cool-valley-trail/official-result.jpg",
+      "assets/images/events/2026-cool-valley-trail/route-summary.jpg"
+    ]
   },
   {
     "id": "2026-seolbong-triathlon",
