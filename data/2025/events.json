@@ -36,6 +36,30 @@
     ]
   },
   {
+    "id": "2025-yangyang-granfondo",
+    "year": 2025,
+    "date": "2025-04-26",
+    "title": "양양 그란폰도",
+    "category": "cycling",
+    "status": "finished",
+    "reviewStatus": "partial",
+    "official": {
+      "result": "완주",
+      "course": "그란폰도 151km · 한계령 2회",
+      "distanceKm": 151,
+      "elevationGainM": 2380
+    },
+    "story": {
+      "url": "https://story.kakao.com/_F7q479/E7ssqnfa3KA"
+    },
+    "review": "한계령을 두 번 오르는 151km·2,380m 코스에 완주만을 바라고 나섰다. 맑은 날씨와 순풍, 완만한 내리막에 신나 초반 페이스 관리를 놓쳤고, 다리 경련이 올 때마다 근육 이완제를 먹으며 버텼다. 첫 다운힐에서는 서울~속초 라이딩 때의 공포가 되살아났고, 두 번째 한계령에서는 두 번 멈춰 끌바와 회수차를 저울질했지만 포기하지 않기를 선택해 다시 올라 회수차를 피해 완주했다. 막판 다운힐에서 통제를 잃은 차를 간발의 차로 피하며, 다음 목표인 설악 그란폰도를 바라봤다.",
+    "sources": [
+      "kakao-story",
+      "youtube"
+    ],
+    "media": []
+  },
+  {
     "id": "2025-nakdong-triathlon",
     "year": 2025,
     "date": "2025-05-04",
@@ -58,6 +82,29 @@
       "assets/images/events/2025-nakdong-triathlon/official-certificate.jpg",
       "assets/images/events/2025-nakdong-triathlon/result-capture-04.jpg"
     ]
+  },
+  {
+    "id": "2025-seoul-bike-parade",
+    "year": 2025,
+    "date": "2025-05-11",
+    "title": "서울 자전거 대행진",
+    "category": "cycling",
+    "status": "finished",
+    "reviewStatus": "partial",
+    "official": {
+      "result": "완주 · 약 21km 40여 분",
+      "course": "광화문 광장 ~ 마포 평화의 공원 · 미니벨로",
+      "distanceKm": 21
+    },
+    "story": {
+      "url": "https://story.kakao.com/_F7q479/EMt0cclKHKA"
+    },
+    "review": "광화문 광장에서 마포 평화의 공원까지 약 21km를 달리는 행사에 미니벨로로 참가해 40여 분 만에 마쳤다. 비 걱정과 달리 흐리기만 했고, 로드바이크 사이에서 속도를 따라잡으며 미니벨로로 낸 개인 최고 속도에 즐거워했다. 짧아서 아쉬웠지만 끝난 뒤 수영까지 다녀온 알찬 하루였고, 다음 주 설악 그란폰도를 앞두고 일찍 자는 연습과 컨디션 관리를 다짐했다.",
+    "sources": [
+      "kakao-story",
+      "youtube"
+    ],
+    "media": []
   },
   {
     "id": "2025-seorak-granfondo",
