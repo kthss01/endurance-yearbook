@@ -53,6 +53,16 @@ const LABEL = {
   participated: "참가",
 };
 const MEDIA = {
+  "2026-tongyeong-triathlon": [
+    "assets/images/events/2026-tongyeong-triathlon/cover.jpg",
+    "assets/images/events/2026-tongyeong-triathlon/official-certificate.jpg",
+    "assets/images/events/2026-tongyeong-triathlon/official-result.jpg",
+    "assets/images/events/2026-tongyeong-triathlon/official-ranking.jpg",
+    "assets/images/events/2026-tongyeong-triathlon/swim-strava.jpg",
+    "assets/images/events/2026-tongyeong-triathlon/bike-strava.jpg",
+    "assets/images/events/2026-tongyeong-triathlon/run-strava.jpg",
+    "assets/images/events/2026-tongyeong-triathlon/venue.jpg",
+  ],
   "2026-siheung-half": [
     "assets/images/events/2026-siheung-half/cover.jpg",
     "assets/images/events/2026-siheung-half/official-certificate.jpg",
@@ -207,6 +217,7 @@ const JOURNEY_STRAVA = {
 };
 const KAKAO = "https://story.kakao.com/_F7q479";
 const KAKAO_POSTS = {
+  "2026-tongyeong-triathlon": "https://story.kakao.com/_F7q479/DUchhqMNaRA",
   "2026-siheung-half": "https://story.kakao.com/_F7q479/C7aHp1UGPQ0",
   "2026-iksan-aquathlon-cutoff": "https://story.kakao.com/_F7q479/CCeTRc1pCQ0",
   "2026-bbang-trail-30k": "https://story.kakao.com/_F7q479/KEv6PDZ57Ra",
@@ -226,6 +237,20 @@ const KAKAO_POSTS = {
   "2026-incheon-full-marathon": "https://story.kakao.com/_F7q479/EVJyv4BzXRA",
 };
 const AI_ANALYSIS = {
+  "2026-tongyeong-triathlon": {
+    facts: [
+      "공식 기록은 총 03:06:33(수영 00:38:33, T1 00:05:53, 사이클 01:22:25, T2 00:03:57, 러닝 00:55:46)이며 배번호는 183번입니다.",
+      "Standard 전체 602/1303위, 남자 540/1142위, 동호인 35-39세 남자 62/126위이고, 종목별 전체 순위는 수영 876위·사이클 293위·러닝 716위입니다.",
+      "Strava 기록은 수영 1,489 m(평균 2:35/100m), 사이클 37.50 km(상승 603 m, 평균 27.6 km/h, 197 W), 러닝 9.92 km(평균 5:37/km)입니다.",
+    ],
+    assessment:
+      "두 달 전 설봉 대회와 비교하면 총 기록은 3분 19초 줄었고, 수영은 8분 08초, 러닝은 10분 24초 빨라졌습니다. 반면 사이클은 15분 09초 늘었는데, 상승고도가 설봉(197 m)의 약 3배인 603 m였고 빗길이었던 만큼 코스 차이가 크게 작용한 것으로 보입니다. 수영 단축에는 후기에서 말한 몸싸움 대응과 드래프팅이 영향을 줬을 수 있으나 바다 조류 조건이 기록되지 않아 개선 폭을 실력 향상만으로 보지 않습니다.",
+    next: [
+      "수영에서 익힌 앞사람 뒤 드래프팅을 훈련에서도 연습해 오픈워터 페이스를 안정시킵니다.",
+      "업힐이 많은 철인 코스를 대비해 사이클 업힐 반복 훈련을 시즌 중에도 유지합니다.",
+      "T1 05:53을 줄이도록 슈트 탈의와 장비 착용 순서를 반복 연습합니다.",
+    ],
+  },
   "2026-siheung-half": {
     facts: [
       "공식 기록은 01:48:54.34(배번호 20146)로, 2025년 MBN 하프 01:53:32보다 약 4분 38초, 2026년 1월 한강 하프 02:16:29.24보다 약 27분 35초 빠릅니다.",

@@ -299,11 +299,24 @@
     "title": "통영 월드 트라이애슬론 컵",
     "category": "triathlon",
     "status": "finished",
-    "reviewStatus": "partial",
+    "reviewStatus": "verified",
+    "official": {
+      "time": "03:06:33",
+      "bib": 183,
+      "course": "Standard",
+      "rankOverall": 602,
+      "rankMen": 540,
+      "splits": { "swimming": "00:38:33", "cycling": "01:22:25", "running": "00:55:46" },
+      "transitions": { "t1": "00:05:53", "t2": "00:03:57" }
+    },
     "strava": { "swimDistanceKm": 1.49, "bikeDistanceKm": 37.5, "runDistanceKm": 9.92 },
-    "review": "바다 수영과 언덕이 있는 사이클·러닝 코스를 완주한 시즌 후반 철인 대회다. 공식 총기록 확인이 남아 있다.",
+    "review": "전날부터 비가 쏟아진 통영에서 1,700명 가까운 참가자와 함께 바다로 뛰어들었다. 후미 그룹에서도 초보들이 만든 몸싸움을 마주했지만, 이번에는 그동안 당하며 익힌 방어로 내 길을 지키고 앞사람 뒤에서 물살을 타는 법까지 써 보며 겁 없이 리듬을 유지해 00:38:33에 수영을 마쳤다. 업힐이 많은 사이클에서는 오르막에서 속도를 내 추월하고 빗길 내리막은 안전하게 내려왔고, 일주일 전 풀코스를 완주한 덕인지 러닝 페이스도 떨어지지 않아 03:06:33으로 만족스럽게 완주했다.",
     "sources": ["strava", "google-docs", "kakao-story"],
-    "media": []
+    "media": [
+      "assets/images/events/2026-tongyeong-triathlon/cover.jpg",
+      "assets/images/events/2026-tongyeong-triathlon/official-result.jpg",
+      "assets/images/events/2026-tongyeong-triathlon/bike-strava.jpg"
+    ]
   },
   {
     "id": "2026-incheon-full-marathon",
