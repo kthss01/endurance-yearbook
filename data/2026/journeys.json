@@ -62,11 +62,12 @@
     "category": "journey",
     "status": "finished",
     "reviewStatus": "verified",
+    "story": {"url": "https://story.kakao.com/_F7q479/AQazVpx8aO0", "posts": [{ "day": 1, "url": "https://story.kakao.com/_F7q479/0HS2mhQrvn0" }, { "day": 3, "url": "https://story.kakao.com/_F7q479/111xaZUxwN9" }, { "day": 4, "url": "https://story.kakao.com/_F7q479/D7mKis7myOA" }, { "day": 5, "url": "https://story.kakao.com/_F7q479/HZNANq3d1oa" }, { "day": 7, "url": "https://story.kakao.com/_F7q479/4KfPsKzr1n9" }, { "day": 8, "url": "https://story.kakao.com/_F7q479/k9GTPdlt6Pa" }, { "day": 9, "url": "https://story.kakao.com/_F7q479/iOxHfT5m7Pa" }, { "day": 11, "url": "https://story.kakao.com/_F7q479/HIwEu9UnAPa" }, { "day": 12, "url": "https://story.kakao.com/_F7q479/kFPP0a5IaPa" }, { "day": 13, "url": "https://story.kakao.com/_F7q479/AQazVpx8aO0" }]},
     "strava": { "activityCount": 13, "distanceKm": 823.49, "movingHours": 53.33, "elapsedHours": 80.68, "elevationGainM": 10614 },
     "review": "생장에서 산티아고까지 13일간 자전거로 완주했다. 계획과 실제 숙박지를 조정하면서도 최종 일정의 핵심 목표를 달성했다.",
     "display": { "featured": true, "suggestedFormat": "13-day chapter" },
     "sources": ["strava", "google-docs", "kakao-story"],
-    "media": []
+    "media": ["assets/images/journeys/camino/finish.jpg", "assets/images/journeys/camino/day-01-01.jpg", "assets/images/journeys/camino/day-05-01.jpg", "assets/images/journeys/camino/day-09-01.jpg", "assets/images/journeys/camino/day-13-01.jpg"]
   },
   {
     "id": "2026-river-to-sea-challenge",
