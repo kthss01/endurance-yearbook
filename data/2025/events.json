@@ -227,11 +227,15 @@
     "category": "running",
     "status": "finished",
     "reviewStatus": "verified",
-    "official": { "time": "00:54:20" },
-    "strava": { "distanceKm": 9.93, "movingTime": "00:54:36", "elevationGainM": 89 },
-    "review": "전날 여수 그란폰도 직후 참가한 연속 일정이라는 점이 기록의 핵심이다.",
+    "official": { "time": "00:54:20", "bib": 39590 },
+    "strava": { "distanceKm": 9.93, "movingTime": "00:54:22", "elevationGainM": 89 },
+    "review": "전날 여수 그란폰도를 마치고 피로가 남은 채 춘천으로 향한 10km다. 출발 시각을 착각해 1시간 일찍 도착한 덕분에 웜업과 스트레칭을 충분히 했고, 오르내림이 있는 코스에서도 평균 5분 30초 안팎의 페이스를 지켜 목표였던 55분 안인 00:54:20에 들어왔다. 다리에 피로가 조금 남았지만 잘 달린 하루였고, 긴 운전으로 지친 주말을 마무리했다.",
     "sources": ["strava", "google-docs", "kakao-story"],
-    "media": []
+    "media": [
+      "assets/images/events/2025-chuncheon-10k/cover.jpg",
+      "assets/images/events/2025-chuncheon-10k/gallery-01.jpg",
+      "assets/images/events/2025-chuncheon-10k/gallery-02.jpg"
+    ]
   },
   {
     "id": "2025-mbn-half",

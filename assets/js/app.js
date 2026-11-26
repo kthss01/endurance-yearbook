@@ -53,6 +53,13 @@ const LABEL = {
   participated: "참가",
 };
 const MEDIA = {
+  "2025-chuncheon-10k": [
+    "assets/images/events/2025-chuncheon-10k/cover.jpg",
+    "assets/images/events/2025-chuncheon-10k/gallery-01.jpg",
+    "assets/images/events/2025-chuncheon-10k/gallery-02.jpg",
+    "assets/images/events/2025-chuncheon-10k/gallery-03.jpg",
+    "assets/images/events/2025-chuncheon-10k/gallery-04.jpg",
+  ],
   "2025-yeosu-granfondo": [
     "assets/images/events/2025-yeosu-granfondo/cover.jpg",
     "assets/images/events/2025-yeosu-granfondo/gallery-01.jpg",
@@ -435,6 +442,7 @@ const JOURNEY_STRAVA = {
 };
 const KAKAO = "https://story.kakao.com/_F7q479";
 const KAKAO_POSTS = {
+  "2025-chuncheon-10k": "https://story.kakao.com/_F7q479/hKjZ4K5Esma",
   "2025-yeosu-granfondo": "https://story.kakao.com/_F7q479/53daRxAKQL9",
   "2025-goryeong-duathlon": "https://story.kakao.com/_F7q479/iIoSjWfkpma",
   "2025-marvel-run-half": "https://story.kakao.com/_F7q479/DPSg2iu9plA",
@@ -466,6 +474,20 @@ const KAKAO_POSTS = {
   "2026-incheon-full-marathon": "https://story.kakao.com/_F7q479/EVJyv4BzXRA",
 };
 const AI_ANALYSIS = {
+  "2025-chuncheon-10k": {
+    facts: [
+      "공식 기록은 00:54:20(참가번호 39590, 평균 5:25/km)이며, 기록 사이트의 비공식 순위는 전체 2,984위·남자 2,340위입니다.",
+      "구간 기록은 1차 반환 00:23:54, 2차 반환까지 00:10:08, 도착까지 00:20:19입니다.",
+      "Strava 기록은 9.92 km · 이동 시간 54:22 · 평균 5:29/km · 상승 89 m · 평균 케이던스 180 spm입니다.",
+    ],
+    assessment:
+      "전날 113 km 그란폰도를 탄 뒤에도 3월 코리아 오픈레이스(00:59:26.13)보다 약 5분 6초 빠르게 달려, 7개월 사이 러닝 기본 속도가 확실히 올라왔습니다. Strava 1 km 랩이 5분 초중반에서 크게 흔들리지 않아 오르내림 속에서도 페이스를 고르게 유지한 것으로 보입니다. 구간 거리가 표시되지 않아 반환 구간별 페이스는 계산하지 않습니다.",
+    next: [
+      "연속 일정에서는 대회 전 충분한 웜업이 효과적이었던 만큼 출발 30분 전 도착을 기본으로 합니다.",
+      "10 km 목표를 55분에서 52~53분으로 올려 하프 준비 페이스와 연결합니다.",
+      "장거리 운전이 필요한 대회는 귀가 일정까지 회복 계획에 포함합니다.",
+    ],
+  },
   "2025-yeosu-granfondo": {
     facts: [
       "공식 기록은 04:45:42.70(그란폰도 113km, 배번호 1342)입니다.",
