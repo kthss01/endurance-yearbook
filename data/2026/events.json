@@ -264,11 +264,15 @@
     "category": "running",
     "status": "finished",
     "reviewStatus": "verified",
-    "official": { "time": "01:48:54.34" },
-    "strava": { "distanceKm": 20.81, "movingTime": "01:49:12", "elevationGainM": 17 },
-    "review": "2025년 MBN 하프보다 약 4분 38초 빠른 대표 하프 기록이다.",
+    "official": { "time": "01:48:54.34", "bib": 20146 },
+    "strava": { "distanceKm": 20.81, "movingTime": "01:49:01", "elevationGainM": 17 },
+    "review": "풀코스를 2주가량 앞두고 나선 하프로, 전날 푹 쉬고 일찍 도착해 3km 넘게 몸을 풀며 바람에 맞춘 페이스 전략까지 세웠다. 맞바람이 분 초반에는 비슷한 페이스의 그룹 뒤에서 바람을 피하며 8~9km까지 함께 달렸고, 반환 후에는 순풍을 타고 홀로 페이스를 유지했다. 18km부터 힘들어지고 급수 뒤 잠시 처졌지만 다시 치고 나가 막판 스프린트까지 하며 01:48:54.34로 2시간과 1시간 50분 벽을 함께 넘었다. 꾸준한 주간 장거리 러닝과 자세 교정이 쌓인 결과라 여기며, 평지 코스와 바람의 덕도 있었다고 덧붙였다.",
     "sources": ["strava", "google-docs", "kakao-story"],
-    "media": []
+    "media": [
+      "assets/images/events/2026-siheung-half/cover.jpg",
+      "assets/images/events/2026-siheung-half/official-certificate.jpg",
+      "assets/images/events/2026-siheung-half/route-summary.jpg"
+    ]
   },
   {
     "id": "2026-daecheongho-full-marathon",

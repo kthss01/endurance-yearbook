@@ -53,6 +53,13 @@ const LABEL = {
   participated: "참가",
 };
 const MEDIA = {
+  "2026-siheung-half": [
+    "assets/images/events/2026-siheung-half/cover.jpg",
+    "assets/images/events/2026-siheung-half/official-certificate.jpg",
+    "assets/images/events/2026-siheung-half/route-summary.jpg",
+    "assets/images/events/2026-siheung-half/splits.jpg",
+    "assets/images/events/2026-siheung-half/venue.jpg",
+  ],
   "2026-iksan-aquathlon-cutoff": [
     "assets/images/events/2026-iksan-aquathlon-cutoff/cover.jpg",
     "assets/images/events/2026-iksan-aquathlon-cutoff/swim-strava.jpg",
@@ -200,6 +207,7 @@ const JOURNEY_STRAVA = {
 };
 const KAKAO = "https://story.kakao.com/_F7q479";
 const KAKAO_POSTS = {
+  "2026-siheung-half": "https://story.kakao.com/_F7q479/C7aHp1UGPQ0",
   "2026-iksan-aquathlon-cutoff": "https://story.kakao.com/_F7q479/CCeTRc1pCQ0",
   "2026-bbang-trail-30k": "https://story.kakao.com/_F7q479/KEv6PDZ57Ra",
   "2026-mungyeong-granfondo": "https://story.kakao.com/_F7q479/f3nKEZ0awQA",
@@ -218,6 +226,20 @@ const KAKAO_POSTS = {
   "2026-incheon-full-marathon": "https://story.kakao.com/_F7q479/EVJyv4BzXRA",
 };
 const AI_ANALYSIS = {
+  "2026-siheung-half": {
+    facts: [
+      "공식 기록은 01:48:54.34(배번호 20146)로, 2025년 MBN 하프 01:53:32보다 약 4분 38초, 2026년 1월 한강 하프 02:16:29.24보다 약 27분 35초 빠릅니다.",
+      "Strava 기록은 20.80 km · 이동 시간 01:49:01 · 평균 5:14/km · 상승 17 m, 평균 심박 160 bpm · 최고 174 bpm입니다.",
+      "Strava 1 km 랩은 첫 km 5:21에서 20 km 5:08로 후반까지 5분 초중반대를 유지했고, 마지막 0.8 km는 4:53/km였습니다.",
+    ],
+    assessment:
+      "공식 기록 기준 평균 페이스는 약 5분 10초/km로, 후반 랩이 초반보다 느려지지 않은 이븐~네거티브 운영이 확인됩니다. 같은 해 1월 눈길 하프에서 경련으로 버텼던 것과 비교하면 주간 장거리 러닝과 철인·트레일 시즌을 거치며 러닝 지구력이 크게 올라섰습니다. 다만 후기에서도 인정했듯 고도 17 m의 평지 코스와 후반 순풍이 기록에 유리했으므로, 개선 폭 전부를 체력 향상으로 보지는 않습니다.",
+    next: [
+      "이 하프 페이스를 기준으로 풀코스 목표 페이스를 보수적으로 산정합니다.",
+      "급수 직후 페이스가 떨어진 점을 고려해 걷지 않고 마시는 급수 동작을 연습합니다.",
+      "하프 뒤 회복 상태를 확인하며 풀코스 전 마지막 장거리 훈련의 강도를 조절합니다.",
+    ],
+  },
   "2026-iksan-aquathlon-cutoff": {
     facts: [
       "후기 기준 수영 1.5 km 00:53:13으로 컷오프됐고, 이후 허용된 러닝 10 km는 00:56:34였습니다.",
