@@ -70,6 +70,7 @@ const MEDIA = {
     "assets/images/events/2026-seoul-200k-brevet/strava-chart-1.jpg",
     "assets/images/events/2026-seoul-200k-brevet/strava-chart-2.jpg",
     "assets/images/events/2026-seoul-200k-brevet/strava-chart-3.jpg",
+    "assets/images/events/2026-seoul-200k-brevet/brevet-certificate.jpg",
   ],
   "2026-samcheok-granfondo": [
     "assets/images/events/2026-samcheok-granfondo/cover.jpg",
@@ -78,6 +79,7 @@ const MEDIA = {
     "assets/images/events/2026-samcheok-granfondo/strava-chart-1.jpg",
     "assets/images/events/2026-samcheok-granfondo/strava-chart-2.jpg",
     "assets/images/events/2026-samcheok-granfondo/strava-chart-3.jpg",
+    "assets/images/events/2026-samcheok-granfondo/official-result.jpg",
   ],
   "2026-gumi-full-marathon": [
     "assets/images/events/2026-gumi-full-marathon/cover.jpg",
@@ -396,8 +398,6 @@ const MEDIA = {
     "assets/images/events/2026-hongcheon-granfondo/gallery-04.jpg",
     "assets/images/events/2026-hongcheon-granfondo/gallery-05.jpg",
   ],
-  "2026-samcheok-granfondo": ["assets/images/events/2026-samcheok-granfondo/official-result.jpg"],
-  "2026-seoul-200k-brevet": ["assets/images/events/2026-seoul-200k-brevet/brevet-certificate.jpg"],
   "2026-yangsan-triathlon": [
     "assets/images/events/2026-yangsan-triathlon/cover.jpg",
     "assets/images/events/2026-yangsan-triathlon/gallery-01.jpg",
