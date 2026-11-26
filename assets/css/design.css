@@ -98,6 +98,13 @@
 .featured-journey .journey-media img,
 .wide-journey.has-media .journey-media img { position: absolute; inset: 0; }
 
+/* 여정 카드: 접히는 AI 분석과 원문 링크 */
+.journey-analysis { margin-top: 18px; border-top: 1px solid #444; padding-top: 14px; color: #bbb; font-size: 13px; }
+.journey-analysis summary { cursor: pointer; color: var(--acid); font-size: 12px; letter-spacing: .06em; }
+.journey-analysis p { min-height: 0; margin: 12px 0 0; line-height: 1.7; }
+.journey-analysis ul { margin: 10px 0 0; padding-left: 18px; line-height: 1.7; }
+.story-link { margin-left: 18px; }
+
 /* 상세 팝업: 사진 없는 히어로는 종목 색으로 */
 .detail-hero[class*="cat-"] {
   background:

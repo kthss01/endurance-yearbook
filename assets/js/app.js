@@ -271,6 +271,9 @@ const MEDIA = {
   ],
 };
 const JOURNEY_MEDIA = {
+  "2026-cheonan-200k-brevet": ["cover", ...Array.from({ length: 9 }, (_, i) => `gallery-0${i + 1}`)].map(
+    (n) => `assets/images/journeys/2026-cheonan-200k-brevet/${n}.jpg`,
+  ),
   "2025-remember-granfondo": [
     "assets/images/journeys/2025/remember-granfondo-1.jpg",
     "assets/images/journeys/2025/remember-granfondo-2.jpg",
@@ -778,7 +781,7 @@ function renderJourneys() {
             ? j.startDate
             : `${j.startDate} — ${j.endDate}`,
         activity = JOURNEY_STRAVA[j.id];
-      return `<article class="journey-card ${photos.length ? "has-media" : ""} ${j.id === FEATURED ? "featured-journey" : ""} ${j.id === lastWide ? "wide-journey" : ""}">${photos.length ? `<div class="journey-media"><img src="${photos[0]}" alt="${j.title} 대표 사진">${photos.length > 1 ? `<span>+${photos.length - 1} PHOTOS</span>` : ""}</div>` : ""}<div class="journey-copy"><span class="date">${period}</span><small>${j.category === "randonneuring" ? "RANDONNEURING" : j.category === "walking" ? "WALKING" : "JOURNEY"}</small><h3>${j.title}</h3><p>${j.review || j.summary || ""}</p><div class="journey-stats">${s.distanceKm ? `<b>${num(s.distanceKm)} km</b>` : ""}${s.elapsedHours ? `<b>${num(s.elapsedHours)} h</b>` : ""}${s.elevationGainM ? `<b>${num(s.elevationGainM)} m↑</b>` : ""}${s.activityCount > 1 ? `<b>${s.activityCount} stages</b>` : ""}</div>${activity ? `<a class="strava-link" href="https://www.strava.com/activities/${activity}" target="_blank" rel="noreferrer">Strava에서 경로와 원본 기록 보기 ↗</a>` : ""}</div></article>`;
+      return `<article class="journey-card ${photos.length ? "has-media" : ""} ${j.id === FEATURED ? "featured-journey" : ""} ${j.id === lastWide ? "wide-journey" : ""}">${photos.length ? `<div class="journey-media"><img src="${photos[0]}" alt="${j.title} 대표 사진">${photos.length > 1 ? `<span>+${photos.length - 1} PHOTOS</span>` : ""}</div>` : ""}<div class="journey-copy"><span class="date">${period}</span><small>${j.category === "randonneuring" ? "RANDONNEURING" : j.category === "walking" ? "WALKING" : "JOURNEY"}</small><h3>${j.title}</h3><p>${j.review || j.summary || ""}</p>${j.analysis ? `<details class="journey-analysis"><summary>AI 기록 분석 · 다음 도전</summary><p>${j.analysis}</p>${j.next?.length ? `<ul>${j.next.map((x) => `<li>${x}</li>`).join("")}</ul>` : ""}</details>` : ""}<div class="journey-stats">${s.distanceKm ? `<b>${num(s.distanceKm)} km</b>` : ""}${s.elapsedHours ? `<b>${num(s.elapsedHours)} h</b>` : ""}${s.elevationGainM ? `<b>${num(s.elevationGainM)} m↑</b>` : ""}${s.activityCount > 1 ? `<b>${s.activityCount} stages</b>` : ""}</div>${activity ? `<a class="strava-link" href="https://www.strava.com/activities/${activity}" target="_blank" rel="noreferrer">Strava에서 경로와 원본 기록 보기 ↗</a>` : ""}${j.story?.url ? `<a class="strava-link story-link" href="${j.story.url}" target="_blank" rel="noreferrer">카카오스토리 원문 읽기 ↗</a>` : ""}</div></article>`;
     })
     .join("");
 }
