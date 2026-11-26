@@ -253,9 +253,12 @@
     "reviewStatus": "verified",
     "official": { "time": "04:43:02", "rankOverall": 5220, "rankMen": 4662 },
     "strava": { "distanceKm": 42.44, "movingTime": "04:42:35", "elevationGainM": 169 },
-    "review": "30km까지 4시간 30분 목표권이었으나 반복된 경련으로 마지막 7.2km에서 감속했다. 올해 세 번째 풀코스이자 시즌 마무리다.",
+    "review": "세 번째 풀코스이자 한 해의 마지막 대회. 독감 회복과 부족한 준비, 전날 10km 참가에도 20km까지는 영종도의 풍경을 즐겼다. 25km부터 지치기 시작했고 30km에서 4시간 30분 페이스메이커를 의식해 서두르다 오른쪽 허벅지 뒤쪽에 경련이 왔다. 목표 기록은 놓았지만 걷지 않고 끝까지 달리며 ‘나는 할 수 있다’는 다짐으로 04:43:02에 완주했다. 지금은 잘 마무리했으니 쉬고 회복할 시간이다.",
     "sources": ["strava", "google-docs", "kakao-story"],
-    "media": []
+    "media": [
+      "assets/images/events/2026-incheon-full-marathon/cover.jpg",
+      "assets/images/events/2026-incheon-full-marathon/official-result.jpg",
+      "assets/images/events/2026-incheon-full-marathon/route-summary.jpg"
+    ]
   }
 ]
-
