@@ -6,11 +6,15 @@
     "title": "코리아 오픈레이스 10km",
     "category": "running",
     "status": "finished",
-    "reviewStatus": "partial",
-    "strava": { "distanceKm": 10.01, "movingTime": "00:59:24", "elevationGainM": 76 },
-    "review": "봄 시즌 첫 대표 러닝 대회로 분류했다. 공식 기록은 추가 확인이 필요하다.",
-    "sources": ["strava"],
-    "media": []
+    "reviewStatus": "verified",
+    "official": { "time": "00:59:26.13", "bib": 15032, "course": "10km" },
+    "strava": { "distanceKm": 10.01, "movingTime": "00:59:16", "elevationGainM": 76 },
+    "review": "2025년 첫 마라톤으로 나선 한강 10km다. 준비가 부족해 물집까지 잡히며 힘들었지만 00:59:26.13으로 간신히 1시간 안에 들어왔다. 완주 뒤에는 변화의 필요성, 다가오는 대회와 회사 일을 떠올리며 하나씩 두려워하지 말고 해 보자고 스스로를 다독였다.",
+    "sources": ["strava", "kakao-story"],
+    "media": [
+      "assets/images/events/2025-korea-open-race-10k/cover.jpg",
+      "assets/images/events/2025-korea-open-race-10k/gallery-01.jpg"
+    ]
   },
   {
     "id": "2025-goseong-granfondo",

@@ -53,6 +53,10 @@ const LABEL = {
   participated: "참가",
 };
 const MEDIA = {
+  "2025-korea-open-race-10k": [
+    "assets/images/events/2025-korea-open-race-10k/cover.jpg",
+    "assets/images/events/2025-korea-open-race-10k/gallery-01.jpg",
+  ],
   "2026-tongyeong-triathlon": [
     "assets/images/events/2026-tongyeong-triathlon/cover.jpg",
     "assets/images/events/2026-tongyeong-triathlon/official-certificate.jpg",
@@ -326,6 +330,7 @@ const JOURNEY_STRAVA = {
 };
 const KAKAO = "https://story.kakao.com/_F7q479";
 const KAKAO_POSTS = {
+  "2025-korea-open-race-10k": "https://story.kakao.com/_F7q479/DLPlrPlDsJA",
   "2026-tongyeong-triathlon": "https://story.kakao.com/_F7q479/DUchhqMNaRA",
   "2026-siheung-half": "https://story.kakao.com/_F7q479/C7aHp1UGPQ0",
   "2026-iksan-aquathlon-cutoff": "https://story.kakao.com/_F7q479/CCeTRc1pCQ0",
@@ -346,6 +351,20 @@ const KAKAO_POSTS = {
   "2026-incheon-full-marathon": "https://story.kakao.com/_F7q479/EVJyv4BzXRA",
 };
 const AI_ANALYSIS = {
+  "2025-korea-open-race-10k": {
+    facts: [
+      "공식 완주기록증 기준 기록은 00:59:26.13, 참가번호는 15032번입니다.",
+      "Strava 기록은 10.00 km · 이동 시간 59:16 · 평균 5:55/km · 상승 76 m · 평균 심박 160 bpm입니다.",
+      "후기에는 준비 부족과 물집, 1시간 안 완주가 간신히였다는 점이 기록돼 있습니다.",
+    ],
+    assessment:
+      "공식 기록 기준 평균 페이스는 약 5분 57초/km로, 목표로 보이는 1시간 벽을 34초 차이로 넘었습니다. 같은 해 10월 춘천 10K(00:54:20)와 비교하면 약 5분을 단축하게 되는 출발점 기록입니다. 구간 랩이 없어 물집이 페이스에 준 영향은 판단하지 않습니다.",
+    next: [
+      "대회용 양말과 신발 조합을 장거리 훈련에서 먼저 시험해 물집 원인을 줄입니다.",
+      "1 km 랩을 기록해 후반 페이스 유지 여부를 확인합니다.",
+      "이 기록을 2025년 러닝 기준선으로 두고 하프 도전 전 10 km 기록 변화를 추적합니다.",
+    ],
+  },
   "2026-tongyeong-triathlon": {
     facts: [
       "공식 기록은 총 03:06:33(수영 00:38:33, T1 00:05:53, 사이클 01:22:25, T2 00:03:57, 러닝 00:55:46)이며 배번호는 183번입니다.",
