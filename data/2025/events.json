@@ -41,17 +41,22 @@
     "title": "부산 낙동강 철인3종",
     "category": "triathlon",
     "status": "finished",
-    "reviewStatus": "partial",
+    "reviewStatus": "verified",
+    "official": { "result": "슬로우 철인3종 스탠다드 완주", "bib": 112, "course": "수영 1.5km · 자전거 46km · 트레일런 10km" },
     "strava": {
       "segments": [
-        { "sport": "swimming", "distanceKm": 1.52, "movingTime": "00:37:12" },
-        { "sport": "cycling", "distanceKm": 46.16, "movingTime": "01:34:48" },
-        { "sport": "running", "distanceKm": 8.53, "movingTime": "00:56:24" }
+        { "sport": "swimming", "distanceKm": 1.52, "movingTime": "00:37:17" },
+        { "sport": "cycling", "distanceKm": 46.16, "movingTime": "01:34:55" },
+        { "sport": "running", "distanceKm": 8.53, "movingTime": "00:56:19" }
       ]
     },
-    "review": "세 종목이 모두 기록된 2025년의 핵심 멀티스포츠 대회다. 공식 종목 거리와 총기록은 문서에서 보완한다.",
-    "sources": ["strava", "google-docs"],
-    "media": []
+    "review": "처음 철인3종을 완주한 제1회 낙동강 슬로우 철인 대회다. 웜업부터 긴장과 공포로 숨이 막혔고, 오리발과 부이를 쓰고도 첫 바퀴 뒤 다리가 풀려 주저앉았으며 안전요원이 기권을 권할 만큼 위기가 많았지만 이를 악물고 다시 뛰어들어 마지막 300m에서야 리듬을 찾았다. 자전거에서는 수영의 공포를 씻어 내듯 질주했고, 녹초가 된 몸으로도 걷지 않고 트레일 러닝을 끝까지 달렸다. 완주의 기쁨보다 수영·러닝·감량을 제대로 준비해 기록과 제한 시간이 있는 진짜 철인에 다시 도전하겠다는 진지한 다짐이 남은 대회였다.",
+    "sources": ["strava", "google-docs", "kakao-story"],
+    "media": [
+      "assets/images/events/2025-nakdong-triathlon/cover.jpg",
+      "assets/images/events/2025-nakdong-triathlon/gallery-01.jpg",
+      "assets/images/events/2025-nakdong-triathlon/gallery-05.jpg"
+    ]
   },
   {
     "id": "2025-seorak-granfondo",

@@ -53,6 +53,16 @@ const LABEL = {
   participated: "참가",
 };
 const MEDIA = {
+  "2025-nakdong-triathlon": [
+    "assets/images/events/2025-nakdong-triathlon/cover.jpg",
+    "assets/images/events/2025-nakdong-triathlon/gallery-01.jpg",
+    "assets/images/events/2025-nakdong-triathlon/gallery-02.jpg",
+    "assets/images/events/2025-nakdong-triathlon/gallery-03.jpg",
+    "assets/images/events/2025-nakdong-triathlon/gallery-04.jpg",
+    "assets/images/events/2025-nakdong-triathlon/gallery-05.jpg",
+    "assets/images/events/2025-nakdong-triathlon/gallery-06.jpg",
+    "assets/images/events/2025-nakdong-triathlon/gallery-07.jpg",
+  ],
   "2025-goseong-granfondo": [
     "assets/images/events/2025-goseong-granfondo/cover.jpg",
     "assets/images/events/2025-goseong-granfondo/gallery-01.jpg",
@@ -339,6 +349,7 @@ const JOURNEY_STRAVA = {
 };
 const KAKAO = "https://story.kakao.com/_F7q479";
 const KAKAO_POSTS = {
+  "2025-nakdong-triathlon": "https://story.kakao.com/_F7q479/FZOt4epNDKA",
   "2025-goseong-granfondo": "https://story.kakao.com/_F7q479/7HYQjMbVCi9",
   "2025-korea-open-race-10k": "https://story.kakao.com/_F7q479/DLPlrPlDsJA",
   "2026-tongyeong-triathlon": "https://story.kakao.com/_F7q479/DUchhqMNaRA",
@@ -361,6 +372,20 @@ const KAKAO_POSTS = {
   "2026-incheon-full-marathon": "https://story.kakao.com/_F7q479/EVJyv4BzXRA",
 };
 const AI_ANALYSIS = {
+  "2025-nakdong-triathlon": {
+    facts: [
+      "완주증 기준 스탠다드(수영 1.5km·자전거 46km·트레일런 10km) 완주이며 배번은 112번입니다.",
+      "Strava 기록은 수영 1,523 m · 37:17(평균 2:26/100m, 오리발·부이 사용), 자전거 46.15 km · 1:34:55(평균 29.2 km/h), 러닝 8.53 km · 56:19(평균 6:36/km)입니다.",
+      "후기 기준 총 소요 시간은 약 3시간 27분이며, 세 종목 이동 시간 합계는 3:08:31입니다.",
+    ],
+    assessment:
+      "세 종목 이동 시간 합계와 후기의 총 소요 시간 차이(약 18분)는 전환과 첫 바퀴 뒤 휴식이 포함된 결과로 보입니다. 자전거는 평지 46 km를 평균 29.2 km/h로 달렸지만, 후기에서 스스로 위험할 만큼 폭주했다고 돌아본 만큼 이후 러닝(평균 6:36/km)과의 체력 배분이 과제로 남았습니다. 오리발·부이를 허용한 슬로우 형식이라 수영 기록은 이후 정규 대회와 직접 비교하지 않습니다.",
+    next: [
+      "오리발 없이 1.5 km를 쉬지 않고 수영할 수 있도록 오픈워터 호흡 리듬 훈련을 우선합니다.",
+      "자전거 후반 강도를 조절해 러닝 첫 2 km를 안정적으로 시작하는 브릭 훈련을 합니다.",
+      "몸에 맞는 슈트를 준비해 쓸림과 호흡 제한을 줄입니다.",
+    ],
+  },
   "2025-goseong-granfondo": {
     facts: [
       "공식 기록은 05:26:25.84(그란폰도 119km, 배번호 1319)이며 전체 468/1237위, 남자 443/1165위입니다.",
