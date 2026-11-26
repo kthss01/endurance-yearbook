@@ -69,7 +69,11 @@
     "review": "밤을 통과해 42km를 걷는 장시간 지구력 도전. 달리기와 사이클 외에 걷기로 완성한 여행형 기록이다.",
     "display": { "featured": false, "suggestedFormat": "photo card" },
     "sources": ["strava"],
-    "media": []
+    "media": [
+      "assets/images/journeys/2025-busan-night-walk/web-01.jpg",
+      "assets/images/journeys/2025-busan-night-walk/web-02.jpg",
+      "assets/images/journeys/2025-busan-night-walk/web-03.jpg"
+    ]
   },
   {
     "id": "2025-seoul-busan-cycling",

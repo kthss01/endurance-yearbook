@@ -576,6 +576,9 @@ const JOURNEY_MEDIA = {
     "assets/images/journeys/2025/remember-granfondo-2.jpg",
   ],
   "2025-busan-night-walk": [
+    "assets/images/journeys/2025-busan-night-walk/web-01.jpg",
+    "assets/images/journeys/2025-busan-night-walk/web-02.jpg",
+    "assets/images/journeys/2025-busan-night-walk/web-03.jpg",
     "assets/images/journeys/2025/busan-night-walk-1.jpg",
     "assets/images/journeys/2025/busan-night-walk-2.jpg",
   ],
@@ -1138,4 +1141,7 @@ const IMAGE_CREDITS = {
   "assets/images/events/2025-korea-open-race-10k/web-03.jpg": { caption: "서울 뚝섬한강공원 쉼터 (대회 장소 일대, 대회 당일 사진 아님)", author: "Motoko C. K.", license: "CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Ttukseom_Hangang_Park_20260416_3.jpg" },
   "assets/images/events/2025-chuncheon-10k/web-01.jpg": { caption: "공지천유원지에서 바라본 의암호와 춘천대교 (대회 당일 사진 아님)", author: "YellowTurtle9", license: "CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:20231226_%EA%B3%B5%EC%A7%80%EC%B2%9C%EC%9C%A0%EC%9B%90%EC%A7%80%EC%97%90%EC%84%9C_%EB%B0%94%EB%9D%BC%EB%B3%B8_%EC%B6%98%EC%B2%9C%EB%8C%80%EA%B5%90_%EC%A0%84%EA%B2%BD.jpg" },
   "assets/images/events/2025-chuncheon-10k/web-02.jpg": { caption: "의암호변 공지천유원지 산책로 (대회 당일 사진 아님)", author: "YellowTurtle9", license: "CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:20231226_%EA%B3%B5%EC%A7%80%EC%B2%9C%EC%9C%A0%EC%9B%90%EC%A7%80%EC%9D%98_%EB%B3%B4%EB%8F%84_%EB%AA%A8%EC%8A%B5.jpg" },
+  "assets/images/journeys/2025-busan-night-walk/web-01.jpg": { caption: "광안리 해수욕장에서 본 광안대교 야경 (대회 당일 사진 아님)", author: "lumoplank", license: "CC0", source: "https://commons.wikimedia.org/wiki/File:Gwangan_Bridge_and_Gwangalli_Beach_-_Gwangalli2721.jpg" },
+  "assets/images/journeys/2025-busan-night-walk/web-02.jpg": { caption: "마린시티 쪽에서 본 광안대교 야경 (대회 당일 사진 아님)", author: "Jeena Paradies", license: "Public domain", source: "https://commons.wikimedia.org/wiki/File:Gwangan_Bridge_seen_Marine_City_at_Night_02.jpg" },
+  "assets/images/journeys/2025-busan-night-walk/web-03.jpg": { caption: "광안리 해변 야경 (대회 당일 사진 아님)", author: "Carey Ciuro", license: "CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Busan_Gwangalli_Night.jpg" },
 };
