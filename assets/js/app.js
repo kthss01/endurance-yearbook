@@ -53,6 +53,10 @@ const LABEL = {
   participated: "참가",
 };
 const MEDIA = {
+  "2026-yangsan-triathlon": [
+    "assets/images/events/2026-yangsan-triathlon/official-result.jpg",
+    "assets/images/events/2026-yangsan-triathlon/swim-strava.jpg",
+  ],
   "2026-changwon-triathlon": [
     "assets/images/events/2026-changwon-triathlon/official-result.jpg",
   ],
@@ -133,12 +137,27 @@ const JOURNEY_STRAVA = {
 };
 const KAKAO = "https://story.kakao.com/_F7q479";
 const KAKAO_POSTS = {
+  "2026-yangsan-triathlon": "https://story.kakao.com/_F7q479/aBHsNXID4o0",
   "2026-changwon-triathlon": "https://story.kakao.com/_F7q479/AEdVmqWxOO0",
   "2026-gumi-full-marathon": "https://story.kakao.com/_F7q479/KQsGwUHN1Oa",
   "2026-daecheongho-full-marathon": "https://story.kakao.com/_F7q479/H97RJOBnzRa",
   "2026-incheon-full-marathon": "https://story.kakao.com/_F7q479/EVJyv4BzXRA",
 };
 const AI_ANALYSIS = {
+  "2026-yangsan-triathlon": {
+    facts: [
+      "공식 기록은 총 03:12:59, 수영 00:48:33, 사이클 01:14:00, 러닝 01:02:35입니다.",
+      "공식 세 구간 합계는 03:05:08로, 전환 등에 사용된 나머지 시간은 07:51입니다.",
+      "Strava 거리는 수영 1.52 km, 사이클 39.44 km, 러닝 9.99 km입니다.",
+    ],
+    assessment:
+      "창원 우천 단축 대회에서 얻은 경험을 2주 만에 표준거리 완주로 확장한 점이 가장 큰 성장입니다. 사이클 39.44 km를 01:14:00에 마친 뒤 10 km 러닝을 01:02:35로 이어가며 세 종목을 안정적으로 연결했습니다. 후기에는 대회 뒤 피로와 통증, 휴식 필요성이 분명히 나타납니다. 다만 종목별 심박·세부 랩과 보급 시점이 없어 후반 감속의 정확한 원인은 추정할 수 없습니다.",
+    next: [
+      "수영 100 m 랩과 방향 이탈 여부를 기록해 48분대 수영의 개선 지점을 찾습니다.",
+      "사이클 이후 러닝 첫 3 km를 통제해 근전환 적응과 후반 페이스 유지 여부를 비교합니다.",
+      "대회 다음 주를 회복 주간으로 고정해 후기에서 확인된 누적 피로와 부상 위험을 낮춥니다.",
+    ],
+  },
   "2026-changwon-triathlon": {
     facts: [
       "공식 완주 기록은 01:49:07이며 배번호는 118번입니다.",
