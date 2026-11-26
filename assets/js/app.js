@@ -53,6 +53,31 @@ const LABEL = {
   participated: "참가",
 };
 const MEDIA = {
+  "2026-siheung-half": [
+    "assets/images/events/2026-siheung-half/cover.jpg",
+    "assets/images/events/2026-siheung-half/finish-gate.jpg",
+    "assets/images/events/2026-siheung-half/official-result.jpg",
+    "assets/images/events/2026-siheung-half/route-summary.jpg",
+    "assets/images/events/2026-siheung-half/venue-01.jpg",
+    "assets/images/events/2026-siheung-half/venue-02.jpg",
+    "assets/images/events/2026-siheung-half/splits.jpg",
+    "assets/images/events/2026-siheung-half/pace.jpg",
+    "assets/images/events/2026-siheung-half/heart-rate.jpg",
+    "assets/images/events/2026-siheung-half/cadence-power.jpg",
+    "assets/images/events/2026-siheung-half/power.jpg",
+  ],
+  "2026-tongyeong-triathlon": [
+    "assets/images/events/2026-tongyeong-triathlon/official-result.jpg",
+    "assets/images/events/2026-tongyeong-triathlon/race-result-01.jpg",
+    "assets/images/events/2026-tongyeong-triathlon/race-result-02.jpg",
+    "assets/images/events/2026-tongyeong-triathlon/swim-route.jpg",
+    "assets/images/events/2026-tongyeong-triathlon/bike-route.jpg",
+    "assets/images/events/2026-tongyeong-triathlon/run-route.jpg",
+    "assets/images/events/2026-tongyeong-triathlon/transition-route.jpg",
+    "assets/images/events/2026-tongyeong-triathlon/run-pace.jpg",
+    "assets/images/events/2026-tongyeong-triathlon/heart-rate.jpg",
+    "assets/images/events/2026-tongyeong-triathlon/official-splits.jpg",
+  ],
   "2026-samcheok-granfondo": ["assets/images/events/2026-samcheok-granfondo/official-result.jpg"],
   "2026-seoul-200k-brevet": ["assets/images/events/2026-seoul-200k-brevet/brevet-certificate.jpg"],
   "2026-yangsan-triathlon": [
@@ -87,6 +112,18 @@ const MEDIA = {
   ],
 };
 const JOURNEY_MEDIA = {
+  "2026-cheonan-200k-brevet": [
+    "assets/images/journeys/2026-cheonan-200k-brevet/cover.jpg",
+    "assets/images/journeys/2026-cheonan-200k-brevet/gallery-01.jpg",
+    "assets/images/journeys/2026-cheonan-200k-brevet/gallery-02.jpg",
+    "assets/images/journeys/2026-cheonan-200k-brevet/gallery-03.jpg",
+    "assets/images/journeys/2026-cheonan-200k-brevet/gallery-04.jpg",
+    "assets/images/journeys/2026-cheonan-200k-brevet/gallery-05.jpg",
+    "assets/images/journeys/2026-cheonan-200k-brevet/gallery-06.jpg",
+    "assets/images/journeys/2026-cheonan-200k-brevet/gallery-07.jpg",
+    "assets/images/journeys/2026-cheonan-200k-brevet/gallery-08.jpg",
+    "assets/images/journeys/2026-cheonan-200k-brevet/gallery-09.jpg",
+  ],
   "2025-remember-granfondo": [
     "assets/images/journeys/2025/remember-granfondo-1.jpg",
     "assets/images/journeys/2025/remember-granfondo-2.jpg",
@@ -139,6 +176,8 @@ const JOURNEY_STRAVA = {
 };
 const KAKAO = "https://story.kakao.com/_F7q479";
 const KAKAO_POSTS = {
+  "2026-siheung-half": "https://story.kakao.com/_F7q479/C7aHp1UGPQ0",
+  "2026-tongyeong-triathlon": "https://story.kakao.com/_F7q479/DUchhqMNaRA",
   "2026-samcheok-granfondo": "https://story.kakao.com/_F7q479/gQ86NqzRLPA",
   "2026-seoul-200k-brevet": "https://story.kakao.com/_F7q479/5TSCRTj8RO9",
   "2026-yangsan-triathlon": "https://story.kakao.com/_F7q479/aBHsNXID4o0",
@@ -148,6 +187,32 @@ const KAKAO_POSTS = {
   "2026-incheon-full-marathon": "https://story.kakao.com/_F7q479/EVJyv4BzXRA",
 };
 const AI_ANALYSIS = {
+  "2026-siheung-half": {
+    facts: [
+      "공식 기록은 01:48:54.34입니다.",
+      "Strava export는 20.81 km·01:49:01·누적 상승 17 m입니다.",
+      "직접 쓴 후기에서 전날 휴식, 3 km 이상 웜업, 바람을 고려한 그룹 주행과 18 km 이후 위기를 기록했습니다.",
+    ],
+    assessment: "공식 평균 페이스는 약 5분 10초/km이며 1시간 50분을 1분 06초가량 앞섰습니다. 거의 평지인 코스와 순풍 구간이 기록에 유리했다고 본인이 밝혔지만, 초반 맞바람에서 그룹을 활용하고 18 km 이후에도 페이스를 다시 끌어올린 운영 역시 기록 향상의 근거입니다. 대회 뒤 수영을 취소할 만큼 데미지가 있었다는 점은 다음 풀코스 전 회복이 필요했음을 보여줍니다.",
+    next: [
+      "급수 뒤 페이스 회복을 훈련에서 반복해 18 km 이후 리듬 단절을 줄입니다.",
+      "풀코스 전에는 이번에 효과를 본 전날 휴식과 충분한 웜업 원칙을 유지합니다.",
+      "무릎·허벅지 불편감이 남으면 강도보다 회복을 우선합니다.",
+    ],
+  },
+  "2026-tongyeong-triathlon": {
+    facts: [
+      "카카오스토리 후기와 기록 이미지에서 공식 총 03:06:33, 수영 00:38:33, 사이클 01:22:25, 러닝 00:55:46을 확인했습니다.",
+      "Strava에는 수영 1.49 km, T1 00:06:14, 사이클 37.50 km, T2 00:03:52, 러닝 9.92 km가 각각 남아 있습니다.",
+      "직접 쓴 후기에는 폭우, 수영 몸싸움과 드래프팅 시도, 빗길 다운힐 안전 운영이 기록됐습니다.",
+    ],
+    assessment: "공식 세 종목 합계는 02:56:44로 총 기록과의 차이 09:49가 전환 구간에 해당합니다. Strava의 T1·T2 합계 10:06과 17초 차이가 있어 기록 장치 구간과 공식 계측선을 구분해야 합니다. 악천후 속에서도 수영 불안을 관리하고 사이클 업힐에서 강점을 활용한 뒤 10 km를 55분대에 유지한 점이 시즌 후반의 가장 뚜렷한 성과입니다.",
+    next: [
+      "오픈워터에서는 진로 유지와 안전한 드래프팅을 반복해 몸싸움 노출을 줄입니다.",
+      "전환 동선을 점검해 공식 전환 합계 09:49를 다음 표준거리의 기준선으로 삼습니다.",
+      "빗길 대회 뒤에는 체온 저하와 누적 피로를 확인하고 회복일을 확보합니다.",
+    ],
+  },
   "2026-samcheok-granfondo": {
     facts: ["공식 기록은 05:41:22.8, 배번호는 1194번입니다.", "Strava 기록은 131.73 km·05:24:00·누적 상승 1,916 m입니다.", "이틀 뒤 후기에는 목·허리 통증과 에너지 고갈, 휴식 필요성이 기록됐습니다."],
     assessment: "이동 평균은 약 24.4 km/h이며 공식 기록과 이동 시간 차이는 약 17분 23초입니다. 1,900m가 넘는 상승량에도 정차를 효율적으로 관리했습니다. 다만 후기에서 통증과 피로 누적이 확인됩니다. 통증 원인은 의료 자료가 없어 훈련 과부하로 단정하지 않습니다.",
@@ -385,7 +450,8 @@ function renderJourneys() {
             ? j.startDate
             : `${j.startDate} — ${j.endDate}`,
         activity = JOURNEY_STRAVA[j.id];
-      return `<article class="journey-card ${photos.length ? "has-media" : ""} ${j.id === "2026-camino-frances" ? "featured-journey" : ""}">${photos.length ? `<div class="journey-media"><img src="${photos[0]}" alt="${j.title} 대표 사진">${photos.length > 1 ? `<span>+${photos.length - 1} PHOTOS</span>` : ""}</div>` : ""}<div class="journey-copy"><span class="date">${period}</span><small>${j.category === "randonneuring" ? "RANDONNEURING" : j.category === "walking" ? "WALKING" : "JOURNEY"}</small><h3>${j.title}</h3><p>${j.review || j.summary || ""}</p><div class="journey-stats">${s.distanceKm ? `<b>${num(s.distanceKm)} km</b>` : ""}${s.elapsedHours ? `<b>${num(s.elapsedHours)} h</b>` : ""}${s.elevationGainM ? `<b>${num(s.elevationGainM)} m↑</b>` : ""}${s.activityCount > 1 ? `<b>${s.activityCount} stages</b>` : ""}</div>${activity ? `<a class="strava-link" href="https://www.strava.com/activities/${activity}" target="_blank" rel="noreferrer">Strava에서 경로와 원본 기록 보기 ↗</a>` : ""}</div></article>`;
+      const story = j.id === "2026-cheonan-200k-brevet" ? "https://story.kakao.com/_F7q479/EWt2ZsTBGRA" : "";
+      return `<article class="journey-card ${photos.length ? "has-media" : ""} ${j.id === "2026-camino-frances" ? "featured-journey" : ""}">${photos.length ? `<div class="journey-media"><img src="${photos[0]}" alt="${j.title} 대표 사진">${photos.length > 1 ? `<span>+${photos.length - 1} PHOTOS</span>` : ""}</div>` : ""}<div class="journey-copy"><span class="date">${period}</span><small>${j.category === "randonneuring" ? "RANDONNEURING" : j.category === "walking" ? "WALKING" : "JOURNEY"}</small><h3>${j.title}</h3><p><strong>MY STORY / 직접 쓴 후기</strong><br>${j.review || j.summary || ""}</p>${j.analysis ? `<p><strong>AI REVIEW / 기록 분석</strong><br>${j.analysis}</p>` : ""}${j.next?.length ? `<p><strong>NEXT / 다음 도전</strong><br>${j.next.join(" · ")}</p>` : ""}<div class="journey-stats">${s.distanceKm ? `<b>${num(s.distanceKm)} km</b>` : ""}${s.elapsedTime ? `<b>${s.elapsedTime}</b>` : s.elapsedHours ? `<b>${num(s.elapsedHours)} h</b>` : ""}${s.elevationGainM ? `<b>${num(s.elevationGainM)} m↑</b>` : ""}${s.activityCount > 1 ? `<b>${s.activityCount} stages</b>` : ""}</div>${activity ? `<a class="strava-link" href="https://www.strava.com/activities/${activity}" target="_blank" rel="noreferrer">Strava에서 경로와 원본 기록 보기 ↗</a>` : ""}${story ? `<a class="strava-link" href="${story}" target="_blank" rel="noreferrer">카카오스토리 원문 읽기 ↗</a>` : ""}</div></article>`;
     })
     .join("");
 }

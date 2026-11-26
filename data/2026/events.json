@@ -216,10 +216,14 @@
     "status": "finished",
     "reviewStatus": "verified",
     "official": { "time": "01:48:54.34" },
-    "strava": { "distanceKm": 20.81, "movingTime": "01:49:12", "elevationGainM": 17 },
-    "review": "2025년 MBN 하프보다 약 4분 38초 빠른 대표 하프 기록이다.",
+    "strava": { "activityId": "20454988992", "distanceKm": 20.81, "elapsedTime": "01:49:01", "movingTime": "01:49:01", "elevationGainM": 17 },
+    "review": "풀코스를 2주 앞두고 오랜만에 선 하프였다. 전날 충분히 쉬고 일찍 도착해 3km 넘게 몸을 풀었으며, 코스와 바람을 살피고 구간별 페이스를 정했다. 초반 맞바람에서는 비슷한 페이스의 그룹 뒤에서 8~9km까지 달렸고, 반환점 뒤 순풍 구간부터는 혼자 페이스를 이어갔다. 18km부터 힘들고 급수 뒤 속도가 떨어졌지만 다시 끌어올려 막판 스프린트까지 마쳤다. 2시간과 1시간 50분 벽을 한꺼번에 넘은 결과가 기뻤지만, 대회 뒤 수영을 포기할 만큼 데미지가 올라와 다음 풀코스 전에 우선 회복하기로 했다.",
     "sources": ["strava", "google-docs", "kakao-story"],
-    "media": []
+    "media": [
+      "assets/images/events/2026-siheung-half/cover.jpg",
+      "assets/images/events/2026-siheung-half/finish-gate.jpg",
+      "assets/images/events/2026-siheung-half/official-result.jpg"
+    ]
   },
   {
     "id": "2026-daecheongho-full-marathon",
@@ -246,11 +250,26 @@
     "title": "통영 월드 트라이애슬론 컵",
     "category": "triathlon",
     "status": "finished",
-    "reviewStatus": "partial",
-    "strava": { "swimDistanceKm": 1.49, "bikeDistanceKm": 37.5, "runDistanceKm": 9.92 },
-    "review": "바다 수영과 언덕이 있는 사이클·러닝 코스를 완주한 시즌 후반 철인 대회다. 공식 총기록 확인이 남아 있다.",
+    "reviewStatus": "verified",
+    "official": { "time": "03:06:33", "swimTime": "00:38:33", "bikeTime": "01:22:25", "runTime": "00:55:46" },
+    "strava": {
+      "activityIds": ["20719968074", "20719968060", "20719968082", "20719968086", "20719968093"],
+      "segments": [
+        { "sport": "swimming", "distanceKm": 1.49, "elapsedTime": "00:38:39" },
+        { "sport": "transition", "name": "T1", "distanceKm": 0.25, "elapsedTime": "00:06:14" },
+        { "sport": "cycling", "distanceKm": 37.5, "elapsedTime": "01:21:56", "elevationGainM": 603 },
+        { "sport": "transition", "name": "T2", "distanceKm": 0.2, "elapsedTime": "00:03:52" },
+        { "sport": "running", "distanceKm": 9.92, "elapsedTime": "00:55:46", "elevationGainM": 23 }
+      ]
+    },
+    "review": "비가 쏟아지는 통영 바다에서 1,700명에 가까운 참가자와 출발했다. 후위 그룹에서도 몸싸움이 있었지만 이전 경험으로 대응했고, 비슷한 속도의 참가자 뒤 물살을 이용하는 방법도 실전에서 시도했다. 첫 바퀴 뒤 리듬과 시간을 확인하자 두려움보다 ‘시간 안에 가보자’는 생각이 앞섰다. 사이클에서는 업힐에서 추월하되 빗길 다운힐은 안전하게 운영했고, 러닝에서는 직전 풀코스 경험 덕분인지 페이스가 크게 떨어지지 않았다. 폭우와 불안을 넘어 03:06:33에 완주했고, 다음을 서두르기보다 휴식이 가장 중요하다고 적었다.",
     "sources": ["strava", "google-docs", "kakao-story"],
-    "media": []
+    "media": [
+      "assets/images/events/2026-tongyeong-triathlon/official-result.jpg",
+      "assets/images/events/2026-tongyeong-triathlon/swim-route.jpg",
+      "assets/images/events/2026-tongyeong-triathlon/bike-route.jpg",
+      "assets/images/events/2026-tongyeong-triathlon/run-route.jpg"
+    ]
   },
   {
     "id": "2026-incheon-full-marathon",

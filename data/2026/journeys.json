@@ -17,17 +17,23 @@
   {
     "id": "2026-cheonan-200k-brevet",
     "year": 2026,
-    "startDate": "2026-10-30",
-    "endDate": "2026-10-30",
+    "startDate": "2026-10-31",
+    "endDate": "2026-10-31",
     "title": "천안 200K 브레베",
     "category": "randonneuring",
     "status": "finished",
     "reviewStatus": "verified",
-    "strava": { "activityCount": 1, "distanceKm": 204.76, "elapsedHours": 16.64, "elevationGainM": 1478 },
-    "review": "시즌 후반에 다시 완주한 200km 브레베. 같은 거리라도 계절과 코스에 따라 달라지는 장거리 운영 경험을 더했다.",
+    "strava": { "activityId": "20803744632", "activityCount": 1, "distanceKm": 204.76, "movingTime": "07:53:59", "movingHours": 7.9, "elapsedTime": "10:24:05", "elapsedHours": 10.4, "elevationGainM": 1478 },
+    "review": "왕복 운전만 약 5시간을 더한 천안 200K였다. 아침 추위와 안개 구간, 차량이 적은 대신 편의점도 드문 코스를 지나 서해를 만났다. 맛집 경유 코스였지만 고기·냉면·굴은 건너뛰고 라면과 카페 식사로 보급했다. 잠이 부족했어도 카페에서 쉬고 먹으며 완주했고, 이후 호두과자와 온양온천으로 하루를 마무리했다. 다음 날에는 고속 주행의 피로가 몰려와 휴식을 우선했다.",
+    "analysis": "Strava export 기준 204.76km를 실제 이동 07:53:59, 전체 경과 10:24:05에 기록했다. 카카오스토리의 ‘이동시간 10:24:05’ 표기는 export상 경과시간과 일치하므로 두 시간을 구분했다. 이동 평균은 약 25.9km/h이며, 정차·보급 등 비이동 시간은 약 2시간 30분이다.",
+    "next": ["편의점이 드문 코스는 출발 전 고형식과 비상 보급을 별도로 준비한다.", "안개 구간에서는 속도보다 전조등·후미등 시인성과 차량 접근 확인을 우선한다.", "장거리 주행 뒤 귀가 운전까지 포함해 수면과 회복 시간을 계획한다."],
     "display": { "featured": true, "suggestedFormat": "route card" },
-    "sources": ["strava"],
-    "media": []
+    "sources": ["strava", "kakao-story"],
+    "media": [
+      "assets/images/journeys/2026-cheonan-200k-brevet/cover.jpg",
+      "assets/images/journeys/2026-cheonan-200k-brevet/gallery-01.jpg",
+      "assets/images/journeys/2026-cheonan-200k-brevet/gallery-02.jpg"
+    ]
   },
   {
     "id": "2026-donghae-coast",
