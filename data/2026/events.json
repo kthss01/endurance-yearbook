@@ -118,10 +118,28 @@
     "status": "finished",
     "reviewStatus": "verified",
     "official": { "swimTime": "00:47:11", "transitionTime": "00:05:53", "verticalRunTime": "00:34:02" },
-    "strava": { "swimDistanceKm": 1.51, "verticalFinish": "롯데타워 123층" },
-    "review": "석촌호수 1.5km 수영과 롯데타워 123층 계단을 연결한 독특한 복합 종목이다.",
+    "strava": {
+      "swimDistanceKm": 1.51,
+      "verticalFinish": "롯데타워 123층",
+      "activities": [
+        { "discipline": "swim", "activityId": "19275097487", "url": "https://www.strava.com/activities/19275097487" },
+        { "discipline": "transition", "activityId": "19275097493", "url": "https://www.strava.com/activities/19275097493" },
+        { "discipline": "vertical-run", "activityId": "19275097452", "url": "https://www.strava.com/activities/19275097452" }
+      ]
+    },
+    "story": { "url": "https://story.kakao.com/_F7q479/6HAVzVSBio9", "postedAt": "2026-07-13T00:42:00+09:00" },
+    "personalReview": "수영 초반 약 500m까지 슈트 없이 가라앉는 다리와 몸싸움 때문에 호흡이 흔들렸지만, 페이스를 낮추고 리듬을 찾아 1.5km를 마쳤다. 바꿈터를 지나 롯데타워 123층 계단에서는 서두르지 않고 끝까지 올라 완주했다.",
+    "aiAnalysis": "오픈워터의 불안을 호흡과 페이스 조절로 회복한 뒤 수직 러닝까지 연결했다. 서로 다른 부하를 한 대회 안에서 관리한 점이 핵심이다.",
+    "nextChallenge": "수영 초반 몸싸움에서도 리듬을 빨리 찾고, 철인3종을 위해 전환과 러닝을 함께 준비한다.",
+    "review": "석촌호수 1.5km 수영에서 초반 불안을 페이스 조절로 넘기고 롯데타워 123층까지 완주했다.",
     "sources": ["strava", "kakao-story"],
-    "media": []
+    "media": [
+      "assets/images/events/2026-lotte-aquathlon/story-01.jpg",
+      "assets/images/events/2026-lotte-aquathlon/story-02.jpg",
+      "assets/images/events/2026-lotte-aquathlon/story-03.jpg",
+      "assets/images/events/2026-lotte-aquathlon/story-04.jpg",
+      "assets/images/events/2026-lotte-aquathlon/story-05.jpg"
+    ]
   },
   {
     "id": "2026-cool-valley-trail",
@@ -132,10 +150,20 @@
     "status": "finished",
     "reviewStatus": "verified",
     "official": { "time": "03:45:22", "milestone": "첫 트레일러닝" },
-    "strava": { "distanceKm": 18.62, "movingTime": "03:24:00", "elevationGainM": 980 },
-    "review": "비와 진흙 속에서 치른 첫 트레일러닝이다. 이후 대관령과 빵트레일런으로 확장되는 시작점이다.",
+    "strava": { "activityId": "19370536509", "url": "https://www.strava.com/activities/19370536509", "distanceKm": 18.62, "movingTime": "03:24:18", "elevationGainM": 980 },
+    "story": { "url": "https://story.kakao.com/_F7q479/9BLlsmohoP0", "postedAt": "2026-07-19T23:44:00+09:00" },
+    "personalReview": "첫 트레일러닝을 비 내리는 장수에서 시작했다. 경사가 예상보다 훨씬 가팔랐고 진흙에서 미끄러지지 않으려 로프까지 붙잡아야 했다. 만만하게 본 것을 인정하면서도 멈추지 않고 18km를 완주했다.",
+    "aiAnalysis": "로드 러닝과 다른 경사·노면·하강 기술의 필요를 몸으로 확인한 첫 트레일이다. 악천후 속 완주는 이후 산악 대회를 위한 경험 자산이 됐다.",
+    "nextChallenge": "회복 뒤 수영과 자전거 훈련을 재개해 설봉 철인3종을 안정적으로 완주하고, 두 번째 트레일에서는 오르막과 내리막 운영을 개선한다.",
+    "review": "비와 진흙, 로프 구간을 지나 18.61km를 완주한 첫 트레일러닝이다.",
     "sources": ["strava", "kakao-story"],
-    "media": []
+    "media": [
+      "assets/images/events/2026-cool-valley-trail/story-01.jpg",
+      "assets/images/events/2026-cool-valley-trail/story-02.jpg",
+      "assets/images/events/2026-cool-valley-trail/story-03.jpg",
+      "assets/images/events/2026-cool-valley-trail/story-04.jpg",
+      "assets/images/events/2026-cool-valley-trail/story-05.jpg"
+    ]
   },
   {
     "id": "2026-seolbong-triathlon",
@@ -146,10 +174,29 @@
     "status": "finished",
     "reviewStatus": "verified",
     "official": { "time": "03:09:52", "swimTime": "00:46:41", "bikeTime": "01:07:16", "runTime": "01:06:10" },
-    "strava": { "swimDistanceKm": 1.45, "bikeDistanceKm": 38.61, "runDistanceKm": 9.61 },
-    "review": "두 번째 철인 완주다. 수영의 불안 관리와 전환 후 러닝 운영에서 성장한 대회로 기록한다.",
+    "strava": {
+      "swimDistanceKm": 1.45,
+      "bikeDistanceKm": 38.61,
+      "runDistanceKm": 9.61,
+      "activities": [
+        { "discipline": "swim", "activityId": "19857899795", "url": "https://www.strava.com/activities/19857899795" },
+        { "discipline": "bike", "activityId": "19857899802", "url": "https://www.strava.com/activities/19857899802" },
+        { "discipline": "run", "activityId": "19857899854", "url": "https://www.strava.com/activities/19857899854" }
+      ]
+    },
+    "story": { "url": "https://story.kakao.com/_F7q479/gKcGvKqzlQA", "postedAt": "2026-08-23T13:08:00+09:00" },
+    "personalReview": "설봉호 수영은 여전히 긴장됐지만 호흡을 다잡아 빠져나왔고, 자전거와 러닝까지 이어 두 번째 철인3종을 완주했다. 각 종목의 기록보다 불안 속에서도 다음 동작을 계속한 경험이 남았다.",
+    "aiAnalysis": "수영·사이클·러닝 세 활동이 Strava export에서 연속 기록으로 확인된다. 첫 철인 경험을 재현 가능한 운영 능력으로 바꾼 대회다.",
+    "nextChallenge": "수영의 안정성을 높이고 전환 시간을 줄여, 다음 철인에서는 후반 러닝 페이스를 더 오래 유지한다.",
+    "review": "수영의 불안을 관리하고 사이클과 러닝을 이어 03:09:52에 마친 두 번째 철인3종 완주다.",
     "sources": ["strava", "google-docs", "kakao-story"],
-    "media": []
+    "media": [
+      "assets/images/events/2026-seolbong-triathlon/story-01.jpg",
+      "assets/images/events/2026-seolbong-triathlon/story-02.jpg",
+      "assets/images/events/2026-seolbong-triathlon/story-03.jpg",
+      "assets/images/events/2026-seolbong-triathlon/story-04.jpg",
+      "assets/images/events/2026-seolbong-triathlon/story-05.jpg"
+    ]
   },
   {
     "id": "2026-daegwallyeong-trail",
@@ -160,10 +207,20 @@
     "status": "finished",
     "reviewStatus": "verified",
     "official": { "time": "03:26:34" },
-    "strava": { "distanceKm": 21.6, "movingTime": "03:19:12", "elevationGainM": 872 },
-    "review": "첫 트레일 대회보다 거리와 운영 능력이 확장된 두 번째 트레일러닝이다.",
+    "strava": { "activityId": "19956405053", "url": "https://www.strava.com/activities/19956405053", "distanceKm": 21.6, "movingTime": "03:18:56", "elevationGainM": 872 },
+    "story": { "url": "https://story.kakao.com/_F7q479/1DDc1Ry7qP9", "postedAt": "2026-08-30T11:34:00+09:00" },
+    "personalReview": "잠을 설쳤지만 비가 그친 뒤의 시원한 날씨에 감사하며 출발했다. 44km 참가자들을 보며 언젠가 더 긴 거리를 상상했고, 두 번째 트레일에서는 첫 대회보다 여유 있게 20km 코스를 운영했다.",
+    "aiAnalysis": "첫 트레일의 진흙과 급경사 경험을 한 달 뒤 더 긴 코스의 페이스 관리로 연결했다. 공식 03:26:34와 Strava 이동시간 03:18:56을 분리해 보면 정차를 포함한 전체 운영도 안정적이었다.",
+    "nextChallenge": "회복을 우선하면서 장거리 트레일을 위한 하체 근력과 보급 경험을 쌓고, 30km급 코스로 확장한다.",
+    "review": "첫 트레일보다 긴 21.6km를 03:26:34에 완주하며 거리와 운영 능력을 확장한 두 번째 트레일러닝이다.",
     "sources": ["strava", "kakao-story"],
-    "media": []
+    "media": [
+      "assets/images/events/2026-daegwallyeong-trail/story-01.jpg",
+      "assets/images/events/2026-daegwallyeong-trail/story-02.jpg",
+      "assets/images/events/2026-daegwallyeong-trail/story-03.jpg",
+      "assets/images/events/2026-daegwallyeong-trail/story-04.jpg",
+      "assets/images/events/2026-daegwallyeong-trail/story-05.jpg"
+    ]
   },
   {
     "id": "2026-mungyeong-granfondo",
