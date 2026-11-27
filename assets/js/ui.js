@@ -503,6 +503,11 @@ const TRACK_COLOR = { Swim: COLOR.swimming, Ride: COLOR.cycling, "Gravel Ride": 
 const DAY_COLORS = ["#c4dc66", "#7c98e6", "#e8755f", "#5fb7cf", "#dfb262", "#a895dc", "#66bf8f"];
 const RIDE_TYPE_LABEL = { Ride: "로드·그래블", "E-Bike Ride": "전기자전거", "Virtual Ride": "실내(Zwift)", "Gravel Ride": "그래블", "Mountain Bike Ride": "MTB" };
 const REGION_LABEL = { KR: "국내", JP: "일본", EU: "유럽" };
+// 지도 경로 종류(장비 이름으로 판별)별 이름과 색
+const TRACK_KIND = {
+  road: ["로드", "#7c98e6"], gravel: ["그래블", "#c9a66b"], ebike: ["전기자전거", "#5fb7cf"],
+  city: ["미니벨로·따릉이", "#a895dc"], run: ["러닝", "#e8755f"], trail: ["트레일·하이킹", "#66bf8f"],
+};
 let detailMaps = [];
 
 // Google encoded polyline → [[lat, lon], ...]
@@ -536,7 +541,19 @@ function drawMap(el, lines, { fit = true, interactive = true } = {}) {
         pl.on("mouseout", () => pl.setStyle({ weight: ln.weight || 3, opacity: ln.opacity ?? 0.9 }));
       }
     });
-    if (fit) map.fitBounds(layer.getBounds(), { padding: [18, 18] });
+    if (fit) {
+      const b = layer.getBounds();
+      map.fitBounds(b, { padding: [18, 18] });
+      // 섹션이 숨겨졌거나 등장 애니메이션 중에 그려지면 크기가 0이라 한 구간에 확대된 채로 남는다 → 실제 크기가 잡힐 때 한 번 다시 맞춘다
+      const ro = new ResizeObserver(() => {
+        if (!el.clientWidth || !el.isConnected || !map._loaded || map._removed) return;
+        ro.disconnect();
+        map.invalidateSize({ animate: false });
+        map.fitBounds(b, { padding: [18, 18], animate: false });
+      });
+      ro.observe(el);
+      map.on("unload", () => { map._removed = true; ro.disconnect(); });
+    }
     map._tracks = layer;
     return map;
   }
@@ -623,7 +640,7 @@ function renderRideMap() {
     ["라이딩 횟수", r.rides, "회", 0, `평균 ${num(r.totalKm / r.rides, 1)} km`],
     ["최장 거리", r.longestKm, "km", 1, "한 번에 달린 거리"],
     ["누적 상승", r.elevationM, "m", 0, `에베레스트 ${num(r.elevationM / 8849, 1)}회`],
-    ["지도에 그린 경로", r.mapped.km, "km", 0, `${r.mapped.rides}회 · 실외 10km 이상`],
+    ["지도에 그린 경로", r.mapped.km, "km", 0, `자전거 ${r.mapped.rides}회${r.kinds?.run || r.kinds?.trail ? ` · 러닝 ${(r.kinds.run?.n || 0) + (r.kinds.trail?.n || 0)}회` : ""}`],
   ];
   $("#ride-kpis").innerHTML = kpis
     .map(([a, v, unit, d, sub]) => `<div class="kpi"><span>${a}</span><strong><b data-count="${v}" data-dec="${d}">0</b><small class="unit">${unit}</small></strong><em>${sub}</em></div>`)
@@ -648,14 +665,32 @@ function renderRideMap() {
     ? regions.map((g) => `<button data-region="${g}" class="${g === state.rideRegion ? "active" : ""}">${REGION_LABEL[g] || g}<small>${r.tracks.filter((t) => t.r === g).length}</small></button>`).join("")
     : "";
   $$("#ride-regions button").forEach((b) => (b.onclick = () => { state.rideRegion = b.dataset.region; renderRideMap(); }));
-  const lines = r.tracks
-    .filter((t) => t.r === state.rideRegion)
-    .map((t) => ({ pts: decodePoly(t.p), color: "#c4dc66", weight: 2.5, opacity: 0.55, tip: `${dateKo(t.d)} · ${num(t.km, 1)} km` }));
+  // 종류 토글: 지역 안에 있는 종류만 버튼으로, 꺼 둔 종류는 지도에서 뺀다
+  if (!state.rideOff) state.rideOff = new Set();
+  const inRegion = r.tracks.filter((t) => t.r === state.rideRegion);
+  const kinds = Object.keys(TRACK_KIND).filter((k) => inRegion.some((t) => (t.t || "road") === k));
+  $("#ride-kinds").innerHTML = kinds
+    .map((k) => `<button data-kind="${k}" class="${state.rideOff.has(k) ? "" : "active"}" style="--c:${TRACK_KIND[k][1]}" aria-pressed="${!state.rideOff.has(k)}"><i></i>${TRACK_KIND[k][0]}<small>${inRegion.filter((t) => (t.t || "road") === k).length}</small></button>`)
+    .join("");
+  $$("#ride-kinds button").forEach((b) => (b.onclick = () => {
+    const k = b.dataset.kind;
+    if (state.rideOff.has(k)) state.rideOff.delete(k); else state.rideOff.add(k);
+    renderRideMap();
+  }));
+  // 러닝은 자전거 위에 보이도록 나중에 그린다
+  const order = (t) => (["run", "trail"].includes(t.t) ? 1 : 0);
+  const lines = inRegion
+    .filter((t) => !state.rideOff.has(t.t || "road"))
+    .sort((a, b) => order(a) - order(b))
+    .map((t) => {
+      const [label, color] = TRACK_KIND[t.t || "road"];
+      return { pts: decodePoly(t.p), color, weight: order(t) ? 2.2 : 2.5, opacity: t.t === "ebike" ? 0.4 : 0.6, tip: `${label} · ${dateKo(t.d)} · ${num(t.km, 1)} km` };
+    });
   const el = $("#ride-map");
   if (state.rideMap) { state.rideMap.remove(); state.rideMap = null; }
   el.innerHTML = "";
   state.rideMap = drawMap(el, lines);
-  $("#ride-map-caption").textContent = `${REGION_LABEL[state.rideRegion] || ""} ${lines.length}개 경로 · 선 위에 올리면 날짜와 거리가 보입니다.`;
+  $("#ride-map-caption").textContent = `${REGION_LABEL[state.rideRegion] || ""} ${lines.length}개 경로 · 종류 버튼으로 켜고 끌 수 있고, 선 위에 올리면 종류·날짜·거리가 보입니다.`;
 }
 
 /* ───────── 상세 화면 ───────── */

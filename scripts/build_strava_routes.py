@@ -9,7 +9,9 @@
 
 개인정보 보호:
     - 여정과 연간 지도 경로는 각 활동의 시작·끝 1km를 잘라 내 숙소·집 위치가 드러나지 않게 한다.
-    - 연간 지도에는 E-Bike Ride(출퇴근 위주), Virtual Ride(Zwift 가상 좌표), 10km 미만 라이딩을 그리지 않는다.
+    - 연간 지도에는 Virtual Ride(Zwift 가상 좌표)와 짧은 활동(자전거 10km·러닝 5km 미만)을 그리지 않는다.
+    - 출퇴근·집 근처 기록이 많은 전기자전거·생활 자전거·러닝은 시작·끝을 2km씩 잘라 낸다.
+    - 경로마다 장비 이름으로 판별한 종류(road/gravel/ebike/city/run/trail)만 남기고 장비 이름은 내보내지 않는다.
       거리 합계에는 모든 자전거 활동을 포함한다.
     - 활동 이름·설명·장비 이름은 내보내지 않는다.
 """
@@ -34,7 +36,27 @@ YEARS = ("2025", "2026")
 TRIM_M = 1000          # 여정·연간 지도에서 잘라 낼 시작·끝 거리
 MAP_MIN_KM = 10        # 연간 지도에 그릴 최소 거리
 RIDE_TYPES = {"Ride", "E-Bike Ride", "Virtual Ride", "Gravel Ride", "Mountain Bike Ride", "E-Mountain Bike Ride", "Velomobile", "Handcycle"}
-MAP_TYPES = {"Ride", "Gravel Ride", "Mountain Bike Ride"}
+RUN_TYPES = {"Run", "Trail Run", "Hike"}
+TRIM_FAR_M = 2000      # 출퇴근·집 근처가 많은 종류의 시작·끝 잘라 낼 거리
+KIND_LABEL = {"road": "로드", "gravel": "그래블", "ebike": "전기자전거", "city": "미니벨로·따릉이", "run": "러닝", "trail": "트레일·하이킹"}
+
+
+def kind_of(a):
+    """활동 종류와 장비 이름으로 지도 표시 종류를 정한다. 표시하지 않을 활동은 None."""
+    t, g = a["type"], a.get("gear", "")
+    if t.startswith("Virtual"):
+        return None
+    if t in RUN_TYPES:
+        return "trail" if t != "Run" or "trail" in g.lower() else "run"
+    if t not in RIDE_TYPES:
+        return None
+    if t.startswith("E-"):
+        return "ebike"
+    if t in ("Gravel Ride", "Mountain Bike Ride") or "그래블" in g:
+        return "gravel"
+    if "미니벨로" in g or "따릉이" in g:
+        return "city"
+    return "road"
 
 
 # ---------- 좌표 처리 ----------
@@ -162,7 +184,7 @@ def load_csv(z):
     acts = {}
     for x in rows[1:]:
         when = dt.datetime.strptime(x[1], "%b %d, %Y, %I:%M:%S %p") + dt.timedelta(hours=9)  # UTC → KST
-        acts[x[0]] = {"type": x[3], "date": when.strftime("%Y-%m-%d"), "start": when.strftime("%H:%M"), "file": x[12],
+        acts[x[0]] = {"type": x[3], "date": when.strftime("%Y-%m-%d"), "start": when.strftime("%H:%M"), "file": x[12], "gear": x[11],
                       "dist": num(x[17]) or (num(x[6]) or 0) * 1000, "moving": num(x[16]), "elapsed": num(x[15]),
                       "elev": num(x[20]), "maxSpeed": num(x[18]), "avgSpeed": num(x[19]), "avgHr": num(x[31]), "maxHr": num(x[30]),
                       "avgW": num(x[33]), "npW": num(x[46]), "cad": num(x[29]), "kcal": num(x[34]), "temp": num(x[36])}
@@ -277,23 +299,33 @@ def main(zip_path):
             km = a["dist"] / 1000
             by_type[a["type"]] = by_type.get(a["type"], 0) + km
             by_month[int(a["date"][5:7]) - 1] += km
-        tracks, mapped_km = [], 0.0
-        for aid, a in sorted(rides, key=lambda r: r[1]["date"]):
-            if a["type"] not in MAP_TYPES or a["dist"] < MAP_MIN_KM * 1000:
+        tracks, mapped_km, kinds = [], 0.0, {}
+        movers = [(aid, a) for aid, a in acts.items() if a["date"].startswith(y) and kind_of(a)]
+        for aid, a in sorted(movers, key=lambda r: r[1]["date"]):
+            k = kind_of(a)
+            run = k in ("run", "trail")
+            if a["dist"] < (5 if run else MAP_MIN_KM) * 1000:
                 continue
-            pts = trim(track(aid), TRIM_M)
+            pts = trim(track(aid), TRIM_FAR_M if k in ("ebike", "city", "run") else TRIM_M)
             if len(pts) < 2:
                 continue
-            mapped_km += a["dist"] / 1000
-            tracks.append({"d": a["date"], "km": round(a["dist"] / 1000, 1), "r": region(pts),
-                           "p": encode([(round(p[0], 4), round(p[1], 4)) for p in simplify(pts, 60, 260)])})
+            if not run:
+                mapped_km += a["dist"] / 1000
+            kk = kinds.setdefault(k, {"label": KIND_LABEL[k], "n": 0, "km": 0.0})
+            kk["n"] += 1; kk["km"] += a["dist"] / 1000
+            cap = 120 if k == "ebike" else 260   # 반복되는 출퇴근 경로는 점을 더 줄인다
+            tracks.append({"d": a["date"], "km": round(a["dist"] / 1000, 1), "r": region(pts), "t": k,
+                           "p": encode([(round(p[0], 4), round(p[1], 4)) for p in simplify(pts, 60, cap)])})
+        for v in kinds.values():
+            v["km"] = round(v["km"], 1)
         out = {"year": int(y), "totalKm": round(sum(by_type.values()), 1), "rides": len(rides),
                "byType": {k: round(v, 1) for k, v in sorted(by_type.items(), key=lambda kv: -kv[1])},
                "byMonthKm": [round(v, 1) for v in by_month],
                "longestKm": round(max((a["dist"] for _, a in rides), default=0) / 1000, 1),
                "elevationM": round(sum(a["elev"] or 0 for _, a in rides)),
-               "mapped": {"rides": len(tracks), "km": round(mapped_km, 1)},
-               "policy": "E-Bike·Virtual·10km 미만 라이딩은 지도에서 제외하고, 각 경로의 시작·끝 1km를 잘라 냈습니다.",
+               "mapped": {"rides": sum(v["n"] for k, v in kinds.items() if k not in ("run", "trail")), "km": round(mapped_km, 1)},
+               "kinds": kinds,
+               "policy": "실내 라이딩과 짧은 활동(자전거 10km·러닝 5km 미만)은 지도에서 제외했습니다. 경로 시작·끝은 1km(전기자전거·생활 자전거·러닝은 2km)씩 잘라 냈습니다.",
                "tracks": tracks}
         (ROOT / f"data/{y}/rides.json").write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
         print(y, "rides", len(rides), "km", out["totalKm"], "mapped", out["mapped"])
