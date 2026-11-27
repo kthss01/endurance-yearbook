@@ -10,9 +10,9 @@ const YEARS = [2025, 2026];
 
 const SPORT_ORDER = ["cycling", "running", "swimming", "walking", "mobility"];
 const COLOR = {
-  cycling: "#4d7cff", running: "#ff5a3c", swimming: "#19c3e6", walking: "#a77bff",
-  mobility: "#8a8d85", triathlon: "#d9ff43", aquathlon: "#19c3e6", trail: "#3ddc84",
-  journey: "#ffb627", randonneuring: "#ffb627", transition: "#6b6d66",
+  cycling: "#7c98e6", running: "#e8755f", swimming: "#5fb7cf", walking: "#a895dc",
+  mobility: "#8a8d85", triathlon: "#c4dc66", aquathlon: "#5fb7cf", trail: "#66bf8f",
+  journey: "#dfb262", randonneuring: "#dfb262", transition: "#6b6d66",
 };
 const METRICS = {
   distanceKm: { label: "거리", unit: "km", d: 1 },
@@ -300,7 +300,7 @@ function renderCumulative() {
   const W = 760, H = 280, pad = { l: 52, r: 70, t: 20, b: 28 };
   const ticks = niceTicks(max, 4), top = ticks[ticks.length - 1];
   const xx = (i) => pad.l + ((W - pad.l - pad.r) * i) / 11, yy = (v) => pad.t + (H - pad.t - pad.b) * (1 - v / top);
-  let svg = `<defs>${series.map((sr) => `<linearGradient id="cg${sr.y}" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="${sr.y === state.year ? "#d9ff43" : "#8a8d85"}" stop-opacity=".35"/><stop offset="1" stop-color="${sr.y === state.year ? "#d9ff43" : "#8a8d85"}" stop-opacity="0"/></linearGradient>`).join("")}</defs>`;
+  let svg = `<defs>${series.map((sr) => `<linearGradient id="cg${sr.y}" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="${sr.y === state.year ? "#c4dc66" : "#8a8d85"}" stop-opacity=".2"/><stop offset="1" stop-color="${sr.y === state.year ? "#c4dc66" : "#8a8d85"}" stop-opacity="0"/></linearGradient>`).join("")}</defs>`;
   svg += ticks.map((t) => `<g class="grid"><line x1="${pad.l}" x2="${W - pad.r}" y1="${yy(t)}" y2="${yy(t)}"/><text x="${pad.l - 8}" y="${yy(t) + 4}" text-anchor="end">${num(t, 0)}</text></g>`).join("");
   svg += Array.from({ length: 12 }, (_, i) => `<text class="xl" x="${xx(i)}" y="${H - 8}" text-anchor="middle">${i + 1}</text>`).join("");
   // 현재 연도를 위에 그린다
@@ -314,7 +314,7 @@ function renderCumulative() {
   $("#cumulative-legend").innerHTML = YEARS.map((y) => `<span class="${y === state.year ? "on" : ""}"><i></i>${y}</span>`).join("");
   $$("#cumulative-chart .pt").forEach((c) => {
     c.onmousemove = (ev) => {
-      const i = +c.dataset.i, rows = series.filter((sr) => sr.pts[i] != null).map((sr) => `<span><i style="background:${sr.y === state.year ? "#d9ff43" : "#8a8d85"}"></i>${sr.y} <em>${num(sr.pts[i], M.d)} ${M.unit}</em></span>`).join("");
+      const i = +c.dataset.i, rows = series.filter((sr) => sr.pts[i] != null).map((sr) => `<span><i style="background:${sr.y === state.year ? "#c4dc66" : "#8a8d85"}"></i>${sr.y} <em>${num(sr.pts[i], M.d)} ${M.unit}</em></span>`).join("");
       tip(ev, `<b>${i + 1}월까지 누적</b>${rows}`);
     };
     c.onmouseleave = hideTip;
@@ -444,7 +444,7 @@ function recordFace(e) {
 function renderEvents() {
   const events = state.events[state.year], cats = ["all", ...new Set(events.map((e) => e.category))];
   $("#event-filters").innerHTML = cats
-    .map((c) => `<button class="${state.filter === c ? "active" : ""}" data-filter="${c}" style="--c:${COLOR[c] || "#d9ff43"}">${c === "all" ? "전체" : LABEL2[c] || c}<small>${c === "all" ? events.length : events.filter((e) => e.category === c).length}</small></button>`)
+    .map((c) => `<button class="${state.filter === c ? "active" : ""}" data-filter="${c}" style="--c:${COLOR[c] || "#c4dc66"}">${c === "all" ? "전체" : LABEL2[c] || c}<small>${c === "all" ? events.length : events.filter((e) => e.category === c).length}</small></button>`)
     .join("");
   $$("#event-filters button").forEach((b) => (b.onclick = () => {
     state.filter = b.dataset.filter;
@@ -456,7 +456,7 @@ function renderEvents() {
     .map((e, i) => {
       const pics = MEDIA[e.id] || [], photo = coverPhoto(pics), o = e.official || {}, d = eventDistance(e);
       const rank = o.rankOverall ? `<span class="rank">#${o.rankOverall}<small>종합</small></span>` : "";
-      return `<article class="race-card reveal ${photo ? "has-photo" : ""}" tabindex="0" data-id="${e.id}" style="--c:${COLOR[e.category] || "#d9ff43"};--d:${(i % 6) * 60}ms"><div class="rc-media">${photo ? `<img src="${photo}"${focus(photo)} alt="${e.title} 대표 사진" loading="lazy">` : recordFace(e)}<div class="rc-chips"><span class="chip">${LABEL2[e.category] || e.category}</span>${photo && credit(photo) ? `<span class="chip ghost" title="${credit(photo).caption || ""}">참고 사진</span>` : ""}${e.status !== "finished" ? `<span class="chip warn">${LABEL2[e.status] || e.status}</span>` : ""}${pics.length ? `<span class="chip ghost">${pics.length} PHOTOS</span>` : ""}${videoChip(videosOf("event", e.id).length)}</div></div><div class="rc-body"><div class="rc-meta"><span>${dateKo(e.date)}</span>${rank}</div><h3>${e.title}</h3><div class="rc-result">${u(result(e))}</div><div class="rc-stats">${d ? `<span>${num(d)} km</span>` : ""}${eventElevation(e) ? `<span>↑ ${num(eventElevation(e), 0)} m</span>` : ""}${o.course ? `<span>${o.course}</span>` : ""}</div></div><span class="rc-glow" aria-hidden="true"></span></article>`;
+      return `<article class="race-card reveal ${photo ? "has-photo" : ""}" tabindex="0" data-id="${e.id}" style="--c:${COLOR[e.category] || "#c4dc66"};--d:${(i % 6) * 60}ms"><div class="rc-media">${photo ? `<img src="${photo}"${focus(photo)} alt="${e.title} 대표 사진" loading="lazy">` : recordFace(e)}<div class="rc-chips"><span class="chip">${LABEL2[e.category] || e.category}</span>${photo && credit(photo) ? `<span class="chip ghost" title="${credit(photo).caption || ""}">참고 사진</span>` : ""}${e.status !== "finished" ? `<span class="chip warn">${LABEL2[e.status] || e.status}</span>` : ""}${pics.length ? `<span class="chip ghost">${pics.length} PHOTOS</span>` : ""}${videoChip(videosOf("event", e.id).length)}</div></div><div class="rc-body"><div class="rc-meta"><span>${dateKo(e.date)}</span>${rank}</div><h3>${e.title}</h3><div class="rc-result">${u(result(e))}</div><div class="rc-stats">${d ? `<span>${num(d)} km</span>` : ""}${eventElevation(e) ? `<span>↑ ${num(eventElevation(e), 0)} m</span>` : ""}${o.course ? `<span>${o.course}</span>` : ""}</div></div><span class="rc-glow" aria-hidden="true"></span></article>`;
     })
     .join("");
   $$("#event-grid .race-card").forEach((card) => {
@@ -640,7 +640,7 @@ function detailNav() {
 }
 
 function showEvent(e) {
-  const pics = MEDIA[e.id] || [], cover = coverPhoto(pics), c = COLOR[e.category] || "#d9ff43";
+  const pics = MEDIA[e.id] || [], cover = coverPhoto(pics), c = COLOR[e.category] || "#c4dc66";
   const storyUrl = KAKAO_POSTS[e.id] || e.story?.url || KAKAO, an = AI_ANALYSIS[e.id], lg = legs(e), bd = badges(e), links = stravaLinks(e);
   const html = `
   <div class="d-hero ${cover ? "has-photo" : ""}" style="--c:${c}">${cover ? `<img class="kb" src="${cover}"${focus(cover)} alt="">${credit(cover) ? `<small class="hero-credit">${creditHtml(credit(cover))}</small>` : ""}` : `<div class="d-hero-pattern"></div>`}
@@ -690,8 +690,8 @@ function showJourney(j) {
     ? `<section class="d-block"><h3>STAGES / 구간별 기록</h3><div class="cmp">${(() => { const mx = Math.max(...j.stages.map((x) => x.distanceKm)); return j.stages.map((x, i) => `<div class="cmp-row ${x.status !== "finished" ? "dnf" : ""}" style="--d:${i * 80}ms"><span>${i + 1}. ${x.title}<small>${LABEL2[x.status] || x.status}</small></span><div class="cmp-track"><i style="width:${(x.distanceKm / mx) * 100}%"></i></div><b>${u(`${num(x.distanceKm)} km`)}</b></div>`).join(""); })()}</div></section>`
     : "";
   const html = `
-  <div class="d-hero ${cover ? "has-photo" : ""}" style="--c:#ffb627">${cover ? `<img class="kb" src="${cover}"${focus(cover)} alt="">${credit(cover) ? `<small class="hero-credit">${creditHtml(credit(cover))}</small>` : ""}` : `<div class="d-hero-pattern"></div>`}
-    <div class="d-hero-copy"><div class="d-tags"><span>${period}</span><span class="cat" style="--c:#ffb627">${j.category === "randonneuring" ? "브레베" : "여정"}</span>${j.status && j.status !== "finished" ? `<span class="warn">${LABEL2[j.status] || j.status}</span>` : ""}</div><h2 id="detail-title">${j.title}</h2><p class="d-result">${s.distanceKm ? u(`${num(s.distanceKm)} km`) : ""}</p></div></div>
+  <div class="d-hero ${cover ? "has-photo" : ""}" style="--c:#dfb262">${cover ? `<img class="kb" src="${cover}"${focus(cover)} alt="">${credit(cover) ? `<small class="hero-credit">${creditHtml(credit(cover))}</small>` : ""}` : `<div class="d-hero-pattern"></div>`}
+    <div class="d-hero-copy"><div class="d-tags"><span>${period}</span><span class="cat" style="--c:#dfb262">${j.category === "randonneuring" ? "브레베" : "여정"}</span>${j.status && j.status !== "finished" ? `<span class="warn">${LABEL2[j.status] || j.status}</span>` : ""}</div><h2 id="detail-title">${j.title}</h2><p class="d-result">${s.distanceKm ? u(`${num(s.distanceKm)} km`) : ""}</p></div></div>
   <div class="d-quick">${quick.map(([a, b, ic], i) => `<div style="--d:${i * 70}ms"><i>${ic}</i><span>${a}</span><strong>${u(b)}</strong></div>`).join("")}</div>
   <div class="d-body"><div class="d-main">
     ${videoBlock(videosOf("journey", j.id))}
@@ -791,8 +791,8 @@ function tilt(card) {
   if (REDUCED || matchMedia("(hover: none)").matches) return;
   card.onmousemove = (ev) => {
     const r = card.getBoundingClientRect(), x = (ev.clientX - r.left) / r.width, y = (ev.clientY - r.top) / r.height;
-    card.style.setProperty("--rx", `${(0.5 - y) * 7}deg`);
-    card.style.setProperty("--ry", `${(x - 0.5) * 9}deg`);
+    card.style.setProperty("--rx", `${(0.5 - y) * 3}deg`);
+    card.style.setProperty("--ry", `${(x - 0.5) * 4}deg`);
     card.style.setProperty("--mx", `${x * 100}%`);
     card.style.setProperty("--my", `${y * 100}%`);
   };
