@@ -11,7 +11,7 @@
     "next": ["오르막 체크포인트 구간의 목표 속도를 미리 정해 초반 남한산성 구간의 체력 소모를 관리한다.", "그룹과 함께 달릴 때도 체크포인트마다 최소 보급 시간을 확보한다.", "설악급 고도를 대비해 1,900m 이상 상승이 있는 장거리 훈련을 추가한다."],
     "analysis": "eBrevet 기록상 06:30 출발, 16:20:10 도착으로 라이딩 시간은 9시간 50분이며 제한 13시간 30분보다 약 3시간 40분 일찍 완주했다. Strava 기준 이동 시간은 08:22:46, 경과 시간은 09:43:12로 정차 시간은 약 1시간 20분이다. 체크포인트 구간 속도는 남한산성 오르막 구간 17.2km/h, 양동까지의 15.8km/h가 가장 느렸고 마지막 38.3km는 25.2km/h로 가장 빨랐다.",
     "strava": { "activityId": "18898997887", "activityCount": 1, "distanceKm": 206.21, "movingTime": "08:22:46", "movingHours": 8.38, "elapsedTime": "09:43:12", "elapsedHours": 9.72, "elevationGainM": 1812 },
-    "review": "퍼머넌트로 혼자 달리던 200km를 처음으로 정식 브레베에서 달렸다. 서울 동쪽 코스의 남한산성과 여러 고개를 넘는 동안 체크포인트마다 인증 사진을 남겼고, 사람들과 함께 달리다 보니 휴식은 짧아졌지만 내리막과 순풍 덕에 제한 13시간 30분 코스를 9시간 50분에 마쳤다. 귀가 피로를 줄이려 차를 한강에 세워 둔 선택도 잘 맞았고, 일주일 뒤 설악 그란폰도를 앞둔 마지막 점검으로 '준비는 끝났다, 할 수 있다'는 다짐을 남겼다.",
+    "review": "퍼머넌트로 달리던 200km를 처음 정식 브레베로 달려, 제한 13시간 30분 코스를 경과 09:43:12에 완주했다. 남한산성을 비롯한 서울 동쪽 고개를 넘는 코스로 Strava 기준 206.21km, 상승 1,812m다.",
     "display": { "featured": true, "suggestedFormat": "route card" },
     "sources": ["strava", "google-docs"],
     "media": ["assets/images/events/2026-seoul-200k-brevet/cover.jpg", "assets/images/events/2026-seoul-200k-brevet/brevet-certificate.jpg", "assets/images/events/2026-seoul-200k-brevet/official-result.jpg", "assets/images/events/2026-seoul-200k-brevet/gallery-01.jpg"]
@@ -35,7 +35,7 @@
       "elevationGainM": 1524
     },
     "analysis": "Zwift 결과 화면 기준 완주 시간은 9:57:52이며, Strava 기준 200.42km를 실제 이동 07:53:51, 전체 경과 09:58:04에 기록했다. 이동 평균은 25.4km/h, 평균 파워는 115W다. 실내 가상 코스(마쿠리 40 5바퀴)라 상승 1,524m는 실제 도로와 직접 비교하지 않는다.",
-    "review": "한여름 란도너스 대회를 Zwift 가상 코스(마쿠리 40 5바퀴)로 치르는 IC-200 Vector에, 장마 이후 자전거를 너무 오래 쉬었다는 생각에 급히 참가해 200km를 9:57:52에 완주했다. 근력과 체력이 떨어져 안장통이 심했고 졸음과 포기 생각이 계속됐지만, 온라인으로 함께 달린 참가자들의 드래프팅 덕을 보며 버텼다.",
+    "review": "Zwift 가상 코스(마쿠리 40, 5바퀴)로 치른 IC-200 Vector 200km를 완주했다. Strava 기준 200.42km, 이동 07:53:51, 경과 09:58:04다.",
     "display": {
       "featured": false,
       "suggestedFormat": "challenge card"
@@ -67,9 +67,9 @@
     "status": "finished",
     "reviewStatus": "verified",
     "next": ["편의점이 드문 코스는 출발 전 고형식과 비상 보급을 별도로 준비한다.", "안개 구간에서는 속도보다 전조등·후미등 시인성과 차량 접근 확인을 우선한다.", "장거리 주행 뒤 귀가 운전까지 포함해 수면과 회복 시간을 계획한다."],
-    "analysis": "Strava export 기준 204.76km를 실제 이동 07:53:59, 전체 경과 10:24:05에 기록했다. 카카오스토리의 ‘이동시간 10:24:05’ 표기는 export상 경과시간과 일치하므로 두 시간을 구분했다. 이동 평균은 약 25.9km/h이며, 정차·보급 등 비이동 시간은 약 2시간 30분이다.",
+    "analysis": "Strava export 기준 204.76km를 실제 이동 07:53:59, 전체 경과 10:24:05에 기록했다. 이동 평균은 약 25.9km/h이며, 정차·보급 등 비이동 시간은 약 2시간 30분이다.",
     "strava": { "activityId": "20803744632", "activityCount": 1, "distanceKm": 204.76, "movingTime": "07:53:59", "movingHours": 7.9, "elapsedTime": "10:24:05", "elapsedHours": 10.4, "elevationGainM": 1478 },
-    "review": "왕복 운전만 약 5시간을 더한 천안 200K였다. 아침 추위와 안개 구간, 차량이 적은 대신 편의점도 드문 코스를 지나 서해를 만났다. 맛집 경유 코스였지만 고기·냉면·굴은 건너뛰고 라면과 카페 식사로 보급했다. 잠이 부족했어도 카페에서 쉬고 먹으며 완주했고, 이후 호두과자와 온양온천으로 하루를 마무리했다. 다음 날에는 고속 주행의 피로가 몰려와 휴식을 우선했다.",
+    "review": "천안을 출발해 서해안을 지나는 200K 브레베 코스를 완주했다. Strava 기준 204.76km, 상승 1,478m, 이동 07:53:59·경과 10:24:05다.",
     "display": { "featured": true, "suggestedFormat": "route card" },
     "sources": ["strava"],
     "media": ["assets/images/journeys/2026-cheonan-200k-brevet/cover.jpg", "assets/images/journeys/2026-cheonan-200k-brevet/gallery-01.jpg", "assets/images/journeys/2026-cheonan-200k-brevet/gallery-02.jpg", "assets/images/journeys/2026-cheonan-200k-brevet/gallery-03.jpg", "assets/images/journeys/2026-cheonan-200k-brevet/gallery-04.jpg", "assets/images/journeys/2026-cheonan-200k-brevet/gallery-05.jpg", "assets/images/journeys/2026-cheonan-200k-brevet/gallery-06.jpg", "assets/images/journeys/2026-cheonan-200k-brevet/gallery-07.jpg", "assets/images/journeys/2026-cheonan-200k-brevet/gallery-08.jpg", "assets/images/journeys/2026-cheonan-200k-brevet/gallery-09.jpg"]
@@ -86,7 +86,7 @@
     "next": ["다일 여행에는 휴대폰·라이트용 충전기를 두 개 챙겨 밤사이 충전 부담을 줄인다.", "마지막 날 교통편이 정해진 일정은 출발 시각을 앞당기고 구간별 통과 시각을 정해 둔다.", "업다운이 많은 해안 코스는 오르막 페이스 상한을 정해 이튿날 피로 누적을 줄인다."],
     "analysis": "일차별 Strava 기록은 1일차 170.81km(이동 7:58:12, 경과 10:03:18, 상승 1,297m), 2일차 153.17km(7:29:03, 9:16:44, 1,553m), 3일차 101.00km(4:47:10, 5:35:44, 684m)로 합계 424.98km, 이동 약 20.24시간이다. 평균 속도는 21.4 → 20.5 → 21.1km/h로 사흘 내내 비슷하게 유지됐고, 하루 정차 시간은 약 48분~2시간 5분이었다. 상승고도가 가장 컸던 2일차에도 속도 저하가 크지 않아 연속 장거리 주행 지구력이 확인된다.",
     "strava": { "activityCount": 3, "distanceKm": 424.99, "movingHours": 20.24, "elapsedHours": 24.93, "elevationGainM": 3534, "activityIds": ["17789048821", "17799255914", "17810455452"] },
-    "review": "스페인 순례를 앞둔 마지막 자전거 준비로 그래블 바이크를 타고 울산에서 속초까지 3일간 동해안을 북상했다. 첫날 울산~영덕 170km는 추위와 바람, 많은 업힐로 고행에 가까웠고, 둘째 날 영덕~동해 153km는 순풍과 따뜻한 날씨에도 끝없는 오르내림에 몇 번이고 힘들다는 말이 나왔지만 온천에서 피로를 풀며 성장을 느꼈다. 마지막 날에는 속초발 버스 시간에 쫓겨 사진 한 장 없이 101km를 달렸고, 이렇게 순례 전 자전거 준비를 마쳤다.",
+    "review": "그래블 바이크로 3일간 울산에서 속초까지 동해안을 북상했다. 1일차 울산~영덕 170km, 2일차 영덕~동해 153km, 3일차 101km를 달렸다.",
     "display": { "featured": true, "suggestedFormat": "three-stage chart" },
     "sources": ["strava"],
     "media": ["assets/images/journeys/2026-donghae-coast/cover.jpg", "assets/images/journeys/2026-donghae-coast/day1-bulguksa.jpg", "assets/images/journeys/2026-donghae-coast/day1-east-sea.jpg", "assets/images/journeys/2026-donghae-coast/strava-day1.jpg"]
@@ -101,9 +101,9 @@
     "status": "finished",
     "reviewStatus": "verified",
     "next": ["다음 해외 자전거 순례는 일차별 숙소와 보급 지점을 미리 정해 하루 거리 편차를 줄인다.", "비포장 구간이 많은 코스는 타이어와 짐 구성을 출발 전에 시험한다.", "동행자의 체력에 맞춘 휴식일을 일정에 미리 넣는다."],
-    "analysis": "Strava 기준 13일간 823.49km, 상승 10,614m를 이동 53.33시간, 경과 80.68시간에 달렸다. 하루 거리는 49.7~79.2km(평균 약 63.3km)로, 가장 길게 달린 날은 7일차(79.2km), 가장 짧은 날은 10일차(49.7km)였다. 이동 평균은 약 15.4km/h로 국내 장거리 라이딩보다 낮은데, 비포장 순례길과 전기자전거를 처음 타는 동생과의 동행, 성당·마을 방문 등이 함께 작용한 것으로 보인다. 경과 시간 중 약 27시간은 이동하지 않은 시간이다.",
+    "analysis": "Strava 기준 13일간 823.49km, 상승 10,614m를 이동 53.33시간, 경과 80.68시간에 달렸다. 하루 거리는 49.7~79.2km(평균 약 63.3km)로, 가장 길게 달린 날은 7일차(79.2km), 가장 짧은 날은 10일차(49.7km)였다. 이동 평균은 약 15.4km/h로 국내 장거리 라이딩보다 낮은데, 비포장 순례길과 동행 주행, 성당·마을 방문 등이 함께 작용한 것으로 보인다. 경과 시간 중 약 27시간은 이동하지 않은 시간이다.",
     "strava": { "activityCount": 13, "distanceKm": 823.49, "movingHours": 53.33, "elapsedHours": 80.68, "elevationGainM": 10614, "activityIds": ["17964683849", "17976599720", "17986857288", "18000812444", "18014047273", "18027274490", "18040699841", "18055155464", "18066024625", "18079504134", "18090556496", "18106799609", "18117169323"] },
-    "review": "생장에서 산티아고까지 13일간 자전거로 완주했다. 계획과 실제 숙박지를 조정하면서도 최종 일정의 핵심 목표를 달성했다.",
+    "review": "생장피에드포르에서 산티아고 데 콤포스텔라까지 프랑스길을 13일간 자전거로 완주했다. Strava 기준 823.49km, 상승 10,614m다.",
     "display": { "featured": true, "suggestedFormat": "13-day chapter" },
     "sources": ["strava", "google-docs"],
     "media": ["assets/images/journeys/camino/finish.jpg", "assets/images/journeys/camino/day-01-01.jpg", "assets/images/journeys/camino/day-05-01.jpg", "assets/images/journeys/camino/day-09-01.jpg", "assets/images/journeys/camino/day-13-01.jpg"]
@@ -118,7 +118,7 @@
     "status": "finished-with-dnf-stage",
     "reviewStatus": "verified",
     "next": ["제한 시간이 빠듯한 구간은 체크포인트별 마감 시각을 미리 표로 만들어 이동 중에도 바로 확인한다.", "상승 3,000m 이상 구간은 보급 정차를 짧게 하고 끌바 구간을 계획에 포함해 시간 여유를 확보한다.", "안동 어드벤처 재도전 전에는 야간 내리막 장비(라이트)와 경련 대응 보급을 점검한다."],
-    "analysis": "Strava 기준 4개 구간 885.59km, 상승 10,869m를 이동 42.5시간, 경과 52.97시간에 달렸다. 구간별 이동 시간은 영월 11:19:37(255.91km) → 안동 11:16:05(207.65km, 상승 3,267m) → 거창 9:49:23(208.65km) → 통영 10:04:54(213.41km)로, 상승이 가장 컸던 안동 구간의 평균 속도가 18.4km/h로 가장 낮았다. 안동 구간은 후기상 도착이 제한 시간보다 3분 늦어 DNF로 기록하며, 이후 두 구간은 21km/h 이상으로 회복했다.",
+    "analysis": "Strava 기준 4개 구간 885.59km, 상승 10,869m를 이동 42.5시간, 경과 52.97시간에 달렸다. 구간별 이동 시간은 영월 11:19:37(255.91km) → 안동 11:16:05(207.65km, 상승 3,267m) → 거창 9:49:23(208.65km) → 통영 10:04:54(213.41km)로, 상승이 가장 컸던 안동 구간의 평균 속도가 18.4km/h로 가장 낮았다. 안동 구간은 도착이 제한 시간보다 3분 늦어 DNF로 기록하며, 이후 두 구간은 21km/h 이상으로 회복했다.",
     "strava": { "activityCount": 4, "distanceKm": 885.59, "movingHours": 42.5, "elapsedHours": 52.97, "elevationGainM": 10869, "activityIds": ["20293599162", "20308271155", "20333563213", "20347841053"] },
     "stages": [
       { "title": "강 따라 영월까지", "distanceKm": 255.91, "status": "finished" },
@@ -126,7 +126,7 @@
       { "title": "거창 돼지구이", "distanceKm": 208.6, "status": "finished" },
       { "title": "통영 가는 길", "distanceKm": 213.42, "status": "finished" }
     ],
-    "review": "강을 따라 내려가 통영 바다에 닿는 200km급 퍼머넌트 4구간을 5일에 걸쳐 달렸다. 첫날 수면 부족 속에 영월까지 256km를 14시간 넘게 달렸고, 둘째 날 안동 어드벤처는 학가산을 끌고 오르고 어둠 속 내리막과 숨은 오르막에서 온몸 경련을 버텼지만 제한 시간을 3분 넘겨 DNF가 됐다. 결과에 승복하고 비 오는 날 하루를 쉰 뒤, 셋째 날 거창 구간으로 설욕했고 마지막 날 강이 바다로 바뀌는 순간을 보며 통영에 도착했다. 안동 구간 재도전을 남긴 채 '할 수 있다'를 다시 확인한 여정이었다.",
+    "review": "강을 따라 통영 바다까지 가는 200km급 퍼머넌트 4구간을 5일에 걸쳐 달렸다. 2일차 안동 어드벤처 구간은 제한 시간을 3분 넘겨 DNF가 됐고, 나머지 구간은 완주했다.",
     "display": { "featured": true, "suggestedFormat": "stage timeline" },
     "sources": ["strava"],
     "media": ["assets/images/journeys/2026-river-to-sea-challenge/cover.jpg", "assets/images/journeys/2026-river-to-sea-challenge/stage1-misty-sunrise.jpg", "assets/images/journeys/2026-river-to-sea-challenge/stage2-sunrise-road.jpg", "assets/images/journeys/2026-river-to-sea-challenge/strava-stage1.jpg"]
