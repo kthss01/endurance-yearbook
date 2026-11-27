@@ -107,6 +107,8 @@
     "category": "journey",
     "status": "finished",
     "reviewStatus": "verified",
+    "next": ["다음 해외 자전거 순례는 일차별 숙소와 보급 지점을 미리 정해 하루 거리 편차를 줄인다.", "비포장 구간이 많은 코스는 타이어와 짐 구성을 출발 전에 시험한다.", "동행자의 체력에 맞춘 휴식일을 일정에 미리 넣는다."],
+    "analysis": "Strava 기준 13일간 823.49km, 상승 10,614m를 이동 53.33시간, 경과 80.68시간에 달렸다. 하루 거리는 49.7~79.2km(평균 약 63.3km)로, 가장 길게 달린 날은 7일차(79.2km), 가장 짧은 날은 10일차(49.7km)였다. 이동 평균은 약 15.4km/h로 국내 장거리 라이딩보다 낮은데, 비포장 순례길과 전기자전거를 처음 타는 동생과의 동행, 성당·마을 방문 등이 함께 작용한 것으로 보인다. 경과 시간 중 약 27시간은 이동하지 않은 시간이다.",
     "story": {"url": "https://story.kakao.com/_F7q479/AQazVpx8aO0", "posts": [{ "day": 1, "url": "https://story.kakao.com/_F7q479/0HS2mhQrvn0" }, { "day": 3, "url": "https://story.kakao.com/_F7q479/111xaZUxwN9" }, { "day": 4, "url": "https://story.kakao.com/_F7q479/D7mKis7myOA" }, { "day": 5, "url": "https://story.kakao.com/_F7q479/HZNANq3d1oa" }, { "day": 7, "url": "https://story.kakao.com/_F7q479/4KfPsKzr1n9" }, { "day": 8, "url": "https://story.kakao.com/_F7q479/k9GTPdlt6Pa" }, { "day": 9, "url": "https://story.kakao.com/_F7q479/iOxHfT5m7Pa" }, { "day": 11, "url": "https://story.kakao.com/_F7q479/HIwEu9UnAPa" }, { "day": 12, "url": "https://story.kakao.com/_F7q479/kFPP0a5IaPa" }, { "day": 13, "url": "https://story.kakao.com/_F7q479/AQazVpx8aO0" }]},
     "strava": { "activityCount": 13, "distanceKm": 823.49, "movingHours": 53.33, "elapsedHours": 80.68, "elevationGainM": 10614, "activityIds": ["17964683849", "17976599720", "17986857288", "18000812444", "18014047273", "18027274490", "18040699841", "18055155464", "18066024625", "18079504134", "18090556496", "18106799609", "18117169323"] },
     "review": "생장에서 산티아고까지 13일간 자전거로 완주했다. 계획과 실제 숙박지를 조정하면서도 최종 일정의 핵심 목표를 달성했다.",
