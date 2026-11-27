@@ -981,6 +981,8 @@ const STRAVA_LINKS = {
   "2026-hongcheon-granfondo": "18246523308",
   "2026-samcheok-granfondo": "18804591837",
   "2026-seoul-200k-brevet": "18898997887",
+  "2026-bingrae-granfondo": "20510706046",
+  "2026-asics-gofree-10k": "21064492699",
 };
 const JOURNEY_STRAVA = {
   "2025-randonneurs-virtual-200k": "13630226993",
@@ -989,6 +991,8 @@ const JOURNEY_STRAVA = {
   "2026-camino-frances": "18117169323",
   "2026-seoul-200k-brevet": "18898997887",
   "2026-cheonan-200k-brevet": "20803744632",
+  "2025-jeju-1100-ride": "15632626913",
+  "2026-ic200-vector": "19650849197",
 };
 const KAKAO = "https://story.kakao.com/_F7q479";
 const KAKAO_POSTS = {
