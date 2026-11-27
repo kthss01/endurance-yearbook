@@ -1,5 +1,6 @@
 // 엔듀런스 연감 화면 렌더링
 // 데이터 상수(COPY, LABEL, MEDIA, JOURNEY_MEDIA, STRAVA_LINKS, JOURNEY_STRAVA, AI_ANALYSIS)는 app.js에서 불러온다.
+// 경로 지도는 Leaflet(index.html에서 로드)을 쓰고, 없으면 SVG로 대체한다.
 
 /* ───────── 기본 도구 ───────── */
 const $ = (s, el = document) => el.querySelector(s);
@@ -128,7 +129,7 @@ function runBucket(e) {
 const BUCKET_LABEL = { FULL: "풀코스", HALF: "하프", "10K": "10K" };
 
 /* ───────── 상태 ───────── */
-const state = { year: 2026, filter: "all", metric: "distanceKm", summaries: {}, events: {}, journeys: {}, videos: {}, detailList: [], detailIndex: 0, lb: { list: [], i: 0 } };
+const state = { year: 2026, filter: "all", metric: "distanceKm", summaries: {}, events: {}, journeys: {}, videos: {}, detailList: [], detailIndex: 0, lb: { list: [], i: 0 }, routes: null, rides: {}, rideRegion: "KR", rideMap: null };
 const allEvents = () => YEARS.flatMap((y) => state.events[y] || []);
 
 /* 유튜브 영상 목록(data/videos.json)을 "type:targetId"별로 묶는다.
@@ -153,8 +154,13 @@ async function loadVideos() {
 }
 const videosOf = (type, id) => state.videos[`${type}:${id}`] || [];
 
+// 경로·라이딩 데이터는 없어도 사이트가 동작하도록 실패를 무시한다
+const optionalJson = (url) => fetch(url).then((r) => (r.ok ? r.json() : null)).catch(() => null);
+
 async function load() {
   const videos = loadVideos();
+  const routes = optionalJson("data/routes.json");
+  const rides = Promise.all(YEARS.map((y) => optionalJson(`data/${y}/rides.json`)));
   for (const y of YEARS) {
     const [s, e, j] = await Promise.all(
       ["summary", "events", "journeys"].map((n) => fetch(`data/${y}/${n}.json`).then((r) => r.json())),
@@ -164,6 +170,8 @@ async function load() {
     state.journeys[y] = j;
   }
   state.videos = await videos;
+  state.routes = await routes;
+  (await rides).forEach((r, i) => r && (state.rides[YEARS[i]] = r));
   render();
 }
 
@@ -184,6 +192,7 @@ function render() {
   renderPBs();
   renderEvents();
   renderJourneys();
+  renderRideMap();
   $("#review-quote").textContent = c.quote;
   $("#review-points").innerHTML = c.points
     .map(([a, b], i) => `<article class="review-point reveal" style="--d:${i * 90}ms"><span>${String(i + 1).padStart(2, "0")}</span><strong>${a}</strong><p>${b}</p></article>`)
@@ -485,6 +494,170 @@ function renderJourneys() {
   });
 }
 
+/* ───────── 경로 지도 ─────────
+   data/routes.json(대회·여정 경로와 활동 통계)과 data/<year>/rides.json(연간 라이딩)을 그린다.
+   Leaflet을 불러오지 못하면 배경 지도 없이 SVG로 경로만 그린다. */
+const TILE_URL = "https://tile.openstreetmap.org/{z}/{x}/{y}.png"; // 어두운 화면에 맞게 CSS 필터로 색을 뒤집는다
+const TILE_ATTR = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+const TRACK_COLOR = { Swim: COLOR.swimming, Ride: COLOR.cycling, "Gravel Ride": COLOR.cycling, Run: COLOR.running, "Trail Run": COLOR.trail, Walk: COLOR.walking, Hike: COLOR.trail, Workout: COLOR.transition };
+const DAY_COLORS = ["#c4dc66", "#7c98e6", "#e8755f", "#5fb7cf", "#dfb262", "#a895dc", "#66bf8f"];
+const RIDE_TYPE_LABEL = { Ride: "로드·그래블", "E-Bike Ride": "전기자전거", "Virtual Ride": "실내(Zwift)", "Gravel Ride": "그래블", "Mountain Bike Ride": "MTB" };
+const REGION_LABEL = { KR: "국내", JP: "일본", EU: "유럽" };
+let detailMaps = [];
+
+// Google encoded polyline → [[lat, lon], ...]
+function decodePoly(str) {
+  const pts = [];
+  let i = 0, lat = 0, lon = 0;
+  while (i < str.length) {
+    for (const k of [0, 1]) {
+      let shift = 0, res = 0, b;
+      do { b = str.charCodeAt(i++) - 63; res |= (b & 0x1f) << shift; shift += 5; } while (b >= 0x20);
+      const d = res & 1 ? ~(res >> 1) : res >> 1;
+      if (k === 0) lat += d; else lon += d;
+    }
+    pts.push([lat / 1e5, lon / 1e5]);
+  }
+  return pts;
+}
+
+// lines: [{ pts, color, weight, opacity, tip }]
+function drawMap(el, lines, { fit = true, interactive = true } = {}) {
+  if (!lines.length) return null;
+  if (window.L) {
+    const map = L.map(el, { scrollWheelZoom: false, zoomSnap: 0.25, attributionControl: true, dragging: interactive, tap: false });
+    L.tileLayer(TILE_URL, { attribution: TILE_ATTR, maxZoom: 18 }).addTo(map);
+    const layer = L.featureGroup().addTo(map);
+    lines.forEach((ln) => {
+      const pl = L.polyline(ln.pts, { color: ln.color, weight: ln.weight || 3, opacity: ln.opacity ?? 0.9, lineJoin: "round" }).addTo(layer);
+      if (ln.tip) {
+        pl.bindTooltip(ln.tip, { sticky: true, className: "map-tip" });
+        pl.on("mouseover", () => { pl.setStyle({ weight: (ln.weight || 3) + 3, opacity: 1 }); pl.bringToFront(); });
+        pl.on("mouseout", () => pl.setStyle({ weight: ln.weight || 3, opacity: ln.opacity ?? 0.9 }));
+      }
+    });
+    if (fit) map.fitBounds(layer.getBounds(), { padding: [18, 18] });
+    map._tracks = layer;
+    return map;
+  }
+  // 대체 SVG: 위도 보정한 평면 투영
+  const all = lines.flatMap((l) => l.pts), lat0 = all.reduce((a, p) => a + p[0], 0) / all.length, k = Math.cos((lat0 * Math.PI) / 180);
+  const xs = all.map((p) => p[1] * k), ys = all.map((p) => -p[0]);
+  const [x0, x1, y0, y1] = [Math.min(...xs), Math.max(...xs), Math.min(...ys), Math.max(...ys)], w = x1 - x0 || 1e-6, h = y1 - y0 || 1e-6;
+  const pad = Math.max(w, h) * 0.06;
+  el.innerHTML = `<svg class="map-fallback" viewBox="${x0 - pad} ${y0 - pad} ${w + pad * 2} ${h + pad * 2}" preserveAspectRatio="xMidYMid meet">${lines
+    .map((l) => `<polyline points="${l.pts.map((p) => `${p[1] * k},${-p[0]}`).join(" ")}" fill="none" stroke="${l.color}" stroke-width="${(Math.max(w, h) / 300) * (l.weight || 3) / 2}" stroke-linejoin="round" stroke-linecap="round" opacity="${l.opacity ?? 0.9}">${l.tip ? `<title>${l.tip}</title>` : ""}</polyline>`)
+    .join("")}</svg>`;
+  return null;
+}
+
+const paceOf = (a) => {
+  if (!a.distanceKm || !a.movingTime) return "";
+  const sec = toSec(a.movingTime);
+  if (a.type === "Swim") return `${fmtPace(sec / a.distanceKm / 10)}/100m`;
+  if (/Run|Walk|Hike/.test(a.type)) return `${fmtPace(sec / a.distanceKm)}/km`;
+  return `${num(a.avgKmh ?? a.distanceKm / (sec / 3600))} km/h`;
+};
+
+// 상세 화면의 경로·기록 블록
+function routeBlock(kind, id) {
+  const tracks = state.routes?.[kind]?.[id] || [], acts = state.routes?.activities || {};
+  const rows = tracks.map((t) => ({ t, a: acts[t.id] })).filter((x) => x.a);
+  if (!rows.length) return "";
+  const has = (k) => rows.some((x) => x.a[k] != null);
+  const multi = rows.length > 1;
+  const cols = [
+    multi && ["구간", (x) => x.t.label || LABEL2[x.a.type] || x.a.type],
+    ["거리", (x) => `${num(x.a.distanceKm, 2)} km`],
+    ["이동", (x) => x.a.movingTime || "—"],
+    ["경과", (x) => x.a.elapsedTime || "—"],
+    has("elevationGainM") && ["상승", (x) => (x.a.elevationGainM != null ? `${num(x.a.elevationGainM, 0)} m` : "—")],
+    ["평균", (x) => paceOf(x.a) || "—"],
+    has("avgHr") && ["심박", (x) => (x.a.avgHr ? `${x.a.avgHr}${x.a.maxHr ? ` / ${x.a.maxHr}` : ""} bpm` : "—")],
+    has("avgWatts") && ["파워", (x) => (x.a.avgWatts ? `${x.a.avgWatts} W` : "—")],
+    has("cadence") && ["케이던스", (x) => (x.a.cadence ? `${x.a.cadence}` : "—")],
+  ].filter(Boolean);
+  const dot = (x, i) => `<i style="background:${trackColor(x, i, multi, kind)}"></i>`;
+  const hasMap = tracks.some((t) => t.poly);
+  const note = kind === "journeys" ? "개인정보 보호를 위해 각 경로의 시작·끝 1km는 지도에서 생략했습니다." : "경로는 Strava GPS 기록을 단순화해 그렸습니다.";
+  return `<section class="d-block route"><h3>ROUTE / 경로와 기록</h3>${hasMap ? `<div class="route-map" data-kind="${kind}" data-id="${id}" role="img" aria-label="${kind === "journeys" ? "여정" : "대회"} 이동 경로 지도"></div>` : ""}
+    <div class="route-table-wrap"><table class="route-table"><thead><tr>${multi ? "<th></th>" : ""}${cols.map(([h]) => `<th>${h}</th>`).join("")}</tr></thead><tbody>${rows
+      .map((x, i) => `<tr>${multi ? `<td>${dot(x, i)}</td>` : ""}${cols.map(([, f]) => `<td>${u(f(x))}</td>`).join("")}</tr>`)
+      .join("")}</tbody></table></div><small class="note">${hasMap ? note : "이 활동은 GPS 경로가 없어 기록만 표시합니다."} 출처: Strava 내보내기</small></section>`;
+}
+function trackColor(x, i, multi, kind) {
+  if (kind === "journeys" && multi) return DAY_COLORS[i % DAY_COLORS.length];
+  return TRACK_COLOR[x.a.type] || COLOR.journey;
+}
+function mountRouteMaps(box) {
+  detailMaps.forEach((m) => m.remove());
+  detailMaps = [];
+  $$(".route-map", box).forEach((el) => {
+    const kind = el.dataset.kind, tracks = state.routes[kind][el.dataset.id], acts = state.routes.activities;
+    const multi = tracks.length > 1;
+    // 멀티스포츠 기록처럼 경로 하나에 모든 종목이 담긴 경우는 중립색으로 '전체 경로'라고 표시한다
+    const shared = multi && tracks.filter((t) => t.poly).length === 1;
+    const total = tracks.reduce((a, t) => a + (acts[t.id]?.distanceKm || 0), 0);
+    const lines = tracks
+      .map((t, i) => ({ t, a: acts[t.id], i }))
+      .filter((x) => x.t.poly)
+      .map((x) => shared
+        ? { pts: decodePoly(x.t.poly), color: COLOR.triathlon, weight: 4, tip: `전체 경로 · ${dateKo(x.a.date)} · ${num(total, 1)} km` }
+        : { pts: decodePoly(x.t.poly), color: trackColor(x, x.i, multi, kind), weight: 4, tip: `${x.t.label ? `${x.t.label} · ` : ""}${dateKo(x.a.date)} · ${num(x.a.distanceKm, 1)} km` });
+    const m = drawMap(el, lines);
+    if (m) { detailMaps.push(m); setTimeout(() => { m.invalidateSize(); m.fitBounds(m._tracks.getBounds(), { padding: [18, 18] }); }, 450); }
+  });
+}
+
+/* ───────── 연간 라이딩 지도 ───────── */
+function renderRideMap() {
+  const sec = $("#ridemap");
+  const r = state.rides[state.year];
+  if (!r) { sec.hidden = true; return; }
+  sec.hidden = false;
+  const prev = state.rides[state.year - 1];
+  const delta = prev ? r.totalKm - prev.totalKm : null;
+  $("#ride-policy").textContent = `거리 합계는 모든 자전거 활동을 더했습니다. ${r.policy}`;
+  const kpis = [
+    ["자전거 총 거리", r.totalKm, "km", 0, delta != null ? `${delta >= 0 ? "▲" : "▼"} ${num(Math.abs(delta), 0)} km · ${state.year - 1}년 대비` : `${r.rides}회 라이딩`],
+    ["라이딩 횟수", r.rides, "회", 0, `평균 ${num(r.totalKm / r.rides, 1)} km`],
+    ["최장 거리", r.longestKm, "km", 1, "한 번에 달린 거리"],
+    ["누적 상승", r.elevationM, "m", 0, `에베레스트 ${num(r.elevationM / 8849, 1)}회`],
+    ["지도에 그린 경로", r.mapped.km, "km", 0, `${r.mapped.rides}회 · 실외 10km 이상`],
+  ];
+  $("#ride-kpis").innerHTML = kpis
+    .map(([a, v, unit, d, sub]) => `<div class="kpi"><span>${a}</span><strong><b data-count="${v}" data-dec="${d}">0</b><small class="unit">${unit}</small></strong><em>${sub}</em></div>`)
+    .join("");
+  const mx = Math.max(...r.byMonthKm, 1);
+  $("#ride-months").innerHTML = `<div class="ride-bars">${r.byMonthKm
+    .map((v, i) => `<div class="rb" data-tip="${i + 1}월 · ${num(v, 0)} km"><i style="height:${(v / mx) * 100}%"></i><span>${i + 1}</span></div>`)
+    .join("")}</div>`;
+  const tmax = Math.max(...Object.values(r.byType));
+  $("#ride-types").innerHTML = Object.entries(r.byType)
+    .map(([k, v]) => `<div class="rt"><span>${RIDE_TYPE_LABEL[k] || k}</span><div class="cmp-track"><i style="width:${(v / tmax) * 100}%"></i></div><b>${u(`${num(v, 0)} km`)}</b></div>`)
+    .join("");
+  $$("#ride-months .rb").forEach((b) => {
+    b.onmouseenter = (ev) => tip(ev, b.dataset.tip);
+    b.onmousemove = (ev) => tip(ev, b.dataset.tip);
+    b.onmouseleave = hideTip;
+  });
+  // 지역 버튼: 경로가 있는 지역만, 기본은 국내
+  const regions = [...new Set(r.tracks.map((t) => t.r))].sort((a, b) => Object.keys(REGION_LABEL).indexOf(a) - Object.keys(REGION_LABEL).indexOf(b));
+  if (!regions.includes(state.rideRegion)) state.rideRegion = regions.includes("KR") ? "KR" : regions[0];
+  $("#ride-regions").innerHTML = regions.length > 1
+    ? regions.map((g) => `<button data-region="${g}" class="${g === state.rideRegion ? "active" : ""}">${REGION_LABEL[g] || g}<small>${r.tracks.filter((t) => t.r === g).length}</small></button>`).join("")
+    : "";
+  $$("#ride-regions button").forEach((b) => (b.onclick = () => { state.rideRegion = b.dataset.region; renderRideMap(); }));
+  const lines = r.tracks
+    .filter((t) => t.r === state.rideRegion)
+    .map((t) => ({ pts: decodePoly(t.p), color: "#c4dc66", weight: 2.5, opacity: 0.55, tip: `${dateKo(t.d)} · ${num(t.km, 1)} km` }));
+  const el = $("#ride-map");
+  if (state.rideMap) { state.rideMap.remove(); state.rideMap = null; }
+  el.innerHTML = "";
+  state.rideMap = drawMap(el, lines);
+  $("#ride-map-caption").textContent = `${REGION_LABEL[state.rideRegion] || ""} ${lines.length}개 경로 · 선 위에 올리면 날짜와 거리가 보입니다.`;
+}
+
 /* ───────── 상세 화면 ───────── */
 function splitBar(lg, compact = false) {
   const total = lg.reduce((a, x) => a + (x.sec || 0), 0);
@@ -687,11 +860,12 @@ function showEvent(e) {
       ${lg.length > 1 ? `<section class="d-block"><h3>SPLITS / 종목별 구간</h3>${splitBar(lg)}${legTable(lg)}</section>` : ""}
       ${timeCompare(e)}
       <section class="d-block story"><h3>RECORD / 기록 요약</h3><p class="d-review">${e.review || ""}</p></section>
+      ${routeBlock("events", e.id)}
       ${an ? `<section class="d-block ai"><h3>AI REVIEW / 기록 분석</h3><ul class="facts">${an.facts.map((x) => `<li>${x}</li>`).join("")}</ul><p class="assess">${an.assessment}</p><small class="note">※ 공식 기록과 Strava 수치를 토대로 정리했으며, 수치로 확인할 수 없는 해석은 추정입니다.</small></section>` : ""}
       ${an ? "" : autoFacts(e)}${comparables(e)}
     </div>
     <aside class="d-side">
-      <section class="d-block strava"><h3>ROUTE / STRAVA</h3><div class="strava-card"><div class="route-mark">S</div><p>지도·고도·랩은 Strava 원본에서 확인하세요.</p>${links.length ? links.map(([u, l]) => `<a href="${u}" target="_blank" rel="noreferrer">${l} ↗</a>`).join("") : "<span>원본 활동 연결 준비 중</span>"}</div></section>
+      <section class="d-block strava"><h3>STRAVA / 원본 활동</h3><div class="strava-card"><div class="route-mark">S</div><p>고도 그래프·랩·구간 기록은 Strava 원본에서 확인하세요.</p>${links.length ? links.map(([u, l]) => `<a href="${u}" target="_blank" rel="noreferrer">${l} ↗</a>`).join("") : "<span>원본 활동 연결 준비 중</span>"}</div></section>
       ${an ? `<section class="d-block next"><h3>NEXT / 다음 도전</h3><ol>${an.next.map((x) => `<li>${x}</li>`).join("")}</ol></section>` : ""}
       <section class="d-block sources"><h3>SOURCES</h3><p>${(e.sources || []).join(" · ")}</p><p class="note">AI 분석과 기록 요약을 구분해 표시합니다.</p></section>
     </aside>
@@ -730,9 +904,10 @@ function showJourney(j) {
     ${videoBlock(videosOf("journey", j.id))}
     ${stages}
     <section class="d-block story"><h3>RECORD / 여정 기록</h3><p class="d-review">${j.review || j.summary || ""}</p></section>
+    ${routeBlock("journeys", j.id)}
     ${j.analysis ? `<section class="d-block ai"><h3>AI REVIEW / 기록 분석</h3><p class="assess">${j.analysis}</p></section>` : ""}
   </div><aside class="d-side">
-    <section class="d-block strava"><h3>ROUTE / STRAVA</h3><div class="strava-card"><div class="route-mark">S</div><p>경로와 일차별 기록은 Strava 원본에서 확인하세요.</p>${act ? `<a href="https://www.strava.com/activities/${act}" target="_blank" rel="noreferrer">활동 열기 ↗</a>` : "<span>원본 활동 연결 준비 중</span>"}</div></section>
+    <section class="d-block strava"><h3>STRAVA / 원본 활동</h3><div class="strava-card"><div class="route-mark">S</div><p>고도 그래프와 랩 기록은 Strava 원본에서 확인하세요.</p>${act ? `<a href="https://www.strava.com/activities/${act}" target="_blank" rel="noreferrer">활동 열기 ↗</a>` : "<span>원본 활동 연결 준비 중</span>"}</div></section>
     ${j.next?.length ? `<section class="d-block next"><h3>NEXT / 다음 도전</h3><ol>${j.next.map((x) => `<li>${x}</li>`).join("")}</ol></section>` : ""}
   </aside></div>
   ${gallery(pics, j.title)}
@@ -752,7 +927,7 @@ function mountDetail(html) {
   $$(".cmp-row[data-id]", box).forEach((b) => (b.onclick = () => b.dataset.id && openEvent(b.dataset.id)));
   $$(".vid-poster", box).forEach((b) => (b.onclick = () => playVideo(b)));
   // 섹션 바로가기 탭
-  const TAB = { SPLITS: "구간", STAGES: "구간", TIME: "시간 비교", RECORD: "기록", "AI REVIEW": "분석", DATA: "기록 요약", COMPARE: "비교", VIDEO: "영상", ROUTE: "Strava", NEXT: "다음 도전" };
+  const TAB = { SPLITS: "구간", STAGES: "구간", TIME: "시간 비교", RECORD: "기록", "AI REVIEW": "분석", DATA: "기록 요약", COMPARE: "비교", VIDEO: "영상", ROUTE: "경로", NEXT: "다음 도전" };
   const secs = [...$$(".d-block", box), ...$$(".gallery-section", box)]
     .map((el) => ({ el, label: el.matches(".gallery-section") ? "사진" : TAB[($("h3", el)?.textContent || "").split(" / ")[0].trim()] }))
     .filter((x) => x.label);
@@ -782,6 +957,7 @@ function mountDetail(html) {
     const list = JSON.parse(gs.dataset.pics);
     $$("figure", gs).forEach((f) => (f.onclick = () => openLightbox(list, +f.dataset.i)));
   }
+  mountRouteMaps(box);
 }
 function stepDetail(step) {
   const L = state.detailList, i = state.detailIndex + step;

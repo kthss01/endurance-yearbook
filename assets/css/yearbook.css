@@ -598,3 +598,52 @@ button.cmp-row:hover { background: rgba(255, 255, 255, .04); }
   .d-tabs { padding: 10px 100px 10px 16px; }
   .d-body { padding-top: 16px; }
 }
+
+/* ───────── 경로 지도 ───────── */
+.leaflet-container { background: #0e100e; font-family: var(--font); }
+.leaflet-tile-pane { filter: invert(1) hue-rotate(180deg) brightness(.78) contrast(.92) saturate(.45); }
+.leaflet-container .leaflet-control-attribution { background: rgba(18, 20, 18, .75); color: var(--dim); font-size: 10px; }
+.leaflet-container .leaflet-control-attribution a { color: var(--muted); }
+.leaflet-bar a { background: var(--surface-2); color: var(--text); border-color: var(--line-2); }
+.leaflet-bar a:hover { background: #2e302b; }
+.leaflet-tooltip.map-tip { padding: 6px 10px; border: 1px solid var(--line-2); border-radius: 8px; background: #000; color: var(--text); font-size: 12px; font-weight: 700; box-shadow: none; }
+.leaflet-tooltip.map-tip::before { display: none; }
+.map-fallback { width: 100%; height: 100%; }
+.route-map { height: 340px; margin-bottom: 16px; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: #0e100e; }
+.route-table-wrap { overflow-x: auto; }
+.route-table { width: 100%; border-collapse: collapse; font-size: 13px; white-space: nowrap; }
+.route-table th { padding: 6px 8px; color: var(--dim); font-size: 11px; font-weight: 700; letter-spacing: .06em; text-align: left; border-bottom: 1px solid var(--line-2); }
+.route-table td { padding: 8px; border-bottom: 1px solid var(--line); font-variant-numeric: tabular-nums; }
+.route-table td i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; }
+.d-block.route .note { display: block; margin-top: 10px; color: var(--dim); font-size: 11px; }
+
+/* ───────── 연간 라이딩 지도 ───────── */
+.ride-kpis { margin: 0 0 16px; }
+.ride-kpis .kpi em { color: var(--muted); font-weight: 500; }
+.ride-layout { display: grid; grid-template-columns: 1.8fr 1fr; gap: 16px; }
+.ride-map { height: 520px; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: #0e100e; }
+.ride-map-panel .note { display: block; margin-top: 10px; color: var(--dim); font-size: 12px; }
+.ride-regions { display: inline-flex; gap: 4px; padding: 4px; border: 1px solid var(--line-2); border-radius: 99px; }
+.ride-regions:empty { display: none; }
+.ride-regions button { padding: 6px 14px; border: 0; border-radius: 99px; background: transparent; color: var(--muted); font: 700 13px var(--font); cursor: pointer; }
+.ride-regions button small { margin-left: 6px; color: var(--dim); font-weight: 400; }
+.ride-regions button.active { background: var(--acid); color: #141612; }
+.ride-regions button.active small { color: #3b4220; }
+.ride-bars { display: grid; grid-template-columns: repeat(12, 1fr); gap: 6px; align-items: end; height: 200px; }
+.ride-bars .rb { display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; gap: 6px; cursor: default; }
+.ride-bars .rb i { width: 100%; min-height: 2px; border-radius: 4px 4px 0 0; background: var(--blue); transition: background .2s; }
+.ride-bars .rb:hover i { background: var(--acid); }
+.ride-bars .rb span { color: var(--dim); font-size: 11px; }
+.ride-types-head { margin-top: 26px; }
+.ride-types { display: grid; gap: 12px; }
+.ride-types .rt { display: grid; grid-template-columns: 92px 1fr auto; gap: 10px; align-items: center; font-size: 13px; }
+.ride-types .rt b { font-family: var(--num); font-size: 20px; font-weight: 400; }
+.ride-types .cmp-track { height: 8px; border-radius: 99px; background: var(--surface-2); overflow: hidden; }
+.ride-types .cmp-track i { display: block; height: 100%; border-radius: 99px; background: var(--acid); }
+@media (max-width: 1100px) { .ride-layout { grid-template-columns: 1fr; } }
+@media (max-width: 600px) {
+  .route-map { height: 260px; }
+  .ride-map { height: 380px; }
+  .ride-kpis { grid-template-columns: repeat(2, 1fr); }
+  .ride-regions button { padding: 6px 10px; }
+}

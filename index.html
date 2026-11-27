@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;700;900&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
   <link rel="stylesheet" href="assets/css/yearbook.css">
 </head>
 <body>
@@ -17,7 +18,7 @@
   <header class="topbar">
     <a class="wordmark" href="#top"><b>ENDURANCE</b><span>/ YEARBOOK</span></a>
     <nav class="section-nav" aria-label="섹션 이동">
-      <a href="#season">시즌</a><a href="#races">대회</a><a href="#journeys">여정</a><a href="#review">회고</a>
+      <a href="#season">시즌</a><a href="#races">대회</a><a href="#journeys">여정</a><a href="#ridemap">지도</a><a href="#review">회고</a>
     </nav>
     <div class="year-switch" role="tablist" aria-label="연도 선택">
       <span class="year-pill" aria-hidden="true"></span>
@@ -107,9 +108,31 @@
       <div id="journey-list" class="journey-grid"></div>
     </section>
 
-    <!-- 04 회고 -->
+    <!-- 04 라이딩 지도 -->
+    <section class="section section-ridemap" id="ridemap">
+      <div class="section-head reveal">
+        <div><span class="eyebrow">04 / RIDE MAP</span><h2>자전거로 그린 한 해</h2></div>
+        <p id="ride-policy"></p>
+      </div>
+      <div class="hero-kpis ride-kpis reveal" id="ride-kpis"></div>
+      <div class="ride-layout">
+        <div class="panel ride-map-panel reveal">
+          <header class="panel-head"><div><span class="eyebrow">WHERE I RODE</span><h3>다녀온 길</h3></div><div class="ride-regions" id="ride-regions" role="group" aria-label="지역 선택"></div></header>
+          <div class="ride-map" id="ride-map" role="img" aria-label="한 해 동안 자전거로 달린 경로 지도"></div>
+          <small class="note" id="ride-map-caption"></small>
+        </div>
+        <div class="panel ride-side reveal">
+          <header class="panel-head"><div><span class="eyebrow">MONTHLY</span><h3>월별 자전거 거리</h3></div></header>
+          <div id="ride-months"></div>
+          <header class="panel-head ride-types-head"><div><span class="eyebrow">BY TYPE</span><h3>자전거 종류별</h3></div></header>
+          <div id="ride-types" class="ride-types"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 회고 -->
     <section class="section section-review" id="review">
-      <div class="section-head reveal"><div><span class="eyebrow">04 / REVIEW</span><h2>시즌 노트</h2></div></div>
+      <div class="section-head reveal"><div><span class="eyebrow">05 / REVIEW</span><h2>시즌 노트</h2></div></div>
       <blockquote id="review-quote" class="reveal"></blockquote>
       <div id="review-points" class="review-points"></div>
     </section>
@@ -135,6 +158,7 @@
     <button class="lb-nav lb-next" aria-label="다음 사진">›</button>
   </dialog>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js" defer></script>
   <script src="assets/js/app.js" defer></script>
   <script src="assets/js/ui.js" defer></script>
 </body>
