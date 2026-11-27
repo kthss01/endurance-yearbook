@@ -548,8 +548,41 @@ function quickStats(e) {
   return items.slice(0, 5);
 }
 
+// 시즌 안에서의 위치와 개인 최고 여부 (상세 상단 배지)
+function highlights(e) {
+  const list = [...(state.events[e.year] || [])].sort((a, b) => a.date.localeCompare(b.date));
+  const i = list.findIndex((x) => x.id === e.id), out = [];
+  if (i >= 0) out.push(["시즌", `${i + 1}번째 대회 / ${list.length}`]);
+  if (i > 0) {
+    const gap = Math.round((new Date(e.date) - new Date(list[i - 1].date)) / 864e5);
+    out.push(["직전 대회 이후", gap === 0 ? "같은 날" : `${gap}일`]);
+  }
+  const rb = runBucket(e), sec = officialSec(e);
+  if (rb && sec) {
+    const best = Math.min(...allEvents().filter((x) => runBucket(x) === rb && officialSec(x)).map(officialSec));
+    if (sec === best) out.push([BUCKET_LABEL[rb], "★ 개인 최고"]);
+  }
+  return out;
+}
+// AI 분석이 아직 없는 대회용: 저장된 기록에서 계산한 요약
+function autoFacts(e) {
+  const s = e.strava || {}, o = e.official || {}, d = eventDistance(e), off = officialSec(e), mv = toSec(s.movingTime), f = [];
+  if (d) f.push(`거리 ${num(d, 2)} km${s.elevationGainM ? `, 누적 상승 ${num(s.elevationGainM, 0)} m (km당 ${num(s.elevationGainM / d, 1)} m)` : ""}입니다.`);
+  const t = off || mv;
+  if (t && d && ["running", "trail", "walking"].includes(e.category)) f.push(`평균 페이스는 ${fmtPace(t / d)}/km입니다.`);
+  if (mv && d && e.category === "cycling") f.push(`이동 평균 속도는 ${num(d / (mv / 3600))} km/h입니다.`);
+  if (off && mv && off - mv > 60) f.push(`공식 기록과 Strava 이동 시간의 차이는 약 ${Math.floor((off - mv) / 3600) ? `${Math.floor((off - mv) / 3600)}시간 ` : ""}${Math.round(((off - mv) % 3600) / 60)}분입니다.`);
+  if (o.rankOverall) f.push(`종합 ${o.rankOverall}위${o.rankMen ? `, 남자부 ${o.rankMen}위` : ""}로 기록됐습니다.`);
+  const lg = legs(e).filter((x) => x.sport !== "transition" && x.sec);
+  if (lg.length > 1) {
+    const tot = lg.reduce((a, x) => a + x.sec, 0), top = lg.reduce((a, x) => (x.sec > a.sec ? x : a));
+    f.push(`가장 오래 걸린 구간은 ${top.name || LABEL2[top.sport]}(${num((top.sec / tot) * 100, 0)}%)입니다.`);
+  }
+  if (f.length < 2) return "";
+  return `<section class="d-block ai"><h3>DATA / 기록 요약</h3><ul class="facts">${f.map((x) => `<li>${x}</li>`).join("")}</ul><small class="note">※ 저장된 기록에서 자동으로 계산한 요약입니다. 후기를 바탕으로 한 분석은 아직 없습니다.</small></section>`;
+}
 function badges(e) {
-  const o = e.official || {}, out = [];
+  const o = e.official || {}, out = [...highlights(e)];
   if (o.rankOverall) out.push(["종합", `${o.rankOverall}위`]);
   if (o.rankMen) out.push(["남자부", `${o.rankMen}위`]);
   if (o.ageGroupRank) out.push(["연령별", o.ageGroupRank]);
@@ -655,7 +688,7 @@ function showEvent(e) {
       ${timeCompare(e)}
       <section class="d-block story"><h3>MY STORY / 직접 쓴 후기</h3><p class="d-review">${e.review || ""}</p><a class="link-btn" href="${storyUrl}" target="_blank" rel="noreferrer">카카오스토리 원문 읽기 ↗</a></section>
       ${an ? `<section class="d-block ai"><h3>AI REVIEW / 기록 분석</h3><ul class="facts">${an.facts.map((x) => `<li>${x}</li>`).join("")}</ul><p class="assess">${an.assessment}</p><small class="note">※ 수치로 확인할 수 없는 원인은 직접 쓴 후기를 토대로 추정했으며 확정적 사실이 아닙니다.</small></section>` : ""}
-      ${comparables(e)}
+      ${an ? "" : autoFacts(e)}${comparables(e)}
     </div>
     <aside class="d-side">
       <section class="d-block strava"><h3>ROUTE / STRAVA</h3><div class="strava-card"><div class="route-mark">S</div><p>지도·고도·랩은 Strava 원본에서 확인하세요.</p>${links.length ? links.map(([u, l]) => `<a href="${u}" target="_blank" rel="noreferrer">${l} ↗</a>`).join("") : "<span>원본 활동 연결 준비 중</span>"}</div></section>
@@ -718,6 +751,32 @@ function mountDetail(html) {
   $$(".d-nav button", box).forEach((b) => (b.onclick = () => stepDetail(+b.dataset.step)));
   $$(".cmp-row[data-id]", box).forEach((b) => (b.onclick = () => b.dataset.id && openEvent(b.dataset.id)));
   $$(".vid-poster", box).forEach((b) => (b.onclick = () => playVideo(b)));
+  // 섹션 바로가기 탭
+  const TAB = { SPLITS: "구간", STAGES: "구간", TIME: "시간 비교", "MY STORY": "후기", "AI REVIEW": "분석", DATA: "기록 요약", COMPARE: "비교", VIDEO: "영상", ROUTE: "Strava", NEXT: "다음 도전" };
+  const secs = [...$$(".d-block", box), ...$$(".gallery-section", box)]
+    .map((el) => ({ el, label: el.matches(".gallery-section") ? "사진" : TAB[($("h3", el)?.textContent || "").split(" / ")[0].trim()] }))
+    .filter((x) => x.label);
+  if (secs.length > 2 && $(".d-body", box)) {
+    const nav = document.createElement("nav");
+    nav.className = "d-tabs";
+    nav.setAttribute("aria-label", "상세 섹션 이동");
+    nav.innerHTML = secs.map((x, i) => `<button data-i="${i}">${x.label}</button>`).join("");
+    $(".d-body", box).before(nav);
+    $$("button", nav).forEach((b) => (b.onclick = () => {
+      const el = secs[+b.dataset.i].el;
+      dlg.scrollTo({ top: el.getBoundingClientRect().top - dlg.getBoundingClientRect().top + dlg.scrollTop - 62, behavior: REDUCED ? "auto" : "smooth" });
+    }));
+  }
+  // 사진이 많으면 9장만 먼저 보여 주고 나머지는 접는다
+  const ms = $(".masonry", box);
+  if (ms && ms.children.length > 9) {
+    ms.classList.add("collapsed");
+    const more = document.createElement("button");
+    more.className = "more-btn";
+    more.textContent = `사진 ${ms.children.length - 9}장 더 보기`;
+    more.onclick = () => { ms.classList.remove("collapsed"); more.remove(); };
+    ms.after(more);
+  }
   const gs = $(".gallery-section", box);
   if (gs) {
     const list = JSON.parse(gs.dataset.pics);

@@ -583,3 +583,18 @@ button.cmp-row:hover { background: rgba(255, 255, 255, .04); }
 .masonry figure .credit { position: absolute; left: 0; right: 0; bottom: 0; }
 .credit a, .hero-credit a, #lb-cap a { color: var(--acid); }
 .hero-credit { position: absolute; right: 16px; bottom: 12px; z-index: 1; max-width: 60%; padding: 4px 10px; border-radius: 8px; background: rgba(0, 0, 0, .55); color: #cfcec7; font-size: 11px; text-align: right; }
+/* 상세 팝업 개선: 낮은 상단, 섹션 바로가기 탭, 사진 접기 */
+.d-hero { min-height: 380px; padding: 44px 50px 34px; }
+.d-tabs { position: sticky; top: 0; z-index: 8; display: flex; gap: 6px; margin-top: 18px; padding: 12px 130px 12px 50px; overflow-x: auto; border-block: 1px solid var(--line); background: color-mix(in srgb, var(--bg-2) 90%, transparent); backdrop-filter: blur(12px); scrollbar-width: none; }
+.d-tabs button { flex: none; padding: 7px 14px; border: 1px solid var(--line-2); border-radius: 99px; background: none; color: var(--muted); font-size: 13px; font-weight: 700; transition: color .2s, border-color .2s; }
+.d-tabs button:hover, .d-tabs button:focus-visible { color: var(--text); border-color: var(--acid); }
+.d-body { padding-top: 22px; }
+.d-review { max-width: 62ch; }
+.masonry.collapsed figure:nth-child(n + 10) { display: none; }
+.more-btn { display: block; margin: 8px auto 0; padding: 12px 22px; border: 1px solid var(--line-2); border-radius: 99px; background: var(--surface); font-weight: 700; font-size: 13px; transition: color .2s, border-color .2s; }
+.more-btn:hover { border-color: var(--acid); color: var(--acid); }
+@media (max-width: 600px) {
+  .d-hero { min-height: 300px; padding: 70px 20px 24px; }
+  .d-tabs { padding: 10px 100px 10px 16px; }
+  .d-body { padding-top: 16px; }
+}
