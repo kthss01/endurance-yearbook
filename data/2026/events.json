@@ -105,7 +105,8 @@
           "distanceKm": 10.34,
           "movingTime": "00:57:21"
         }
-      ]
+      ],
+      "activities": [{ "discipline": "swim", "activityId": "18259727592", "url": "https://www.strava.com/activities/18259727592" }, { "discipline": "run", "activityId": "18259727608", "url": "https://www.strava.com/activities/18259727608" }]
     },
     "story": {
       "url": "https://story.kakao.com/_F7q479/5WvWe6v7in9"
@@ -304,7 +305,8 @@
           "distanceKm": 9.8,
           "movingTime": "01:01:26"
         }
-      ]
+      ],
+      "activities": [{ "discipline": "swim", "activityId": "18817428189", "url": "https://www.strava.com/activities/18817428189" }, { "discipline": "bike", "activityId": "18817809728", "url": "https://www.strava.com/activities/18817809728" }, { "discipline": "run", "activityId": "18818086904", "url": "https://www.strava.com/activities/18818086904" }]
     },
     "story": {
       "url": "https://story.kakao.com/_F7q479/hKpWwxwKmpa"

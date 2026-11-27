@@ -314,7 +314,8 @@
         { "sport": "swimming", "distanceKm": 0.79, "movingTime": "00:17:04" },
         { "sport": "cycling", "distanceKm": 20.21, "movingTime": "00:58:06" },
         { "sport": "running", "distanceKm": 6.85, "movingTime": "00:47:47" }
-      ]
+      ],
+      "activities": [{ "discipline": "swim", "activityId": "14646280467", "url": "https://www.strava.com/activities/14646280467" }, { "discipline": "bike", "activityId": "14646747537", "url": "https://www.strava.com/activities/14646747537" }, { "discipline": "run", "activityId": "14646956164", "url": "https://www.strava.com/activities/14646956164" }]
     },
     "review": "서울판 철인3종이라 부를 만한 축제로, 롱핀 오리발과 대여 슈트를 쓰고 미니벨로로 참가했다. 오후 결혼식 일정 탓에 쉬엄쉬엄이 아닌 시간과의 싸움이 됐고, 주차 위치가 멀어 자전거와 러닝은 제대로 즐기지 못했다. 그래도 메인인 한강 횡단 오픈워터는 조류에 밀려 부이를 잡고 쉬어 가면서도 잘 마쳤다. 다음 날 내장산 그란폰도를 앞두고, 상반기 이후에는 수영과 러닝, 특히 수영에 집중하겠다는 계획을 남겼다.",
     "sources": ["strava", "kakao-story"],
@@ -392,7 +393,8 @@
           "distanceKm": 5.13,
           "movingTime": "00:34:23"
         }
-      ]
+      ],
+      "activities": [{ "discipline": "swim", "activityId": "14946829589", "url": "https://www.strava.com/activities/14946829589" }, { "discipline": "run", "activityId": "14947050469", "url": "https://www.strava.com/activities/14947050469" }]
     },
     "story": {
       "url": "https://story.kakao.com/_F7q479/eUfJ4GeaqkA"
@@ -468,7 +470,8 @@
       "segments": [
         { "sport": "swimming", "distanceKm": 1.51, "movingTime": "00:47:42" },
         { "sport": "running", "distanceKm": 5.19, "movingTime": "00:43:04" }
-      ]
+      ],
+      "activities": [{ "discipline": "swim", "activityId": "15238518718", "url": "https://www.strava.com/activities/15238518718" }, { "discipline": "run", "activityId": "15238981694", "url": "https://www.strava.com/activities/15238981694" }]
     },
     "review": "가장 큰 걱정거리였던 수영을 해낼 수 있다고 증명한 대회다. 1.5km를 00:47:26에 마치며 물에 대한 공포가 사라지고 호흡이 트였음을 느꼈고, 폭염으로 5km로 줄어든 러닝까지 01:33:33에 완주했다. 끝난 뒤 온몸에 쥐가 나 운전조차 힘들었고 결승선은 가장 마지막으로 밟았지만, 그 순간 가장 많은 박수를 받았다. 수영이 자전거만큼 자신감을 얻은 만큼, 다음 과제로 러닝과 감량을 꼽았다.",
     "sources": ["strava", "kakao-story"],
@@ -655,7 +658,8 @@
         { "sport": "running", "distanceKm": 5.18, "movingTime": "00:27:29" },
         { "sport": "cycling", "distanceKm": 41.23, "movingTime": "01:21:06" },
         { "sport": "running", "distanceKm": 10.18, "movingTime": "01:00:20" }
-      ]
+      ],
+      "activities": [{ "discipline": "run", "activityId": "16185590289", "url": "https://www.strava.com/activities/16185590289" }, { "discipline": "bike", "activityId": "16186071657", "url": "https://www.strava.com/activities/16186071657" }, { "discipline": "run", "activityId": "16186351951", "url": "https://www.strava.com/activities/16186351951" }]
     },
     "review": "수영이 취소되며 달리기 5km·자전거 40km·달리기 10km 듀애슬론으로 바뀐 대회를 02:55:21에 완주했다. 수원 프로젝트에 오며 외쳤던 철인 도전을 사실상 마무리하는 한 해의 결산 같은 대회였다. 자전거 조금 좋아하는 평범한 사람에게 불가능해 보였던 철인을 예정보다 오래 준비하며, 겁나고 두려운 순간과 막판 감량까지 포기하지 않고 버텨 왔다는 데 만족했다. 완전한 철인이 아닌 아쉬움보다 '할 수 있었다'는 확인과, 끝이 곧 새 시작이라는 다짐을 남겼다.",
     "sources": ["strava", "google-docs", "kakao-story"],
