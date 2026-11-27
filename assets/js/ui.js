@@ -1,5 +1,5 @@
 // 엔듀런스 연감 화면 렌더링
-// 데이터 상수(COPY, LABEL, MEDIA, JOURNEY_MEDIA, STRAVA_LINKS, JOURNEY_STRAVA, KAKAO, KAKAO_POSTS, AI_ANALYSIS)는 app.js에서 불러온다.
+// 데이터 상수(COPY, LABEL, MEDIA, JOURNEY_MEDIA, STRAVA_LINKS, JOURNEY_STRAVA, AI_ANALYSIS)는 app.js에서 불러온다.
 
 /* ───────── 기본 도구 ───────── */
 const $ = (s, el = document) => el.querySelector(s);
@@ -579,7 +579,7 @@ function autoFacts(e) {
     f.push(`가장 오래 걸린 구간은 ${top.name || LABEL2[top.sport]}(${num((top.sec / tot) * 100, 0)}%)입니다.`);
   }
   if (f.length < 2) return "";
-  return `<section class="d-block ai"><h3>DATA / 기록 요약</h3><ul class="facts">${f.map((x) => `<li>${x}</li>`).join("")}</ul><small class="note">※ 저장된 기록에서 자동으로 계산한 요약입니다. 후기를 바탕으로 한 분석은 아직 없습니다.</small></section>`;
+  return `<section class="d-block ai"><h3>DATA / 기록 요약</h3><ul class="facts">${f.map((x) => `<li>${x}</li>`).join("")}</ul><small class="note">※ 저장된 기록에서 자동으로 계산한 요약입니다. 상세 분석은 아직 없습니다.</small></section>`;
 }
 function badges(e) {
   const o = e.official || {}, out = [...highlights(e)];
@@ -674,7 +674,7 @@ function detailNav() {
 
 function showEvent(e) {
   const pics = MEDIA[e.id] || [], cover = coverPhoto(pics), c = COLOR[e.category] || "#c4dc66";
-  const storyUrl = KAKAO_POSTS[e.id] || e.story?.url || KAKAO, an = AI_ANALYSIS[e.id], lg = legs(e), bd = badges(e), links = stravaLinks(e);
+  const an = AI_ANALYSIS[e.id], lg = legs(e), bd = badges(e), links = stravaLinks(e);
   const html = `
   <div class="d-hero ${cover ? "has-photo" : ""}" style="--c:${c}">${cover ? `<img class="kb" src="${cover}"${focus(cover)} alt="">${credit(cover) ? `<small class="hero-credit">${creditHtml(credit(cover))}</small>` : ""}` : `<div class="d-hero-pattern"></div>`}
     <div class="d-hero-copy"><div class="d-tags"><span>${dateKo(e.date)}</span><span style="--c:${c}" class="cat">${LABEL2[e.category] || e.category}</span><span class="${e.status !== "finished" ? "warn" : ""}">${LABEL2[e.status] || e.status}</span></div>
@@ -686,14 +686,14 @@ function showEvent(e) {
       ${videoBlock(videosOf("event", e.id))}
       ${lg.length > 1 ? `<section class="d-block"><h3>SPLITS / 종목별 구간</h3>${splitBar(lg)}${legTable(lg)}</section>` : ""}
       ${timeCompare(e)}
-      <section class="d-block story"><h3>MY STORY / 직접 쓴 후기</h3><p class="d-review">${e.review || ""}</p><a class="link-btn" href="${storyUrl}" target="_blank" rel="noreferrer">카카오스토리 원문 읽기 ↗</a></section>
-      ${an ? `<section class="d-block ai"><h3>AI REVIEW / 기록 분석</h3><ul class="facts">${an.facts.map((x) => `<li>${x}</li>`).join("")}</ul><p class="assess">${an.assessment}</p><small class="note">※ 수치로 확인할 수 없는 원인은 직접 쓴 후기를 토대로 추정했으며 확정적 사실이 아닙니다.</small></section>` : ""}
+      <section class="d-block story"><h3>RECORD / 기록 요약</h3><p class="d-review">${e.review || ""}</p></section>
+      ${an ? `<section class="d-block ai"><h3>AI REVIEW / 기록 분석</h3><ul class="facts">${an.facts.map((x) => `<li>${x}</li>`).join("")}</ul><p class="assess">${an.assessment}</p><small class="note">※ 공식 기록과 Strava 수치를 토대로 정리했으며, 수치로 확인할 수 없는 해석은 추정입니다.</small></section>` : ""}
       ${an ? "" : autoFacts(e)}${comparables(e)}
     </div>
     <aside class="d-side">
       <section class="d-block strava"><h3>ROUTE / STRAVA</h3><div class="strava-card"><div class="route-mark">S</div><p>지도·고도·랩은 Strava 원본에서 확인하세요.</p>${links.length ? links.map(([u, l]) => `<a href="${u}" target="_blank" rel="noreferrer">${l} ↗</a>`).join("") : "<span>원본 활동 연결 준비 중</span>"}</div></section>
       ${an ? `<section class="d-block next"><h3>NEXT / 다음 도전</h3><ol>${an.next.map((x) => `<li>${x}</li>`).join("")}</ol></section>` : ""}
-      <section class="d-block sources"><h3>SOURCES</h3><p>${(e.sources || []).join(" · ")}</p><p class="note">AI 분석과 직접 쓴 후기를 구분해 표시합니다.</p></section>
+      <section class="d-block sources"><h3>SOURCES</h3><p>${(e.sources || []).join(" · ")}</p><p class="note">AI 분석과 기록 요약을 구분해 표시합니다.</p></section>
     </aside>
   </div>
   ${gallery(pics, e.title)}
@@ -729,7 +729,7 @@ function showJourney(j) {
   <div class="d-body"><div class="d-main">
     ${videoBlock(videosOf("journey", j.id))}
     ${stages}
-    <section class="d-block story"><h3>MY STORY / 여정 기록</h3><p class="d-review">${j.review || j.summary || ""}</p>${j.story?.url ? `<a class="link-btn" href="${j.story.url}" target="_blank" rel="noreferrer">카카오스토리 원문 읽기 ↗</a>` : ""}</section>
+    <section class="d-block story"><h3>RECORD / 여정 기록</h3><p class="d-review">${j.review || j.summary || ""}</p></section>
     ${j.analysis ? `<section class="d-block ai"><h3>AI REVIEW / 기록 분석</h3><p class="assess">${j.analysis}</p></section>` : ""}
   </div><aside class="d-side">
     <section class="d-block strava"><h3>ROUTE / STRAVA</h3><div class="strava-card"><div class="route-mark">S</div><p>경로와 일차별 기록은 Strava 원본에서 확인하세요.</p>${act ? `<a href="https://www.strava.com/activities/${act}" target="_blank" rel="noreferrer">활동 열기 ↗</a>` : "<span>원본 활동 연결 준비 중</span>"}</div></section>
@@ -752,7 +752,7 @@ function mountDetail(html) {
   $$(".cmp-row[data-id]", box).forEach((b) => (b.onclick = () => b.dataset.id && openEvent(b.dataset.id)));
   $$(".vid-poster", box).forEach((b) => (b.onclick = () => playVideo(b)));
   // 섹션 바로가기 탭
-  const TAB = { SPLITS: "구간", STAGES: "구간", TIME: "시간 비교", "MY STORY": "후기", "AI REVIEW": "분석", DATA: "기록 요약", COMPARE: "비교", VIDEO: "영상", ROUTE: "Strava", NEXT: "다음 도전" };
+  const TAB = { SPLITS: "구간", STAGES: "구간", TIME: "시간 비교", RECORD: "기록", "AI REVIEW": "분석", DATA: "기록 요약", COMPARE: "비교", VIDEO: "영상", ROUTE: "Strava", NEXT: "다음 도전" };
   const secs = [...$$(".d-block", box), ...$$(".gallery-section", box)]
     .map((el) => ({ el, label: el.matches(".gallery-section") ? "사진" : TAB[($("h3", el)?.textContent || "").split(" / ")[0].trim()] }))
     .filter((x) => x.label);

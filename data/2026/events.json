@@ -10,7 +10,7 @@
     "official": { "time": "02:16:29.24", "rankOverall": 1441, "rankMen": 1306 },
     "strava": { "distanceKm": 21.0, "movingTime": "02:16:12" },
     "review": "눈이 내린 다음 날 열린 한겨울 하프로, 집을 나서기 전부터 귀찮음·피곤함·추위와 먼저 싸워야 했다. 초반 눈 덮인 흙길에서 힘이 빠졌고 10km 갈림길, 15km 부근, 쥐가 오기 시작한 18km 이후까지 몇 번이고 포기를 떠올렸다. 그래도 몸의 힘을 빼고 속도를 낮춰 걷지 않고 끝까지 달려 02:16:29.24에 들어왔다. 결승 직후엔 기쁨보다 통증과 회복이 먼저였지만, 이 하프를 다음 목표인 첫 풀코스로 가는 한 걸음으로 받아들였다.",
-    "sources": ["strava", "google-docs", "kakao-story"],
+    "sources": ["strava", "google-docs"],
     "media": [
       "assets/images/events/2026-hangang-seoul-half/venue.jpg",
       "assets/images/events/2026-hangang-seoul-half/official-result.jpg",
@@ -28,7 +28,7 @@
     "official": { "time": "04:51:59", "milestone": "첫 풀코스" },
     "strava": { "distanceKm": 42.21, "movingTime": "04:51:00", "elevationGainM": 209 },
     "review": "첫 42.195km를 앞두고 기록 경쟁보다 오로지 완주를 목표로 삼았다. 한 주 동안 운동을 줄이고 쉬면서도 미지의 거리에 대한 불안은 남아 있었다. 나이트워크, 철인과 장거리 자전거에서 넘어온 경험을 떠올리며 ‘도망치지 말고 끝까지 가자’고 다짐했고, 04:51:59에 첫 풀코스를 완주했다. 이후 대청호와 인천 기록을 비교하는 출발점이 된 대회다.",
-    "sources": ["strava", "google-docs", "kakao-story"],
+    "sources": ["strava", "google-docs"],
     "media": [
       "assets/images/events/2026-gumi-full-marathon/cover.jpg",
       "assets/images/events/2026-gumi-full-marathon/official-certificate.jpg",
@@ -49,13 +49,8 @@
       "rankOverall": 2296,
       "distanceKm": 10
     },
-    "story": {
-      "url": "https://story.kakao.com/_F7q479/CH7b2UcvGn0"
-    },
     "review": "전년 서울 마라톤 급수 자원봉사로 얻은 참가권으로 10km를 00:52:26에 달렸다. 전날 춘천 라이딩과 수면 부족으로 피곤했지만 5km 26:10, 10km 52:26으로 km당 5분 14~15초 페이스를 끝까지 유지했고, 풀코스 뒤 회복해 다시 빨라진 몸에 감사했다. 다음 목표로 동해안 일주와 스페인 순례를 바라봤다.",
-    "sources": [
-      "kakao-story"
-    ],
+    "sources": [],
     "media": [
       "assets/images/events/2026-seoul-marathon-10k/cover.jpg",
       "assets/images/events/2026-seoul-marathon-10k/official-certificate.jpg",
@@ -74,7 +69,7 @@
     "official": { "time": "05:09:22.80", "bib": 1313, "course": "그란폰도 121.52km", "rankOverall": 364, "rankMen": 333 },
     "strava": { "distanceKm": 119.64, "movingTime": "04:48:12", "elevationGainM": 1727 },
     "review": "산티아고 순례 뒤 그래블과 실내 로라만 타다가 오랜만에 로드로 나선 대회였다. 대회 속에서 로드에 다시 적응하며 속도와 가벼움을 실감했고, 남을 따라가지 않고 내 페이스를 고집하느라 쉬어 가지 못한 채 전력으로 달렸다. 업힐 뒤 이어진 약 40km 완만한 내리막에서 마음껏 질주했고, 쥐와 몸의 무리 속에서도 05:09:22.80에 완주했다. 평지·업힐·역풍에는 자신감을 얻었고, 남은 과제로 다운힐 공포를 적었다.",
-    "sources": ["strava", "google-docs", "kakao-story"],
+    "sources": ["strava", "google-docs"],
     "media": [
       "assets/images/events/2026-hongcheon-granfondo/cover.jpg",
       "assets/images/events/2026-hongcheon-granfondo/official-result.jpg",
@@ -108,13 +103,9 @@
       ],
       "activities": [{ "discipline": "swim", "activityId": "18259727592", "url": "https://www.strava.com/activities/18259727592" }, { "discipline": "run", "activityId": "18259727608", "url": "https://www.strava.com/activities/18259727608" }]
     },
-    "story": {
-      "url": "https://story.kakao.com/_F7q479/5WvWe6v7in9"
-    },
     "review": "전날 홍천 그란폰도를 완주하고 바로 이어 표준거리(수영 1.5km·러닝 10km) 아쿠아슬론에 나섰다. 기록증은 아직 나오지 않았지만 Strava 기준 수영 38:05, 러닝 57:21로, 작년 익산에서 꼴찌로 들어왔던 때와 달리 끝까지 좋은 페이스로 수영하고 달렸다. 쥐가 계속 올라왔지만 1년 사이의 준비를 확인했고, 다음 주 철인3종을 위한 자격 증명을 했다고 여겼다.",
     "sources": [
-      "strava",
-      "kakao-story"
+      "strava"
     ],
     "media": [
       "assets/images/events/2026-iksan-aquathlon-standard/cover.jpg",
@@ -149,7 +140,7 @@
       ]
     },
     "review": "2026년 철인 시즌의 첫 대회. 비 때문에 사이클과 러닝 코스가 축소됐지만 수영 1.53km부터 전환, 사이클, 러닝까지 멈추지 않고 01:49:07에 완주했다. 같은 날 카카오스토리에는 결과 자체보다 한계를 부정하고 끝까지 나답게 살아가려는 감정을 남겼다. 예상하지 못한 조건에서도 모든 종목을 이어낸 경험은 이후 양산 표준거리 도전의 출발점이 됐다.",
-    "sources": ["strava", "kakao-story"],
+    "sources": ["strava"],
     "media": [
       "assets/images/events/2026-changwon-triathlon/cover.jpg",
       "assets/images/events/2026-changwon-triathlon/official-result.jpg"
@@ -174,13 +165,9 @@
       "movingTime": "00:55:41",
       "elevationGainM": 12
     },
-    "story": {
-      "url": "https://story.kakao.com/_F7q479/5LABVTcUtn9"
-    },
     "review": "오랜만의 10km를 카본화 없이 가볍게 뛰어 00:55:37에 마쳤다. 족저근막염이 떠올라 속도를 더 내지 않고 지치면 페이스를 줄이며 달렸고, 빠르게 뛰는 것보다 끝까지 최선을 다하며 즐기는 게 중요하다는 걸 되새겼다. 돌아오는 길 한강을 따라 탄 전기자전거 위에서 삶의 감사함을 느꼈다.",
     "sources": [
-      "strava",
-      "kakao-story"
+      "strava"
     ],
     "media": [
       "assets/images/events/2026-seoul-citizen-10k/cover.jpg",
@@ -210,7 +197,7 @@
       ]
     },
     "review": "창원 단축 대회 2주 뒤 처음으로 표준거리 세 종목을 온전히 이어 03:12:59에 완주했다. 수영 00:48:33, 사이클 01:14:00, 러닝 01:02:35로 각 구간을 버텼다. 이틀 뒤에는 성취감과 함께 밀려오는 피로와 고통, 절실한 휴식을 기록하면서도 끝을 선언하는 대신 다음 설악 도전을 생각했다. 첫 표준거리 완주가 곧 다음 시작으로 이어진 날이었다.",
-    "sources": ["strava", "google-docs", "kakao-story"],
+    "sources": ["strava", "google-docs"],
     "media": [
       "assets/images/events/2026-yangsan-triathlon/cover.jpg",
       "assets/images/events/2026-yangsan-triathlon/official-result.jpg",
@@ -238,13 +225,9 @@
       "elapsedTime": "02:02:24",
       "elevationGainM": 40
     },
-    "story": {
-      "url": "https://story.kakao.com/_F7q479/9ClwAlVJFo0"
-    },
     "review": "오랜만의 하프를 02:02:21.34에 완주했다. 러닝 훈련량은 부족했지만 철인 완주 경험과 감량 덕에 기록 향상을 노렸고, 무릎과 발바닥에 처음 해 본 스포츠 테이핑이 효과를 봐 큰 위기 없이 즐겁게 달렸다. 2시간 벽까지 얼마 남지 않았음을 확인했고, 쓸림 방지는 풀코스 전에 챙길 숙제로 남겼다.",
     "sources": [
-      "strava",
-      "kakao-story"
+      "strava"
     ],
     "media": [
       "assets/images/events/2026-yeomyeong808-half/cover.jpg",
@@ -269,7 +252,7 @@
     "official": { "time": "05:41:22.8", "bib": 1194 },
     "strava": { "distanceKm": 131.73, "movingTime": "05:24:00", "elevationGainM": 1916 },
     "review": "131.73km와 누적 상승 1,916m의 그란폰도를 공식 05:41:22.8에 완주했다. 대회 이틀 뒤에는 목과 허리 통증, 고갈된 에너지를 먹는 것으로 버티는 상태를 적으며 휴식의 필요성을 분명히 기록했다. 다음 설악을 앞두고 훈련과 회복의 경계를 다시 확인하게 한 대회였다.",
-    "sources": ["strava", "kakao-story"],
+    "sources": ["strava"],
     "media": [
       "assets/images/events/2026-samcheok-granfondo/cover.jpg",
       "assets/images/events/2026-samcheok-granfondo/official-result.jpg",
@@ -308,13 +291,9 @@
       ],
       "activities": [{ "discipline": "swim", "activityId": "18817428189", "url": "https://www.strava.com/activities/18817428189" }, { "discipline": "bike", "activityId": "18817809728", "url": "https://www.strava.com/activities/18817809728" }, { "discipline": "run", "activityId": "18818086904", "url": "https://www.strava.com/activities/18818086904" }]
     },
-    "story": {
-      "url": "https://story.kakao.com/_F7q479/hKpWwxwKmpa"
-    },
     "review": "전날 삼척 그란폰도의 피로를 안고 작년에 이어 쉬엄쉬엄 한강 3종 상급자 코스(수영 1km·따릉이 20km·러닝 10km)에 나섰다. 수영 중 숨이 막히자 배영으로 누워 호흡을 가다듬었고, 방류로 빨라진 물살에 맨 오른쪽에서 맨 왼쪽까지 밀려 줄을 잡고 버티며 빠져나왔다. 따릉이 20km는 59:58, 근전환 훈련 삼아 쉬지 않고 이어 간 러닝 10km는 1:01:26으로 마쳐 늘어난 체력을 확인했다.",
     "sources": [
-      "strava",
-      "kakao-story"
+      "strava"
     ],
     "media": [
       "assets/images/events/2026-hangang-slow-triathlon/cover.jpg",
@@ -348,7 +327,7 @@
     "reviewStatus": "verified",
     "strava": { "distanceKm": 206.21, "movingTime": "08:22:48", "elevationGainM": 1812 },
     "review": "206.21km, 누적 상승 1,812m를 이동 시간 08:22:48에 달린 서울 200K 브레베다. 카카오스토리에 남긴 인증서와 브레베 카드는 체크포인트와 제한 시간 안에서 스스로 주행을 운영해 공식 인증을 얻었음을 보여준다.",
-    "sources": ["strava", "kakao-story"],
+    "sources": ["strava"],
     "media": [
       "assets/images/events/2026-seoul-200k-brevet/cover.jpg",
       "assets/images/events/2026-seoul-200k-brevet/brevet-certificate.jpg",
@@ -371,13 +350,9 @@
       "distanceKm": 0.948,
       "movingTime": "00:21:31"
     },
-    "story": {
-      "url": "https://story.kakao.com/_F7q479/4ZDAniIEwO9"
-    },
     "review": "대회가 취소된다는 소식에 양양에서 자전거를 타려다 재개 소식을 듣고 급히 서울로 돌아와 나섰다. 오리발(롱핀)과 슈트를 착용해 948m를 21:31에 여유 있게 건넜고, 전날 수영 특훈의 성과를 확인했다. 설악 그란폰도 취소로 허망했던 상반기를 정리하며 풀코스 마라톤과 감량 준비를 다짐했다.",
     "sources": [
-      "strava",
-      "kakao-story"
+      "strava"
     ],
     "media": [
       "assets/images/events/2026-hangang-cross-swim/cover.jpg",
@@ -413,13 +388,9 @@
       "elapsedTime": "03:30:35",
       "elevationGainM": 948
     },
-    "story": {
-      "url": "https://story.kakao.com/_F7q479/CSaXRZgZ5P0"
-    },
     "review": "전날 밤 사북역에서 숙소까지 어둠 속을 달리고, 새벽에는 산 하나를 넘어 대회장에 도착했다. 난이도가 낮고 평지가 많은 92km 코스를 로드로 쏟아붓듯 질주해 03:29:44로 종합 77위·연령대 12위를 했다. 서울행 버스 시간에 쫓겨 거의 쉬지 않고 한계를 찍었고, 설악 취소 뒤 지쳐 있던 마음을 속도로 풀어낸 하루였다.",
     "sources": [
-      "strava",
-      "kakao-story"
+      "strava"
     ],
     "media": [
       "assets/images/events/2026-jeongseon-granfondo/cover.jpg",
@@ -453,13 +424,9 @@
       "distanceKm": 1.5,
       "movingTime": "00:26:38"
     },
-    "story": {
-      "url": "https://story.kakao.com/_F7q479/F3oyHeEZdpA"
-    },
     "review": "처음 나선 실내 장거리 수영대회에서 오리발(롱핀) 1.5km를 26:38.68에 마쳤다. 30분 제한의 부담과 좁은 레인에서 쫓기는 스트레스로 출발 전까지 도망치고 싶었지만, 레인의 앞선 두 사람을 차례로 추월하고 턴에서도 쉬지 않고 끝까지 밀어붙였다. 오랜만에 전력을 다한 경험으로 다음 도전에 대한 자신감을 얻었다.",
     "sources": [
-      "strava",
-      "kakao-story"
+      "strava"
     ],
     "media": [
       "assets/images/events/2026-hwaseong-fin-swim/cover.jpg",
@@ -477,9 +444,8 @@
     "reviewStatus": "verified",
     "official": { "time": "01:27:06", "bib": 1313, "swimTime": "00:47:11", "transitionTime": "00:05:53", "verticalRunTime": "00:34:02", "rankOverall": 624, "rankMen": 507 },
     "strava": { "swimDistanceKm": 1.51, "verticalFinish": "롯데타워 123층", "activities": [{ "discipline": "swim", "activityId": "19275097487", "url": "https://www.strava.com/activities/19275097487" }, { "discipline": "transition", "activityId": "19275097493", "url": "https://www.strava.com/activities/19275097493" }, { "discipline": "vertical-run", "activityId": "19275097452", "url": "https://www.strava.com/activities/19275097452" }] },
-    "story": { "url": "https://story.kakao.com/_F7q479/6HAVzVSBio9", "postedAt": "2026-07-13T00:42:00+09:00" },
     "review": "석촌호수 1.5km 수영 뒤 롯데타워 123층을 계단으로 오르는 아쿠아슬론이다. 슈트 없이 들어간 물에서 다리가 가라앉고 초반 몸싸움에 휩쓸려 500m까지는 포기를 떠올릴 만큼 힘들었지만, 페이스를 낮추고 리듬을 되찾아 00:47:11에 수영을 마쳤다. 처음 해 본 수직 마라톤은 뛰기엔 벅차 빠른 걸음으로 꾸준히 올랐고, 업힐 라이딩 경험을 떠올리며 많은 참가자를 따라잡아 총 01:27:06에 완주했다. 걱정하던 수영을 잘 버틴 데 만족하며 다음 주 트레일러닝을 준비했다.",
-    "sources": ["strava", "kakao-story"],
+    "sources": ["strava"],
     "media": [
       "assets/images/events/2026-lotte-aquathlon/cover.jpg",
       "assets/images/events/2026-lotte-aquathlon/official-result.jpg",
@@ -496,9 +462,8 @@
     "reviewStatus": "verified",
     "official": { "time": "03:45:22", "milestone": "첫 트레일러닝", "bib": 3386, "course": "SUN.18K", "rankOverall": 407, "rankMen": 319 },
     "strava": { "distanceKm": 18.62, "movingTime": "03:24:18", "elevationGainM": 980, "activityId": "19370536509", "url": "https://www.strava.com/activities/19370536509" },
-    "story": { "url": "https://story.kakao.com/_F7q479/9BLlsmohoP0", "postedAt": "2026-07-19T23:44:00+09:00" },
     "review": "비 내리는 장수에서 새벽 셔틀을 타고 두 번째로 신어 보는 트레일화로 나선 첫 트레일러닝이었다. 산에서 하는 러닝 정도로 여겼던 생각은 로프를 잡아야 하는 급경사와 진흙길 앞에서 반성으로 바뀌었고, 오르막에서는 허리와 심박이, 내리막에서는 발톱과 무릎이 버티기 어려웠다. 그래도 포기는 떠올리지 않고 03:45:22에 완주했다. 비를 핑계로 가지 않을 이유가 많았는데도 귀찮음을 이기고 뛰어든 것 자체를 이번 도전의 가장 큰 의미로 남겼다.",
-    "sources": ["strava", "kakao-story"],
+    "sources": ["strava"],
     "media": [
       "assets/images/events/2026-cool-valley-trail/cover.jpg",
       "assets/images/events/2026-cool-valley-trail/official-result.jpg",
@@ -523,13 +488,9 @@
       "elapsedTime": "07:04:12",
       "elevationGainM": 108
     },
-    "story": {
-      "url": "https://story.kakao.com/_F7q479/GL1hk2RX1pA"
-    },
     "review": "18:00에 출발해 걷기와 달리기를 섞어 42km를 07:13:20에 마쳤다. 초반에 치고 나가 병목을 피했지만 후반에는 22시 출발 14K 참가자와 겹쳤고, 물집 때문에 막판은 걸었다. 비경쟁 걷기 대회라 혼자 달리는 심심함과 생각보다 큰 피로에 우울하기도 했지만, 위기 없이 전략적으로 쉬며 완주했다.",
     "sources": [
-      "strava",
-      "kakao-story"
+      "strava"
     ],
     "media": [
       "assets/images/events/2026-hangang-night-walk-42k/cover.jpg",
@@ -566,9 +527,8 @@
       "transitions": { "t1": "00:05:24", "t2": "00:04:20" }
     },
     "strava": { "swimDistanceKm": 1.45, "bikeDistanceKm": 38.61, "runDistanceKm": 9.61, "activities": [{ "discipline": "swim", "activityId": "19857899795", "url": "https://www.strava.com/activities/19857899795" }, { "discipline": "bike", "activityId": "19857899802", "url": "https://www.strava.com/activities/19857899802" }, { "discipline": "run", "activityId": "19857899854", "url": "https://www.strava.com/activities/19857899854" }] },
-    "story": { "url": "https://story.kakao.com/_F7q479/gKcGvKqzlQA", "postedAt": "2026-08-23T13:08:00+09:00" },
     "review": "스스로 두 번째 철인 완주로 꼽은 대회다. 수영에서는 작은 경기복에 숨이 막히고, 좁은 구간의 병목과 물풀·부유물, 뒤에서 몰려온 그룹과의 몸싸움까지 겹쳐 처음으로 포기를 떠올렸다. 팔과 발차기를 늦춰 심박을 가라앉히며 버틴 끝에 00:46:41로 수영을 마쳤고, 오랜만에 탄 자전거에서는 쌓아 둔 서러움을 원동력 삼아 많은 참가자를 제치며 01:07:16을 기록했다. 러닝은 전환 구간에서 심박을 낮추고 천천히 출발해 언덕을 걷지 않고 넘었고, 03:09:52로 무사히 완주했다.",
-    "sources": ["strava", "google-docs", "kakao-story"],
+    "sources": ["strava", "google-docs"],
     "media": [
       "assets/images/events/2026-seolbong-triathlon/cover.jpg",
       "assets/images/events/2026-seolbong-triathlon/official-result.jpg",
@@ -585,9 +545,8 @@
     "reviewStatus": "verified",
     "official": { "time": "03:26:34", "bib": 2273, "course": "20.18K", "rankOverall": 260, "rankMen": 183 },
     "strava": { "distanceKm": 21.6, "movingTime": "03:18:56", "elevationGainM": 872, "activityId": "19956405053", "url": "https://www.strava.com/activities/19956405053" },
-    "story": { "url": "https://story.kakao.com/_F7q479/1DDc1Ry7qP9", "postedAt": "2026-08-30T11:34:00+09:00" },
     "review": "숙소에서 잠을 설치고 나섰지만 비가 그친 시원한 날씨 덕에 컨디션은 좋았던 두 번째 트레일러닝이다. 먼저 출발하는 44km 주자들을 보며 언젠가를 그려 보다가, 출발선의 열기에 휩쓸리지 않도록 페이스를 조심했다. 한 번 겪어 본 경험 덕에 병목과 속도를 낼 구간이 예상되어 겁이 덜했고, 오르막은 쉬지 않고 걷듯 오르며 내리막에서 속도를 유지하는 기술이 나아졌음을 느꼈다. 마지막 구간까지 페이스를 조절해 03:26:34로 완주했고, 다음 30km 트레일도 해볼 만하다는 자신감을 얻었다.",
-    "sources": ["strava", "kakao-story"],
+    "sources": ["strava"],
     "media": [
       "assets/images/events/2026-daegwallyeong-trail/cover.jpg",
       "assets/images/events/2026-daegwallyeong-trail/official-result.jpg",
@@ -605,7 +564,7 @@
     "official": { "time": "06:46:47.23", "bib": 1412, "course": "그란폰도 153.2km", "rankOverall": 502, "rankMen": 468 },
     "strava": { "distanceKm": 154.36, "movingTime": "06:21:33", "elevationGainM": 1988 },
     "review": "2025년 분기점 컷오프로 메디오폰도 완주에 그쳤던 대회에 다시 서서 그란폰도 완주를 이뤘다. 자전거를 많이 타지 못한 채 다른 그란폰도보다 30km 긴 코스에 나서며 구간별 통과 시간표와 파워젤·쥐 방지 보급을 챙겼고, 줄이 긴 1·2보급소는 건너뛰었다. 그란폰도·메디오폰도 분기에는 마감 11:30보다 3분 이른 11:27에 도착했다. 이화령과 여우목고개에서 오른쪽 허벅지에 쥐가 나고 허리와 안장 통증이 이어졌지만 끌바 없이 페이스를 지켜 06:46:47에 완주했고, 마지막 평지에서 후회 없이 쏟아붓자는 마음을 새겼다.",
-    "sources": ["strava", "google-docs", "kakao-story"],
+    "sources": ["strava", "google-docs"],
     "media": [
       "assets/images/events/2026-mungyeong-granfondo/cover.jpg",
       "assets/images/events/2026-mungyeong-granfondo/official-certificate.jpg",
@@ -623,7 +582,7 @@
     "official": { "time": "05:31:45", "bib": 1024, "course": "30K", "rankOverall": 82, "rankMen": 69 },
     "strava": { "distanceKm": 31.29, "movingTime": "05:10:37", "elevationGainM": 1587 },
     "review": "20km를 겨우 넘겨 본 상태에서 나선 첫 30km 트레일이다. 초반이 완만하고 빵을 나눠 주는 분위기에 긴장이 풀리기 쉬웠지만, 강원도 산의 30km는 풀코스급이라 여기고 운탄고도에서 페이스를 끌어올리지 않았다. 그 덕분에 길게 내려갔다가 다시 올라오는 후반 구간에서 왼발목·발가락 쥐와 무릎 부담을 겪으면서도 아껴 둔 파워젤로 버텨 05:31:45에 완주했다. 마주 오는 주자들과 주고받은 응원, 가족이 함께한 결승이 힘이 됐고, 끝난 뒤엔 기쁨보다 생각이 많아진 하루로 남겼다.",
-    "sources": ["strava", "kakao-story"],
+    "sources": ["strava"],
     "media": [
       "assets/images/events/2026-bbang-trail-30k/cover.jpg",
       "assets/images/events/2026-bbang-trail-30k/official-result.jpg",
@@ -641,7 +600,7 @@
     "official": { "swimTime": "00:53:13", "runTime": "00:56:34", "result": "수영 컷오프" },
     "strava": { "swimDistanceKm": 1.54, "runDistanceKm": 10.22, "activities": [{ "discipline": "swim", "activityId": "20235758966", "url": "https://www.strava.com/activities/20235758966" }, { "discipline": "run", "activityId": "20235759050", "url": "https://www.strava.com/activities/20235759050" }] },
     "review": "수영 1.5km를 00:53:13에 마쳤지만 컷오프로 기록칩을 반납했고, 러닝은 뛸 수 있다는 안내에 따라 10km를 00:56:34에 뛰었다. 러닝 페이스는 좋았지만 공식 결과는 수영 컷오프다. 여러 번 참가한 대회라 자신한 나머지 슈트를 입지 않았고, 4바퀴를 도는 코스와 바퀴마다 드나들며 잃는 시간, 심한 너울을 현장에서야 알았다. 속도를 4바퀴째에야 올린 것을 아쉬워하며, 모든 도전은 진심을 다해야 겨우 닿는다는 것과 좌절에서 다시 일어서는 과정까지가 성장이라는 다짐을 남겼다.",
-    "sources": ["strava", "kakao-story"],
+    "sources": ["strava"],
     "media": [
       "assets/images/events/2026-iksan-aquathlon-cutoff/cover.jpg",
       "assets/images/events/2026-iksan-aquathlon-cutoff/swim-strava.jpg",
@@ -663,13 +622,9 @@
       "rankOverall": 147,
       "rankMen": 140
     },
-    "story": {
-      "url": "https://story.kakao.com/_F7q479/9E6Uc64wcQ0"
-    },
     "review": "부산의 대교 7개를 건너는 77km 자전거 축제로, 전년에 추가 접수조차 못 했던 대회에 처음 나섰다. 전날 익산 아쿠아슬론 수영 컷오프의 아쉬움을 안고 새벽 4시 반에 일어나, 5,000명 넘는 참가자 속 초반 병목을 지난 뒤 평지와 완만한 내리막에서 분노하듯 쏟아내 02:35:11에 완주했다. 참가 부문이 로드가 아닌 MTB/일반으로 배정되는 해프닝이 있었고, 다음에는 고속 주행이 안전한 로드 부문으로 다시 나가고 싶은 대회로 남겼다.",
     "sources": [
       "strava",
-      "kakao-story",
       "youtube"
     ],
     "media": [
@@ -718,13 +673,9 @@
       "elapsedTime": "05:08:06",
       "elevationGainM": 1393
     },
-    "story": {
-      "url": "https://story.kakao.com/_F7q479/0QzIEotNnQ0"
-    },
     "review": "당일 새벽 집에서 출발했지만 교통 체증으로 출발 시각보다 늦게 도착해, 최후미 구급차와 함께 15분 늦게 출발했다. 컷오프 부담 속에 몸도 풀지 못한 채 계속 페이스를 끌어올려 122.2km 그란폰도를 04:44:50에 완주했다. 장비보다 훈련과 정신력이 앞서간다는 것을 느낀 대회였다.",
     "sources": [
-      "strava",
-      "kakao-story"
+      "strava"
     ],
     "media": [
       "assets/images/events/2026-chungju-granfondo/cover.jpg",
@@ -748,7 +699,7 @@
     "official": { "time": "01:48:54.34", "bib": 20146 },
     "strava": { "distanceKm": 20.81, "movingTime": "01:49:01", "elevationGainM": 17, "activityId": "20454988992", "elapsedTime": "01:49:01" },
     "review": "풀코스를 2주가량 앞두고 나선 하프로, 전날 푹 쉬고 일찍 도착해 3km 넘게 몸을 풀며 바람에 맞춘 페이스 전략까지 세웠다. 맞바람이 분 초반에는 비슷한 페이스의 그룹 뒤에서 바람을 피하며 8~9km까지 함께 달렸고, 반환 후에는 순풍을 타고 홀로 페이스를 유지했다. 18km부터 힘들어지고 급수 뒤 잠시 처졌지만 다시 치고 나가 막판 스프린트까지 하며 01:48:54.34로 2시간과 1시간 50분 벽을 함께 넘었다. 꾸준한 주간 장거리 러닝과 자세 교정이 쌓인 결과라 여기며, 평지 코스와 바람의 덕도 있었다고 덧붙였다.",
-    "sources": ["strava", "google-docs", "kakao-story"],
+    "sources": ["strava", "google-docs"],
     "media": [
       "assets/images/events/2026-siheung-half/cover.jpg",
       "assets/images/events/2026-siheung-half/official-certificate.jpg",
@@ -770,13 +721,9 @@
       "rankOverall": 451,
       "rankMen": 420
     },
-    "story": {
-      "url": "https://story.kakao.com/_F7q479/GCtjSRtOsqA"
-    },
     "review": "공주에서 열린 114.14km·1,274m 그란폰도를 04:34:52에 완주했다. 수요일 러닝 훈련으로 근육통과 피로가 남아 있었지만 페이스를 끝까지 유지했고, 규모가 큰 대회라 첫 보급소까지 병목이 있었으나 이후 빠르게 앞질러 편하게 달렸다. 빠른 참가자들 사이에서 세상이 넓다는 걸 느꼈고, 끝난 뒤 금강 온천에서 몸을 풀며 이틀 뒤 PT-75 안동 리벤지를 위한 휴식을 다짐했다.",
     "sources": [
       "strava",
-      "kakao-story",
       "youtube"
     ],
     "media": [
@@ -808,7 +755,7 @@
     "official": { "time": "04:39:37.06" },
     "strava": { "distanceKm": 42.43, "movingTime": "04:38:24", "elevationGainM": 446 },
     "review": "두 번째 풀코스에서 04:39:37.06으로 첫 풀코스보다 약 12분 22초 단축했다. 만족스러운 완주였지만 대회 뒤에는 온몸의 통증과 피로가 남았고, 다음 도전을 준비해야 한다는 조급함 속에서 ‘성장한 것이 아니라 망가진 것은 아닐까’라는 마음도 기록했다. 강렬한 도전 뒤의 고요함과 회복까지가 이번 대회의 이야기다.",
-    "sources": ["strava", "google-docs", "kakao-story"],
+    "sources": ["strava", "google-docs"],
     "media": [
       "assets/images/events/2026-daecheongho-full-marathon/cover.jpg",
       "assets/images/events/2026-daecheongho-full-marathon/official-result.jpg",
@@ -834,7 +781,7 @@
     },
     "strava": { "swimDistanceKm": 1.49, "bikeDistanceKm": 37.5, "runDistanceKm": 9.92, "activityIds": ["20719968074", "20719968060", "20719968082", "20719968086", "20719968093"], "gpsTransitions": { "t1": "00:06:14", "t2": "00:03:52" } },
     "review": "전날부터 비가 쏟아진 통영에서 1,700명 가까운 참가자와 함께 바다로 뛰어들었다. 후미 그룹에서도 초보들이 만든 몸싸움을 마주했지만, 이번에는 그동안 당하며 익힌 방어로 내 길을 지키고 앞사람 뒤에서 물살을 타는 법까지 써 보며 겁 없이 리듬을 유지해 00:38:33에 수영을 마쳤다. 업힐이 많은 사이클에서는 오르막에서 속도를 내 추월하고 빗길 내리막은 안전하게 내려왔고, 일주일 전 풀코스를 완주한 덕인지 러닝 페이스도 떨어지지 않아 03:06:33으로 만족스럽게 완주했다.",
-    "sources": ["strava", "google-docs", "kakao-story"],
+    "sources": ["strava", "google-docs"],
     "media": [
       "assets/images/events/2026-tongyeong-triathlon/cover.jpg",
       "assets/images/events/2026-tongyeong-triathlon/official-result.jpg",
@@ -860,13 +807,9 @@
       "movingTime": "00:56:35",
       "elevationGainM": 44
     },
-    "story": {
-      "url": "https://story.kakao.com/_F7q479/j3R05fJxxra"
-    },
     "review": "인천 국제 마라톤 풀코스 전날, 회사 러닝 동호회 활동을 겸해 10km를 00:56:42에 달렸다. 기침이 계속돼 다음 날 풀코스가 걱정됐지만 가볍게 뛰어도 페이스는 나쁘지 않았고, 회원들을 챙기며 동호회를 이끄는 책임과 의미를 다시 생각했다.",
     "sources": [
-      "strava",
-      "kakao-story"
+      "strava"
     ],
     "media": [
       "assets/images/events/2026-asics-gofree-10k/cover.jpg",
@@ -892,7 +835,7 @@
     "official": { "time": "04:43:02", "rankOverall": 5220, "rankMen": 4662 },
     "strava": { "distanceKm": 42.44, "movingTime": "04:42:35", "elevationGainM": 169 },
     "review": "세 번째 풀코스이자 한 해의 마지막 대회. 독감 회복과 부족한 준비, 전날 10km 참가에도 20km까지는 영종도의 풍경을 즐겼다. 25km부터 지치기 시작했고 30km에서 4시간 30분 페이스메이커를 의식해 서두르다 오른쪽 허벅지 뒤쪽에 경련이 왔다. 목표 기록은 놓았지만 걷지 않고 끝까지 달리며 ‘나는 할 수 있다’는 다짐으로 04:43:02에 완주했다. 지금은 잘 마무리했으니 쉬고 회복할 시간이다.",
-    "sources": ["strava", "google-docs", "kakao-story"],
+    "sources": ["strava", "google-docs"],
     "media": [
       "assets/images/events/2026-incheon-full-marathon/cover.jpg",
       "assets/images/events/2026-incheon-full-marathon/official-result.jpg",

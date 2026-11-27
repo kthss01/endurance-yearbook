@@ -994,40 +994,6 @@ const JOURNEY_STRAVA = {
   "2025-jeju-1100-ride": "15632626913",
   "2026-ic200-vector": "19650849197",
 };
-const KAKAO = "https://story.kakao.com/_F7q479";
-const KAKAO_POSTS = {
-  "2025-mbn-half": "https://story.kakao.com/_F7q479/1UfwkAy0Dl9",
-  "2025-chuncheon-10k": "https://story.kakao.com/_F7q479/hKjZ4K5Esma",
-  "2025-yeosu-granfondo": "https://story.kakao.com/_F7q479/53daRxAKQL9",
-  "2025-goryeong-duathlon": "https://story.kakao.com/_F7q479/iIoSjWfkpma",
-  "2025-marvel-run-half": "https://story.kakao.com/_F7q479/DPSg2iu9plA",
-  "2025-mungyeong-granfondo": "https://story.kakao.com/_F7q479/4NIx4h8Cik9",
-  "2025-hangang-night-walk-42k": "https://story.kakao.com/_F7q479/FMyvEUHLmLA",
-  "2025-iksan-aquathlon-standard": "https://story.kakao.com/_F7q479/CCoGDX57jk0",
-  "2025-hangang-slow-triathlon": "https://story.kakao.com/_F7q479/5UaHhSdmWJ9",
-  "2025-seorak-granfondo": "https://story.kakao.com/_F7q479/HAvEDTP0Pka",
-  "2025-nakdong-triathlon": "https://story.kakao.com/_F7q479/FZOt4epNDKA",
-  "2025-goseong-granfondo": "https://story.kakao.com/_F7q479/7HYQjMbVCi9",
-  "2025-korea-open-race-10k": "https://story.kakao.com/_F7q479/DLPlrPlDsJA",
-  "2026-tongyeong-triathlon": "https://story.kakao.com/_F7q479/DUchhqMNaRA",
-  "2026-siheung-half": "https://story.kakao.com/_F7q479/C7aHp1UGPQ0",
-  "2026-iksan-aquathlon-cutoff": "https://story.kakao.com/_F7q479/CCeTRc1pCQ0",
-  "2026-bbang-trail-30k": "https://story.kakao.com/_F7q479/KEv6PDZ57Ra",
-  "2026-mungyeong-granfondo": "https://story.kakao.com/_F7q479/f3nKEZ0awQA",
-  "2026-daegwallyeong-trail": "https://story.kakao.com/_F7q479/1DDc1Ry7qP9",
-  "2026-seolbong-triathlon": "https://story.kakao.com/_F7q479/gKcGvKqzlQA",
-  "2026-cool-valley-trail": "https://story.kakao.com/_F7q479/9BLlsmohoP0",
-  "2026-lotte-aquathlon": "https://story.kakao.com/_F7q479/6HAVzVSBio9",
-  "2026-hongcheon-granfondo": "https://story.kakao.com/_F7q479/7YcOoBR8in9",
-  "2026-hangang-seoul-half": "https://story.kakao.com/_F7q479/CQmnGjL16N0",
-  "2026-samcheok-granfondo": "https://story.kakao.com/_F7q479/gQ86NqzRLPA",
-  "2026-seoul-200k-brevet": "https://story.kakao.com/_F7q479/5TSCRTj8RO9",
-  "2026-yangsan-triathlon": "https://story.kakao.com/_F7q479/GN3IyHIQ1oA",
-  "2026-changwon-triathlon": "https://story.kakao.com/_F7q479/7P7ZKO9Unn9",
-  "2026-gumi-full-marathon": "https://story.kakao.com/_F7q479/d7sXuXoS1nA",
-  "2026-daecheongho-full-marathon": "https://story.kakao.com/_F7q479/H97RJOBnzRa",
-  "2026-incheon-full-marathon": "https://story.kakao.com/_F7q479/EVJyv4BzXRA",
-};
 const AI_ANALYSIS = {
   "2025-mbn-half": {
     facts: [

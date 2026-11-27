@@ -3,31 +3,31 @@
     "eventId": "2025-seorak-granfondo",
     "status": "candidate-needed",
     "desired": ["완주 또는 메달 사진", "산악 코스가 드러나는 사진"],
-    "source": "kakao-story"
+    "source": "personal-archive"
   },
   {
     "eventId": "2025-mungyeong-granfondo",
     "status": "candidate-needed",
     "desired": ["대회 현장 사진", "메디오폰도 전환을 설명할 수 있는 사진"],
-    "source": "kakao-story"
+    "source": "personal-archive"
   },
   {
     "eventId": "2025-goryeong-duathlon",
     "status": "candidate-needed",
     "desired": ["바꿈터 또는 경기 사진", "수영 취소 현장 안내가 보이는 사진"],
-    "source": "kakao-story"
+    "source": "personal-archive"
   },
   {
     "eventId": "2025-kyushu-cycling",
     "status": "candidate-needed",
     "desired": ["대표 자전거 여행 사진", "파손된 자전거 또는 수리 과정", "일차별 장소 사진"],
-    "source": "kakao-story"
+    "source": "personal-archive"
   },
   {
     "eventId": "2025-mbn-half",
     "status": "candidate-needed",
     "desired": ["완주 사진", "배번호 또는 기록증"],
-    "source": "kakao-story"
+    "source": "personal-archive"
   }
 ]
 

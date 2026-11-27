@@ -1,10 +1,10 @@
 [
-  {"eventId": "2026-gumi-full-marathon", "status": "candidate-needed", "source": "kakao-story", "storyUrl": "https://story.kakao.com/_F7q479/KQsGwUHN1Oa", "desired": ["첫 풀코스 완주 사진", "완주기록 또는 메달"]},
-  {"eventId": "2026-camino-frances", "status": "downloaded", "source": "kakao-story", "count": 6},
-  {"eventId": "2026-seolbong-triathlon", "status": "downloaded", "source": "kakao-story", "count": 28, "storyUrl": "https://story.kakao.com/_F7q479/gKcGvKqzlQA"},
-  {"eventId": "2026-mungyeong-granfondo", "status": "downloaded", "source": "kakao-story", "count": 9, "storyUrl": "https://story.kakao.com/_F7q479/f3nKEZ0awQA"},
-  {"eventId": "2026-river-to-sea-challenge", "status": "candidate-needed", "source": "kakao-story", "desired": ["구간별 도착 사진", "안동 DNF 맥락", "통영 도착 사진"]},
-  {"eventId": "2026-incheon-full-marathon", "status": "downloaded", "source": "kakao-story", "count": 7, "storyUrl": "https://story.kakao.com/_F7q479/EVJyv4BzXRA"},
-  {"eventId": "2026-bbang-trail-30k", "status": "downloaded", "count": 18, "storyUrl": "https://story.kakao.com/_F7q479/KEv6PDZ57Ra", "source": "kakao-story"},
-  {"eventId": "2026-iksan-aquathlon-cutoff", "status": "downloaded", "count": 15, "storyUrl": "https://story.kakao.com/_F7q479/CCeTRc1pCQ0", "source": "kakao-story"}
+  {"eventId": "2026-gumi-full-marathon", "status": "candidate-needed", "source": "personal-archive", "desired": ["첫 풀코스 완주 사진", "완주기록 또는 메달"]},
+  {"eventId": "2026-camino-frances", "status": "downloaded", "source": "personal-archive", "count": 6},
+  {"eventId": "2026-seolbong-triathlon", "status": "downloaded", "source": "personal-archive", "count": 28},
+  {"eventId": "2026-mungyeong-granfondo", "status": "downloaded", "source": "personal-archive", "count": 9},
+  {"eventId": "2026-river-to-sea-challenge", "status": "candidate-needed", "source": "personal-archive", "desired": ["구간별 도착 사진", "안동 DNF 맥락", "통영 도착 사진"]},
+  {"eventId": "2026-incheon-full-marathon", "status": "downloaded", "source": "personal-archive", "count": 7},
+  {"eventId": "2026-bbang-trail-30k", "status": "downloaded", "count": 18, "source": "personal-archive"},
+  {"eventId": "2026-iksan-aquathlon-cutoff", "status": "downloaded", "count": 15, "source": "personal-archive"}
 ]
