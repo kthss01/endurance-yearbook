@@ -14,7 +14,7 @@
     "review": "퍼머넌트로 달리던 200km를 처음 정식 브레베로 달려, 제한 13시간 30분 코스를 경과 09:43:12에 완주했다. 남한산성을 비롯한 서울 동쪽 고개를 넘는 코스로 Strava 기준 206.21km, 상승 1,812m다.",
     "display": { "featured": true, "suggestedFormat": "route card" },
     "sources": ["strava", "google-docs"],
-    "media": ["assets/images/events/2026-seoul-200k-brevet/cover.jpg", "assets/images/events/2026-seoul-200k-brevet/brevet-certificate.jpg", "assets/images/events/2026-seoul-200k-brevet/official-result.jpg", "assets/images/events/2026-seoul-200k-brevet/gallery-01.jpg"]
+    "media": ["assets/images/events/2026-seoul-200k-brevet/cover.jpg", "assets/images/events/2026-seoul-200k-brevet/brevet-certificate.jpg", "assets/images/events/2026-seoul-200k-brevet/official-result.jpg"]
   },
   {
     "id": "2026-ic200-vector",

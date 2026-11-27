@@ -90,7 +90,7 @@ const MEDIA = {
     "assets/images/events/2025-guri-canola-10k/route-summary.jpg",
   ],
   "2025-naejangsan-granfondo": [
-    "assets/images/events/2025-naejangsan-granfondo/cover.jpg",
+    "assets/images/events/2025-naejangsan-granfondo/web-01.jpg",
     "assets/images/events/2025-naejangsan-granfondo/official-certificate.jpg",
     "assets/images/events/2025-naejangsan-granfondo/official-result.jpg",
     "assets/images/events/2025-naejangsan-granfondo/route-summary.jpg",
@@ -109,7 +109,6 @@ const MEDIA = {
     "assets/images/events/2025-iksan-aquathlon-sprint/gallery-08.jpg",
     "assets/images/events/2025-iksan-aquathlon-sprint/gallery-09.jpg",
     "assets/images/events/2025-iksan-aquathlon-sprint/gallery-10.jpg",
-    "assets/images/events/2025-iksan-aquathlon-sprint/gallery-11.jpg",
     "assets/images/events/2025-iksan-aquathlon-sprint/gallery-12.jpg",
     "assets/images/events/2025-iksan-aquathlon-sprint/gallery-13.jpg",
     "assets/images/events/2025-iksan-aquathlon-sprint/gallery-14.jpg",
@@ -331,7 +330,6 @@ const MEDIA = {
     "assets/images/events/2025-seoul-bike-parade/strava-chart-1.jpg",
   ],
   "2025-yangyang-granfondo": [
-    "assets/images/events/2025-yangyang-granfondo/cover.jpg",
     "assets/images/events/2025-yangyang-granfondo/gallery-01.jpg",
     "assets/images/events/2025-yangyang-granfondo/gallery-02.jpg",
     "assets/images/events/2025-yangyang-granfondo/gallery-03.jpg",
@@ -343,13 +341,6 @@ const MEDIA = {
   ],
   "2026-seoul-200k-brevet": [
     "assets/images/events/2026-seoul-200k-brevet/cover.jpg",
-    "assets/images/events/2026-seoul-200k-brevet/gallery-01.jpg",
-    "assets/images/events/2026-seoul-200k-brevet/gallery-02.jpg",
-    "assets/images/events/2026-seoul-200k-brevet/gallery-03.jpg",
-    "assets/images/events/2026-seoul-200k-brevet/gallery-04.jpg",
-    "assets/images/events/2026-seoul-200k-brevet/gallery-05.jpg",
-    "assets/images/events/2026-seoul-200k-brevet/gallery-06.jpg",
-    "assets/images/events/2026-seoul-200k-brevet/gallery-07.jpg",
     "assets/images/events/2026-seoul-200k-brevet/gallery-08.jpg",
     "assets/images/events/2026-seoul-200k-brevet/gallery-09.jpg",
     "assets/images/events/2026-seoul-200k-brevet/official-result.jpg",
@@ -369,9 +360,6 @@ const MEDIA = {
     "assets/images/events/2026-samcheok-granfondo/official-result.jpg",
   ],
   "2026-gumi-full-marathon": [
-    "assets/images/events/2026-gumi-full-marathon/cover.jpg",
-    "assets/images/events/2026-gumi-full-marathon/gallery-01.jpg",
-    "assets/images/events/2026-gumi-full-marathon/gallery-02.jpg",
     "assets/images/events/2026-gumi-full-marathon/gallery-03.jpg",
     "assets/images/events/2026-gumi-full-marathon/gallery-04.jpg",
     "assets/images/events/2026-gumi-full-marathon/official-certificate.jpg",
@@ -408,7 +396,6 @@ const MEDIA = {
     "assets/images/events/2025-yeosu-granfondo/gallery-09.jpg",
   ],
   "2025-goryeong-duathlon": [
-    "assets/images/events/2025-goryeong-duathlon/cover.jpg",
     "assets/images/events/2025-goryeong-duathlon/official-certificate.jpg",
     "assets/images/events/2025-goryeong-duathlon/result-capture-01.jpg",
     "assets/images/events/2025-goryeong-duathlon/result-capture-02.jpg",
@@ -423,7 +410,6 @@ const MEDIA = {
     "assets/images/events/2025-goryeong-duathlon/gallery-12.jpg",
     "assets/images/events/2025-goryeong-duathlon/gallery-13.jpg",
     "assets/images/events/2025-goryeong-duathlon/gallery-14.jpg",
-    "assets/images/events/2025-goryeong-duathlon/gallery-15.jpg",
   ],
   "2025-marvel-run-half": [
     "assets/images/events/2025-marvel-run-half/cover.jpg",
@@ -470,7 +456,6 @@ const MEDIA = {
     "assets/images/events/2025-hangang-slow-triathlon/result-capture-03.jpg",
   ],
   "2025-seorak-granfondo": [
-    "assets/images/events/2025-seorak-granfondo/cover.jpg",
     "assets/images/events/2025-seorak-granfondo/result-capture-01.jpg",
     "assets/images/events/2025-seorak-granfondo/result-capture-02.jpg",
     "assets/images/events/2025-seorak-granfondo/result-capture-03.jpg",
@@ -482,7 +467,6 @@ const MEDIA = {
     "assets/images/events/2025-seorak-granfondo/gallery-09.jpg",
   ],
   "2025-nakdong-triathlon": [
-    "assets/images/events/2025-nakdong-triathlon/cover.jpg",
     "assets/images/events/2025-nakdong-triathlon/official-certificate.jpg",
     "assets/images/events/2025-nakdong-triathlon/gallery-01.jpg",
     "assets/images/events/2025-nakdong-triathlon/gallery-02.jpg",
@@ -492,7 +476,6 @@ const MEDIA = {
     "assets/images/events/2025-nakdong-triathlon/result-capture-06.jpg",
   ],
   "2025-goseong-granfondo": [
-    "assets/images/events/2025-goseong-granfondo/cover.jpg",
     "assets/images/events/2025-goseong-granfondo/result-capture-01.jpg",
     "assets/images/events/2025-goseong-granfondo/result-capture-02.jpg",
     "assets/images/events/2025-goseong-granfondo/result-capture-03.jpg",
@@ -679,7 +662,6 @@ const MEDIA = {
     "assets/images/events/2026-lotte-aquathlon/result-capture-07.jpg",
   ],
   "2026-hongcheon-granfondo": [
-    "assets/images/events/2026-hongcheon-granfondo/cover.jpg",
     "assets/images/events/2026-hongcheon-granfondo/official-result.jpg",
     "assets/images/events/2026-hongcheon-granfondo/official-ranking.jpg",
     "assets/images/events/2026-hongcheon-granfondo/route-summary.jpg",
@@ -797,7 +779,6 @@ const JOURNEY_MEDIA = {
     "assets/images/journeys/2026-river-to-sea-challenge/stage2-sunrise-road.jpg",
     "assets/images/journeys/2026-river-to-sea-challenge/stage2-pass-stone.jpg",
     "assets/images/journeys/2026-river-to-sea-challenge/stage2-rock-monument.jpg",
-    "assets/images/journeys/2026-river-to-sea-challenge/stage2-finish-selfie.jpg",
     "assets/images/journeys/2026-river-to-sea-challenge/stage3-riverside.jpg",
     "assets/images/journeys/2026-river-to-sea-challenge/stage3-gaya-road.jpg",
     "assets/images/journeys/2026-river-to-sea-challenge/stage3-bus-shelter.jpg",
@@ -867,13 +848,6 @@ const JOURNEY_MEDIA = {
   ],
   "2026-seoul-200k-brevet": [
     "assets/images/events/2026-seoul-200k-brevet/cover.jpg",
-    "assets/images/events/2026-seoul-200k-brevet/gallery-01.jpg",
-    "assets/images/events/2026-seoul-200k-brevet/gallery-02.jpg",
-    "assets/images/events/2026-seoul-200k-brevet/gallery-03.jpg",
-    "assets/images/events/2026-seoul-200k-brevet/gallery-04.jpg",
-    "assets/images/events/2026-seoul-200k-brevet/gallery-05.jpg",
-    "assets/images/events/2026-seoul-200k-brevet/gallery-06.jpg",
-    "assets/images/events/2026-seoul-200k-brevet/gallery-07.jpg",
     "assets/images/events/2026-seoul-200k-brevet/gallery-08.jpg",
     "assets/images/events/2026-seoul-200k-brevet/gallery-09.jpg",
     "assets/images/events/2026-seoul-200k-brevet/brevet-certificate.jpg",
@@ -922,7 +896,6 @@ const JOURNEY_MEDIA = {
     "assets/images/journeys/camino/day-09-03.jpg",
     "assets/images/journeys/camino/day-10.jpg",
     "assets/images/journeys/camino/day-11-01.jpg",
-    "assets/images/journeys/camino/day-11-02.jpg",
     "assets/images/journeys/camino/day-11-03.jpg",
     "assets/images/journeys/camino/day-12-01.jpg",
     "assets/images/journeys/camino/day-12-02.jpg",
@@ -1781,11 +1754,9 @@ const RECORD_MEDIA = {
   "2025-longestDistance": [
     "assets/images/records/2025-longestDistance/cover.jpg",
     "assets/images/records/2025-longestDistance/gallery-01.jpg",
-    "assets/images/records/2025-longestDistance/gallery-02.jpg",
     "assets/images/records/2025-longestDistance/gallery-03.jpg",
   ],
   "2025-highestElevation": [
-    "assets/images/events/2025-seorak-granfondo/cover.jpg",
     "assets/images/events/2025-seorak-granfondo/gallery-06.jpg",
     "assets/images/events/2025-seorak-granfondo/gallery-08.jpg",
   ],
@@ -1798,7 +1769,6 @@ const RECORD_MEDIA = {
     "assets/images/journeys/2026-river-to-sea-challenge/stage2-sunrise-road.jpg",
     "assets/images/journeys/2026-river-to-sea-challenge/stage2-pass-stone.jpg",
     "assets/images/journeys/2026-river-to-sea-challenge/stage2-rock-monument.jpg",
-    "assets/images/journeys/2026-river-to-sea-challenge/stage2-finish-selfie.jpg",
   ],
 };
 // 대표 사진 초점 위치(object-position). 썸네일·상세 상단에서 피사체가 잘리지 않도록 사진별로 지정한다.
@@ -1807,6 +1777,7 @@ const COVER_FOCUS = {
 };
 // 인터넷 자유 라이선스 사진의 출처(캡션·작가·라이선스·원본 페이지). 대회 당일 사진이 아니면 캡션에 밝힌다.
 const IMAGE_CREDITS = {
+  "assets/images/events/2025-naejangsan-granfondo/web-01.jpg": { caption: "정읍 내장산 우화정 (대회 코스 일대, 대회 당일 사진 아님)", author: "Tungdangthanh", license: "CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Naejangsan_Pavilion_2.jpg" },
   "assets/images/events/2025-korea-open-race-10k/web-01.jpg": { caption: "서울 뚝섬한강공원 자벌레 전망대 앞 광장 (대회 장소 일대, 대회 당일 사진 아님)", author: "Motoko C. K.", license: "CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Ttukseom_Hangang_Park_20260416_1.jpg" },
   "assets/images/events/2025-korea-open-race-10k/web-02.jpg": { caption: "서울 뚝섬한강공원 고가 아래 산책로 (대회 장소 일대, 대회 당일 사진 아님)", author: "Motoko C. K.", license: "CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Ttukseom_Hangang_Park_20260416_2.jpg" },
   "assets/images/events/2025-korea-open-race-10k/web-03.jpg": { caption: "서울 뚝섬한강공원 쉼터 (대회 장소 일대, 대회 당일 사진 아님)", author: "Motoko C. K.", license: "CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Ttukseom_Hangang_Park_20260416_3.jpg" },

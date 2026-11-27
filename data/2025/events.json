@@ -30,7 +30,6 @@
     "review": "그란폰도 119km 코스를 05:26:25.84에 완주해 종합 468위·남자 443위를 기록했다. Strava 기준 120.17km, 상승 1,583m다.",
     "sources": ["strava"],
     "media": [
-      "assets/images/events/2025-goseong-granfondo/cover.jpg",
       "assets/images/events/2025-goseong-granfondo/result-capture-03.jpg",
       "assets/images/events/2025-goseong-granfondo/result-capture-01.jpg"
     ]
@@ -127,7 +126,6 @@
       "youtube"
     ],
     "media": [
-      "assets/images/events/2025-yangyang-granfondo/cover.jpg",
       "assets/images/events/2025-yangyang-granfondo/gallery-01.jpg",
       "assets/images/events/2025-yangyang-granfondo/gallery-02.jpg",
       "assets/images/events/2025-yangyang-granfondo/gallery-03.jpg",
@@ -162,7 +160,6 @@
     "review": "제1회 낙동강 슬로우 철인3종(수영 1.5km·자전거 46km·트레일런 10km) 스탠다드를 완주했다. 첫 철인3종 완주이며 Strava 기준 수영 00:37:17, 자전거 01:34:55, 러닝 00:56:19다.",
     "sources": ["strava", "google-docs"],
     "media": [
-      "assets/images/events/2025-nakdong-triathlon/cover.jpg",
       "assets/images/events/2025-nakdong-triathlon/official-certificate.jpg",
       "assets/images/events/2025-nakdong-triathlon/result-capture-04.jpg"
     ]
@@ -240,7 +237,6 @@
     "review": "M Granfondo 208km 코스를 제한 12시간 안인 11:10:50.69에 완주했다. Strava 기준 204.99km, 상승 3,676m로 2025년 대회 중 가장 길고 높은 코스다.",
     "sources": ["strava", "google-docs"],
     "media": [
-      "assets/images/events/2025-seorak-granfondo/cover.jpg",
       "assets/images/events/2025-seorak-granfondo/result-capture-04.jpg",
       "assets/images/events/2025-seorak-granfondo/result-capture-01.jpg"
     ]
@@ -328,7 +324,7 @@
       "strava"
     ],
     "media": [
-      "assets/images/events/2025-naejangsan-granfondo/cover.jpg",
+      "assets/images/events/2025-naejangsan-granfondo/web-01.jpg",
       "assets/images/events/2025-naejangsan-granfondo/official-certificate.jpg",
       "assets/images/events/2025-naejangsan-granfondo/official-result.jpg",
       "assets/images/events/2025-naejangsan-granfondo/route-summary.jpg",
@@ -384,7 +380,6 @@
       "assets/images/events/2025-iksan-aquathlon-sprint/gallery-08.jpg",
       "assets/images/events/2025-iksan-aquathlon-sprint/gallery-09.jpg",
       "assets/images/events/2025-iksan-aquathlon-sprint/gallery-10.jpg",
-      "assets/images/events/2025-iksan-aquathlon-sprint/gallery-11.jpg",
       "assets/images/events/2025-iksan-aquathlon-sprint/gallery-12.jpg",
       "assets/images/events/2025-iksan-aquathlon-sprint/gallery-13.jpg",
       "assets/images/events/2025-iksan-aquathlon-sprint/gallery-14.jpg",
@@ -615,8 +610,6 @@
     "review": "유속 문제로 수영이 취소돼 러닝 5km·자전거 40km·러닝 10km 듀애슬론으로 바뀐 대회를 02:55:21에 완주했다. 구간 기록은 00:26:22 / 01:21:21 / 00:59:37, 30-34세 남자부 45위다.",
     "sources": ["strava", "google-docs"],
     "media": [
-      "assets/images/events/2025-goryeong-duathlon/cover.jpg",
-      "assets/images/events/2025-goryeong-duathlon/gallery-15.jpg",
       "assets/images/events/2025-goryeong-duathlon/official-certificate.jpg"
     ]
   },

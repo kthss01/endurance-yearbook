@@ -30,7 +30,6 @@
     "review": "첫 풀코스 42.195km를 04:51:59에 완주했다. Strava 기준 42.21km, 상승 209m다.",
     "sources": ["strava", "google-docs"],
     "media": [
-      "assets/images/events/2026-gumi-full-marathon/cover.jpg",
       "assets/images/events/2026-gumi-full-marathon/official-certificate.jpg",
       "assets/images/events/2026-gumi-full-marathon/strava-summary.jpg"
     ]
@@ -71,7 +70,6 @@
     "review": "그란폰도 121.52km 코스를 05:09:22.80에 완주해 종합 364위·남자 333위를 기록했다. 업힐 뒤 약 40km 완만한 내리막이 이어지는 코스로, Strava 기준 상승 1,727m다.",
     "sources": ["strava", "google-docs"],
     "media": [
-      "assets/images/events/2026-hongcheon-granfondo/cover.jpg",
       "assets/images/events/2026-hongcheon-granfondo/official-result.jpg",
       "assets/images/events/2026-hongcheon-granfondo/route-summary.jpg"
     ]
